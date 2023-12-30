@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Dec 30 00:31:59 2023
-# Process ID: 15860
+# Start of session at: Sat Dec 30 17:49:43 2023
+# Process ID: 33072
 # Current directory: C:/verilog project/move sprite/move sprite.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/verilog project/move sprite/move sprite.runs/synth_1/Top.vds
@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19952
+INFO: [Synth 8-7075] Helper process launched with PID 49464
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1019.656 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1018.238 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/verilog project/move sprite/top.v:1]
 	Parameter A_CODE bound to: 9'b000011100 
@@ -43,10 +43,14 @@ INFO: [Synth 8-6157] synthesizing module 'state_control' [C:/verilog project/mov
 INFO: [Synth 8-6155] done synthesizing module 'state_control' (4#1) [C:/verilog project/move sprite/state_control.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/verilog project/move sprite/mem_addr_gen.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (5#1) [C:/verilog project/move sprite/mem_addr_gen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-15860-DESKTOP-Q29MBHF/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-15860-DESKTOP-Q29MBHF/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-33072-DESKTOP-Q29MBHF/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-33072-DESKTOP-Q29MBHF/realtime/blk_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'blk_mem_gen_0' [C:/verilog project/move sprite/top.v:83]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-33072-DESKTOP-Q29MBHF/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (7#1) [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-33072-DESKTOP-Q29MBHF/realtime/blk_mem_gen_1_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'blk_mem_gen_1' [C:/verilog project/move sprite/top.v:91]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/verilog project/move sprite/vga_controller.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (7#1) [C:/verilog project/move sprite/vga_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (8#1) [C:/verilog project/move sprite/vga_controller.v:1]
 INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/verilog project/move sprite/KeyboardDecoder.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
@@ -55,36 +59,38 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/verilog project/m
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-15860-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (8#1) [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-15860-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-33072-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (9#1) [C:/verilog project/move sprite/move sprite.runs/synth_1/.Xil/Vivado-33072-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/move sprite/KeyboardDecoder.v:69]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/move sprite/KeyboardDecoder.v:79]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/move sprite/KeyboardDecoder.v:89]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/move sprite/KeyboardDecoder.v:99]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/move sprite/KeyboardDecoder.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (9#1) [C:/verilog project/move sprite/KeyboardDecoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (10#1) [C:/verilog project/move sprite/top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (10#1) [C:/verilog project/move sprite/KeyboardDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (11#1) [C:/verilog project/move sprite/top.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1019.656 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.238 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1019.656 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.238 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1019.656 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.238 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1019.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1018.238 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'BMG0'
-Finished Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'BMG0'
 Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
 Finished Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'BMG0'
+Finished Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'BMG0'
+Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'BMG0_m'
+Finished Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'BMG0_m'
 Parsing XDC File [C:/verilog project/move sprite/cons.xdc]
 WARNING: [Vivado 12-584] No ports matched 'start'. [C:/verilog project/move sprite/cons.xdc:39]
 WARNING: [Vivado 12-584] No ports matched 'start'. [C:/verilog project/move sprite/cons.xdc:40]
@@ -94,20 +100,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1068.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1052.605 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1068.582 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1052.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1068.582 ; gain = 48.926
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1052.605 ; gain = 34.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1068.582 ; gain = 48.926
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1052.605 ; gain = 34.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -116,10 +122,11 @@ Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  {c:/ve
 Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  {c:/verilog project/move sprite/move sprite.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 2).
 Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  {c:/verilog project/move sprite/move sprite.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 3).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  {c:/verilog project/move sprite/move sprite.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 4).
-Applied set_property KEEP_HIERARCHY = SOFT for BMG0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for key_de/inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for BMG0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for BMG0_m. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1068.582 ; gain = 48.926
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1052.605 ; gain = 34.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------------------------
@@ -132,23 +139,27 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Keybo
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1068.582 ; gain = 48.926
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1052.605 ; gain = 34.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   10 Bit       Adders := 6     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 1     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
 	              512 Bit    Registers := 1     
-	               10 Bit    Registers := 5     
+	               10 Bit    Registers := 6     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 10    
 +---Muxes : 
 	   2 Input  512 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
 	   4 Input   10 Bit        Muxes := 2     
 	   6 Input   10 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 2     
@@ -173,22 +184,30 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP MAG/pixel_addr0, operation Mode is: C+A*(B:0x140).
+DSP Report: Generating DSP MAG/pixel_addr2, operation Mode is: A*(B:0x14).
+DSP Report: operator MAG/pixel_addr2 is absorbed into DSP MAG/pixel_addr2.
+DSP Report: Generating DSP MAG/pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec0).
 DSP Report: operator MAG/pixel_addr0 is absorbed into DSP MAG/pixel_addr0.
-DSP Report: operator MAG/pixel_addr1 is absorbed into DSP MAG/pixel_addr0.
+DSP Report: Generating DSP MAG_m/pixel_addr2, operation Mode is: A*(B:0x14).
+DSP Report: operator MAG_m/pixel_addr2 is absorbed into DSP MAG_m/pixel_addr2.
+DSP Report: Generating DSP MAG_m/pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec0).
+DSP Report: operator MAG_m/pixel_addr0 is absorbed into DSP MAG_m/pixel_addr0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1068.582 ; gain = 48.926
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1052.605 ; gain = 34.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping	Report (see note below)
-+-------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name  | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mem_addr_gen | C+A*(B:0x140) | 10     | 9      | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-+-------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top          | PCIN+(A:0x0):B+(C:0xfffffffffec0) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top          | PCIN+(A:0x0):B+(C:0xfffffffffec0) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -198,19 +217,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1086.402 ; gain = 66.746
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1091.246 ; gain = 73.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1086.699 ; gain = 67.043
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1091.992 ; gain = 73.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1105.793 ; gain = 86.137
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1111.082 ; gain = 92.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -227,50 +246,38 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[11]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[10]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[9]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[8]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[7]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[6]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[5]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[4]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -281,7 +288,8 @@ Report BlackBoxes:
 |      |BlackBox name  |Instances |
 +------+---------------+----------+
 |1     |blk_mem_gen_0  |         1|
-|2     |KeyboardCtrl_0 |         1|
+|2     |blk_mem_gen_1  |         1|
+|3     |KeyboardCtrl_0 |         1|
 +------+---------------+----------+
 
 Report Cell Usage: 
@@ -289,43 +297,42 @@ Report Cell Usage:
 |      |Cell         |Count |
 +------+-------------+------+
 |1     |KeyboardCtrl |     1|
-|2     |blk_mem_gen  |     1|
-|3     |BUFG         |     1|
-|4     |CARRY4       |    32|
-|5     |DSP48E1      |     1|
-|6     |LUT1         |    20|
-|7     |LUT2         |    82|
-|8     |LUT3         |    40|
-|9     |LUT4         |    21|
-|10    |LUT5         |    23|
-|11    |LUT6         |    41|
-|12    |FDCE         |    19|
-|13    |FDRE         |    63|
-|14    |FDSE         |     2|
-|15    |IBUF         |     2|
-|16    |OBUF         |    14|
+|2     |blk_mem_gen  |     2|
+|4     |BUFG         |     1|
+|5     |CARRY4       |   129|
+|6     |DSP48E1      |     4|
+|8     |LUT1         |    32|
+|9     |LUT2         |   155|
+|10    |LUT3         |   213|
+|11    |LUT4         |   159|
+|12    |LUT5         |   103|
+|13    |LUT6         |   136|
+|14    |FDCE         |    19|
+|15    |FDRE         |    56|
+|16    |FDSE         |    18|
+|17    |IBUF         |     2|
+|18    |OBUF         |    14|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 12 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1113.125 ; gain = 44.543
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1113.125 ; gain = 93.469
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1122.523 ; gain = 69.918
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1122.523 ; gain = 104.285
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1125.203 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1132.367 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1125.203 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1132.367 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 3 Warnings, 12 Critical Warnings and 0 Errors encountered.
+49 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1125.203 ; gain = 105.547
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1132.367 ; gain = 114.129
 INFO: [Common 17-1381] The checkpoint 'C:/verilog project/move sprite/move sprite.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 30 00:32:20 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 30 17:50:09 2023...

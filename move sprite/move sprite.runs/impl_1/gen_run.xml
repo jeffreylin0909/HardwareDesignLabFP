@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1703867515">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1703929744">
   <File Type="BITSTR-BMM" Name="Top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_timing_summary_init.rpt"/>
@@ -133,13 +133,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/octopus.coe">
+    <File Path="$PPRDIR/link.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/link.coe">
+    <File Path="$PPRDIR/octopus.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -183,6 +183,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
   <BlockFileSet Type="BlockSrcs" Name="KeyboardCtrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
 </GenRun>

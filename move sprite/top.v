@@ -12,8 +12,8 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 	
 	wire clk_d2;//25MHz
     wire clk_d22;
-    wire [16:0] pixel_addr;
-    wire [11:0] pixel;
+    wire [16:0] pixel_addr, pixel_addr_m;
+    wire [11:0] pixel, pixel_m, RGB_link, RGB_m;
 	wire [11:0] data;
     wire valid;
 	//640*480
@@ -21,6 +21,8 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 	wire [9:0] h_cnt_re, v_cnt_re;
 	
 	wire [9:0] pos_h, pos_v;
+	
+	wire [9:0] pos_h_m, pos_v_m;
 	//signals
 	wire rst_db;
 	wire rst_op;
@@ -28,7 +30,9 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 	assign h_cnt_re = h_cnt>>1;
 	assign v_cnt_re = v_cnt>>1;
 	
-	assign {vgaRed, vgaGreen, vgaBlue} = (valid==1'b1) ? pixel : 12'h0;
+	assign RGB_link = (valid==1'b1 && (h_cnt_re+pos_h)%320 < 20 && (v_cnt_re+pos_v)%240 < 20 ) ? pixel : 12'h0;
+	assign RGB_m = (valid==1'b1 && (h_cnt_re+pos_h_m)%320 < 20 && (v_cnt_re+pos_v_m)%240 < 20 ) ? pixel_m : 12'h0;
+	assign {vgaRed, vgaGreen, vgaBlue} = RGB_link+RGB_m;
 	
 	//clock
 	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
@@ -52,7 +56,9 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.W_signal(key_down[W_CODE]),
 		.S_signal(key_down[S_CODE]),
 		.pos_h(pos_h),
-		.pos_v(pos_v)
+		.pos_v(pos_v),
+		.pos_h_m(pos_h_m),
+		.pos_v_m(pos_v_m)
 	);
 	mem_addr_gen MAG(
 		.h_cnt(h_cnt_re),
@@ -60,6 +66,14 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.pos_h(pos_h),
 		.pos_v(pos_v),
 		.pixel_addr(pixel_addr)
+	);
+	
+	mem_addr_gen MAG_m(
+		.h_cnt(h_cnt_re),
+		.v_cnt(v_cnt_re), 
+		.pos_h(pos_h_m),
+		.pos_v(pos_v_m),
+		.pixel_addr(pixel_addr_m)
 	);
      
 	//display
@@ -69,6 +83,14 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .addra(pixel_addr),
         .dina(data[11:0]),
         .douta(pixel)
+    ); 
+    
+    blk_mem_gen_1 BMG0_m(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_m),
+        .dina(data[11:0]),
+        .douta(pixel_m)
     ); 
 
     vga_controller VC0(

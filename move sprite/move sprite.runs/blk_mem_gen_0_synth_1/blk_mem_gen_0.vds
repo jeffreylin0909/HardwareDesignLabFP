@@ -2,14 +2,17 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Dec 29 20:56:23 2023
-# Process ID: 30172
+# Start of session at: Sat Dec 30 11:11:25 2023
+# Process ID: 42912
 # Current directory: C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
 # Log file: C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
 # Journal file: C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/verilog project/move sprite/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
 Command: synth_design -top blk_mem_gen_0 -part xc7a35tcpg236-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
@@ -17,11 +20,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 49812
+INFO: [Synth 8-7075] Helper process launched with PID 6064
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.090 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1017.934 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/synth/blk_mem_gen_0.vhd:69]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -53,9 +56,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/verilog project/move
 	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_A bound to: 12 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 12 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 76800 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 76800 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 17 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 400 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 400 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 9 - type: integer 
 	Parameter C_HAS_RSTB bound to: 0 - type: integer 
 	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
 	Parameter C_RSTRAM_B bound to: 0 - type: integer 
@@ -67,9 +70,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/verilog project/move
 	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 12 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 12 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 76800 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 76800 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 17 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 400 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 400 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 9 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
@@ -94,70 +97,65 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/verilog project/move
 	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 26 - type: string 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     9.042558 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:234]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (11#1) [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:69]
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.70645 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/synth/blk_mem_gen_0.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (9#1) [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/synth/blk_mem_gen_0.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1305.883 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1200.000 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/verilog project/move sprite/move sprite.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc] for cell 'U0'
 Parsing XDC File [C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1305.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1200.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1305.883 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1200.000 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  {C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1/dont_touch.xdc}, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Registers : 
-	               17 Bit    Registers := 1     
-	                5 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input    1 Bit        Muxes := 65    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -174,25 +172,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:38 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -210,37 +208,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -256,39 +254,32 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |LUT1     |     1|
-|2     |LUT3     |     1|
-|3     |LUT5     |    31|
-|4     |LUT6     |    45|
-|5     |MUXF7    |    18|
-|6     |RAMB18E1 |     1|
-|7     |RAMB36E1 |    26|
-|14    |FDRE     |    10|
+|1     |RAMB18E1 |     1|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 1305.883 ; gain = 290.793
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.883 ; gain = 290.793
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1200.000 ; gain = 182.066
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1200.000 ; gain = 182.066
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1305.883 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1200.000 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1305.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1200.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1305.883 ; gain = 290.793
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1200.000 ; gain = 182.066
 INFO: [Common 17-1381] The checkpoint 'C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blk_mem_gen_0, cache-ID = 3e42fa1be88616b5
-INFO: [Coretcl 2-1174] Renamed 54 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blk_mem_gen_0, cache-ID = 4174163e90068aa5
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/verilog project/move sprite/move sprite.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blk_mem_gen_0_utilization_synth.rpt -pb blk_mem_gen_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 29 20:57:12 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 30 11:11:59 2023...
