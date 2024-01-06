@@ -47,7 +47,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
     wire [11:0] pixel_YC;
     wire [11:0] pixel_ZY;
     wire [11:0] pixel_key;
-    wire [11:0] pixel_hearts;
+    wire [11:0] pixel_heart;
     wire [11:0] pixel_potion;
     wire [11:0] pixel_yoshi;
     wire [11:0] pixel_car;
@@ -61,10 +61,14 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
     //for CY
     wire [16:0] pixel_addr_CY;
     wire [11:0] pixel_CY;
+    
+    wire [3:0] pixel_idx_CY;
     wire [9:0] pos_h_CY, pos_v_CY;
     //for monster_1
     wire [16:0] pixel_addr_monster_1;
     wire [11:0] pixel_monster_1;
+    
+    wire [3:0] pixel_idx_monster_1;
     wire [9:0] pos_h_monster_1, pos_v_monster_1;
 	
 	select_pixel SP0(
@@ -140,8 +144,10 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.K_signal(key_down[K_CODE]),
 		.L_signal(key_down[L_CODE]),
 		.SPACE_signal(key_down[SPACE_CODE]),
+		.pixel_idx_CY(pixel_idx_CY),
 		.pos_h_CY(pos_h_CY),
 		.pos_v_CY(pos_v_CY),
+		.pixel_idx_monster_1(pixel_idx_monster_1),
 		.pos_h_monster_1(pos_h_monster_1),
 		.pos_v_monster_1(pos_v_monster_1)
 	);
@@ -169,6 +175,69 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .addra(pixel_addr_CY),
         .dina(12'd0),
         .douta(pixel_CY_front_stand)
+    ); 
+    BM_CY_front_walk_L BM_CY_front_walk_L_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_front_walk_L)
+    ); 
+    BM_CY_front_walk_R BM_CY_front_walk_R_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_front_walk_R)
+    ); 
+    BM_CY_back_stand BM_CY_back_stand_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_back_stand)
+    ); 
+    BM_CY_back_walk_L BM_CY_back_walk_L_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_back_walk_L)
+    ); 
+    BM_CY_back_walk_R BM_CY_back_walk_R_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_back_walk_R)
+    ); 
+    BM_CY_left_stand BM_CY_left_stand_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_left_stand)
+    ); 
+    BM_CY_left_walk BM_CY_left_walk_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_left_walk)
+    ); 
+    BM_CY_right_stand BM_CY_right_stand_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_right_stand)
+    ); 
+    BM_CY_right_walk BM_CY_right_walk_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_right_walk)
     ); 
     
     BM_CS_student BM_CS_student_(

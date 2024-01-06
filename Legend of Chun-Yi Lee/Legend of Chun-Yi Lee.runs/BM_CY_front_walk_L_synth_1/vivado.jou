@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Jan  6 22:09:04 2024
+# Process ID: 47032
+# Current directory: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1
+# Command line: vivado.exe -log BM_CY_front_walk_L.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BM_CY_front_walk_L.tcl
+# Log file: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/BM_CY_front_walk_L.vds
+# Journal file: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1\vivado.jou
+#-----------------------------------------------------------
+source BM_CY_front_walk_L.tcl -notrace
