@@ -416,14 +416,14 @@ module state_control(
 
 
 
-	//monster_1
-	// monster_one m1(
-	//    .clk(clk), 
-	//    .rst(changing_stage), 
-	//    .stagestate(stage), 
-	//    .pos_h(pos_h_monster_1), 
-	//    .pos_v(pos_v_monster_1)
-	// );
+//	monster_1
+	 monster_one m1(
+	    .clk(clk), 
+	    .rst(changing_stage), 
+	    .stagestate(stage), 
+	    .pos_h(pos_h_monster_1), 
+	    .pos_v(pos_v_monster_1)
+	 );
 	
 endmodule
 
@@ -660,18 +660,31 @@ output reg [9:0] pos_h;
 output reg [9:0] pos_v;
 
 reg [2:0] state, nstate;
-reg [8:0] npos_h, npos_v;
-integer i;
+reg [9:0] counter;
+wire [12:0] randomNum;
+
+LFSR randomgen(
+    .clock(clk),
+    .reset(rst),
+    .rnd(randomNum)
+);
 
 always @(posedge clk) begin
     if (rst) begin
         state <= 3'd0;
         case (stagestate)
+            4'd0: begin
+                pos_h <= 160;
+                pos_v <= 120;
+                counter <= 0;
+            end
             4'd1: begin
                 pos_h <= 160;
                 pos_v <= 120;
+                counter <= 0;
             end
             4'd2: begin
+                
             end
             4'd3: begin
             
@@ -694,6 +707,12 @@ always @(posedge clk) begin
             4'd9: begin
             
             end
+            4'd10: begin
+
+            end
+            4'd11: begin
+
+            end
             default: begin
                 pos_h <= -1;
                 pos_v <= -1;
@@ -701,251 +720,57 @@ always @(posedge clk) begin
         endcase 
     end 
     else begin
-        state <= nstate;
-        pos_h <= npos_h;
-        pos_v <= npos_v;
+        counter <= counter + 1;
+        if (counter == 10'd2) begin
+            if (randomNum % 2 == 0) begin
+                pos_h <= pos_h + (randomNum % 3) - 1;
+            end else begin
+                pos_v <= pos_v + (randomNum % 3) - 1;
+            end
+        counter <= 0;
+        end
+    end
+end
+endmodule
+
+module LFSR (
+    input clock,
+    input reset,
+    output [12:0] rnd 
+    );
+
+reg [12:0] random, random_next, random_done;
+reg [3:0] count, count_next; //to keep track of the shifts
+
+wire feedback = random[12] ^ random[3] ^ random[2] ^ random[0]; 
+
+always @ (posedge clock) begin
+    if (reset) begin
+        random <= 13'hF; //An LFSR cannot have an all 0 state, thus reset to FF
+        count <= 0;
+    end else begin
+        random <= random_next;
+        count <= count_next;
     end
 end
 
-always @(*) begin
-    case (stagestate)
-        4'd1: begin //stage 2
-            case (state)
-                3'd0: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-                3'd1: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;   
-                end
-                3'd2: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h;
-                            npos_v = pos_v + 1;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h;
-                            npos_v = pos_v + 1;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h;
-                            npos_v = pos_v + 1;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-                3'd3: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-                3'd4: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h;
-                            npos_v = pos_v + 1;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h;
-                            npos_v = pos_v + 1;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h;
-                            npos_v = pos_v + 1;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-                3'd5: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-                3'd6: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h - 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-                3'd7: begin
-                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h > 319) npos_h = 319;
-                    end
-                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 60) npos_v = 61;
-                        if (pos_v >= 200) npos_v = 199;
-                    end
-                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
-                        for (i = 0; i < 20; i= i+1) begin
-                            npos_h = pos_h + 1;
-                            npos_v = pos_v;
-                        end
-                        if (pos_v <= 100) npos_v = 101;
-                        if (pos_v >= 160) npos_v = 159;
-                        if (pos_h < 20) npos_h = 20;
-                    end
-                    nstate = state + 3'd1;
-                end
-            endcase
-        end
-    endcase
+always @ (*) begin
+    random_next = random; //default state stays the same
+    count_next = count;
+  
+    random_next = {random[11:0], feedback}; //shift left the xor'd every posedge clock
+    count_next = count + 1;
+
+    if (count == 13) begin
+        count_next = 0;
+        random_done = random; //assign the random number to output after 13 shifts
+    end
+ 
 end
 
+
+assign rnd = random_done;
+
 endmodule
+
+

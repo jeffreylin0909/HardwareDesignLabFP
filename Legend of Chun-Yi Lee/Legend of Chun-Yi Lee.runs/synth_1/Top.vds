@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jan  7 17:59:33 2024
-# Process ID: 23848
+# Start of session at: Sun Jan  7 18:25:09 2024
+# Process ID: 22248
 # Current directory: C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.vds
@@ -21,9 +21,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17792 
+INFO: Helper process launched with PID 25076 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 784.578 ; gain = 233.414
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 784.406 ; gain = 232.957
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1]
 	Parameter A_CODE bound to: 9'b000011100 
@@ -131,52 +131,55 @@ INFO: [Synth 8-6155] done synthesizing module 'maincharacter' (6#1) [C:/Users/nt
 WARNING: [Synth 8-7023] instance 'MC' of module 'maincharacter' has 17 connections declared, but only 13 given [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:239]
 INFO: [Synth 8-6157] synthesizing module 'wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:430]
 INFO: [Synth 8-6155] done synthesizing module 'wall' (7#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:430]
+INFO: [Synth 8-6157] synthesizing module 'monster_one' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:654]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:736]
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (8#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:736]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:674]
+INFO: [Synth 8-6155] done synthesizing module 'monster_one' (9#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:654]
 WARNING: [Synth 8-3848] Net pixel_idx_monster_1 in module/entity state_control does not have driver. [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:6]
-WARNING: [Synth 8-3848] Net pos_h_monster_1 in module/entity state_control does not have driver. [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:7]
-WARNING: [Synth 8-3848] Net pos_v_monster_1 in module/entity state_control does not have driver. [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:7]
 WARNING: [Synth 8-3848] Net pixel_idx_walls in module/entity state_control does not have driver. [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:8]
 WARNING: [Synth 8-3848] Net cave in module/entity state_control does not have driver. [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:72]
-INFO: [Synth 8-6155] done synthesizing module 'state_control' (8#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'state_control' (10#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/mem_addr_gen.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (9#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/mem_addr_gen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_front_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_stand' (10#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_front_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (11#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/mem_addr_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_front_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_stand' (12#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_front_stand_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1015]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_L' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_front_walk_L_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_L' (11#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_front_walk_L_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_L' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_front_walk_L_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_L' (13#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_front_walk_L_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_walk_L' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1022]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_R' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_front_walk_R_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_R' (12#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_front_walk_R_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_R' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_front_walk_R_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_R' (14#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_front_walk_R_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_walk_R' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1029]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_back_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_stand' (13#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_back_stand_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_back_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_stand' (15#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_back_stand_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1036]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_L' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_back_walk_L_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_L' (14#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_back_walk_L_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_L' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_back_walk_L_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_L' (16#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_back_walk_L_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_walk_L' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1043]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_R' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_back_walk_R_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_R' (15#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_back_walk_R_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_R' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_back_walk_R_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_R' (17#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_back_walk_R_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_walk_R' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1050]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_left_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_stand' (16#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_left_stand_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_left_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_stand' (18#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_left_stand_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1057]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_walk' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_left_walk_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_walk' (17#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_left_walk_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_walk' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_left_walk_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_walk' (19#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_left_walk_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_walk' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1064]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_right_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_stand' (18#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_right_stand_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_right_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_stand' (20#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_right_stand_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_stand' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1071]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_walk' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_right_walk_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_walk' (19#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CY_right_walk_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_walk' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_right_walk_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_walk' (21#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CY_right_walk_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_walk' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1078]
-INFO: [Synth 8-6157] synthesizing module 'BM_CS_student' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CS_student_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CS_student' (20#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_CS_student_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_CS_student' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CS_student_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CS_student' (22#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_CS_student_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CS_student' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1086]
-INFO: [Synth 8-6157] synthesizing module 'BM_computer_room_entrance' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_computer_room_entrance_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_computer_room_entrance' (21#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_computer_room_entrance_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_computer_room_entrance' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_computer_room_entrance_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_computer_room_entrance' (23#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_computer_room_entrance_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_computer_room_entrance' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1094]
-INFO: [Synth 8-6157] synthesizing module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_overwall_wall_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_overwall_wall' (22#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/BM_overwall_wall_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_overwall_wall_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_overwall_wall' (24#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/BM_overwall_wall_stub.v:6]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1100]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1102]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1104]
@@ -238,7 +241,7 @@ WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1216]
 WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1218]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/vga_controller.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (23#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/vga_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (25#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/vga_controller.v:1]
 INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
@@ -247,15 +250,15 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/nthu-326/De
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (24#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-23848-R326-31/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (26#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-22248-R326-31/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-226] default block is never used [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:69]
 INFO: [Synth 8-226] default block is never used [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:79]
 INFO: [Synth 8-226] default block is never used [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:89]
 INFO: [Synth 8-226] default block is never used [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:99]
 INFO: [Synth 8-226] default block is never used [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (25#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (26#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (27#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (28#1) [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v:1]
 WARNING: [Synth 8-3331] design maincharacter has unconnected port J_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port K_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port L_signal
@@ -264,26 +267,6 @@ WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_mons
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[2]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[1]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[0]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[9]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[8]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[7]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[6]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[5]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[4]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[3]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[2]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[1]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_h_monster_1[0]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[9]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[8]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[7]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[6]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[5]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[4]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[3]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[2]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[1]
-WARNING: [Synth 8-3331] design state_control has unconnected port pos_v_monster_1[0]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_walls[3]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_walls[2]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_walls[1]
@@ -293,7 +276,7 @@ WARNING: [Synth 8-3331] design state_control has unconnected port K_signal
 WARNING: [Synth 8-3331] design state_control has unconnected port L_signal
 WARNING: [Synth 8-3331] design state_control has unconnected port SPACE_signal
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 861.051 ; gain = 309.887
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 861.094 ; gain = 309.645
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -306,12 +289,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 861.051 ; gain = 309.887
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 861.094 ; gain = 309.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 861.051 ; gain = 309.887
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 861.094 ; gain = 309.645
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.272 . Memory (MB): peak = 861.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.265 . Memory (MB): peak = 861.094 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -473,20 +456,20 @@ Parsing XDC File [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of
 Finished Parsing XDC File [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 989.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 989.855 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 989.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 989.855 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 989.457 ; gain = 438.293
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 989.855 ; gain = 438.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 989.457 ; gain = 438.293
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 989.855 ; gain = 438.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -569,7 +552,7 @@ Applied set_property DONT_TOUCH = true for BM_overwall_wall_8. (constraint file 
 Applied set_property DONT_TOUCH = true for BM_overwall_wall_9. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BM_computer_room_entrance_. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 989.457 ; gain = 438.293
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 989.855 ; gain = 438.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:597]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:597]
@@ -577,6 +560,7 @@ INFO: [Synth 8-5544] ROM "pos_h" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "pos_v" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 WARNING: [Synth 8-327] inferring latch for variable 'nstate_reg' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:505]
+WARNING: [Synth 8-327] inferring latch for variable 'random_done_reg' [C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v:766]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -587,14 +571,14 @@ WARNING: [Synth 8-327] inferring latch for variable 'nstate_reg' [C:/Users/nthu-
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 989.457 ; gain = 438.293
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 989.855 ; gain = 438.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |state_control |           1|     31194|
+|1     |state_control |           1|     31646|
 |2     |Top__GB1      |           1|      6705|
 |3     |Top__GB2      |           1|      6324|
 |4     |Top__GB3      |           1|      7905|
@@ -616,34 +600,41 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 80    
 	  63 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 286   
-	   2 Input     10 Bit       Adders := 130   
-	   2 Input      4 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 131   
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
 	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	              512 Bit    Registers := 1     
-	               10 Bit    Registers := 5     
-	                4 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	               10 Bit    Registers := 8     
+	                4 Bit    Registers := 5     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
 	   2 Input    512 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 64    
 	   3 Input     12 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 6     
+	  14 Input     10 Bit        Muxes := 2     
 	   4 Input     10 Bit        Muxes := 1     
 	  13 Input      8 Bit        Muxes := 1     
 	  13 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 9     
 	   5 Input      4 Bit        Muxes := 42    
 	   5 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 4     
 	   3 Input      2 Bit        Muxes := 41    
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 18    
 	   5 Input      1 Bit        Muxes := 2     
 	  16 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 7     
+	  14 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -998,6 +989,32 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input      4 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
+Module LFSR 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module monster_one 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	  14 Input     10 Bit        Muxes := 2     
+	  14 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
 Module state_control 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1961,9 +1978,13 @@ WARNING: [Synth 8-3332] Sequential element (MC/nstate_reg[2]) is unused and will
 WARNING: [Synth 8-3332] Sequential element (MC/nstate_reg[1]) is unused and will be removed from module state_control.
 WARNING: [Synth 8-3332] Sequential element (MC/nstate_reg[0]) is unused and will be removed from module state_control.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 989.457 ; gain = 438.293
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 989.855 ; gain = 438.406
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 126, Available = 90. Use report_utilization command for details.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
@@ -2285,7 +2306,7 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |state_control |           1|       621|
+|1     |state_control |           1|      1141|
 |2     |Top__GB1      |           1|      5790|
 |3     |Top__GB2      |           1|      5128|
 |4     |Top__GB3      |           1|      6418|
@@ -2295,7 +2316,7 @@ Report RTL Partitions:
 |8     |Top__GB7      |           1|      3866|
 |9     |Top__GB8      |           1|       144|
 |10    |Top__GB9      |           1|     13490|
-|11    |Top__GB10     |           1|      4015|
+|11    |Top__GB10     |           1|      4021|
 |12    |Top__GB11     |           1|     14755|
 |13    |Top__GB12     |           1|      4071|
 +------+--------------+------------+----------+
@@ -2303,20 +2324,20 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1064.813 ; gain = 513.648
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1066.137 ; gain = 514.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1069.910 ; gain = 518.746
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1071.262 ; gain = 519.813
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |state_control |           1|       621|
+|1     |state_control |           1|      1141|
 |2     |Top__GB1      |           1|      5789|
 |3     |Top__GB2      |           1|      5032|
 |4     |Top__GB3      |           1|      6298|
@@ -2326,7 +2347,7 @@ Report RTL Partitions:
 |8     |Top__GB7      |           1|      3866|
 |9     |Top__GB8      |           1|       144|
 |10    |Top__GB9      |           1|     13490|
-|11    |Top__GB10     |           1|      3986|
+|11    |Top__GB10     |           1|      4017|
 |12    |Top__GB11     |           1|     14683|
 |13    |Top__GB12     |           1|      3996|
 +------+--------------+------------+----------+
@@ -2334,7 +2355,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2358,13 +2379,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2383,25 +2404,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2505,35 +2526,36 @@ Report Cell Usage:
 |72    |BM_overwall_wall__99      |     1|
 |73    |KeyboardCtrl_0            |     1|
 |74    |BUFG                      |     3|
-|75    |CARRY4                    |  4013|
-|76    |DSP48E1                   |    44|
-|77    |DSP48E1_1                 |    44|
+|75    |CARRY4                    |  4031|
+|76    |DSP48E1                   |    45|
+|77    |DSP48E1_1                 |    45|
 |78    |LUT1                      |  1199|
-|79    |LUT2                      |  4712|
-|80    |LUT3                      |  6758|
-|81    |LUT4                      |  5347|
-|82    |LUT5                      |  3028|
-|83    |LUT6                      |  2445|
+|79    |LUT2                      |  4764|
+|80    |LUT3                      |  6774|
+|81    |LUT4                      |  5366|
+|82    |LUT5                      |  3048|
+|83    |LUT6                      |  2487|
 |84    |MUXF7                     |    12|
 |85    |FDCE                      |    19|
-|86    |FDRE                      |   141|
-|87    |FDSE                      |     6|
-|88    |IBUF                      |     2|
-|89    |OBUF                      |    14|
+|86    |FDRE                      |   183|
+|87    |FDSE                      |    28|
+|88    |LD                        |    13|
+|89    |IBUF                      |     2|
+|90    |OBUF                      |    14|
 +------+--------------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------------+------------------------+------+
 |      |Instance                     |Module                  |Cells |
 +------+-----------------------------+------------------------+------+
-|1     |top                          |                        | 28663|
+|1     |top                          |                        | 28909|
 |2     |  CD0                        |clk_div                 |     4|
 |3     |  CD1                        |clk_div__parameterized0 |    25|
 |4     |  OP1                        |onepulse                |     2|
 |5     |  DB1                        |debounce                |     6|
 |6     |  MAG_CY                     |mem_addr_gen            |   308|
 |7     |  MAG_computer_room_entrance |mem_addr_gen_0          |   305|
-|8     |  MAG_monster_1              |mem_addr_gen_1          |   316|
+|8     |  MAG_monster_1              |mem_addr_gen_1          |   308|
 |9     |  MAG_wall_0                 |mem_addr_gen_2          |   305|
 |10    |  MAG_wall_1                 |mem_addr_gen_3          |   306|
 |11    |  MAG_wall_10                |mem_addr_gen_4          |   306|
@@ -2563,7 +2585,7 @@ Report Instance Areas:
 |35    |  MAG_wall_32                |mem_addr_gen_28         |   337|
 |36    |  MAG_wall_33                |mem_addr_gen_29         |   305|
 |37    |  MAG_wall_34                |mem_addr_gen_30         |   332|
-|38    |  MAG_wall_35                |mem_addr_gen_31         |   435|
+|38    |  MAG_wall_35                |mem_addr_gen_31         |   432|
 |39    |  MAG_wall_36                |mem_addr_gen_32         |   332|
 |40    |  MAG_wall_37                |mem_addr_gen_33         |   334|
 |41    |  MAG_wall_38                |mem_addr_gen_34         |   305|
@@ -2573,7 +2595,7 @@ Report Instance Areas:
 |45    |  MAG_wall_41                |mem_addr_gen_38         |   306|
 |46    |  MAG_wall_42                |mem_addr_gen_39         |   306|
 |47    |  MAG_wall_43                |mem_addr_gen_40         |   306|
-|48    |  MAG_wall_44                |mem_addr_gen_41         |   347|
+|48    |  MAG_wall_44                |mem_addr_gen_41         |   346|
 |49    |  MAG_wall_45                |mem_addr_gen_42         |   338|
 |50    |  MAG_wall_46                |mem_addr_gen_43         |   338|
 |51    |  MAG_wall_47                |mem_addr_gen_44         |   338|
@@ -2594,37 +2616,40 @@ Report Instance Areas:
 |66    |  MAG_wall_7                 |mem_addr_gen_59         |   306|
 |67    |  MAG_wall_8                 |mem_addr_gen_60         |   305|
 |68    |  MAG_wall_9                 |mem_addr_gen_61         |   306|
-|69    |  RGB_GEN_                   |RGB_GEN                 |   687|
-|70    |  SC0                        |state_control           |   288|
-|71    |    MC                       |maincharacter           |   284|
+|69    |  RGB_GEN_                   |RGB_GEN                 |   704|
+|70    |  SC0                        |state_control           |   488|
+|71    |    MC                       |maincharacter           |   286|
 |72    |      CD0                    |clk_div__parameterized1 |     8|
-|73    |  VC0                        |vga_controller          |  4891|
-|74    |  key_de                     |KeyboardDecoder         |    81|
-|75    |    op                       |onepulse_62             |     3|
+|73    |    m1                       |monster_one             |   198|
+|74    |      randomgen              |LFSR                    |   115|
+|75    |  VC0                        |vga_controller          |  4896|
+|76    |  key_de                     |KeyboardDecoder         |    77|
+|77    |    op                       |onepulse_62             |     3|
 +------+-----------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1112.793 ; gain = 561.344
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1113.180 ; gain = 433.609
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1113.180 ; gain = 562.016
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 1112.793 ; gain = 432.582
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1112.793 ; gain = 561.344
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.437 . Memory (MB): peak = 1113.180 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4113 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.439 . Memory (MB): peak = 1122.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4146 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1113.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1129.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 13 instances were transformed.
+  LD => LDCE: 13 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-83 Infos, 187 Warnings, 0 Critical Warnings and 0 Errors encountered.
+87 Infos, 167 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1113.180 ; gain = 815.133
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1113.180 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1129.555 ; gain = 830.945
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1129.555 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan  7 18:00:49 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  7 18:26:24 2024...
