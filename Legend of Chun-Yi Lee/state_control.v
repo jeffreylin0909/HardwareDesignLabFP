@@ -1,80 +1,951 @@
 module state_control(
     input clk, rst, 
     input A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal, 
-    output reg [3:0] pixel_idx_CY,
-    output reg [9:0] pos_h_CY, pos_v_CY,
-    output reg [3:0] pixel_idx_monster_1,
-    output reg [9:0] pos_h_monster_1, pos_v_monster_1
+    output [3:0] pixel_idx_CY,
+    output [9:0] pos_h_CY, pos_v_CY,
+    output [3:0] pixel_idx_monster_1,
+    output [9:0] pos_h_monster_1, pos_v_monster_1,
+    output [3:0] pixel_idx_walls,
+    output [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance,
+    output [9:0] pos_h_wall_0, pos_v_wall_0,
+    output [9:0] pos_h_wall_1, pos_v_wall_1,
+    output [9:0] pos_h_wall_2, pos_v_wall_2,
+    output [9:0] pos_h_wall_3, pos_v_wall_3,
+    output [9:0] pos_h_wall_4, pos_v_wall_4,
+    output [9:0] pos_h_wall_5, pos_v_wall_5,
+    output [9:0] pos_h_wall_6, pos_v_wall_6,
+    output [9:0] pos_h_wall_7, pos_v_wall_7,
+    output [9:0] pos_h_wall_8, pos_v_wall_8,
+    output [9:0] pos_h_wall_9, pos_v_wall_9,
+    output [9:0] pos_h_wall_10, pos_v_wall_10,
+    output [9:0] pos_h_wall_11, pos_v_wall_11,
+    output [9:0] pos_h_wall_12, pos_v_wall_12,
+    output [9:0] pos_h_wall_13, pos_v_wall_13,
+    output [9:0] pos_h_wall_14, pos_v_wall_14,
+    output [9:0] pos_h_wall_15, pos_v_wall_15,
+    output [9:0] pos_h_wall_16, pos_v_wall_16,
+    output [9:0] pos_h_wall_17, pos_v_wall_17,
+    output [9:0] pos_h_wall_18, pos_v_wall_18,
+    output [9:0] pos_h_wall_19, pos_v_wall_19,
+    output [9:0] pos_h_wall_20, pos_v_wall_20,
+    output [9:0] pos_h_wall_21, pos_v_wall_21,
+    output [9:0] pos_h_wall_22, pos_v_wall_22,
+    output [9:0] pos_h_wall_23, pos_v_wall_23,
+    output [9:0] pos_h_wall_24, pos_v_wall_24,
+    output [9:0] pos_h_wall_25, pos_v_wall_25,
+    output [9:0] pos_h_wall_26, pos_v_wall_26,
+    output [9:0] pos_h_wall_27, pos_v_wall_27,
+    output [9:0] pos_h_wall_28, pos_v_wall_28,
+    output [9:0] pos_h_wall_29, pos_v_wall_29,
+    output [9:0] pos_h_wall_30, pos_v_wall_30,
+    output [9:0] pos_h_wall_31, pos_v_wall_31,
+    output [9:0] pos_h_wall_32, pos_v_wall_32,
+    output [9:0] pos_h_wall_33, pos_v_wall_33,
+    output [9:0] pos_h_wall_34, pos_v_wall_34,
+    output [9:0] pos_h_wall_35, pos_v_wall_35,
+    output [9:0] pos_h_wall_36, pos_v_wall_36,
+    output [9:0] pos_h_wall_37, pos_v_wall_37,
+    output [9:0] pos_h_wall_38, pos_v_wall_38,
+    output [9:0] pos_h_wall_39, pos_v_wall_39,
+    output [9:0] pos_h_wall_40, pos_v_wall_40,
+    output [9:0] pos_h_wall_41, pos_v_wall_41,
+    output [9:0] pos_h_wall_42, pos_v_wall_42,
+    output [9:0] pos_h_wall_43, pos_v_wall_43,
+    output [9:0] pos_h_wall_44, pos_v_wall_44,
+    output [9:0] pos_h_wall_45, pos_v_wall_45,
+    output [9:0] pos_h_wall_46, pos_v_wall_46,
+    output [9:0] pos_h_wall_47, pos_v_wall_47,
+    output [9:0] pos_h_wall_48, pos_v_wall_48,
+    output [9:0] pos_h_wall_49, pos_v_wall_49,
+    output [9:0] pos_h_wall_50, pos_v_wall_50,
+    output [9:0] pos_h_wall_51, pos_v_wall_51,
+    output [9:0] pos_h_wall_52, pos_v_wall_52,
+    output [9:0] pos_h_wall_53, pos_v_wall_53,
+    output [9:0] pos_h_wall_54, pos_v_wall_54,
+    output [9:0] pos_h_wall_55, pos_v_wall_55,
+    output [9:0] pos_h_wall_56, pos_v_wall_56,
+    output [9:0] pos_h_wall_57, pos_v_wall_57,
+    output [9:0] pos_h_wall_58, pos_v_wall_58,
+    output [9:0] pos_h_wall_59, pos_v_wall_59
+    
     );
-	
+	wire backstage, nextstage, cave;
 	reg [3:0] stage, next_stage;
-	wire backstage, nextstage;
+	wire changing_stage;
+	wire halfsec_clk, dclk;
+	assign changing_stage = backstage | nextstage | rst;
+
+    wire [3:0] wall_collisions[63:0];
+    wire [3:0] wall_collision_total;
+
+    assign wall_collision_total = wall_collisions[0]|wall_collisions[1]|wall_collisions[2]|wall_collisions[3]|wall_collisions[4]|wall_collisions[5]|wall_collisions[6]|wall_collisions[7]|wall_collisions[8]|wall_collisions[9]|
+                                  wall_collisions[10]|wall_collisions[11]|wall_collisions[12]|wall_collisions[13]|wall_collisions[14]|wall_collisions[15]|wall_collisions[16]|wall_collisions[17]|wall_collisions[18]|wall_collisions[19]|
+                                  wall_collisions[20]|wall_collisions[21]|wall_collisions[22]|wall_collisions[23]|wall_collisions[24]|wall_collisions[25]|wall_collisions[26]|wall_collisions[27]|wall_collisions[28]|wall_collisions[29]|
+                                  wall_collisions[30]|wall_collisions[31]|wall_collisions[32]|wall_collisions[33]|wall_collisions[34]|wall_collisions[35]|wall_collisions[36]|wall_collisions[37]|wall_collisions[38]|wall_collisions[39];
+                                  
+	assign pos_h_computer_room_entrance = 240;
+	assign pos_v_computer_room_entrance = 160;
 	
+    assign pos_h_wall_0 = 320;
+    assign pos_v_wall_0 = 120;//
+    assign pos_h_wall_1 = 300;
+    assign pos_v_wall_1 = 120;//
+    assign pos_h_wall_2 = 280;
+    assign pos_v_wall_2 = 120;//
+    assign pos_h_wall_3 = 260;
+    assign pos_v_wall_3 = 160;//
+    assign pos_h_wall_4 = 240;
+    assign pos_v_wall_4 = 180;//
+    assign pos_h_wall_5 = 220;
+    assign pos_v_wall_5 = 160;//
+    assign pos_h_wall_6 = 200;
+    assign pos_v_wall_6 = 180;//
+    assign pos_h_wall_7 = 180;
+    assign pos_v_wall_7 = 180;//
+    assign pos_h_wall_8 = 160;
+    assign pos_v_wall_8 = 180;//
+    assign pos_h_wall_9 = 140;
+    assign pos_v_wall_9 = 180;//
+    assign pos_h_wall_10 = 120;
+    assign pos_v_wall_10 = 180;//
+    assign pos_h_wall_11 = 100;
+    assign pos_v_wall_11 = 140;//
+    assign pos_h_wall_12 = 80;
+    assign pos_v_wall_12 = 140;//
+    assign pos_h_wall_13 = 60;
+    assign pos_v_wall_13 = 140;//
+    assign pos_h_wall_14 = 40;
+    assign pos_v_wall_14 = 140;//
+    assign pos_h_wall_15 = 20;
+    assign pos_v_wall_15 = 140;////
+    assign pos_h_wall_16 = 320;
+    assign pos_v_wall_16 = 60;//
+    assign pos_h_wall_17 = 300;
+    assign pos_v_wall_17 = 60;//
+    assign pos_h_wall_18 = 280;
+    assign pos_v_wall_18 = 60;//
+    assign pos_h_wall_19 = 260;
+    assign pos_v_wall_19 = 60;//
+    assign pos_h_wall_20 = 240;
+    assign pos_v_wall_20 = 60;//
+    assign pos_h_wall_21 = 220;
+    assign pos_v_wall_21 = 60;//
+    assign pos_h_wall_22 = 200;
+    assign pos_v_wall_22 = 60;//
+    assign pos_h_wall_23 = 180;
+    assign pos_v_wall_23 = 60;//
+    assign pos_h_wall_24 = 160;
+    assign pos_v_wall_24 = 60;//
+    assign pos_h_wall_25 = 140;
+    assign pos_v_wall_25 = 60;//
+    assign pos_h_wall_26 = 120;
+    assign pos_v_wall_26 = 60;//
+    assign pos_h_wall_27 = 100;
+    assign pos_v_wall_27 = 60;//
+    assign pos_h_wall_28 = 80;
+    assign pos_v_wall_28 = 60;//
+    assign pos_h_wall_29 = 60;
+    assign pos_v_wall_29 = 60;//
+    assign pos_h_wall_30 = 40;
+    assign pos_v_wall_30 = 60;//
+    assign pos_h_wall_31 = 20;
+    assign pos_v_wall_31 = 60;////
+    assign pos_h_wall_32 = 280;
+    assign pos_v_wall_32 = 140;//
+    assign pos_h_wall_33 = 100;
+    assign pos_v_wall_33 = 160;//
+    assign pos_h_wall_34 = 320;
+    assign pos_v_wall_34 = 140;//
+    assign pos_h_wall_35 = 300;
+    assign pos_v_wall_35 = 140;//
+    assign pos_h_wall_36 = 80;
+    assign pos_v_wall_36 = 160;//
+    assign pos_h_wall_37 = 60;
+    assign pos_v_wall_37 = 160;//
+    assign pos_h_wall_38 = 40;
+    assign pos_v_wall_38 = 160;//
+    assign pos_h_wall_39 = 20;
+    assign pos_v_wall_39 = 160;//
+    assign pos_h_wall_40 = 100;
+    assign pos_v_wall_40 = 100;//
+    assign pos_h_wall_41 = 100;
+    assign pos_v_wall_41 = 100;//
+    assign pos_h_wall_42 = 100;
+    assign pos_v_wall_42 = 100;//
+    assign pos_h_wall_43 = 100;
+    assign pos_v_wall_43 = 100;//
+    assign pos_h_wall_44 = 100;
+    assign pos_v_wall_44 = 100;//
+    assign pos_h_wall_45 = 100;
+    assign pos_v_wall_45 = 100;//
+    assign pos_h_wall_46 = 100;
+    assign pos_v_wall_46 = 100;//
+    assign pos_h_wall_47 = 100;
+    assign pos_v_wall_47 = 100;//
+    assign pos_h_wall_48 = 100;
+    assign pos_v_wall_48 = 100;//
+    assign pos_h_wall_49 = 100;
+    assign pos_v_wall_49 = 100;//
+    assign pos_h_wall_50 = 100;
+    assign pos_v_wall_50 = 100;//
+    assign pos_h_wall_51 = 100;
+    assign pos_v_wall_51 = 100;//
+    assign pos_h_wall_52 = 100;
+    assign pos_v_wall_52 = 100;//
+    assign pos_h_wall_53 = 100;
+    assign pos_v_wall_53 = 100;//
+    assign pos_h_wall_54 = 100;
+    assign pos_v_wall_54 = 100;//
+    assign pos_h_wall_55 = 100;
+    assign pos_v_wall_55 = 100;//
+    assign pos_h_wall_56 = 100;
+    assign pos_v_wall_56 = 100;//
+    assign pos_h_wall_57 = 100;
+    assign pos_v_wall_57 = 100;//
+    assign pos_h_wall_58 = 100;
+    assign pos_v_wall_58 = 100;//
+    assign pos_h_wall_59 = 100;
+    assign pos_v_wall_59 = 100;//
+
 	//stage change
 	always@(posedge clk) begin
 	   if (rst)begin
-	       stage <= 4'h0;
+	       stage <= 4'd0;
 	   end else begin
 	       stage <= next_stage;
 	   end
 	end
-	//determin state change
+	//determine state change
 	always@(*)begin
 	   if (nextstage)begin
 	       next_stage = stage+1;
 	   end else begin
-	       if (backstage)begin
-               next_stage = stage-1;
-           end else begin
+           if (backstage)begin
+                if (stage == 4'h0)begin
+                    next_stage = stage;
+                end else begin
+                    next_stage = stage-1;
+                end
+           end 
+           else if (cave) begin
+               next_stage = 4'd11;
+           end
+           else begin
                next_stage = stage;
            end
 	   end
 	end
 	//CY
-	always@(posedge clk)begin
-	   if (A_signal) begin
-           if (pos_h_CY < 319) begin
-               pos_h_CY <= pos_h_CY+1;
-           end else begin
-               pos_h_CY <= 319;
-           end
-       end else begin
-           if (D_signal) begin
-               if (pos_h_CY > 20) begin
-                   pos_h_CY <= pos_h_CY-1;
-               end else begin
-                   pos_h_CY <= 20;
-               end
-           end else begin
-               if (W_signal) begin
-                   if (pos_v_CY < 239) begin
-                       pos_v_CY <= pos_v_CY+1;
-                   end else begin
-                       pos_v_CY <= 239;
-                   end
-               end else begin
-                   if (S_signal) begin
-                       if (pos_v_CY > 20) begin
-                           pos_v_CY <= pos_v_CY-1;
-                       end else begin
-                           pos_v_CY <= 20;
-                       end
-                   end else begin
-                       pos_h_CY <= pos_h_CY;
-                       pos_v_CY <= pos_v_CY;
-                   end
-               end
-           end
-       end
-	end
+	maincharacter MC(
+	   .clk(clk),
+	   .rst(changing_stage), 
+	   .A_signal(A_signal), 
+	   .D_signal(D_signal), 
+	   .W_signal(W_signal), 
+	   .S_signal(S_signal), 
+	   .stagestate(stage), 
+	   .pos_h(pos_h_CY), 
+	   .pos_v(pos_v_CY), 
+	   .state(pixel_idx_CY),
+	   .backstage(backstage), 
+	   .nextstage(nextstage),
+	   .wall_collision(wall_collision_total)
+	);
 	
+                 wall wall_0(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_0),
+         .pos_v(pos_v_wall_0),
+.collision(wall_collisions[0]));
+                 wall wall_1(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_1),
+         .pos_v(pos_v_wall_1),
+.collision(wall_collisions[1]));
+                 wall wall_2(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_2),
+         .pos_v(pos_v_wall_2),
+.collision(wall_collisions[2]));
+                 wall wall_3(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_3),
+         .pos_v(pos_v_wall_3),
+.collision(wall_collisions[3]));
+                 wall wall_4(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_4),
+         .pos_v(pos_v_wall_4),
+.collision(wall_collisions[4]));
+                 wall wall_5(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_5),
+         .pos_v(pos_v_wall_5),
+.collision(wall_collisions[5]));
+                 wall wall_6(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_6),
+         .pos_v(pos_v_wall_6),
+.collision(wall_collisions[6]));
+                 wall wall_7(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_7),
+         .pos_v(pos_v_wall_7),
+.collision(wall_collisions[7]));
+                 wall wall_8(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_8),
+         .pos_v(pos_v_wall_8),
+.collision(wall_collisions[8]));
+                 wall wall_9(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_9),
+         .pos_v(pos_v_wall_9),
+.collision(wall_collisions[9]));
+                 wall wall_10(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_10),
+         .pos_v(pos_v_wall_10),
+.collision(wall_collisions[10]));
+                 wall wall_11(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_11),
+         .pos_v(pos_v_wall_11),
+.collision(wall_collisions[11]));
+                 wall wall_12(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_12),
+         .pos_v(pos_v_wall_12),
+.collision(wall_collisions[12]));
+                 wall wall_13(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_13),
+         .pos_v(pos_v_wall_13),
+.collision(wall_collisions[13]));
+                 wall wall_14(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_14),
+         .pos_v(pos_v_wall_14),
+.collision(wall_collisions[14]));
+                 wall wall_15(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_15),
+         .pos_v(pos_v_wall_15),
+.collision(wall_collisions[15]));
+                 wall wall_16(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_16),
+         .pos_v(pos_v_wall_16),
+.collision(wall_collisions[16]));
+                 wall wall_17(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_17),
+         .pos_v(pos_v_wall_17),
+.collision(wall_collisions[17]));
+                 wall wall_18(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_18),
+         .pos_v(pos_v_wall_18),
+.collision(wall_collisions[18]));
+                 wall wall_19(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_19),
+         .pos_v(pos_v_wall_19),
+.collision(wall_collisions[19]));
+                 wall wall_20(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_20),
+         .pos_v(pos_v_wall_20),
+.collision(wall_collisions[20]));
+                 wall wall_21(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_21),
+         .pos_v(pos_v_wall_21),
+.collision(wall_collisions[21]));
+                 wall wall_22(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_22),
+         .pos_v(pos_v_wall_22),
+.collision(wall_collisions[22]));
+                 wall wall_23(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_23),
+         .pos_v(pos_v_wall_23),
+.collision(wall_collisions[23]));
+                 wall wall_24(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_24),
+         .pos_v(pos_v_wall_24),
+.collision(wall_collisions[24]));
+                 wall wall_25(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_25),
+         .pos_v(pos_v_wall_25),
+.collision(wall_collisions[25]));
+                 wall wall_26(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_26),
+         .pos_v(pos_v_wall_26),
+.collision(wall_collisions[26]));
+                 wall wall_27(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_27),
+         .pos_v(pos_v_wall_27),
+.collision(wall_collisions[27]));
+                 wall wall_28(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_28),
+         .pos_v(pos_v_wall_28),
+.collision(wall_collisions[28]));
+                 wall wall_29(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_29),
+         .pos_v(pos_v_wall_29),
+.collision(wall_collisions[29]));
+                 wall wall_30(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_30),
+         .pos_v(pos_v_wall_30),
+.collision(wall_collisions[30]));
+                 wall wall_31(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_31),
+         .pos_v(pos_v_wall_31),
+.collision(wall_collisions[31]));
+                 wall wall_32(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_32),
+         .pos_v(pos_v_wall_32),
+.collision(wall_collisions[32]));
+                 wall wall_33(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_33),
+         .pos_v(pos_v_wall_33),
+.collision(wall_collisions[33]));
+                 wall wall_34(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_34),
+         .pos_v(pos_v_wall_34),
+.collision(wall_collisions[34]));
+                 wall wall_35(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_35),
+         .pos_v(pos_v_wall_35),
+.collision(wall_collisions[35]));
+                 wall wall_36(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_36),
+         .pos_v(pos_v_wall_36),
+.collision(wall_collisions[36]));
+                 wall wall_37(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_37),
+         .pos_v(pos_v_wall_37),
+.collision(wall_collisions[37]));
+                 wall wall_38(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_38),
+         .pos_v(pos_v_wall_38),
+.collision(wall_collisions[38]));
+                 wall wall_39(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+         .pos_h(pos_h_wall_39),
+         .pos_v(pos_v_wall_39),
+.collision(wall_collisions[39]));
+
+
+
+
 	//monster_1
-	always@(posedge clk)begin
-	   if (pos_h_monster_1 < 319)begin
-           pos_h_monster_1 <= pos_h_monster_1+1;
-       end else begin
-           pos_h_monster_1 <= 20;
-       end
-	end
+	// monster_one m1(
+	//    .clk(clk), 
+	//    .rst(changing_stage), 
+	//    .stagestate(stage), 
+	//    .pos_h(pos_h_monster_1), 
+	//    .pos_v(pos_v_monster_1)
+	// );
 	
+endmodule
+
+module wall(
+    input [9:0] pos_h_CY, pos_v_CY,
+    input [9:0] pos_h, pos_v,
+    output reg [3:0] collision
+    );
+
+    always @(*)begin
+        if (pos_v_CY < pos_v+20 && pos_v_CY > pos_v-20)begin
+            if (pos_h_CY == pos_h+20) begin
+                collision = 4'b0001;//*->|
+            end else begin
+                if (pos_h_CY+20 == pos_h) begin
+                    collision = 4'b0010;//|<-*
+                end else begin
+                    collision = 4'b0000;
+                end
+            end
+        end else begin
+            if (pos_h_CY < pos_h+20 && pos_h_CY > pos_h-20)begin
+                if (pos_v_CY+20 == pos_v) begin
+                    collision = 4'b0100;//^
+                end else begin
+                    if (pos_v_CY == pos_v+20) begin
+                        collision = 4'b1000;//U
+                    end else begin
+                        collision = 4'b0000;
+                    end
+                end
+            end else begin
+                collision = 4'b0000;
+            end
+        end
+    end
+
+endmodule
+
+module maincharacter (clk, rst, A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal, stagestate, pos_h, pos_v, state, backstage, nextstage,wall_collision);
+input clk;
+input rst;
+input A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal;
+input [3:0] stagestate;
+input [3:0] wall_collision;
+output reg  [9:0] pos_h = 10'd150, pos_v = 10'd110;
+output reg [3:0] state;
+output reg backstage, nextstage;
+
+reg [9:0] npos_v, npos_h;
+reg [2:0] signals; 
+reg [3:0] nstate;
+
+parameter FACE_FRONT_STAND = 4'd0, FACE_FRONT_WALK_L = 4'd1, FACE_FRONT_WALK_R = 4'd2, 
+FACE_RIGHT_STAND = 4'd3, FACE_RIGHT_WALK = 4'd4, FACE_LEFT_STAND = 4'd5, FACE_LEFT_WALK = 4'd6, 
+FACE_BACK_STAND = 4'd7, FACE_BACK_WALK_L = 4'd8, FACE_BACK_WALK_R = 4'd9;
+    
+always @(*) begin //combine WASD signals into one reg for ease of coding
+    if (W_signal) signals = 3'd1; //W = go up
+    else if (S_signal) signals = 3'd2; //S = go down
+    else if (A_signal) signals = 3'd3; //A = go left
+    else if (D_signal) signals = 3'd4; //D = go right
+    else signals = 3'd0;
+end
+
+clk_div #(4) CD0(.clk(clk), .clk_d(dclk));
+
+always @(posedge dclk) begin //state always block
+    if (rst) begin
+        state <= FACE_FRONT_STAND;
+    end else begin
+        state <= nstate;
+    end
+end
+
+always @(*) begin //state always block 2
+    case (signals)
+        3'd0: begin
+            nstate = FACE_FRONT_STAND;
+        end
+        3'd1: begin
+            if (state == FACE_BACK_WALK_L) nstate = FACE_BACK_WALK_R;
+            else if (state == FACE_BACK_WALK_R) nstate = FACE_BACK_WALK_L;
+            else nstate = FACE_BACK_WALK_R;
+        end
+        3'd2: begin
+            if (state == FACE_FRONT_WALK_L) nstate = FACE_FRONT_WALK_R;
+            else if (state == FACE_FRONT_WALK_R) nstate = FACE_FRONT_WALK_L;
+            else nstate = FACE_FRONT_WALK_R;
+        end
+        3'd3: begin
+            if (state == FACE_LEFT_WALK) nstate = FACE_LEFT_STAND;
+            else nstate = FACE_LEFT_WALK;        
+        end
+        3'd4: begin
+            if (state == FACE_RIGHT_WALK) nstate = FACE_RIGHT_STAND;
+            else nstate = FACE_RIGHT_WALK;
+        end
+    endcase
+    if (!W_signal && !S_signal && !A_signal && !D_signal) begin
+        if (state == FACE_FRONT_WALK_L || state == FACE_FRONT_WALK_R || state == FACE_FRONT_STAND) nstate = FACE_FRONT_STAND;
+        if (state == FACE_RIGHT_WALK || state == FACE_RIGHT_STAND) nstate = FACE_RIGHT_STAND;
+        if (state == FACE_LEFT_WALK || state == FACE_LEFT_STAND) nstate = FACE_LEFT_STAND;
+        if (state == FACE_BACK_WALK_L || state == FACE_BACK_WALK_R || state == FACE_BACK_STAND) nstate = FACE_BACK_STAND;
+    end
+end
+
+always@(posedge clk) begin //movement always block
+    if (rst) begin
+        case (stagestate)
+            4'd0: begin //stage 1
+                pos_h <= 150;
+                pos_v <= 110;
+            end
+            4'd1: begin //stage 2
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd2: begin //stage 3
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd3: begin //stage 4
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd4: begin //stage 5
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd5: begin //stage 6
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd6: begin //stage 7
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd7: begin //stage 8
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd8: begin //stage 9
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd9: begin //stage 10
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd10: begin //end stage
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            4'd11: begin //cave
+                pos_h <= 25;
+                pos_v <= 25;
+            end
+            default: begin
+                pos_h <= 25;
+                pos_v <= 25;   
+            end
+        endcase
+    end else begin
+        pos_h <= npos_h;
+        pos_v <= npos_v;
+    end
+end
+// 
+always @ (*) begin
+    case (signals)
+        3'd1:begin
+            npos_h = pos_h;
+            if (wall_collision[2])begin
+                npos_v = pos_v;
+            end else begin
+                npos_v = pos_v + 10'd1; //walk up
+            end
+        end 
+        3'd2:begin
+            npos_h = pos_h;
+            if (wall_collision[3])begin
+                npos_v = pos_v;
+            end else begin
+                npos_v = pos_v - 10'd1; //walk down
+            end
+        end 
+        3'd3:begin
+            if (wall_collision[1])begin
+                npos_h = pos_h;
+            end else begin
+                npos_h = pos_h + 10'd1; //walk left
+            end
+            npos_v = pos_v;
+        end 
+        3'd4:begin
+            if (wall_collision[0])begin
+                npos_h = pos_h;
+            end else begin
+                npos_h = pos_h - 10'd1; //walk right
+            end
+            npos_v = pos_v;
+        end 
+        default: begin
+            npos_h = pos_h;
+            npos_v = pos_v;
+        end
+    endcase
+end
+
+always @ (posedge clk) begin
+    if (pos_h >= 319)begin
+        backstage <= 1;
+        nextstage <= 0;
+    end else begin
+        if (pos_h <= 20)begin
+            backstage <= 0;
+            nextstage <= 1;
+        end else begin
+            backstage <= 0;
+            nextstage <= 0;
+        end
+    end
+end
+
+endmodule
+
+module monster_one (clk, rst, stagestate, pos_h, pos_v);
+input clk;
+input rst;
+input [3:0]stagestate;
+
+output reg [9:0] pos_h;
+output reg [9:0] pos_v;
+
+reg [2:0] state, nstate;
+reg [8:0] npos_h, npos_v;
+integer i;
+
+always @(posedge clk) begin
+    if (rst) begin
+        state <= 3'd0;
+        case (stagestate)
+            4'd1: begin
+                pos_h <= 160;
+                pos_v <= 120;
+            end
+            4'd2: begin
+            end
+            4'd3: begin
+            
+            end
+            4'd4: begin
+            
+            end
+            4'd5: begin
+            
+            end
+            4'd6: begin
+            
+            end
+            4'd7: begin
+            
+            end
+            4'd8: begin
+            
+            end
+            4'd9: begin
+            
+            end
+            default: begin
+                pos_h <= -1;
+                pos_v <= -1;
+            end
+        endcase 
+    end 
+    else begin
+        state <= nstate;
+        pos_h <= npos_h;
+        pos_v <= npos_v;
+    end
+end
+
+always @(*) begin
+    case (stagestate)
+        4'd1: begin //stage 2
+            case (state)
+                3'd0: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+                3'd1: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;   
+                end
+                3'd2: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h;
+                            npos_v = pos_v + 1;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h;
+                            npos_v = pos_v + 1;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h;
+                            npos_v = pos_v + 1;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+                3'd3: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+                3'd4: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h;
+                            npos_v = pos_v + 1;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h;
+                            npos_v = pos_v + 1;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h;
+                            npos_v = pos_v + 1;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+                3'd5: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+                3'd6: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h - 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+                3'd7: begin
+                    if (pos_h >= 200 && pos_h <= 319 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h > 319) npos_h = 319;
+                    end
+                    if (pos_h > 100 && pos_h < 200 && pos_v > 60 && pos_v < 200) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 60) npos_v = 61;
+                        if (pos_v >= 200) npos_v = 199;
+                    end
+                    if (pos_h >= 20 && pos_h < 100 && pos_v > 100 && pos_v < 160) begin
+                        for (i = 0; i < 20; i= i+1) begin
+                            npos_h = pos_h + 1;
+                            npos_v = pos_v;
+                        end
+                        if (pos_v <= 100) npos_v = 101;
+                        if (pos_v >= 160) npos_v = 159;
+                        if (pos_h < 20) npos_h = 20;
+                    end
+                    nstate = state + 3'd1;
+                end
+            endcase
+        end
+    endcase
+end
+
 endmodule

@@ -3,6 +3,7 @@ module select_pixel(
 	input [9:0] pos_h,pos_v,
 	input [9:0] size_h,size_v,
 	input [3:0] now_pixel_idx,
+	input [11:0] pixel_0,
 	input [11:0] pixel_1,
 	input [11:0] pixel_2,
 	input [11:0] pixel_3,
@@ -24,7 +25,7 @@ module select_pixel(
 	always @(*) begin
 		if ((h_cnt+pos_h)%320 < size_h && (v_cnt+pos_v)%240 < size_v)begin
 			case (now_pixel_idx)
-			    4'h0: now_pixel = pixel_1;
+			    4'h0: now_pixel = pixel_0;
 				4'h1: now_pixel = pixel_1;
 				4'h2: now_pixel = pixel_2;
 				4'h3: now_pixel = pixel_3;

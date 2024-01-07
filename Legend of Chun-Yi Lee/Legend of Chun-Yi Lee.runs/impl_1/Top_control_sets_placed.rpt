@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Jan  6 13:53:04 2024
-| Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
+| Date         : Sun Jan  7 18:02:03 2024
+| Host         : R326-31 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a35t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    17 |
-|    Minimum number of control sets                        |    17 |
+| Total control sets                                       |    19 |
+|    Minimum number of control sets                        |    19 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    64 |
+| Unused register locations in slices containing registers |    63 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    17 |
-| >= 0 to < 4        |     3 |
-| >= 4 to < 6        |     4 |
-| >= 6 to < 8        |     1 |
+| Total control sets |    19 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     6 |
+| >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     3 |
-| >= 10 to < 12      |     4 |
+| >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     4 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,38 +58,40 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              23 |            7 |
-| No           | No                    | Yes                    |              63 |           22 |
-| No           | Yes                   | No                     |              21 |            8 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              47 |           13 |
-| Yes          | Yes                   | No                     |              30 |           16 |
+| No           | No                    | No                     |              35 |           12 |
+| No           | No                    | Yes                    |              63 |           23 |
+| No           | Yes                   | No                     |              52 |           34 |
+| Yes          | No                    | No                     |              12 |            5 |
+| Yes          | No                    | Yes                    |              47 |           14 |
+| Yes          | Yes                   | No                     |              48 |           19 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------------------------------------------+--------------------------------+------------------+----------------+
-|  Clock Signal  |                   Enable Signal                   |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
-+----------------+---------------------------------------------------+--------------------------------+------------------+----------------+
-|  CD0/Q[0]      |                                                   | rst_IBUF                       |                2 |              2 |
-|  clk_IBUF_BUFG | key_de/inst/inst/lock_status0                     | rst_IBUF                       |                1 |              2 |
-|  CD1/out[0]    | key_de/key_down_reg[35]_0[0]                      | key_de/SR[1]                   |                3 |              3 |
-|  clk_IBUF_BUFG | key_de/op/E[0]                                    | rst_IBUF                       |                1 |              4 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                       |                1 |              4 |
-|  CD1/out[0]    | key_de/E[0]                                       | SC0/pos_h_CY0_in[9]            |                3 |              5 |
-|  CD1/out[0]    | key_de/key_down_reg[28]_0                         | SC0/pos_h_CY[8]_i_1_n_0        |                2 |              5 |
-|  CD1/out[0]    | key_de/key_down_reg[35]_8                         | key_de/SR[0]                   |                3 |              7 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                       |                3 |              8 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                       |                2 |              8 |
-|  CD1/out[0]    |                                                   | SC0/pos_h_monster_1[8]_i_1_n_0 |                2 |              9 |
-|  CD0/Q[0]      |                                                   | VC0/pixel_cnt[9]_i_1_n_0       |                4 |             10 |
-|  CD0/Q[0]      | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0        |                5 |             10 |
-|  clk_IBUF_BUFG | key_de/next_key                                   | rst_IBUF                       |                2 |             10 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                       |                3 |             11 |
-|  clk_IBUF_BUFG |                                                   |                                |                7 |             23 |
-|  clk_IBUF_BUFG |                                                   | rst_IBUF                       |               22 |             63 |
-+----------------+---------------------------------------------------+--------------------------------+------------------+----------------+
++------------------+---------------------------------------------------+--------------------------+------------------+----------------+
+|   Clock Signal   |                   Enable Signal                   |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++------------------+---------------------------------------------------+--------------------------+------------------+----------------+
+|  clk_IBUF_BUFG   | key_de/inst/inst/lock_status0                     | rst_IBUF                 |                1 |              2 |
+|  clk_d2_BUFG     |                                                   | rst_IBUF                 |                2 |              2 |
+|  SC0/MC/CD0/Q[0] |                                                   | SC0/MC/changing_stage    |                4 |              4 |
+|  clk_IBUF_BUFG   | key_de/op/E[0]                                    | rst_IBUF                 |                2 |              4 |
+|  clk_IBUF_BUFG   | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                 |                1 |              4 |
+|  clk_d22_BUFG    | SC0/MC/E[0]                                       | OP1/rst_op               |                1 |              4 |
+|  clk_d22_BUFG    | SC0/MC/pos_h[7]_i_1_n_0                           | SC0/MC/pos_h[9]_i_1_n_0  |                2 |              4 |
+|  clk_d22_BUFG    | SC0/MC/pos_v[9]_i_1_n_0                           | SC0/MC/pos_v[6]_i_1_n_0  |                1 |              4 |
+|  clk_d22_BUFG    | SC0/MC/pos_h[7]_i_1_n_0                           |                          |                3 |              6 |
+|  clk_d22_BUFG    | SC0/MC/pos_v[9]_i_1_n_0                           |                          |                2 |              6 |
+|  clk_IBUF_BUFG   | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                 |                4 |              8 |
+|  clk_IBUF_BUFG   | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                 |                2 |              8 |
+|  clk_d22_BUFG    |                                                   |                          |                3 |              8 |
+|  clk_IBUF_BUFG   | key_de/next_key                                   | rst_IBUF                 |                2 |             10 |
+|  clk_IBUF_BUFG   | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                 |                2 |             11 |
+|  clk_IBUF_BUFG   |                                                   |                          |                9 |             27 |
+|  clk_d2_BUFG     | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |               15 |             36 |
+|  clk_d2_BUFG     |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |               28 |             46 |
+|  clk_IBUF_BUFG   |                                                   | rst_IBUF                 |               23 |             63 |
++------------------+---------------------------------------------------+--------------------------+------------------+----------------+
 
 

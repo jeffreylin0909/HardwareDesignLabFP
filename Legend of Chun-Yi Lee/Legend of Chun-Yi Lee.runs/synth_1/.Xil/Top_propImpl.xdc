@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/verilog project/Legend of Chun-Yi Lee/cons.xdc} rfile:../../../cons.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/cons.xdc} rfile:../../../cons.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J18 [get_ports {vgaBlue[3]}]
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]

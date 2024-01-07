@@ -66,23 +66,34 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 5
+  set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/wt} [current_project]
-  set_property parent.project_path {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr} [current_project]
-  set_property ip_repo_paths {{C:/verilog project/Legend of Chun-Yi Lee/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr} [current_project]
+  set_property ip_repo_paths {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/ip}} [current_project]
   update_ip_catalog
-  set_property ip_output_repo {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/ip}} [current_project]
+  set_property ip_output_repo {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand/BM_CY_front_stand.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student/BM_CS_student.xci}}
-  read_xdc {{C:/verilog project/Legend of Chun-Yi Lee/cons.xdc}}
+  add_files -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R.xci}}
+  read_ip -quiet {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall.xci}}
+  read_ip -quiet {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance.xci}}
+  read_xdc {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/cons.xdc}}
   link_design -top Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
