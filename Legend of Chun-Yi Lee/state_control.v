@@ -5,8 +5,9 @@ module state_control(
     output [9:0] pos_h_CY, pos_v_CY,
     output [3:0] pixel_idx_monster_1,
     output [9:0] pos_h_monster_1, pos_v_monster_1,
-    output [3:0] pixel_idx_walls,
+    output [3:0] pixel_idx_computer_room_entrance,
     output [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance,
+    output [3:0] pixel_idx_walls,
     output [9:0] pos_h_wall_0, pos_v_wall_0,
     output [9:0] pos_h_wall_1, pos_v_wall_1,
     output [9:0] pos_h_wall_2, pos_v_wall_2,
@@ -72,17 +73,25 @@ module state_control(
 	wire backstage, nextstage, cave;
 	reg [3:0] stage, next_stage;
 	wire changing_stage;
-	wire halfsec_clk, dclk;
-	assign changing_stage = backstage | nextstage | rst;
+	assign changing_stage = backstage || nextstage || rst;
 
-    wire [3:0] wall_collisions[63:0];
-    wire [3:0] wall_collision_total;
+    wire [3:0] wall_collisions_CY[63:0];
+    wire [3:0] wall_collision_total_CY;
 
-    assign wall_collision_total = wall_collisions[0]|wall_collisions[1]|wall_collisions[2]|wall_collisions[3]|wall_collisions[4]|wall_collisions[5]|wall_collisions[6]|wall_collisions[7]|wall_collisions[8]|wall_collisions[9]|
-                                  wall_collisions[10]|wall_collisions[11]|wall_collisions[12]|wall_collisions[13]|wall_collisions[14]|wall_collisions[15]|wall_collisions[16]|wall_collisions[17]|wall_collisions[18]|wall_collisions[19]|
-                                  wall_collisions[20]|wall_collisions[21]|wall_collisions[22]|wall_collisions[23]|wall_collisions[24]|wall_collisions[25]|wall_collisions[26]|wall_collisions[27]|wall_collisions[28]|wall_collisions[29]|
-                                  wall_collisions[30]|wall_collisions[31]|wall_collisions[32]|wall_collisions[33]|wall_collisions[34]|wall_collisions[35]|wall_collisions[36]|wall_collisions[37]|wall_collisions[38]|wall_collisions[39];
-                                  
+    assign wall_collision_total_CY = wall_collisions_CY[0]|wall_collisions_CY[1]|wall_collisions_CY[2]|wall_collisions_CY[3]|wall_collisions_CY[4]|wall_collisions_CY[5]|wall_collisions_CY[6]|wall_collisions_CY[7]|wall_collisions_CY[8]|wall_collisions_CY[9]|
+                                  wall_collisions_CY[10]|wall_collisions_CY[11]|wall_collisions_CY[12]|wall_collisions_CY[13]|wall_collisions_CY[14]|wall_collisions_CY[15]|wall_collisions_CY[16]|wall_collisions_CY[17]|wall_collisions_CY[18]|wall_collisions_CY[19]|
+                                  wall_collisions_CY[20]|wall_collisions_CY[21]|wall_collisions_CY[22]|wall_collisions_CY[23]|wall_collisions_CY[24]|wall_collisions_CY[25]|wall_collisions_CY[26]|wall_collisions_CY[27]|wall_collisions_CY[28]|wall_collisions_CY[29]|
+                                  wall_collisions_CY[30]|wall_collisions_CY[31]|wall_collisions_CY[32]|wall_collisions_CY[33]|wall_collisions_CY[34]|wall_collisions_CY[35]|wall_collisions_CY[36]|wall_collisions_CY[37]|wall_collisions_CY[38]|wall_collisions_CY[39];
+    
+    wire [3:0] wall_collisions_monster_1[63:0];
+    wire [3:0] wall_collision_total_monster_1;
+
+    assign wall_collision_total_monster_1 = wall_collisions_monster_1[0]|wall_collisions_monster_1[1]|wall_collisions_monster_1[2]|wall_collisions_monster_1[3]|wall_collisions_monster_1[4]|wall_collisions_monster_1[5]|wall_collisions_monster_1[6]|wall_collisions_monster_1[7]|wall_collisions_monster_1[8]|wall_collisions_monster_1[9]|
+                                  wall_collisions_monster_1[10]|wall_collisions_monster_1[11]|wall_collisions_monster_1[12]|wall_collisions_monster_1[13]|wall_collisions_monster_1[14]|wall_collisions_monster_1[15]|wall_collisions_monster_1[16]|wall_collisions_monster_1[17]|wall_collisions_monster_1[18]|wall_collisions_monster_1[19]|
+                                  wall_collisions_monster_1[20]|wall_collisions_monster_1[21]|wall_collisions_monster_1[22]|wall_collisions_monster_1[23]|wall_collisions_monster_1[24]|wall_collisions_monster_1[25]|wall_collisions_monster_1[26]|wall_collisions_monster_1[27]|wall_collisions_monster_1[28]|wall_collisions_monster_1[29]|
+                                  wall_collisions_monster_1[30]|wall_collisions_monster_1[31]|wall_collisions_monster_1[32]|wall_collisions_monster_1[33]|wall_collisions_monster_1[34]|wall_collisions_monster_1[35]|wall_collisions_monster_1[36]|wall_collisions_monster_1[37]|wall_collisions_monster_1[38]|wall_collisions_monster_1[39];
+    
+
 	assign pos_h_computer_room_entrance = 240;
 	assign pos_v_computer_room_entrance = 160;
 	
@@ -166,46 +175,46 @@ module state_control(
     assign pos_v_wall_38 = 160;//
     assign pos_h_wall_39 = 20;
     assign pos_v_wall_39 = 160;//
-    assign pos_h_wall_40 = 100;
-    assign pos_v_wall_40 = 100;//
-    assign pos_h_wall_41 = 100;
-    assign pos_v_wall_41 = 100;//
-    assign pos_h_wall_42 = 100;
-    assign pos_v_wall_42 = 100;//
-    assign pos_h_wall_43 = 100;
-    assign pos_v_wall_43 = 100;//
-    assign pos_h_wall_44 = 100;
-    assign pos_v_wall_44 = 100;//
-    assign pos_h_wall_45 = 100;
-    assign pos_v_wall_45 = 100;//
-    assign pos_h_wall_46 = 100;
-    assign pos_v_wall_46 = 100;//
-    assign pos_h_wall_47 = 100;
-    assign pos_v_wall_47 = 100;//
-    assign pos_h_wall_48 = 100;
-    assign pos_v_wall_48 = 100;//
-    assign pos_h_wall_49 = 100;
-    assign pos_v_wall_49 = 100;//
-    assign pos_h_wall_50 = 100;
-    assign pos_v_wall_50 = 100;//
-    assign pos_h_wall_51 = 100;
-    assign pos_v_wall_51 = 100;//
+    assign pos_h_wall_40 = 320;
+    assign pos_v_wall_40 = 160;//
+    assign pos_h_wall_41 = 300;
+    assign pos_v_wall_41 = 160;//
+    assign pos_h_wall_42 = 280;
+    assign pos_v_wall_42 = 160;//
+    assign pos_h_wall_43 = 320;
+    assign pos_v_wall_43 = 180;//
+    assign pos_h_wall_44 = 300;
+    assign pos_v_wall_44 = 180;//
+    assign pos_h_wall_45 = 280;
+    assign pos_v_wall_45 = 180;//
+    assign pos_h_wall_46 = 260;
+    assign pos_v_wall_46 = 180;//
+    assign pos_h_wall_47 = 220;
+    assign pos_v_wall_47 = 180;//
+    assign pos_h_wall_48 = 20;
+    assign pos_v_wall_48 = 180;//
+    assign pos_h_wall_49 = 40;
+    assign pos_v_wall_49 = 180;//
+    assign pos_h_wall_50 = 60;
+    assign pos_v_wall_50 = 180;//
+    assign pos_h_wall_51 = 80;
+    assign pos_v_wall_51 = 180;//
     assign pos_h_wall_52 = 100;
-    assign pos_v_wall_52 = 100;//
-    assign pos_h_wall_53 = 100;
-    assign pos_v_wall_53 = 100;//
-    assign pos_h_wall_54 = 100;
-    assign pos_v_wall_54 = 100;//
-    assign pos_h_wall_55 = 100;
-    assign pos_v_wall_55 = 100;//
-    assign pos_h_wall_56 = 100;
-    assign pos_v_wall_56 = 100;//
-    assign pos_h_wall_57 = 100;
-    assign pos_v_wall_57 = 100;//
-    assign pos_h_wall_58 = 100;
-    assign pos_v_wall_58 = 100;//
-    assign pos_h_wall_59 = 100;
-    assign pos_v_wall_59 = 100;//
+    assign pos_v_wall_52 = 180;//
+    assign pos_h_wall_53 = 20;
+    assign pos_v_wall_53 = 20;//
+    assign pos_h_wall_54 = 20;
+    assign pos_v_wall_54 = 20;//
+    assign pos_h_wall_55 = 20;
+    assign pos_v_wall_55 = 20;//
+    assign pos_h_wall_56 = 20;
+    assign pos_v_wall_56 = 20;//
+    assign pos_h_wall_57 = 20;
+    assign pos_v_wall_57 = 200;//
+    assign pos_h_wall_58 = 20;
+    assign pos_v_wall_58 = 40;//
+    assign pos_h_wall_59 = 20;
+    assign pos_v_wall_59 = 20;//
 
 	//stage change
 	always@(posedge clk) begin
@@ -249,172 +258,412 @@ module state_control(
 	   .state(pixel_idx_CY),
 	   .backstage(backstage), 
 	   .nextstage(nextstage),
-	   .wall_collision(wall_collision_total)
+	   .wall_collision(wall_collision_total_CY)
 	);
 	
-                 wall wall_0(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_0),
-         .pos_v(pos_v_wall_0),
-.collision(wall_collisions[0]));
-                 wall wall_1(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_1),
-         .pos_v(pos_v_wall_1),
-.collision(wall_collisions[1]));
-                 wall wall_2(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_2),
-         .pos_v(pos_v_wall_2),
-.collision(wall_collisions[2]));
-                 wall wall_3(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_3),
-         .pos_v(pos_v_wall_3),
-.collision(wall_collisions[3]));
-                 wall wall_4(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_4),
-         .pos_v(pos_v_wall_4),
-.collision(wall_collisions[4]));
-                 wall wall_5(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_5),
-         .pos_v(pos_v_wall_5),
-.collision(wall_collisions[5]));
-                 wall wall_6(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_6),
-         .pos_v(pos_v_wall_6),
-.collision(wall_collisions[6]));
-                 wall wall_7(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_7),
-         .pos_v(pos_v_wall_7),
-.collision(wall_collisions[7]));
-                 wall wall_8(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_8),
-         .pos_v(pos_v_wall_8),
-.collision(wall_collisions[8]));
-                 wall wall_9(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_9),
-         .pos_v(pos_v_wall_9),
-.collision(wall_collisions[9]));
-                 wall wall_10(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_10),
-         .pos_v(pos_v_wall_10),
-.collision(wall_collisions[10]));
-                 wall wall_11(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_11),
-         .pos_v(pos_v_wall_11),
-.collision(wall_collisions[11]));
-                 wall wall_12(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_12),
-         .pos_v(pos_v_wall_12),
-.collision(wall_collisions[12]));
-                 wall wall_13(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_13),
-         .pos_v(pos_v_wall_13),
-.collision(wall_collisions[13]));
-                 wall wall_14(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_14),
-         .pos_v(pos_v_wall_14),
-.collision(wall_collisions[14]));
-                 wall wall_15(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_15),
-         .pos_v(pos_v_wall_15),
-.collision(wall_collisions[15]));
-                 wall wall_16(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_16),
-         .pos_v(pos_v_wall_16),
-.collision(wall_collisions[16]));
-                 wall wall_17(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_17),
-         .pos_v(pos_v_wall_17),
-.collision(wall_collisions[17]));
-                 wall wall_18(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_18),
-         .pos_v(pos_v_wall_18),
-.collision(wall_collisions[18]));
-                 wall wall_19(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_19),
-         .pos_v(pos_v_wall_19),
-.collision(wall_collisions[19]));
-                 wall wall_20(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_20),
-         .pos_v(pos_v_wall_20),
-.collision(wall_collisions[20]));
-                 wall wall_21(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_21),
-         .pos_v(pos_v_wall_21),
-.collision(wall_collisions[21]));
-                 wall wall_22(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_22),
-         .pos_v(pos_v_wall_22),
-.collision(wall_collisions[22]));
-                 wall wall_23(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_23),
-         .pos_v(pos_v_wall_23),
-.collision(wall_collisions[23]));
-                 wall wall_24(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_24),
-         .pos_v(pos_v_wall_24),
-.collision(wall_collisions[24]));
-                 wall wall_25(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_25),
-         .pos_v(pos_v_wall_25),
-.collision(wall_collisions[25]));
-                 wall wall_26(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_26),
-         .pos_v(pos_v_wall_26),
-.collision(wall_collisions[26]));
-                 wall wall_27(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_27),
-         .pos_v(pos_v_wall_27),
-.collision(wall_collisions[27]));
-                 wall wall_28(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_28),
-         .pos_v(pos_v_wall_28),
-.collision(wall_collisions[28]));
-                 wall wall_29(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_29),
-         .pos_v(pos_v_wall_29),
-.collision(wall_collisions[29]));
-                 wall wall_30(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_30),
-         .pos_v(pos_v_wall_30),
-.collision(wall_collisions[30]));
-                 wall wall_31(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_31),
-         .pos_v(pos_v_wall_31),
-.collision(wall_collisions[31]));
-                 wall wall_32(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_32),
-         .pos_v(pos_v_wall_32),
-.collision(wall_collisions[32]));
-                 wall wall_33(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_33),
-         .pos_v(pos_v_wall_33),
-.collision(wall_collisions[33]));
-                 wall wall_34(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_34),
-         .pos_v(pos_v_wall_34),
-.collision(wall_collisions[34]));
-                 wall wall_35(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_35),
-         .pos_v(pos_v_wall_35),
-.collision(wall_collisions[35]));
-                 wall wall_36(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_36),
-         .pos_v(pos_v_wall_36),
-.collision(wall_collisions[36]));
-                 wall wall_37(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_37),
-         .pos_v(pos_v_wall_37),
-.collision(wall_collisions[37]));
-                 wall wall_38(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_38),
-         .pos_v(pos_v_wall_38),
-.collision(wall_collisions[38]));
-                 wall wall_39(.pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
-         .pos_h(pos_h_wall_39),
-         .pos_v(pos_v_wall_39),
-.collision(wall_collisions[39]));
+    wall wall_0(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_0),.pos_v(pos_v_wall_0),
+        .collision(wall_collisions_CY[0])
+    );
+    wall wall_1(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_1),.pos_v(pos_v_wall_1),
+        .collision(wall_collisions_CY[1])
+    );
+    wall wall_2(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_2),.pos_v(pos_v_wall_2),
+        .collision(wall_collisions_CY[2])
+    );
+    wall wall_3(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_3),.pos_v(pos_v_wall_3),
+        .collision(wall_collisions_CY[3])
+    );
+    wall wall_4(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_4),.pos_v(pos_v_wall_4),
+        .collision(wall_collisions_CY[4])
+    );
+    wall wall_5(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_5),.pos_v(pos_v_wall_5),
+        .collision(wall_collisions_CY[5])
+    );
+    wall wall_6(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_6),.pos_v(pos_v_wall_6),
+        .collision(wall_collisions_CY[6])
+    );
+    wall wall_7(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_7),.pos_v(pos_v_wall_7),
+        .collision(wall_collisions_CY[7])
+    );
+    wall wall_8(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_8),.pos_v(pos_v_wall_8),
+        .collision(wall_collisions_CY[8])
+    );
+    wall wall_9(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_9),.pos_v(pos_v_wall_9),
+        .collision(wall_collisions_CY[9])
+    );
+    wall wall_10(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_10),.pos_v(pos_v_wall_10),
+        .collision(wall_collisions_CY[10])
+    );
+    wall wall_11(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_11),.pos_v(pos_v_wall_11),
+        .collision(wall_collisions_CY[11])
+    );
+    wall wall_12(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_12),.pos_v(pos_v_wall_12),
+        .collision(wall_collisions_CY[12])
+    );
+    wall wall_13(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_13),.pos_v(pos_v_wall_13),
+        .collision(wall_collisions_CY[13])
+    );
+    wall wall_14(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_14),.pos_v(pos_v_wall_14),
+        .collision(wall_collisions_CY[14])
+    );
+    wall wall_15(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_15),.pos_v(pos_v_wall_15),
+        .collision(wall_collisions_CY[15])
+    );
+    wall wall_16(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_16),.pos_v(pos_v_wall_16),
+        .collision(wall_collisions_CY[16])
+    );
+    wall wall_17(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_17),.pos_v(pos_v_wall_17),
+        .collision(wall_collisions_CY[17])
+    );
+    wall wall_18(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_18),.pos_v(pos_v_wall_18),
+        .collision(wall_collisions_CY[18])
+    );
+    wall wall_19(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_19),.pos_v(pos_v_wall_19),
+        .collision(wall_collisions_CY[19])
+    );
+    wall wall_20(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_20),.pos_v(pos_v_wall_20),
+        .collision(wall_collisions_CY[20])
+    );
+    wall wall_21(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_21),.pos_v(pos_v_wall_21),
+        .collision(wall_collisions_CY[21])
+    );
+    wall wall_22(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_22),.pos_v(pos_v_wall_22),
+        .collision(wall_collisions_CY[22])
+    );
+    wall wall_23(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_23),.pos_v(pos_v_wall_23),
+        .collision(wall_collisions_CY[23])
+    );
+    wall wall_24(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_24),.pos_v(pos_v_wall_24),
+        .collision(wall_collisions_CY[24])
+    );
+    wall wall_25(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_25),.pos_v(pos_v_wall_25),
+        .collision(wall_collisions_CY[25])
+    );
+    wall wall_26(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_26),.pos_v(pos_v_wall_26),
+        .collision(wall_collisions_CY[26])
+    );
+    wall wall_27(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_27),.pos_v(pos_v_wall_27),
+        .collision(wall_collisions_CY[27])
+    );
+    wall wall_28(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_28),.pos_v(pos_v_wall_28),
+        .collision(wall_collisions_CY[28])
+    );
+    wall wall_29(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_29),.pos_v(pos_v_wall_29),
+        .collision(wall_collisions_CY[29])
+    );
+    wall wall_30(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_30),.pos_v(pos_v_wall_30),
+        .collision(wall_collisions_CY[30])
+    );
+    wall wall_31(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_31),.pos_v(pos_v_wall_31),
+        .collision(wall_collisions_CY[31])
+    );
+    wall wall_32(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_32),.pos_v(pos_v_wall_32),
+        .collision(wall_collisions_CY[32])
+    );
+    wall wall_33(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_33),.pos_v(pos_v_wall_33),
+        .collision(wall_collisions_CY[33])
+    );
+    wall wall_34(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_34),.pos_v(pos_v_wall_34),
+        .collision(wall_collisions_CY[34])
+    );
+    wall wall_35(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_35),.pos_v(pos_v_wall_35),
+        .collision(wall_collisions_CY[35])
+    );
+    wall wall_36(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_36),.pos_v(pos_v_wall_36),
+        .collision(wall_collisions_CY[36])
+    );
+    wall wall_37(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_37),.pos_v(pos_v_wall_37),
+        .collision(wall_collisions_CY[37])
+    );
+    wall wall_38(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_38),.pos_v(pos_v_wall_38),
+        .collision(wall_collisions_CY[38])
+    );
+    wall wall_39(
+        .pos_h_CY(pos_h_CY),.pos_v_CY(pos_v_CY),
+        .pos_h(pos_h_wall_39),.pos_v(pos_v_wall_39),
+        .collision(wall_collisions_CY[39])
+    );
 
 
 
+    wall wall_0_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_0),.pos_v(pos_v_wall_0),
+        .collision(wall_collisions_monster_1[0])
+    );
+    wall wall_1_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_1),.pos_v(pos_v_wall_1),
+        .collision(wall_collisions_monster_1[1])
+    );
+    wall wall_2_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_2),.pos_v(pos_v_wall_2),
+        .collision(wall_collisions_monster_1[2])
+    );
+    wall wall_3_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_3),.pos_v(pos_v_wall_3),
+        .collision(wall_collisions_monster_1[3])
+    );
+    wall wall_4_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_4),.pos_v(pos_v_wall_4),
+        .collision(wall_collisions_monster_1[4])
+    );
+    wall wall_5_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_5),.pos_v(pos_v_wall_5),
+        .collision(wall_collisions_monster_1[5])
+    );
+    wall wall_6_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_6),.pos_v(pos_v_wall_6),
+        .collision(wall_collisions_monster_1[6])
+    );
+    wall wall_7_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_7),.pos_v(pos_v_wall_7),
+        .collision(wall_collisions_monster_1[7])
+    );
+    wall wall_8_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_8),.pos_v(pos_v_wall_8),
+        .collision(wall_collisions_monster_1[8])
+    );
+    wall wall_9_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_9),.pos_v(pos_v_wall_9),
+        .collision(wall_collisions_monster_1[9])
+    );
+    wall wall_10_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_10),.pos_v(pos_v_wall_10),
+        .collision(wall_collisions_monster_1[10])
+    );
+    wall wall_11_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_11),.pos_v(pos_v_wall_11),
+        .collision(wall_collisions_monster_1[11])
+    );
+    wall wall_12_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_12),.pos_v(pos_v_wall_12),
+        .collision(wall_collisions_monster_1[12])
+    );
+    wall wall_13_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_13),.pos_v(pos_v_wall_13),
+        .collision(wall_collisions_monster_1[13])
+    );
+    wall wall_14_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_14),.pos_v(pos_v_wall_14),
+        .collision(wall_collisions_monster_1[14])
+    );
+    wall wall_15_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_15),.pos_v(pos_v_wall_15),
+        .collision(wall_collisions_monster_1[15])
+    );
+    wall wall_16_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_16),.pos_v(pos_v_wall_16),
+        .collision(wall_collisions_monster_1[16])
+    );
+    wall wall_17_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_17),.pos_v(pos_v_wall_17),
+        .collision(wall_collisions_monster_1[17])
+    );
+    wall wall_18_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_18),.pos_v(pos_v_wall_18),
+        .collision(wall_collisions_monster_1[18])
+    );
+    wall wall_19_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_19),.pos_v(pos_v_wall_19),
+        .collision(wall_collisions_monster_1[19])
+    );
+    wall wall_20_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_20),.pos_v(pos_v_wall_20),
+        .collision(wall_collisions_monster_1[20])
+    );
+    wall wall_21_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_21),.pos_v(pos_v_wall_21),
+        .collision(wall_collisions_monster_1[21])
+    );
+    wall wall_22_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_22),.pos_v(pos_v_wall_22),
+        .collision(wall_collisions_monster_1[22])
+    );
+    wall wall_23_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_23),.pos_v(pos_v_wall_23),
+        .collision(wall_collisions_monster_1[23])
+    );
+    wall wall_24_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_24),.pos_v(pos_v_wall_24),
+        .collision(wall_collisions_monster_1[24])
+    );
+    wall wall_25_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_25),.pos_v(pos_v_wall_25),
+        .collision(wall_collisions_monster_1[25])
+    );
+    wall wall_26_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_26),.pos_v(pos_v_wall_26),
+        .collision(wall_collisions_monster_1[26])
+    );
+    wall wall_27_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_27),.pos_v(pos_v_wall_27),
+        .collision(wall_collisions_monster_1[27])
+    );
+    wall wall_28_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_28),.pos_v(pos_v_wall_28),
+        .collision(wall_collisions_monster_1[28])
+    );
+    wall wall_29_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_29),.pos_v(pos_v_wall_29),
+        .collision(wall_collisions_monster_1[29])
+    );
+    wall wall_30_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_30),.pos_v(pos_v_wall_30),
+        .collision(wall_collisions_monster_1[30])
+    );
+    wall wall_31_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_31),.pos_v(pos_v_wall_31),
+        .collision(wall_collisions_monster_1[31])
+    );
+    wall wall_32_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_32),.pos_v(pos_v_wall_32),
+        .collision(wall_collisions_monster_1[32])
+    );
+    wall wall_33_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_33),.pos_v(pos_v_wall_33),
+        .collision(wall_collisions_monster_1[33])
+    );
+    wall wall_34_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_34),.pos_v(pos_v_wall_34),
+        .collision(wall_collisions_monster_1[34])
+    );
+    wall wall_35_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_35),.pos_v(pos_v_wall_35),
+        .collision(wall_collisions_monster_1[35])
+    );
+    wall wall_36_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_36),.pos_v(pos_v_wall_36),
+        .collision(wall_collisions_monster_1[36])
+    );
+    wall wall_37_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_37),.pos_v(pos_v_wall_37),
+        .collision(wall_collisions_monster_1[37])
+    );
+    wall wall_38_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_38),.pos_v(pos_v_wall_38),
+        .collision(wall_collisions_monster_1[38])
+    );
+    wall wall_39_monster_1(
+        .pos_h_CY(pos_h_monster_1),.pos_v_CY(pos_v_monster_1),
+        .pos_h(pos_h_wall_39),.pos_v(pos_v_wall_39),
+        .collision(wall_collisions_monster_1[39])
+    );
 
 //	monster_1
 	 monster_one m1(
@@ -422,7 +671,8 @@ module state_control(
 	    .rst(changing_stage), 
 	    .stagestate(stage), 
 	    .pos_h(pos_h_monster_1), 
-	    .pos_v(pos_v_monster_1)
+	    .pos_v(pos_v_monster_1),
+        .wall_collision(wall_collision_total_monster_1)
 	 );
 	
 endmodule
@@ -473,6 +723,7 @@ output reg  [9:0] pos_h = 10'd150, pos_v = 10'd110;
 output reg [3:0] state;
 output reg backstage, nextstage;
 
+wire dclk;
 reg [9:0] npos_v, npos_h;
 reg [2:0] signals; 
 reg [3:0] nstate;
@@ -489,7 +740,7 @@ always @(*) begin //combine WASD signals into one reg for ease of coding
     else signals = 3'd0;
 end
 
-clk_div #(4) CD0(.clk(clk), .clk_d(dclk));
+clk_div #(3) CD0(.clk(clk), .clk_d(dclk));
 
 always @(posedge dclk) begin //state always block
     if (rst) begin
@@ -651,16 +902,18 @@ end
 
 endmodule
 
-module monster_one (clk, rst, stagestate, pos_h, pos_v);
+module monster_one (clk, rst, stagestate, pos_h, pos_v, wall_collision);
 input clk;
 input rst;
 input [3:0]stagestate;
+input [3:0]wall_collision;
 
 output reg [9:0] pos_h;
 output reg [9:0] pos_v;
 
-reg [2:0] state, nstate;
-reg [9:0] counter;
+reg [9:0] next_pos_h, next_pos_v;
+
+reg [3:0] direction, next_direction;
 wire [12:0] randomNum;
 
 LFSR randomgen(
@@ -669,66 +922,141 @@ LFSR randomgen(
     .rnd(randomNum)
 );
 
-always @(posedge clk) begin
+always@(posedge clk)begin
+    pos_h <= next_pos_h;
+    pos_v <= next_pos_v;
+    direction <= next_direction;
+end
+
+always @(*) begin
     if (rst) begin
-        state <= 3'd0;
         case (stagestate)
             4'd0: begin
-                pos_h <= 160;
-                pos_v <= 120;
-                counter <= 0;
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd1: begin
-                pos_h <= 160;
-                pos_v <= 120;
-                counter <= 0;
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd2: begin
-                
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd3: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd4: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd5: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd6: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd7: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd8: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd9: begin
-            
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd10: begin
-
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
             4'd11: begin
-
-            end
-            default: begin
-                pos_h <= -1;
-                pos_v <= -1;
+                next_pos_h = 160;
+                next_pos_v = 120;
+                next_direction = 0;
             end
         endcase 
     end 
     else begin
-        counter <= counter + 1;
-        if (counter == 10'd2) begin
-            if (randomNum % 2 == 0) begin
-                pos_h <= pos_h + (randomNum % 3) - 1;
+        if ((wall_collision[1] || pos_h >= 300)&&direction==0)begin
+            next_direction = randomNum%3;
+            next_direction = next_direction+1;
+        end else begin
+            if ((wall_collision[0] || pos_h <= 20)&&direction==1)begin
+                next_direction = randomNum%3;
+                if (next_direction >= 1)begin
+                    next_direction = next_direction+1;
+                end else begin
+                    next_direction = next_direction;
+                end
             end else begin
-                pos_v <= pos_v + (randomNum % 3) - 1;
+                if ((wall_collision[2] || pos_v >= 220)&&direction==2)begin
+                    next_direction = randomNum%3;
+                    if (next_direction >= 2)begin
+                        next_direction = next_direction+1;
+                    end else begin
+                        next_direction = next_direction;
+                    end
+                end else begin
+                    if ((wall_collision[3] || pos_v <= 20)&&direction==3)begin
+                        next_direction = randomNum%3;
+                    end else begin
+                        next_direction = direction;
+                    end
+                end
             end
-        counter <= 0;
         end
+
+        case (direction)
+            0:begin
+                if (wall_collision[1] || pos_h >= 300)begin
+                    next_pos_h = pos_h;
+                end else begin
+                    next_pos_h = pos_h+1;
+                end
+                next_pos_v = pos_v;
+            end
+            1:begin
+                if (wall_collision[0] || pos_h <= 20)begin
+                    next_pos_h = pos_h;
+                end else begin
+                    next_pos_h = pos_h-1;
+                end
+                next_pos_v = pos_v;
+            end
+            2:begin
+                if (wall_collision[2] || pos_v >= 220)begin
+                    next_pos_v = pos_v;
+                end else begin
+                    next_pos_v = pos_v+1;
+                end
+                next_pos_h = pos_h;
+            end
+            3:begin
+                if (wall_collision[3] || pos_v <= 20)begin
+                    next_pos_v = pos_v;
+                end else begin
+                    next_pos_v = pos_v-1;
+                end
+                next_pos_h = pos_h;
+            end
+        endcase
     end
 end
 endmodule

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
+set_param chipscope.maxJobs 5
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -26,83 +26,83 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr} [current_project]
+set_property webtalk.parent_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/wt} [current_project]
+set_property parent.project_path {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/ip}} [current_project]
+set_property ip_repo_paths {{c:/verilog project/Legend of Chun-Yi Lee/ip}} [current_project]
 update_ip_catalog
-set_property ip_output_repo {c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/ip} [current_project]
+set_property ip_output_repo {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_front_stand.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_front_walk_L.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_front_walk_R.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_right_stand.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_right_walk.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_left_stand.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_left_walk.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_back_stand.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_back_walk_L.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CY_back_walk_R.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/BOSS_student.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/CS_student.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/EECS_student.coe}}
-add_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/NTHU_student.coe}}
-add_files {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/overwall_wall.coe}}
-add_files {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Assets/computer_room_entrance.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_stand.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_walk_L.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_walk_R.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_stand.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_walk.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_stand.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_walk.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_stand.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_walk_L.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_walk_R.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/BOSS_student.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/EECS_student.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/NTHU_student.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/overwall_wall.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/computer_room_entrance.coe}}
 read_verilog -library xil_defaultlib {
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/KeyboardDecoder.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/RGB_GEN.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/clk_div.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/debounce.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/mem_addr_gen.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/onepluse.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/select_pixel.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/state_control.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/vga_controller.v}
-  {C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/top.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/RGB_GEN.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/clk_div.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/debounce.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/mem_addr_gen.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/onepluse.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/select_pixel.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/state_control.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/vga_controller.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/top.v}
 }
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L_ooc.xdc}}]
 
-read_ip -quiet {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R_ooc.xdc}}]
 
-read_ip -quiet {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall_ooc.xdc}}]
 
-read_ip -quiet {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance_ooc.xdc}}]
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -112,8 +112,8 @@ set_property used_in_implementation false [get_files -all {{c:/Users/nthu-326/De
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/cons.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/cons.xdc}}]
+read_xdc {{C:/verilog project/Legend of Chun-Yi Lee/cons.xdc}}
+set_property used_in_implementation false [get_files {{C:/verilog project/Legend of Chun-Yi Lee/cons.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

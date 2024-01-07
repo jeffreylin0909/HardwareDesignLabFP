@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Jan  7 18:28:34 2024
-| Host             : R326-31 running 64-bit major release  (build 9200)
+| Date             : Mon Jan  8 01:14:41 2024
+| Host             : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
 | Device           : xc7a35tcpg236-1
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+-----------------------------------+
-| Total On-Chip Power (W)  | 369.375 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                      |
-| Power Budget Margin (W)  | NA                                |
-| Dynamic (W)              | 368.856                           |
-| Device Static (W)        | 0.519                             |
-| Effective TJA (C/W)      | 5.0                               |
-| Max Ambient (C)          | 0.0                               |
-| Junction Temperature (C) | 125.0                             |
-| Confidence Level         | Low                               |
-| Setting File             | ---                               |
-| Simulation Activity File | ---                               |
-| Design Nets Matched      | NA                                |
-+--------------------------+-----------------------------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 63.146 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 62.654                           |
+| Device Static (W)        | 0.492                            |
+| Effective TJA (C/W)      | 5.0                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |   164.668 |    28555 |       --- |             --- |
-|   LUT as Logic |   150.177 |    17672 |     20800 |           84.96 |
-|   CARRY4       |    14.359 |     4035 |      8150 |           49.51 |
-|   Register     |     0.075 |      334 |     41600 |            0.80 |
+| Slice Logic    |    25.277 |     9211 |       --- |             --- |
+|   LUT as Logic |    22.951 |     5638 |     20800 |           27.11 |
+|   CARRY4       |     2.202 |     1387 |      8150 |           17.02 |
+|   Register     |     0.068 |      346 |     41600 |            0.83 |
 |   BUFG         |     0.035 |        3 |        32 |            9.38 |
-|   F7/F8 Muxes  |     0.022 |       12 |     32600 |            0.04 |
-|   Others       |     0.000 |      424 |       --- |             --- |
-| Signals        |   151.683 |    27551 |       --- |             --- |
-| Block RAM      |    36.792 |       36 |        50 |           72.00 |
-| DSPs           |     9.912 |       90 |        90 |          100.00 |
-| I/O            |     5.801 |       18 |       106 |           16.98 |
-| Static Power   |     0.519 |          |           |                 |
-| Total          |   369.375 |          |           |                 |
+|   F7/F8 Muxes  |     0.021 |       12 |     32600 |            0.04 |
+|   Others       |     0.000 |       74 |       --- |             --- |
+| Signals        |    22.666 |     6901 |       --- |             --- |
+| Block RAM      |     6.643 |      6.5 |        50 |           13.00 |
+| DSPs           |     1.520 |        8 |        90 |            8.89 |
+| I/O            |     6.548 |       18 |       106 |           16.98 |
+| Static Power   |     0.492 |          |           |                 |
+| Total          |    63.146 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,16 +74,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |   360.650 |     360.287 |      0.362 |
-| Vccaux    |       1.800 |     0.266 |       0.212 |      0.053 |
-| Vcco33    |       3.300 |     1.642 |       1.641 |      0.001 |
+| Vccint    |       1.000 |    55.955 |      55.610 |      0.345 |
+| Vccaux    |       1.800 |     0.293 |       0.240 |      0.053 |
+| Vcco33    |       3.300 |     1.853 |       1.852 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     2.793 |       2.772 |      0.021 |
+| Vccbram   |       1.000 |     0.512 |       0.500 |      0.012 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -141,298 +141,62 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| Top                          |   368.856 |
-|   BM_CS_student_             |     0.580 |
-|     U0                       |     0.580 |
-|       inst_blk_mem_gen       |     0.580 |
-|   BM_CY_back_stand_          |     0.629 |
-|     U0                       |     0.629 |
-|       inst_blk_mem_gen       |     0.629 |
-|   BM_CY_back_walk_L_         |     0.573 |
-|     U0                       |     0.573 |
-|       inst_blk_mem_gen       |     0.573 |
-|   BM_CY_back_walk_R_         |     0.579 |
-|     U0                       |     0.579 |
-|       inst_blk_mem_gen       |     0.579 |
-|   BM_CY_front_stand_         |     0.603 |
-|     U0                       |     0.603 |
-|       inst_blk_mem_gen       |     0.603 |
-|   BM_CY_front_walk_L_        |     0.566 |
-|     U0                       |     0.566 |
-|       inst_blk_mem_gen       |     0.566 |
-|   BM_CY_front_walk_R_        |     0.656 |
-|     U0                       |     0.656 |
-|       inst_blk_mem_gen       |     0.656 |
-|   BM_CY_left_stand_          |     0.576 |
-|     U0                       |     0.576 |
-|       inst_blk_mem_gen       |     0.576 |
-|   BM_CY_left_walk_           |     0.583 |
-|     U0                       |     0.583 |
-|       inst_blk_mem_gen       |     0.583 |
-|   BM_CY_right_stand_         |     0.592 |
-|     U0                       |     0.592 |
-|       inst_blk_mem_gen       |     0.592 |
-|   BM_CY_right_walk_          |     0.612 |
-|     U0                       |     0.612 |
-|       inst_blk_mem_gen       |     0.612 |
-|   BM_computer_room_entrance_ |     0.572 |
-|     U0                       |     0.572 |
-|       inst_blk_mem_gen       |     0.572 |
-|   BM_overwall_wall_0         |     0.582 |
-|     U0                       |     0.582 |
-|       inst_blk_mem_gen       |     0.582 |
-|   BM_overwall_wall_1         |     0.571 |
-|     U0                       |     0.571 |
-|       inst_blk_mem_gen       |     0.571 |
-|   BM_overwall_wall_10        |     0.614 |
-|     U0                       |     0.614 |
-|       inst_blk_mem_gen       |     0.614 |
-|   BM_overwall_wall_11        |     0.578 |
+| Top                          |    62.654 |
+|   BM_CS_student_             |     0.578 |
 |     U0                       |     0.578 |
 |       inst_blk_mem_gen       |     0.578 |
-|   BM_overwall_wall_12        |     0.596 |
-|     U0                       |     0.596 |
-|       inst_blk_mem_gen       |     0.596 |
-|   BM_overwall_wall_13        |     0.641 |
-|     U0                       |     0.641 |
-|       inst_blk_mem_gen       |     0.641 |
-|   BM_overwall_wall_14        |     0.606 |
-|     U0                       |     0.606 |
-|       inst_blk_mem_gen       |     0.606 |
-|   BM_overwall_wall_15        |     0.569 |
-|     U0                       |     0.569 |
-|       inst_blk_mem_gen       |     0.569 |
-|   BM_overwall_wall_16        |     0.660 |
-|     U0                       |     0.660 |
-|       inst_blk_mem_gen       |     0.660 |
-|   BM_overwall_wall_17        |     0.605 |
-|     U0                       |     0.605 |
-|       inst_blk_mem_gen       |     0.605 |
-|   BM_overwall_wall_18        |     0.617 |
-|     U0                       |     0.617 |
-|       inst_blk_mem_gen       |     0.617 |
-|   BM_overwall_wall_19        |     0.593 |
-|     U0                       |     0.593 |
-|       inst_blk_mem_gen       |     0.593 |
-|   BM_overwall_wall_2         |     0.583 |
-|     U0                       |     0.583 |
-|       inst_blk_mem_gen       |     0.583 |
-|   BM_overwall_wall_20        |     0.614 |
-|     U0                       |     0.614 |
-|       inst_blk_mem_gen       |     0.614 |
-|   BM_overwall_wall_21        |     0.610 |
-|     U0                       |     0.610 |
-|       inst_blk_mem_gen       |     0.610 |
-|   BM_overwall_wall_22        |     0.566 |
-|     U0                       |     0.566 |
-|       inst_blk_mem_gen       |     0.566 |
-|   BM_overwall_wall_23        |     0.572 |
+|   BM_CY_back_stand_          |     0.572 |
 |     U0                       |     0.572 |
 |       inst_blk_mem_gen       |     0.572 |
-|   BM_overwall_wall_24        |     0.608 |
-|     U0                       |     0.608 |
-|       inst_blk_mem_gen       |     0.608 |
-|   BM_overwall_wall_25        |     0.587 |
-|     U0                       |     0.587 |
-|       inst_blk_mem_gen       |     0.587 |
-|   BM_overwall_wall_26        |     0.563 |
-|     U0                       |     0.563 |
-|       inst_blk_mem_gen       |     0.563 |
-|   BM_overwall_wall_27        |     0.590 |
-|     U0                       |     0.590 |
-|       inst_blk_mem_gen       |     0.590 |
-|   BM_overwall_wall_28        |     0.594 |
-|     U0                       |     0.594 |
-|       inst_blk_mem_gen       |     0.594 |
-|   BM_overwall_wall_29        |     0.579 |
-|     U0                       |     0.579 |
-|       inst_blk_mem_gen       |     0.579 |
-|   BM_overwall_wall_3         |     0.621 |
-|     U0                       |     0.621 |
-|       inst_blk_mem_gen       |     0.621 |
-|   BM_overwall_wall_30        |     0.626 |
-|     U0                       |     0.626 |
-|       inst_blk_mem_gen       |     0.626 |
-|   BM_overwall_wall_31        |     0.604 |
-|     U0                       |     0.604 |
-|       inst_blk_mem_gen       |     0.604 |
-|   BM_overwall_wall_32        |     0.612 |
-|     U0                       |     0.612 |
-|       inst_blk_mem_gen       |     0.612 |
-|   BM_overwall_wall_33        |     0.632 |
-|     U0                       |     0.632 |
-|       inst_blk_mem_gen       |     0.632 |
-|   BM_overwall_wall_34        |     0.575 |
-|     U0                       |     0.575 |
-|       inst_blk_mem_gen       |     0.575 |
-|   BM_overwall_wall_35        |     0.591 |
-|     U0                       |     0.591 |
-|       inst_blk_mem_gen       |     0.591 |
-|   BM_overwall_wall_36        |     0.564 |
-|     U0                       |     0.564 |
-|       inst_blk_mem_gen       |     0.564 |
-|   BM_overwall_wall_37        |     0.583 |
-|     U0                       |     0.583 |
-|       inst_blk_mem_gen       |     0.583 |
-|   BM_overwall_wall_38        |     0.564 |
-|     U0                       |     0.564 |
-|       inst_blk_mem_gen       |     0.564 |
-|   BM_overwall_wall_39        |     0.602 |
-|     U0                       |     0.602 |
-|       inst_blk_mem_gen       |     0.602 |
-|   BM_overwall_wall_4         |     0.563 |
-|     U0                       |     0.563 |
-|       inst_blk_mem_gen       |     0.563 |
-|   BM_overwall_wall_40        |     0.617 |
-|     U0                       |     0.617 |
-|       inst_blk_mem_gen       |     0.617 |
-|   BM_overwall_wall_41        |     0.586 |
-|     U0                       |     0.586 |
-|       inst_blk_mem_gen       |     0.586 |
-|   BM_overwall_wall_42        |     0.559 |
-|     U0                       |     0.559 |
-|       inst_blk_mem_gen       |     0.559 |
-|   BM_overwall_wall_43        |     0.732 |
-|     U0                       |     0.732 |
-|       inst_blk_mem_gen       |     0.732 |
-|   BM_overwall_wall_44        |     0.666 |
-|     U0                       |     0.666 |
-|       inst_blk_mem_gen       |     0.666 |
-|   BM_overwall_wall_45        |     0.656 |
-|     U0                       |     0.656 |
-|       inst_blk_mem_gen       |     0.656 |
-|   BM_overwall_wall_46        |     0.619 |
-|     U0                       |     0.619 |
-|       inst_blk_mem_gen       |     0.619 |
-|   BM_overwall_wall_47        |     0.612 |
-|     U0                       |     0.612 |
-|       inst_blk_mem_gen       |     0.612 |
-|   BM_overwall_wall_48        |     0.655 |
-|     U0                       |     0.655 |
-|       inst_blk_mem_gen       |     0.655 |
-|   BM_overwall_wall_49        |     0.698 |
-|     U0                       |     0.698 |
-|       inst_blk_mem_gen       |     0.698 |
-|   BM_overwall_wall_5         |     0.584 |
-|     U0                       |     0.584 |
-|       inst_blk_mem_gen       |     0.584 |
-|   BM_overwall_wall_50        |     0.594 |
-|     U0                       |     0.594 |
-|       inst_blk_mem_gen       |     0.594 |
-|   BM_overwall_wall_51        |     0.718 |
-|     U0                       |     0.718 |
-|       inst_blk_mem_gen       |     0.718 |
-|   BM_overwall_wall_52        |     0.567 |
+|   BM_CY_back_walk_L_         |     0.567 |
 |     U0                       |     0.567 |
 |       inst_blk_mem_gen       |     0.567 |
-|   BM_overwall_wall_53        |     0.575 |
-|     U0                       |     0.575 |
-|       inst_blk_mem_gen       |     0.575 |
-|   BM_overwall_wall_54        |     0.609 |
-|     U0                       |     0.609 |
-|       inst_blk_mem_gen       |     0.609 |
-|   BM_overwall_wall_55        |     0.620 |
-|     U0                       |     0.620 |
-|       inst_blk_mem_gen       |     0.620 |
-|   BM_overwall_wall_56        |     0.655 |
-|     U0                       |     0.655 |
-|       inst_blk_mem_gen       |     0.655 |
-|   BM_overwall_wall_57        |     0.609 |
-|     U0                       |     0.609 |
-|       inst_blk_mem_gen       |     0.609 |
-|   BM_overwall_wall_58        |     0.568 |
-|     U0                       |     0.568 |
-|       inst_blk_mem_gen       |     0.568 |
-|   BM_overwall_wall_59        |     0.612 |
+|   BM_CY_back_walk_R_         |     0.582 |
+|     U0                       |     0.582 |
+|       inst_blk_mem_gen       |     0.582 |
+|   BM_CY_front_stand_         |     0.598 |
+|     U0                       |     0.598 |
+|       inst_blk_mem_gen       |     0.598 |
+|   BM_CY_front_walk_L_        |     0.612 |
 |     U0                       |     0.612 |
 |       inst_blk_mem_gen       |     0.612 |
-|   BM_overwall_wall_6         |     0.621 |
-|     U0                       |     0.621 |
-|       inst_blk_mem_gen       |     0.621 |
-|   BM_overwall_wall_7         |     0.570 |
-|     U0                       |     0.570 |
-|       inst_blk_mem_gen       |     0.570 |
-|   BM_overwall_wall_8         |     0.565 |
-|     U0                       |     0.565 |
-|       inst_blk_mem_gen       |     0.565 |
-|   BM_overwall_wall_9         |     0.608 |
-|     U0                       |     0.608 |
-|       inst_blk_mem_gen       |     0.608 |
-|   CD0                        |     0.035 |
-|   CD1                        |     0.055 |
-|   MAG_CY                     |     8.553 |
-|   MAG_computer_room_entrance |     5.091 |
-|   MAG_monster_1              |     7.991 |
-|   MAG_wall_0                 |     4.064 |
-|   MAG_wall_1                 |     5.179 |
-|   MAG_wall_10                |     4.805 |
-|   MAG_wall_11                |     5.277 |
-|   MAG_wall_12                |     4.687 |
-|   MAG_wall_13                |     5.289 |
-|   MAG_wall_14                |     4.848 |
-|   MAG_wall_15                |     4.915 |
-|   MAG_wall_16                |     4.045 |
-|   MAG_wall_17                |     5.148 |
-|   MAG_wall_18                |     4.820 |
-|   MAG_wall_19                |     3.529 |
-|   MAG_wall_2                 |     4.591 |
-|   MAG_wall_20                |     3.337 |
-|   MAG_wall_21                |     5.171 |
-|   MAG_wall_22                |     4.698 |
-|   MAG_wall_23                |     5.253 |
-|   MAG_wall_24                |     4.323 |
-|   MAG_wall_25                |     3.688 |
-|   MAG_wall_26                |     4.895 |
-|   MAG_wall_27                |     3.914 |
-|   MAG_wall_28                |     3.398 |
-|   MAG_wall_29                |     3.798 |
-|   MAG_wall_3                 |     4.659 |
-|   MAG_wall_30                |     3.395 |
-|   MAG_wall_31                |     3.550 |
-|   MAG_wall_32                |     3.251 |
-|   MAG_wall_33                |     5.190 |
-|   MAG_wall_34                |     2.929 |
-|   MAG_wall_35                |     5.352 |
-|   MAG_wall_36                |     3.206 |
-|   MAG_wall_37                |     3.784 |
-|   MAG_wall_38                |     4.729 |
-|   MAG_wall_39                |     4.969 |
-|   MAG_wall_4                 |     4.894 |
-|   MAG_wall_40                |     5.353 |
-|   MAG_wall_41                |     5.223 |
-|   MAG_wall_42                |     5.249 |
-|   MAG_wall_43                |     4.934 |
-|   MAG_wall_44                |     4.903 |
-|   MAG_wall_45                |     3.645 |
-|   MAG_wall_46                |     3.825 |
-|   MAG_wall_47                |     3.657 |
-|   MAG_wall_48                |     5.129 |
-|   MAG_wall_49                |     5.087 |
-|   MAG_wall_5                 |     5.302 |
-|   MAG_wall_50                |     5.321 |
-|   MAG_wall_51                |     5.111 |
-|   MAG_wall_52                |     5.653 |
-|   MAG_wall_53                |     5.272 |
-|   MAG_wall_54                |     5.185 |
-|   MAG_wall_55                |     5.226 |
-|   MAG_wall_56                |     3.717 |
-|   MAG_wall_57                |     3.736 |
-|   MAG_wall_58                |     3.922 |
-|   MAG_wall_59                |     5.156 |
-|   MAG_wall_6                 |     4.717 |
-|   MAG_wall_7                 |     5.289 |
-|   MAG_wall_8                 |     4.493 |
-|   MAG_wall_9                 |     4.976 |
-|   RGB_GEN_                   |     2.265 |
-|   SC0                        |     5.745 |
-|     MC                       |     3.649 |
-|       CD0                    |     0.055 |
-|     m1                       |     2.041 |
-|       randomgen              |     1.362 |
-|   VC0                        |    12.039 |
-|   key_de                     |     0.456 |
-|     inst                     |     0.421 |
-|       inst                   |     0.421 |
+|   BM_CY_front_walk_R_        |     0.583 |
+|     U0                       |     0.583 |
+|       inst_blk_mem_gen       |     0.583 |
+|   BM_CY_left_stand_          |     0.591 |
+|     U0                       |     0.591 |
+|       inst_blk_mem_gen       |     0.591 |
+|   BM_CY_left_walk_           |     0.599 |
+|     U0                       |     0.599 |
+|       inst_blk_mem_gen       |     0.599 |
+|   BM_CY_right_stand_         |     0.605 |
+|     U0                       |     0.605 |
+|       inst_blk_mem_gen       |     0.605 |
+|   BM_CY_right_walk_          |     0.603 |
+|     U0                       |     0.603 |
+|       inst_blk_mem_gen       |     0.603 |
+|   BM_computer_room_entrance_ |     0.580 |
+|     U0                       |     0.580 |
+|       inst_blk_mem_gen       |     0.580 |
+|   BM_overwall_wall_1         |     3.051 |
+|     U0                       |     3.051 |
+|       inst_blk_mem_gen       |     3.051 |
+|   CD0                        |     0.030 |
+|   CD1                        |     0.046 |
+|   MAG_CY                     |     9.132 |
+|   MAG_computer_room_entrance |     5.652 |
+|   MAG_monster_1              |     4.724 |
+|   MAG_wall_1                 |     4.988 |
+|   RGB_GEN_                   |     4.500 |
+|   SC0                        |     4.960 |
+|     MC                       |     3.626 |
+|       CD0                    |     0.066 |
+|     m1                       |     1.299 |
+|       randomgen              |     0.983 |
+|   VC0                        |     6.863 |
+|   key_de                     |     0.457 |
+|     inst                     |     0.416 |
+|       inst                   |     0.416 |
 +------------------------------+-----------+
 
 

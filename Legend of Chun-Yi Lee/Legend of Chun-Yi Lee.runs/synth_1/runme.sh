@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1'
+HD_PWD='C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

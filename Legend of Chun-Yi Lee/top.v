@@ -1,89 +1,84 @@
 module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync);
     
-    parameter [8:0] A_CODE  = {1'b0, 8'h1C};
-    parameter [8:0] D_CODE  = {1'b0, 8'h23};
-    parameter [8:0] W_CODE  = {1'b0, 8'h1D};
-    parameter [8:0] S_CODE  = {1'b0, 8'h1B};
-    parameter [8:0] J_CODE  = {1'b0, 8'h3B};
-    parameter [8:0] K_CODE  = {1'b0, 8'h42};
-    parameter [8:0] L_CODE  = {1'b0, 8'h4B};
-    parameter [8:0] SPACE_CODE  = {1'b0, 8'h29};
+        parameter [8:0] A_CODE  = {1'b0, 8'h1C};
+        parameter [8:0] D_CODE  = {1'b0, 8'h23};
+        parameter [8:0] W_CODE  = {1'b0, 8'h1D};
+        parameter [8:0] S_CODE  = {1'b0, 8'h1B};
+        parameter [8:0] J_CODE  = {1'b0, 8'h3B};
+        parameter [8:0] K_CODE  = {1'b0, 8'h42};
+        parameter [8:0] L_CODE  = {1'b0, 8'h4B};
+        parameter [8:0] SPACE_CODE  = {1'b0, 8'h29};
     
 	//keyboard
 	inout PS2_DATA, PS2_CLK;
 	wire [511:0] key_down;
-    wire [8:0] last_change;
-    wire been_ready;
+        wire [8:0] last_change;
+        wire been_ready;
 	//VGA
-    output [3:0] vgaRed, vgaGreen, vgaBlue;
-    output hsync, vsync;
-    wire [9:0] h_cnt, v_cnt;
-    wire valid;
-	//system
-	input rst;
-	wire rst_db;
-	wire rst_op;
-	input clk;//50MHz, used in keyboard and debounce
-	wire clk_d2;//25MHz, used  in VGA
-    wire clk_d22;//191Hz, used  in state control
-    //for block memory (image)
-    wire [11:0] pixel_CY_back_stand;
-    wire [11:0] pixel_CY_back_walk_L;
-    wire [11:0] pixel_CY_back_walk_R;
-    wire [11:0] pixel_CY_front_stand;
-    wire [11:0] pixel_CY_front_walk_L;
-    wire [11:0] pixel_CY_front_walk_R;
-    wire [11:0] pixel_CY_left_stand;
-    wire [11:0] pixel_CY_left_walk;
-    wire [11:0] pixel_CY_right_stand;
-    wire [11:0] pixel_CY_right_walk;
-    wire [11:0] pixel_BOSS_student;
-    wire [11:0] pixel_CS_student;
-    wire [11:0] pixel_EECS_student;
-    wire [11:0] pixel_NTHU_student;
-    wire [11:0] pixel_CR;
-    wire [11:0] pixel_EM;
-    wire [11:0] pixel_JX;
-    wire [11:0] pixel_YC;
-    wire [11:0] pixel_ZY;
-    wire [11:0] pixel_key;
-    wire [11:0] pixel_heart;
-    wire [11:0] pixel_potion;
-    wire [11:0] pixel_yoshi;
-    wire [11:0] pixel_car;
-    wire [11:0] pixel_wooden_fpga;
-    wire [11:0] pixel_golden_fpga;
-    wire [11:0] pixel_basys_3_fpga;
-    wire [11:0] pixel_computer_room_walls;
-    wire [11:0] pixel_computer_room_entrance;
-    wire [11:0] pixel_overwall_wall[63:0];
-    //for sprites
-    //for CY
-    wire [16:0] pixel_addr_CY;
-    wire [11:0] pixel_CY;
-    
-    wire [3:0] pixel_idx_CY;
-    wire [9:0] pos_h_CY, pos_v_CY;
-    //for monster_1
-    wire [16:0] pixel_addr_monster_1;
-    wire [11:0] pixel_monster_1;
-    
-    wire [3:0] pixel_idx_monster_1;
-    wire [9:0] pos_h_monster_1, pos_v_monster_1;
-    
-    //for cave entrance
-    wire [16:0] pixel_addr_computer_room_entrance;
-    wire [11:0] pixel_computer_room_entrance_ins;
-    
-    wire [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance;
-    
-    //for walls
-    wire [16:0] pixel_addr_wall[63:0];
-    wire [11:0] pixel_wall[63:0];
-    
-    wire [3:0] pixel_idx_wall[63:0];
-    wire [9:0] pos_h_wall[63:0], pos_v_wall[63:0];
-	
+        output [3:0] vgaRed, vgaGreen, vgaBlue;
+        output hsync, vsync;
+        wire [9:0] h_cnt, v_cnt;
+        wire valid;
+        //system
+        input rst;
+        wire rst_db;
+        wire rst_op;
+        input clk;//50MHz, used in keyboard and debounce
+        wire clk_d2;//25MHz, used  in VGA
+        wire clk_d22;//~95Hz, used  in state control
+        //for block memory (image)
+        wire [11:0] pixel_CY_back_stand;
+        wire [11:0] pixel_CY_back_walk_L;
+        wire [11:0] pixel_CY_back_walk_R;
+        wire [11:0] pixel_CY_front_stand;
+        wire [11:0] pixel_CY_front_walk_L;
+        wire [11:0] pixel_CY_front_walk_R;
+        wire [11:0] pixel_CY_left_stand;
+        wire [11:0] pixel_CY_left_walk;
+        wire [11:0] pixel_CY_right_stand;
+        wire [11:0] pixel_CY_right_walk;
+        wire [11:0] pixel_BOSS_student;
+        wire [11:0] pixel_CS_student;
+        wire [11:0] pixel_EECS_student;
+        wire [11:0] pixel_NTHU_student;
+        wire [11:0] pixel_CR;
+        wire [11:0] pixel_EM;
+        wire [11:0] pixel_JX;
+        wire [11:0] pixel_YC;
+        wire [11:0] pixel_ZY;
+        wire [11:0] pixel_key;
+        wire [11:0] pixel_heart;
+        wire [11:0] pixel_potion;
+        wire [11:0] pixel_yoshi;
+        wire [11:0] pixel_car;
+        wire [11:0] pixel_wooden_fpga;
+        wire [11:0] pixel_golden_fpga;
+        wire [11:0] pixel_basys_3_fpga;
+        wire [11:0] pixel_computer_room_walls;
+        wire [11:0] pixel_computer_room_entrance;
+        wire [11:0] pixel_overwall_wall[63:0];
+        //for sprites
+        //for CY
+        wire [16:0] pixel_addr_CY;
+        wire [11:0] pixel_CY;
+        wire [3:0] pixel_idx_CY;
+        wire [9:0] pos_h_CY, pos_v_CY;
+        //for monster_1
+        wire [16:0] pixel_addr_monster_1;
+        wire [11:0] pixel_monster_1;
+        wire [3:0] pixel_idx_monster_1;
+        wire [9:0] pos_h_monster_1, pos_v_monster_1;
+        //for cave entrance
+        wire [16:0] pixel_addr_computer_room_entrance;
+        wire [11:0] pixel_computer_room_entrance_ins;
+        wire [3:0] pixel_idx_computer_room_entrance;
+        wire [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance;
+        //for walls
+        wire [16:0] pixel_addr_wall[63:0];
+        wire [11:0] pixel_wall[63:0];
+        wire [3:0] pixel_idx_wall[63:0];
+        wire [9:0] pos_h_wall[63:0], pos_v_wall[63:0];
+                
 	select_pixel SP_CY(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_CY),.pos_v(pos_v_CY),
@@ -125,460 +120,481 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .pos_h(pos_h_wall[0]),.pos_v(pos_v_wall[0]),
         .size_h(20),.size_v(20),
         .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[0]),
-        .now_pixel(pixel_wall[0])
-	);
-
-    select_pixel SP_w1(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[1]),.pos_v(pos_v_wall[1]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
         .pixel_0(pixel_overwall_wall[1]),
-        .now_pixel(pixel_wall[1])
-	);
-
+        .now_pixel(pixel_wall[0])
+    );
+    select_pixel SP_w1(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[1]),.pos_v(pos_v_wall[1]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[1])
+    );
     select_pixel SP_w2(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[2]),.pos_v(pos_v_wall[2]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[2]),
-        .now_pixel(pixel_wall[2])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[2]),.pos_v(pos_v_wall[2]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[2])
+    );
     select_pixel SP_w3(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[3]),.pos_v(pos_v_wall[3]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[3]),
-        .now_pixel(pixel_wall[3])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[3]),.pos_v(pos_v_wall[3]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[3])
+    );
     select_pixel SP_w4(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[4]),.pos_v(pos_v_wall[4]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[4]),
-        .now_pixel(pixel_wall[4])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[4]),.pos_v(pos_v_wall[4]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[4])
+    );
     select_pixel SP_w5(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[5]),.pos_v(pos_v_wall[5]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[5]),
-        .now_pixel(pixel_wall[5])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[5]),.pos_v(pos_v_wall[5]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[5])
+    );
     select_pixel SP_w6(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[6]),.pos_v(pos_v_wall[6]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[6]),
-        .now_pixel(pixel_wall[6])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[6]),.pos_v(pos_v_wall[6]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[6])
+    );
     select_pixel SP_w7(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[7]),.pos_v(pos_v_wall[7]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[7]),
-        .now_pixel(pixel_wall[7])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[7]),.pos_v(pos_v_wall[7]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[7])
+    );
     select_pixel SP_w8(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[8]),.pos_v(pos_v_wall[8]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[8]),
-        .now_pixel(pixel_wall[8])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[8]),.pos_v(pos_v_wall[8]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[8])
+    );
     select_pixel SP_w9(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[9]),.pos_v(pos_v_wall[9]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[9]),
-        .now_pixel(pixel_wall[9])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[9]),.pos_v(pos_v_wall[9]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[9])
+    );
     select_pixel SP_w10(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[10]),.pos_v(pos_v_wall[10]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[10]),
-        .now_pixel(pixel_wall[10])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[10]),.pos_v(pos_v_wall[10]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[10])
+    );
     select_pixel SP_w11(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[11]),.pos_v(pos_v_wall[11]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[11]),
-        .now_pixel(pixel_wall[11])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[11]),.pos_v(pos_v_wall[11]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[11])
+    );
     select_pixel SP_w12(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[12]),.pos_v(pos_v_wall[12]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[12]),
-        .now_pixel(pixel_wall[12])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[12]),.pos_v(pos_v_wall[12]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[12])
+    );
     select_pixel SP_w13(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[13]),.pos_v(pos_v_wall[13]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[13]),
-        .now_pixel(pixel_wall[13])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[13]),.pos_v(pos_v_wall[13]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[13])
+    );
     select_pixel SP_w14(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[14]),.pos_v(pos_v_wall[14]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[14]),
-        .now_pixel(pixel_wall[14])
-	);
-	
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[14]),.pos_v(pos_v_wall[14]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[14])
+    );
     select_pixel SP_w15(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[15]),.pos_v(pos_v_wall[15]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[15]),
-        .now_pixel(pixel_wall[15])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[15]),.pos_v(pos_v_wall[15]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[15])
+    );
     select_pixel SP_w16(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[16]),.pos_v(pos_v_wall[16]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[16]),
-        .now_pixel(pixel_wall[16])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[16]),.pos_v(pos_v_wall[16]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[16])
+    );
     select_pixel SP_w17(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[17]),.pos_v(pos_v_wall[17]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[17]),
-        .now_pixel(pixel_wall[17])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[17]),.pos_v(pos_v_wall[17]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[17])
+    );
     select_pixel SP_w18(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[18]),.pos_v(pos_v_wall[18]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[18]),
-        .now_pixel(pixel_wall[18])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[18]),.pos_v(pos_v_wall[18]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[18])
+    );
     select_pixel SP_w19(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[19]),.pos_v(pos_v_wall[19]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[19]),
-        .now_pixel(pixel_wall[19])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[19]),.pos_v(pos_v_wall[19]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[19])
+    );
     select_pixel SP_w20(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[20]),.pos_v(pos_v_wall[20]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[20]),
-        .now_pixel(pixel_wall[20])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[20]),.pos_v(pos_v_wall[20]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[20])
+    );
     select_pixel SP_w21(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[21]),.pos_v(pos_v_wall[21]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[21]),
-        .now_pixel(pixel_wall[21])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[21]),.pos_v(pos_v_wall[21]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[21])
+    );
     select_pixel SP_w22(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[22]),.pos_v(pos_v_wall[22]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[22]),
-        .now_pixel(pixel_wall[22])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[22]),.pos_v(pos_v_wall[22]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[22])
+    );
     select_pixel SP_w23(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[23]),.pos_v(pos_v_wall[23]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[23]),
-        .now_pixel(pixel_wall[23])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[23]),.pos_v(pos_v_wall[23]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[23])
+    );
     select_pixel SP_w24(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[24]),.pos_v(pos_v_wall[24]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[24]),
-        .now_pixel(pixel_wall[24])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[24]),.pos_v(pos_v_wall[24]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[24])
+    );
     select_pixel SP_w25(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[25]),.pos_v(pos_v_wall[25]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[25]),
-        .now_pixel(pixel_wall[25])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[25]),.pos_v(pos_v_wall[25]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[25])
+    );
     select_pixel SP_w26(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[26]),.pos_v(pos_v_wall[26]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[26]),
-        .now_pixel(pixel_wall[26])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[26]),.pos_v(pos_v_wall[26]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[26])
+    );
     select_pixel SP_w27(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[27]),.pos_v(pos_v_wall[27]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[27]),
-        .now_pixel(pixel_wall[27])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[27]),.pos_v(pos_v_wall[27]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[27])
+    );
     select_pixel SP_w28(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[28]),.pos_v(pos_v_wall[28]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[28]),
-        .now_pixel(pixel_wall[28])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[28]),.pos_v(pos_v_wall[28]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[28])
+    );
     select_pixel SP_w29(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[29]),.pos_v(pos_v_wall[29]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[29]),
-        .now_pixel(pixel_wall[29])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[29]),.pos_v(pos_v_wall[29]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[29])
+    );
     select_pixel SP_w30(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[30]),.pos_v(pos_v_wall[30]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[30]),
-        .now_pixel(pixel_wall[30])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[30]),.pos_v(pos_v_wall[30]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[30])
+    );
     select_pixel SP_w31(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[31]),.pos_v(pos_v_wall[31]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[31]),
-        .now_pixel(pixel_wall[31])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[31]),.pos_v(pos_v_wall[31]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[31])
+    );
     select_pixel SP_w32(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[32]),.pos_v(pos_v_wall[32]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[32]),
-        .now_pixel(pixel_wall[32])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[32]),.pos_v(pos_v_wall[32]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[32])
+    );
     select_pixel SP_w33(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[33]),.pos_v(pos_v_wall[33]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[33]),
-        .now_pixel(pixel_wall[33])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[33]),.pos_v(pos_v_wall[33]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[33])
+    );
     select_pixel SP_w34(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[34]),.pos_v(pos_v_wall[34]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[34]),
-        .now_pixel(pixel_wall[34])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[34]),.pos_v(pos_v_wall[34]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[34])
+    );
     select_pixel SP_w35(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[35]),.pos_v(pos_v_wall[35]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[35]),
-        .now_pixel(pixel_wall[35])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[35]),.pos_v(pos_v_wall[35]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[35])
+    );
     select_pixel SP_w36(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[36]),.pos_v(pos_v_wall[36]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[36]),
-        .now_pixel(pixel_wall[36])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[36]),.pos_v(pos_v_wall[36]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[36])
+    );
     select_pixel SP_w37(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[37]),.pos_v(pos_v_wall[37]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[37]),
-        .now_pixel(pixel_wall[37])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[37]),.pos_v(pos_v_wall[37]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[37])
+    );
     select_pixel SP_w38(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[38]),.pos_v(pos_v_wall[38]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[38]),
-        .now_pixel(pixel_wall[38])
-	);
-
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[38]),.pos_v(pos_v_wall[38]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[38])
+    );
     select_pixel SP_w39(
-        .h_cnt(h_cnt), .v_cnt(v_cnt),
-        .pos_h(pos_h_wall[39]),.pos_v(pos_v_wall[39]),
-        .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_overwall_wall[39]),
-        .now_pixel(pixel_wall[39])
-	);
-            select_pixel SP_w40(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[40]),
-           .pos_v(pos_v_wall[40]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[40]),
-       .now_pixel(pixel_wall[40]));
-            select_pixel SP_w41(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[41]),
-           .pos_v(pos_v_wall[41]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[41]),
-       .now_pixel(pixel_wall[41]));
-            select_pixel SP_w42(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[42]),
-           .pos_v(pos_v_wall[42]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[42]),
-       .now_pixel(pixel_wall[42]));
-            select_pixel SP_w43(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[43]),
-           .pos_v(pos_v_wall[43]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[43]),
-       .now_pixel(pixel_wall[43]));
-            select_pixel SP_w44(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[44]),
-           .pos_v(pos_v_wall[44]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[44]),
-       .now_pixel(pixel_wall[44]));
-            select_pixel SP_w45(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[45]),
-           .pos_v(pos_v_wall[45]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[45]),
-       .now_pixel(pixel_wall[45]));
-            select_pixel SP_w46(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[46]),
-           .pos_v(pos_v_wall[46]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[46]),
-       .now_pixel(pixel_wall[46]));
-            select_pixel SP_w47(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[47]),
-           .pos_v(pos_v_wall[47]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[47]),
-       .now_pixel(pixel_wall[47]));
-            select_pixel SP_w48(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[48]),
-           .pos_v(pos_v_wall[48]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[48]),
-       .now_pixel(pixel_wall[48]));
-            select_pixel SP_w49(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[49]),
-           .pos_v(pos_v_wall[49]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[49]),
-       .now_pixel(pixel_wall[49]));
-            select_pixel SP_w50(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[50]),
-           .pos_v(pos_v_wall[50]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[50]),
-       .now_pixel(pixel_wall[50]));
-            select_pixel SP_w51(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[51]),
-           .pos_v(pos_v_wall[51]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[51]),
-       .now_pixel(pixel_wall[51]));
-            select_pixel SP_w52(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[52]),
-           .pos_v(pos_v_wall[52]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[52]),
-       .now_pixel(pixel_wall[52]));
-            select_pixel SP_w53(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[53]),
-           .pos_v(pos_v_wall[53]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[53]),
-       .now_pixel(pixel_wall[53]));
-            select_pixel SP_w54(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[54]),
-           .pos_v(pos_v_wall[54]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[54]),
-       .now_pixel(pixel_wall[54]));
-            select_pixel SP_w55(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[55]),
-           .pos_v(pos_v_wall[55]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[55]),
-       .now_pixel(pixel_wall[55]));
-            select_pixel SP_w56(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[56]),
-           .pos_v(pos_v_wall[56]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[56]),
-       .now_pixel(pixel_wall[56]));
-            select_pixel SP_w57(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[57]),
-           .pos_v(pos_v_wall[57]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[57]),
-       .now_pixel(pixel_wall[57]));
-            select_pixel SP_w58(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[58]),
-           .pos_v(pos_v_wall[58]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[58]),
-       .now_pixel(pixel_wall[58]));
-            select_pixel SP_w59(.h_cnt(h_cnt), .v_cnt(v_cnt),
-           .pos_h(pos_h_wall[59]),
-           .pos_v(pos_v_wall[59]),.size_h(20),.size_v(20),.now_pixel_idx(0),
-.pixel_0(pixel_overwall_wall[59]),
-       .now_pixel(pixel_wall[59]));
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[39]),.pos_v(pos_v_wall[39]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[39])
+    );
+    select_pixel SP_w40(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[40]),.pos_v(pos_v_wall[40]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[40])
+    );
+    select_pixel SP_w41(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[41]),.pos_v(pos_v_wall[41]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[41])
+    );
+    select_pixel SP_w42(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[42]),.pos_v(pos_v_wall[42]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[42])
+    );
+    select_pixel SP_w43(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[43]),.pos_v(pos_v_wall[43]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[43])
+    );
+    select_pixel SP_w44(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[44]),.pos_v(pos_v_wall[44]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[44])
+    );
+    select_pixel SP_w45(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[45]),.pos_v(pos_v_wall[45]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[45])
+    );
+    select_pixel SP_w46(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[46]),.pos_v(pos_v_wall[46]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[46])
+    );
+    select_pixel SP_w47(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[47]),.pos_v(pos_v_wall[47]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[47])
+    );
+    select_pixel SP_w48(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[48]),.pos_v(pos_v_wall[48]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[48])
+    );
+    select_pixel SP_w49(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[49]),.pos_v(pos_v_wall[49]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[49])
+    );
+    select_pixel SP_w50(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[50]),.pos_v(pos_v_wall[50]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[50])
+    );
+    select_pixel SP_w51(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[51]),.pos_v(pos_v_wall[51]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[51])
+    );
+    select_pixel SP_w52(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[52]),.pos_v(pos_v_wall[52]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[52])
+    );
+    select_pixel SP_w53(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[53]),.pos_v(pos_v_wall[53]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[53])
+    );
+    select_pixel SP_w54(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[54]),.pos_v(pos_v_wall[54]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[54])
+    );
+    select_pixel SP_w55(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[55]),.pos_v(pos_v_wall[55]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[55])
+    );
+    select_pixel SP_w56(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[56]),.pos_v(pos_v_wall[56]),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[56])
+    );
+    select_pixel SP_w57(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[57]),.pos_v(pos_v_wall[57]),
+            .size_h(320),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[57])
+    );
+    select_pixel SP_w58(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[58]),.pos_v(pos_v_wall[58]),
+            .size_h(320),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[58])
+    );
+    select_pixel SP_w59(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_wall[59]),.pos_v(pos_v_wall[59]),
+            .size_h(320),.size_v(20),
+            .now_pixel_idx(0),
+            .pixel_0(pixel_overwall_wall[1]),
+            .now_pixel(pixel_wall[59])
+    );
 
 
 	RGB_GEN RGB_GEN_(
@@ -652,7 +668,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 	
 	//clock
 	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
-	clk_div #(19) CD1(.clk(clk), .clk_d(clk_d22));
+	clk_div #(20) CD1(.clk(clk), .clk_d(clk_d22));
 	
 	//signals
 	debounce DB1(.s(rst), .s_db(rst_db), .clk(clk));
@@ -676,6 +692,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.pixel_idx_monster_1(pixel_idx_monster_1),
 		.pos_h_monster_1(pos_h_monster_1),
 		.pos_v_monster_1(pos_v_monster_1),
+		.pixel_idx_computer_room_entrance(pixel_idx_computer_room_entrance),
 		.pos_h_computer_room_entrance(pos_h_computer_room_entrance),
 		.pos_v_computer_room_entrance(pos_v_computer_room_entrance),
 		.pixel_idx_walls(pixel_idx_wall[0]),
