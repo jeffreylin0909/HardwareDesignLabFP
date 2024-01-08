@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="BM_CY_front_walk_L_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_front_walk_R_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_right_stand_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_right_walk_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_left_stand_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_left_walk_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_back_stand_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_back_walk_L_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_back_walk_R_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_overwall_wall_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_computer_room_entrance_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CS_student_L_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CS_student_R_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_front_stand_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_back_attack_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_front_attack_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_left_attack_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BM_CY_right_attack_synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="BM_CY_front_walk_L_synth_1"/>
+		<Parent Id="BM_CY_front_walk_R_synth_1"/>
+		<Parent Id="BM_CY_right_stand_synth_1"/>
+		<Parent Id="BM_CY_right_walk_synth_1"/>
+		<Parent Id="BM_CY_left_stand_synth_1"/>
+		<Parent Id="BM_CY_left_walk_synth_1"/>
+		<Parent Id="BM_CY_back_stand_synth_1"/>
+		<Parent Id="BM_CY_back_walk_L_synth_1"/>
+		<Parent Id="BM_CY_back_walk_R_synth_1"/>
+		<Parent Id="BM_overwall_wall_synth_1"/>
+		<Parent Id="BM_computer_room_entrance_synth_1"/>
+		<Parent Id="BM_CS_student_L_synth_1"/>
+		<Parent Id="BM_CS_student_R_synth_1"/>
+		<Parent Id="BM_CY_front_stand_synth_1"/>
+		<Parent Id="BM_CY_back_attack_synth_1"/>
+		<Parent Id="BM_CY_front_attack_synth_1"/>
+		<Parent Id="BM_CY_left_attack_synth_1"/>
+		<Parent Id="BM_CY_right_attack_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="BM_CY_front_walk_L_synth_1"/>
+		<Parent Id="BM_CY_front_walk_R_synth_1"/>
+		<Parent Id="BM_CY_right_stand_synth_1"/>
+		<Parent Id="BM_CY_right_walk_synth_1"/>
+		<Parent Id="BM_CY_left_stand_synth_1"/>
+		<Parent Id="BM_CY_left_walk_synth_1"/>
+		<Parent Id="BM_CY_back_stand_synth_1"/>
+		<Parent Id="BM_CY_back_walk_L_synth_1"/>
+		<Parent Id="BM_CY_back_walk_R_synth_1"/>
+		<Parent Id="BM_overwall_wall_synth_1"/>
+		<Parent Id="BM_computer_room_entrance_synth_1"/>
+		<Parent Id="BM_CS_student_L_synth_1"/>
+		<Parent Id="BM_CS_student_R_synth_1"/>
+		<Parent Id="BM_CY_front_stand_synth_1"/>
+		<Parent Id="BM_CY_back_attack_synth_1"/>
+		<Parent Id="BM_CY_front_attack_synth_1"/>
+		<Parent Id="BM_CY_left_attack_synth_1"/>
+		<Parent Id="BM_CY_right_attack_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

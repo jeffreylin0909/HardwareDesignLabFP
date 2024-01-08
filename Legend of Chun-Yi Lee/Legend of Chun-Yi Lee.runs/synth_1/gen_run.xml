@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704647504">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704710392">
   <File Type="PA-TCL" Name="Top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Top_reports.tcl"/>
@@ -11,20 +11,6 @@
   <File Type="VDS-TIMING-PB" Name="Top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/BM_CS_student_1/BM_CS_student.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/KeyboardDecoder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -161,24 +147,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Assets/CS_student.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/Assets/EECS_student.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/Assets/NTHU_student.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/Assets/overwall_wall.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -186,6 +154,78 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/Assets/computer_room_entrance.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/CS_student_L.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/CS_student_R.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/CY_back_attack.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/CY_front_attack.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/CY_left_attack.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/CY_right_attack.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/heart.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/basys_3_fpga_down.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/wooden_fpga_down.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/wooden_fpga_up.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/wooden_fpga_left.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/wooden_fpga_right.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -216,15 +256,16 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_attack"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CS_student_R"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_left_stand"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_stand"/>
   <BlockFileSet Type="BlockSrcs" Name="KeyboardCtrl_0"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_walk_L"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_wooden_fpga_up"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_walk_L"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_right_walk"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_walk_R"/>
@@ -233,4 +274,13 @@
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_walk_R"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_overwall_wall"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_computer_room_entrance"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CS_student_L"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CY_left_attack"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_attack"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_stand"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_CY_right_attack"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_heart"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_wooden_fpga_down"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_wooden_fpga_left"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_wooden_fpga_right"/>
 </GenRun>

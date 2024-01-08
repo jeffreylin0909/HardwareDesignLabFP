@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Jan  8 01:11:47 2024
-# Process ID: 34636
+# Start of session at: Mon Jan  8 18:39:54 2024
+# Process ID: 36912
 # Current directory: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.vds
@@ -19,9 +19,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20188 
+INFO: Helper process launched with PID 20280 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 849.215 ; gain = 233.812
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 852.664 ; gain = 235.023
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1]
 	Parameter A_CODE bound to: 9'b000011100 
@@ -34,69 +34,73 @@ INFO: [Synth 8-6157] synthesizing module 'Top' [C:/verilog project/Legend of Chu
 	Parameter SPACE_CODE bound to: 9'b000101001 
 INFO: [Synth 8-6157] synthesizing module 'select_pixel' [C:/verilog project/Legend of Chun-Yi Lee/select_pixel.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'select_pixel' (1#1) [C:/verilog project/Legend of Chun-Yi Lee/select_pixel.v:1]
-WARNING: [Synth 8-7023] instance 'SP_CY' of module 'select_pixel' has 24 connections declared, but only 18 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:82]
-WARNING: [Synth 8-7023] instance 'SP_monster_1' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:100]
-WARNING: [Synth 8-7023] instance 'SP_computer_room_entrance' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:109]
-WARNING: [Synth 8-7023] instance 'SP_w0' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:118]
-WARNING: [Synth 8-7023] instance 'SP_w1' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:126]
-WARNING: [Synth 8-7023] instance 'SP_w2' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:134]
-WARNING: [Synth 8-7023] instance 'SP_w3' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:142]
-WARNING: [Synth 8-7023] instance 'SP_w4' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:150]
-WARNING: [Synth 8-7023] instance 'SP_w5' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:158]
-WARNING: [Synth 8-7023] instance 'SP_w6' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:166]
-WARNING: [Synth 8-7023] instance 'SP_w7' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:174]
-WARNING: [Synth 8-7023] instance 'SP_w8' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:182]
-WARNING: [Synth 8-7023] instance 'SP_w9' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:190]
-WARNING: [Synth 8-7023] instance 'SP_w10' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:198]
-WARNING: [Synth 8-7023] instance 'SP_w11' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:206]
-WARNING: [Synth 8-7023] instance 'SP_w12' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:214]
-WARNING: [Synth 8-7023] instance 'SP_w13' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:222]
-WARNING: [Synth 8-7023] instance 'SP_w14' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:230]
-WARNING: [Synth 8-7023] instance 'SP_w15' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:238]
-WARNING: [Synth 8-7023] instance 'SP_w16' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:246]
-WARNING: [Synth 8-7023] instance 'SP_w17' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:254]
-WARNING: [Synth 8-7023] instance 'SP_w18' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:262]
-WARNING: [Synth 8-7023] instance 'SP_w19' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:270]
-WARNING: [Synth 8-7023] instance 'SP_w20' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:278]
-WARNING: [Synth 8-7023] instance 'SP_w21' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:286]
-WARNING: [Synth 8-7023] instance 'SP_w22' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:294]
-WARNING: [Synth 8-7023] instance 'SP_w23' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:302]
-WARNING: [Synth 8-7023] instance 'SP_w24' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:310]
-WARNING: [Synth 8-7023] instance 'SP_w25' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:318]
-WARNING: [Synth 8-7023] instance 'SP_w26' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:326]
-WARNING: [Synth 8-7023] instance 'SP_w27' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:334]
-WARNING: [Synth 8-7023] instance 'SP_w28' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:342]
-WARNING: [Synth 8-7023] instance 'SP_w29' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:350]
-WARNING: [Synth 8-7023] instance 'SP_w30' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:358]
-WARNING: [Synth 8-7023] instance 'SP_w31' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:366]
-WARNING: [Synth 8-7023] instance 'SP_w32' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:374]
-WARNING: [Synth 8-7023] instance 'SP_w33' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:382]
-WARNING: [Synth 8-7023] instance 'SP_w34' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:390]
-WARNING: [Synth 8-7023] instance 'SP_w35' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:398]
-WARNING: [Synth 8-7023] instance 'SP_w36' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:406]
-WARNING: [Synth 8-7023] instance 'SP_w37' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:414]
-WARNING: [Synth 8-7023] instance 'SP_w38' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:422]
-WARNING: [Synth 8-7023] instance 'SP_w39' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:430]
-WARNING: [Synth 8-7023] instance 'SP_w40' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:438]
-WARNING: [Synth 8-7023] instance 'SP_w41' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:446]
-WARNING: [Synth 8-7023] instance 'SP_w42' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:454]
-WARNING: [Synth 8-7023] instance 'SP_w43' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:462]
-WARNING: [Synth 8-7023] instance 'SP_w44' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:470]
-WARNING: [Synth 8-7023] instance 'SP_w45' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:478]
-WARNING: [Synth 8-7023] instance 'SP_w46' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:486]
-WARNING: [Synth 8-7023] instance 'SP_w47' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:494]
-WARNING: [Synth 8-7023] instance 'SP_w48' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:502]
-WARNING: [Synth 8-7023] instance 'SP_w49' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:510]
-WARNING: [Synth 8-7023] instance 'SP_w50' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:518]
-WARNING: [Synth 8-7023] instance 'SP_w51' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:526]
-WARNING: [Synth 8-7023] instance 'SP_w52' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:534]
-WARNING: [Synth 8-7023] instance 'SP_w53' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:542]
-WARNING: [Synth 8-7023] instance 'SP_w54' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:550]
-WARNING: [Synth 8-7023] instance 'SP_w55' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:558]
-WARNING: [Synth 8-7023] instance 'SP_w56' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:566]
-WARNING: [Synth 8-7023] instance 'SP_w57' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:574]
-WARNING: [Synth 8-7023] instance 'SP_w58' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:582]
-WARNING: [Synth 8-7023] instance 'SP_w59' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:590]
+WARNING: [Synth 8-7023] instance 'SP_CY' of module 'select_pixel' has 24 connections declared, but only 22 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:107]
+WARNING: [Synth 8-7023] instance 'SP_monster_1' of module 'select_pixel' has 24 connections declared, but only 10 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:129]
+WARNING: [Synth 8-7023] instance 'SP_computer_room_entrance' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:139]
+WARNING: [Synth 8-7023] instance 'SP_heart_0' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:148]
+WARNING: [Synth 8-7023] instance 'SP_heart_1' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:157]
+WARNING: [Synth 8-7023] instance 'SP_heart_2' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:166]
+WARNING: [Synth 8-7023] instance 'SP_w0' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:175]
+WARNING: [Synth 8-7023] instance 'SP_w1' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:183]
+WARNING: [Synth 8-7023] instance 'SP_w2' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:191]
+WARNING: [Synth 8-7023] instance 'SP_w3' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:199]
+WARNING: [Synth 8-7023] instance 'SP_w4' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:207]
+WARNING: [Synth 8-7023] instance 'SP_w5' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:215]
+WARNING: [Synth 8-7023] instance 'SP_w6' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:223]
+WARNING: [Synth 8-7023] instance 'SP_w7' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:231]
+WARNING: [Synth 8-7023] instance 'SP_w8' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:239]
+WARNING: [Synth 8-7023] instance 'SP_w9' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:247]
+WARNING: [Synth 8-7023] instance 'SP_w10' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:255]
+WARNING: [Synth 8-7023] instance 'SP_w11' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:263]
+WARNING: [Synth 8-7023] instance 'SP_w12' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:271]
+WARNING: [Synth 8-7023] instance 'SP_w13' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:279]
+WARNING: [Synth 8-7023] instance 'SP_w14' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:287]
+WARNING: [Synth 8-7023] instance 'SP_w15' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:295]
+WARNING: [Synth 8-7023] instance 'SP_w16' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:303]
+WARNING: [Synth 8-7023] instance 'SP_w17' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:311]
+WARNING: [Synth 8-7023] instance 'SP_w18' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:319]
+WARNING: [Synth 8-7023] instance 'SP_w19' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:327]
+WARNING: [Synth 8-7023] instance 'SP_w20' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:335]
+WARNING: [Synth 8-7023] instance 'SP_w21' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:343]
+WARNING: [Synth 8-7023] instance 'SP_w22' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:351]
+WARNING: [Synth 8-7023] instance 'SP_w23' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:359]
+WARNING: [Synth 8-7023] instance 'SP_w24' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:367]
+WARNING: [Synth 8-7023] instance 'SP_w25' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:375]
+WARNING: [Synth 8-7023] instance 'SP_w26' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:383]
+WARNING: [Synth 8-7023] instance 'SP_w27' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:391]
+WARNING: [Synth 8-7023] instance 'SP_w28' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:399]
+WARNING: [Synth 8-7023] instance 'SP_w29' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:407]
+WARNING: [Synth 8-7023] instance 'SP_w30' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:415]
+WARNING: [Synth 8-7023] instance 'SP_w31' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:423]
+WARNING: [Synth 8-7023] instance 'SP_w32' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:431]
+WARNING: [Synth 8-7023] instance 'SP_w33' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:439]
+WARNING: [Synth 8-7023] instance 'SP_w34' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:447]
+WARNING: [Synth 8-7023] instance 'SP_w35' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:455]
+WARNING: [Synth 8-7023] instance 'SP_w36' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:463]
+WARNING: [Synth 8-7023] instance 'SP_w37' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:471]
+WARNING: [Synth 8-7023] instance 'SP_w38' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:479]
+WARNING: [Synth 8-7023] instance 'SP_w39' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:487]
+WARNING: [Synth 8-7023] instance 'SP_w40' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:495]
+WARNING: [Synth 8-7023] instance 'SP_w41' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:503]
+WARNING: [Synth 8-7023] instance 'SP_w42' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:511]
+WARNING: [Synth 8-7023] instance 'SP_w43' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:519]
+WARNING: [Synth 8-7023] instance 'SP_w44' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:527]
+WARNING: [Synth 8-7023] instance 'SP_w45' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:535]
+WARNING: [Synth 8-7023] instance 'SP_w46' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:543]
+WARNING: [Synth 8-7023] instance 'SP_w47' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:551]
+WARNING: [Synth 8-7023] instance 'SP_w48' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:559]
+WARNING: [Synth 8-7023] instance 'SP_w49' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:567]
+WARNING: [Synth 8-7023] instance 'SP_w50' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:575]
+WARNING: [Synth 8-7023] instance 'SP_w51' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:583]
+WARNING: [Synth 8-7023] instance 'SP_w52' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:591]
+WARNING: [Synth 8-7023] instance 'SP_w53' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:599]
+WARNING: [Synth 8-7023] instance 'SP_w54' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:607]
+WARNING: [Synth 8-7023] instance 'SP_w55' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:615]
+WARNING: [Synth 8-7023] instance 'SP_w56' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:623]
+WARNING: [Synth 8-7023] instance 'SP_w57' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:631]
+WARNING: [Synth 8-7023] instance 'SP_w58' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:639]
+WARNING: [Synth 8-7023] instance 'SP_w59' of module 'select_pixel' has 24 connections declared, but only 9 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:647]
+WARNING: [Synth 8-7023] instance 'SP_weapon' of module 'select_pixel' has 24 connections declared, but only 12 given [C:/verilog project/Legend of Chun-Yi Lee/top.v:656]
 INFO: [Synth 8-6157] synthesizing module 'RGB_GEN' [C:/verilog project/Legend of Chun-Yi Lee/RGB_GEN.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'RGB_GEN' (2#1) [C:/verilog project/Legend of Chun-Yi Lee/RGB_GEN.v:1]
 INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/verilog project/Legend of Chun-Yi Lee/clk_div.v:1]
@@ -110,7 +114,7 @@ INFO: [Synth 8-6155] done synthesizing module 'debounce' (4#1) [C:/verilog proje
 INFO: [Synth 8-6157] synthesizing module 'onepulse' [C:/verilog project/Legend of Chun-Yi Lee/onepluse.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'onepulse' (5#1) [C:/verilog project/Legend of Chun-Yi Lee/onepluse.v:1]
 INFO: [Synth 8-6157] synthesizing module 'state_control' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1]
-INFO: [Synth 8-6157] synthesizing module 'maincharacter' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:716]
+INFO: [Synth 8-6157] synthesizing module 'maincharacter' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:777]
 	Parameter FACE_FRONT_STAND bound to: 4'b0000 
 	Parameter FACE_FRONT_WALK_L bound to: 4'b0001 
 	Parameter FACE_FRONT_WALK_R bound to: 4'b0010 
@@ -121,127 +125,185 @@ INFO: [Synth 8-6157] synthesizing module 'maincharacter' [C:/verilog project/Leg
 	Parameter FACE_BACK_STAND bound to: 4'b0111 
 	Parameter FACE_BACK_WALK_L bound to: 4'b1000 
 	Parameter FACE_BACK_WALK_R bound to: 4'b1001 
+	Parameter FACE_FRONT_ATTACK bound to: 4'b1010 
+	Parameter FACE_BACK_ATTACK bound to: 4'b1011 
+	Parameter FACE_LEFT_ATTACK bound to: 4'b1100 
+	Parameter FACE_RIGHT_ATTACK bound to: 4'b1101 
 INFO: [Synth 8-6157] synthesizing module 'clk_div__parameterized1' [C:/verilog project/Legend of Chun-Yi Lee/clk_div.v:1]
 	Parameter n bound to: 3 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clk_div__parameterized1' (5#1) [C:/verilog project/Legend of Chun-Yi Lee/clk_div.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:754]
-INFO: [Synth 8-6155] done synthesizing module 'maincharacter' (6#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:716]
-WARNING: [Synth 8-7023] instance 'MC' of module 'maincharacter' has 17 connections declared, but only 13 given [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:248]
-INFO: [Synth 8-6157] synthesizing module 'wall' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:680]
-INFO: [Synth 8-6155] done synthesizing module 'wall' (7#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:680]
-INFO: [Synth 8-6157] synthesizing module 'monster_one' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:905]
-INFO: [Synth 8-6157] synthesizing module 'LFSR' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1064]
-INFO: [Synth 8-6155] done synthesizing module 'LFSR' (8#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1064]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:933]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1026]
-INFO: [Synth 8-6155] done synthesizing module 'monster_one' (9#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:905]
-WARNING: [Synth 8-3848] Net pixel_idx_monster_1 in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:813]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:843]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:862]
+INFO: [Synth 8-6155] done synthesizing module 'maincharacter' (6#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:777]
+WARNING: [Synth 8-7023] instance 'MC' of module 'maincharacter' has 18 connections declared, but only 14 given [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:263]
+INFO: [Synth 8-6157] synthesizing module 'wall' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:741]
+INFO: [Synth 8-6155] done synthesizing module 'wall' (7#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:741]
+INFO: [Synth 8-6157] synthesizing module 'collide' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:718]
+INFO: [Synth 8-6155] done synthesizing module 'collide' (8#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:718]
+INFO: [Synth 8-6157] synthesizing module 'monster_one' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:936]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1135]
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (9#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1135]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:983]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1042]
+INFO: [Synth 8-6155] done synthesizing module 'monster_one' (10#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:936]
+INFO: [Synth 8-6157] synthesizing module 'weapon' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1082]
+	Parameter EMPTY bound to: 4'b1111 
+	Parameter WOODEN_FRONT bound to: 4'b0000 
+	Parameter WOODEN_BACK bound to: 4'b0001 
+	Parameter WOODEN_LEFT bound to: 4'b0010 
+	Parameter WOODEN_RIGHT bound to: 4'b0011 
+	Parameter BASYS_FRONT bound to: 4'b0100 
+	Parameter BASYS_BACK bound to: 4'b0101 
+	Parameter BASYS_LEFT bound to: 4'b0110 
+	Parameter BASYS_RIGHT bound to: 4'b0111 
+	Parameter CAR_FRONT bound to: 4'b1000 
+	Parameter CAR_BACK bound to: 4'b1001 
+	Parameter CAR_LEFT bound to: 4'b1010 
+	Parameter CAR_RIGHT bound to: 4'b1011 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1096]
+INFO: [Synth 8-6155] done synthesizing module 'weapon' (11#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1082]
 WARNING: [Synth 8-3848] Net pixel_idx_computer_room_entrance in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:8]
-WARNING: [Synth 8-3848] Net pixel_idx_walls in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:10]
-WARNING: [Synth 8-3848] Net cave in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:73]
-INFO: [Synth 8-6155] done synthesizing module 'state_control' (10#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1]
+WARNING: [Synth 8-3848] Net pixel_idx_heart_0 in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:10]
+WARNING: [Synth 8-3848] Net pixel_idx_heart_1 in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:12]
+WARNING: [Synth 8-3848] Net pixel_idx_heart_2 in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:14]
+WARNING: [Synth 8-3848] Net pixel_idx_walls in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:18]
+WARNING: [Synth 8-3848] Net cave in module/entity state_control does not have driver. [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'state_control' (12#1) [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/verilog project/Legend of Chun-Yi Lee/mem_addr_gen.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (11#1) [C:/verilog project/Legend of Chun-Yi Lee/mem_addr_gen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_front_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_stand' (12#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_front_stand_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1032]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_L_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_L' (13#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_L_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1039]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_R_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_R' (14#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_R_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1046]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_back_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_stand' (15#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_back_stand_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1053]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_L_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_L' (16#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_L_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1060]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_R_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_R' (17#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_R_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1067]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_left_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_stand' (18#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_left_stand_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1074]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_walk' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_left_walk_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_walk' (19#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_left_walk_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_walk' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1081]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_right_stand_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_stand' (20#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_right_stand_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1088]
-INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_walk' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_right_walk_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_walk' (21#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CY_right_walk_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_walk' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1095]
-INFO: [Synth 8-6157] synthesizing module 'BM_CS_student' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CS_student_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_CS_student' (22#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_CS_student_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CS_student' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1103]
-INFO: [Synth 8-6157] synthesizing module 'BM_computer_room_entrance' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_computer_room_entrance_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_computer_room_entrance' (23#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_computer_room_entrance_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_computer_room_entrance' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1111]
-INFO: [Synth 8-6157] synthesizing module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_overwall_wall_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BM_overwall_wall' (24#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/BM_overwall_wall_stub.v:6]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1117]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1119]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1121]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1123]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1125]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1127]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1129]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1131]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1133]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1135]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1137]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1139]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1141]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1143]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1145]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1147]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1149]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1151]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1153]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1155]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1157]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1159]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1161]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1163]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1165]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1167]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1169]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1171]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1173]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1175]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1177]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1179]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1181]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1183]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1185]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1187]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1189]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1191]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1193]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1195]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1197]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1199]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1201]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1203]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1205]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1207]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1209]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1211]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1213]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1215]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1217]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1219]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1221]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1223]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1225]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1227]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1229]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1231]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1233]
-WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1235]
+INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (13#1) [C:/verilog project/Legend of Chun-Yi Lee/mem_addr_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_stand' (14#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_stand_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1148]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_L_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_L' (15#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_L_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1155]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_R_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_walk_R' (16#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_walk_R_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1162]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_stand' (17#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_stand_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1169]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_L_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_L' (18#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_L_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_walk_L' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1176]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_R_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_walk_R' (19#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_walk_R_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_walk_R' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1183]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_left_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_stand' (20#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_left_stand_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1190]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_walk' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_left_walk_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_walk' (21#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_left_walk_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_walk' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1197]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_stand' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_right_stand_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_stand' (22#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_right_stand_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_stand' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1204]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_walk' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_right_walk_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_walk' (23#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_right_walk_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_walk' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1211]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_back_attack' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_attack_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_back_attack' (24#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_back_attack_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_back_attack' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_front_attack' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_attack_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_front_attack' (25#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_front_attack_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_front_attack' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1227]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_right_attack' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_right_attack_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_right_attack' (26#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_right_attack_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_right_attack' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1235]
+INFO: [Synth 8-6157] synthesizing module 'BM_CY_left_attack' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_left_attack_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CY_left_attack' (27#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CY_left_attack_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CY_left_attack' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1243]
+INFO: [Synth 8-6157] synthesizing module 'BM_CS_student_L' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CS_student_L_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CS_student_L' (28#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CS_student_L_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CS_student_L' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1251]
+INFO: [Synth 8-6157] synthesizing module 'BM_CS_student_R' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CS_student_R_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_CS_student_R' (29#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_CS_student_R_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_CS_student_R' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1259]
+INFO: [Synth 8-6157] synthesizing module 'BM_computer_room_entrance' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_computer_room_entrance_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_computer_room_entrance' (30#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_computer_room_entrance_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_computer_room_entrance' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1267]
+INFO: [Synth 8-6157] synthesizing module 'BM_heart' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_heart_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_heart' (31#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_heart_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_heart' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1275]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_heart' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1283]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_heart' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1291]
+INFO: [Synth 8-6157] synthesizing module 'BM_wooden_fpga_down' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_down_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_wooden_fpga_down' (32#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_down_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_wooden_fpga_down' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1299]
+INFO: [Synth 8-6157] synthesizing module 'BM_wooden_fpga_up' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_up_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_wooden_fpga_up' (33#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_up_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_wooden_fpga_up' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1307]
+INFO: [Synth 8-6157] synthesizing module 'BM_wooden_fpga_left' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_left_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_wooden_fpga_left' (34#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_left_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_wooden_fpga_left' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1315]
+INFO: [Synth 8-6157] synthesizing module 'BM_wooden_fpga_right' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_right_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_wooden_fpga_right' (35#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_wooden_fpga_right_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_wooden_fpga_right' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1323]
+INFO: [Synth 8-6157] synthesizing module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_overwall_wall_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BM_overwall_wall' (36#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/BM_overwall_wall_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1329]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1331]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1333]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1335]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1337]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1339]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1341]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1343]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1345]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1347]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1349]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1351]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1353]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1355]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1357]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1359]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1361]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1363]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1365]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1367]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1369]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1371]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1373]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1375]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1377]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1379]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1381]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1383]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1385]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1387]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1389]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1391]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1393]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1395]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1397]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1399]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1401]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1403]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1405]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1407]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1409]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1411]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1413]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1415]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1417]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1419]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1421]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1423]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1425]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1427]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1429]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1431]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1433]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1435]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1437]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1439]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1441]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1443]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1445]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (9) of module 'BM_overwall_wall' [C:/verilog project/Legend of Chun-Yi Lee/top.v:1447]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/verilog project/Legend of Chun-Yi Lee/vga_controller.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (25#1) [C:/verilog project/Legend of Chun-Yi Lee/vga_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (37#1) [C:/verilog project/Legend of Chun-Yi Lee/vga_controller.v:1]
 INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
@@ -250,27 +312,36 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/verilog project/L
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (26#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-34636-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (38#1) [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/.Xil/Vivado-36912-DESKTOP-Q29MBHF/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:69]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:79]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:89]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:99]
 INFO: [Synth 8-226] default block is never used [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (27#1) [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (28#1) [C:/verilog project/Legend of Chun-Yi Lee/top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (39#1) [C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (40#1) [C:/verilog project/Legend of Chun-Yi Lee/top.v:1]
+WARNING: [Synth 8-3331] design weapon has unconnected port rst
 WARNING: [Synth 8-3331] design maincharacter has unconnected port J_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port K_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port L_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port SPACE_signal
-WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[3]
-WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[2]
-WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[1]
-WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_monster_1[0]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_computer_room_entrance[3]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_computer_room_entrance[2]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_computer_room_entrance[1]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_computer_room_entrance[0]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_0[3]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_0[2]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_0[1]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_0[0]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_1[3]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_1[2]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_1[1]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_1[0]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_2[3]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_2[2]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_2[1]
+WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_heart_2[0]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_walls[3]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_walls[2]
 WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_walls[1]
@@ -278,9 +349,8 @@ WARNING: [Synth 8-3331] design state_control has unconnected port pixel_idx_wall
 WARNING: [Synth 8-3331] design state_control has unconnected port J_signal
 WARNING: [Synth 8-3331] design state_control has unconnected port K_signal
 WARNING: [Synth 8-3331] design state_control has unconnected port L_signal
-WARNING: [Synth 8-3331] design state_control has unconnected port SPACE_signal
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 927.141 ; gain = 311.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 930.223 ; gain = 312.582
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -293,20 +363,16 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 927.141 ; gain = 311.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 930.223 ; gain = 312.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 927.141 ; gain = 311.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 930.223 ; gain = 312.582
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.206 . Memory (MB): peak = 927.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.361 . Memory (MB): peak = 930.223 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student/BM_CS_student_in_context.xdc] for cell 'BM_CS_student_'
-Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student/BM_CS_student_in_context.xdc] for cell 'BM_CS_student_'
-Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand/BM_CY_front_stand_in_context.xdc] for cell 'BM_CY_front_stand_'
-Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand/BM_CY_front_stand_in_context.xdc] for cell 'BM_CY_front_stand_'
 Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
 Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
 Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L/BM_CY_front_walk_L_in_context.xdc] for cell 'BM_CY_front_walk_L_'
@@ -449,6 +515,34 @@ Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee
 Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall/BM_overwall_wall_in_context.xdc] for cell 'BM_overwall_wall_59'
 Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance/BM_computer_room_entrance_in_context.xdc] for cell 'BM_computer_room_entrance_'
 Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance/BM_computer_room_entrance_in_context.xdc] for cell 'BM_computer_room_entrance_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L/BM_CS_student_L_in_context.xdc] for cell 'BM_CS_student_L_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L/BM_CS_student_L_in_context.xdc] for cell 'BM_CS_student_L_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R/BM_CS_student_R_in_context.xdc] for cell 'BM_CS_student_R_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R/BM_CS_student_R_in_context.xdc] for cell 'BM_CS_student_R_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand/BM_CY_front_stand_in_context.xdc] for cell 'BM_CY_front_stand_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand/BM_CY_front_stand_in_context.xdc] for cell 'BM_CY_front_stand_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack/BM_CY_back_attack_in_context.xdc] for cell 'BM_CY_back_attack_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack/BM_CY_back_attack_in_context.xdc] for cell 'BM_CY_back_attack_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack/BM_CY_front_attack_in_context.xdc] for cell 'BM_CY_front_attack_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack/BM_CY_front_attack_in_context.xdc] for cell 'BM_CY_front_attack_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack/BM_CY_left_attack_in_context.xdc] for cell 'BM_CY_left_attack_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack/BM_CY_left_attack_in_context.xdc] for cell 'BM_CY_left_attack_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack/BM_CY_right_attack_in_context.xdc] for cell 'BM_CY_right_attack_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack/BM_CY_right_attack_in_context.xdc] for cell 'BM_CY_right_attack_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart/BM_heart_in_context.xdc] for cell 'BM_heart_0'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart/BM_heart_in_context.xdc] for cell 'BM_heart_0'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart/BM_heart_in_context.xdc] for cell 'BM_heart_1'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart/BM_heart_in_context.xdc] for cell 'BM_heart_1'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart/BM_heart_in_context.xdc] for cell 'BM_heart_2'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart/BM_heart_in_context.xdc] for cell 'BM_heart_2'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down/BM_wooden_fpga_down_in_context.xdc] for cell 'BM_wooden_fpga_down_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down/BM_wooden_fpga_down_in_context.xdc] for cell 'BM_wooden_fpga_down_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up/BM_wooden_fpga_up_in_context.xdc] for cell 'BM_wooden_fpga_up_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up/BM_wooden_fpga_up_in_context.xdc] for cell 'BM_wooden_fpga_up_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left/BM_wooden_fpga_left_in_context.xdc] for cell 'BM_wooden_fpga_left_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left/BM_wooden_fpga_left_in_context.xdc] for cell 'BM_wooden_fpga_left_'
+Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right/BM_wooden_fpga_right_in_context.xdc] for cell 'BM_wooden_fpga_right_'
+Finished Parsing XDC File [c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right/BM_wooden_fpga_right_in_context.xdc] for cell 'BM_wooden_fpga_right_'
 Parsing XDC File [C:/verilog project/Legend of Chun-Yi Lee/cons.xdc]
 WARNING: [Vivado 12-584] No ports matched 'start'. [C:/verilog project/Legend of Chun-Yi Lee/cons.xdc:39]
 WARNING: [Vivado 12-584] No ports matched 'start'. [C:/verilog project/Legend of Chun-Yi Lee/cons.xdc:40]
@@ -456,24 +550,22 @@ Finished Parsing XDC File [C:/verilog project/Legend of Chun-Yi Lee/cons.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/verilog project/Legend of Chun-Yi Lee/cons.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/verilog project/Legend of Chun-Yi Lee/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1058.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1067.324 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1058.000 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1067.324 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1058.000 ; gain = 442.598
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1067.324 ; gain = 449.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1058.000 ; gain = 442.598
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1067.324 ; gain = 449.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -482,8 +574,6 @@ Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  {c:/ve
 Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 2).
 Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 3).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 4).
-Applied set_property DONT_TOUCH = true for BM_CS_student_. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for BM_CY_front_stand_. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for key_de/inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BM_CY_front_walk_L_. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BM_CY_front_walk_R_. (constraint file  auto generated constraint, line ).
@@ -555,20 +645,31 @@ Applied set_property DONT_TOUCH = true for BM_overwall_wall_7. (constraint file 
 Applied set_property DONT_TOUCH = true for BM_overwall_wall_8. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BM_overwall_wall_9. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BM_computer_room_entrance_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CS_student_L_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CS_student_R_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CY_front_stand_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CY_back_attack_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CY_front_attack_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CY_left_attack_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_CY_right_attack_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_heart_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_heart_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_heart_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_wooden_fpga_down_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_wooden_fpga_up_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_wooden_fpga_left_. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BM_wooden_fpga_right_. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1058.000 ; gain = 442.598
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1067.324 ; gain = 449.684
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:848]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:848]
-INFO: [Synth 8-5544] ROM "pos_h" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pos_v" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "next_pos_h" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:879]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:879]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1042]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1042]
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
-WARNING: [Synth 8-327] inferring latch for variable 'nstate_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:756]
-WARNING: [Synth 8-327] inferring latch for variable 'random_done_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1094]
-WARNING: [Synth 8-327] inferring latch for variable 'next_pos_h_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:935]
-WARNING: [Synth 8-327] inferring latch for variable 'next_pos_v_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:936]
-WARNING: [Synth 8-327] inferring latch for variable 'next_direction_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:937]
+WARNING: [Synth 8-327] inferring latch for variable 'nstate_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:815]
+WARNING: [Synth 8-327] inferring latch for variable 'random_done_reg' [C:/verilog project/Legend of Chun-Yi Lee/state_control.v:1165]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -579,25 +680,25 @@ WARNING: [Synth 8-327] inferring latch for variable 'next_direction_reg' [C:/ver
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1058.000 ; gain = 442.598
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1067.324 ; gain = 449.684
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |state_control__GB0 |           1|     31558|
-|2     |state_control__GB1 |           1|     31134|
-|3     |Top__GCB0          |           1|     17571|
-|4     |Top__GCB1          |           1|      5713|
-|5     |Top__GCB2          |           1|      6384|
-|6     |Top__GCB3          |           1|      7486|
-|7     |Top__GCB4          |           1|     16838|
+|1     |state_control__GB0 |           1|     32381|
+|2     |state_control__GB1 |           1|     30796|
+|3     |Top__GCB0          |           1|     18493|
+|4     |Top__GCB1          |           1|      4779|
+|5     |Top__GCB2          |           1|      6396|
+|6     |Top__GCB3          |           1|      9103|
+|7     |Top__GCB4          |           1|     20298|
 |8     |Top__GCB5          |           1|      4743|
-|9     |Top__GCB6          |           1|      6420|
-|10    |Top__GCB7          |           1|     17391|
-|11    |Top__GCB8          |           1|     14313|
-|12    |Top__GCB9          |           1|     10121|
+|9     |Top__GCB6          |           1|      6432|
+|10    |Top__GCB7          |           1|     18972|
+|11    |Top__GCB8          |           1|     14289|
+|12    |Top__GCB9          |           1|     10241|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -605,44 +706,53 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 160   
-	  63 Input     12 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 446   
-	   2 Input     10 Bit       Adders := 134   
+	   2 Input     12 Bit       Adders := 3     
+	   4 Input     12 Bit       Adders := 2     
+	  56 Input     12 Bit       Adders := 1     
+	   5 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 454   
+	   3 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 142   
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 3     
-	   2 Input      3 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	              512 Bit    Registers := 1     
 	               13 Bit    Registers := 1     
-	               10 Bit    Registers := 7     
-	                4 Bit    Registers := 5     
-	                3 Bit    Registers := 1     
+	               10 Bit    Registers := 9     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 12    
 +---Muxes : 
 	   2 Input    512 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 64    
+	   2 Input     12 Bit        Muxes := 70    
 	   3 Input     12 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 12    
-	   4 Input     10 Bit        Muxes := 3     
-	  13 Input      8 Bit        Muxes := 1     
-	  13 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 11    
-	   5 Input      4 Bit        Muxes := 83    
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 5     
+	   5 Input     10 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 14    
+	  11 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 85    
+	   8 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
-	   3 Input      2 Bit        Muxes := 81    
-	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 82    
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 16    
-	  13 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 34    
+	   5 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 2     
-	  16 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -650,36 +760,33 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module LFSR 
+Module clk_div__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-+---XORs : 
-	   4 Input      1 Bit         XORs := 1     
-+---Registers : 
-	               13 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module monster_one 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module maincharacter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 +---Registers : 
 	               10 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 8     
-	   4 Input     10 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	  13 Input      1 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 6     
+	  11 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module wall__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1000,6 +1107,68 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input      4 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
+Module weapon 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   5 Input     10 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module LFSR 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module clk_div__parameterized1__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module monster_one 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+Module collide 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
 Module wall__41 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1320,33 +1489,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   5 Input      4 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
-Module clk_div__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	                3 Bit    Registers := 1     
-Module maincharacter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-+---Registers : 
-	               10 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 2     
-	  13 Input      8 Bit        Muxes := 1     
-	  13 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-	   5 Input      4 Bit        Muxes := 1     
-	   5 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 2     
-	  16 Input      1 Bit        Muxes := 1     
 Module state_control 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1357,18 +1499,6 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 5     
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module mem_addr_gen__1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__2 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__3 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1381,6 +1511,18 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module mem_addr_gen__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module mem_addr_gen__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1419,12 +1561,6 @@ Module mem_addr_gen__8
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module select_pixel__6 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__9 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1433,10 +1569,12 @@ Module mem_addr_gen__10
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__11 
+Module select_pixel__6 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
 Module select_pixel__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1455,19 +1593,11 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module mem_addr_gen__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__10 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-Module select_pixel__11 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-Module select_pixel__12 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
@@ -1477,7 +1607,7 @@ Module mem_addr_gen__12
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module select_pixel__13 
+Module select_pixel__11 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
@@ -1487,7 +1617,23 @@ Module mem_addr_gen__13
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
+Module select_pixel__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__15 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
@@ -1497,20 +1643,16 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
-Module mem_addr_gen__15 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__16 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__15 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module mem_addr_gen__16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__16 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1565,6 +1707,12 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__23 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__20 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1593,18 +1741,6 @@ Module mem_addr_gen__26
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module select_pixel__23 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-Module select_pixel__24 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__27 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1613,6 +1749,18 @@ Module mem_addr_gen__28
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
+Module select_pixel__24 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__25 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__29 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1621,19 +1769,6 @@ Module mem_addr_gen__30
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module RGB_GEN 
-Detailed RTL Component Info : 
-+---Adders : 
-	  63 Input     12 Bit       Adders := 1     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-	   3 Input     12 Bit        Muxes := 1     
-Module select_pixel__25 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__31 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1642,6 +1777,16 @@ Module mem_addr_gen__32
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
+Module RGB_GEN 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 3     
+	   4 Input     12 Bit       Adders := 2     
+	  56 Input     12 Bit       Adders := 1     
+	   5 Input     12 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 3     
+	   3 Input     12 Bit        Muxes := 1     
 Module select_pixel__26 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1660,6 +1805,18 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module mem_addr_gen__33 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__34 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__35 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__29 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1696,18 +1853,6 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
-Module mem_addr_gen__33 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__34 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__35 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__35 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1720,36 +1865,54 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
-Module mem_addr_gen__36 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__37 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__37 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module mem_addr_gen__36 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__38 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module mem_addr_gen__37 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__38 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__39 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
-Module mem_addr_gen__38 
+Module select_pixel__40 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__41 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__42 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
 Module mem_addr_gen__39 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1798,24 +1961,22 @@ Module mem_addr_gen__50
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module select_pixel__40 
+Module mem_addr_gen__51 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-Module select_pixel__41 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__52 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-Module select_pixel__42 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__53 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__54 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module select_pixel__43 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1918,52 +2079,24 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
-Module mem_addr_gen__51 
+Module select_pixel__60 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__52 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__53 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__54 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__55 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__56 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__57 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__58 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module mem_addr_gen__59 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-Module vga_controller 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-+---Registers : 
-	               10 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
+	   2 Input     11 Bit       Adders := 2     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+Module clk_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module onepulse__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1981,6 +2114,40 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 8     
 	   4 Input      1 Bit        Muxes := 7     
+Module vga_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module mem_addr_gen__55 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__56 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__57 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__58 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module onepulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module mem_addr_gen__59 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module mem_addr_gen__60 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1993,32 +2160,26 @@ Module mem_addr_gen__62
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__63 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__64 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__65 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+Module mem_addr_gen__66 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
 Module mem_addr_gen 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 2     
-Module onepulse 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 2     
-Module debounce 
-Detailed RTL Component Info : 
-+---Registers : 
-	                4 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module clk_div 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	                2 Bit    Registers := 1     
-Module select_pixel__60 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
 Module select_pixel__61 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2026,6 +2187,30 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
 Module select_pixel__62 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__63 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__64 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__65 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module select_pixel__66 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
@@ -2133,10 +2318,31 @@ DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
 DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+WARNING: [Synth 8-3331] design weapon has unconnected port rst
 WARNING: [Synth 8-3331] design maincharacter has unconnected port J_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port K_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port L_signal
 WARNING: [Synth 8-3331] design maincharacter has unconnected port SPACE_signal
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m1/direction_reg[3] )
+INFO: [Synth 8-3886] merging instance 'm1/state_reg[2]' (FDR) to 'm1/state_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m1/state_reg[3] )
+INFO: [Synth 8-3886] merging instance 'weapon_/state_reg[2]' (FDE) to 'weapon_/state_reg[3]'
+DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
@@ -2310,9 +2516,35 @@ DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xfffffffffec1).
 DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 1058.000 ; gain = 442.598
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 1067.324 ; gain = 449.684
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 126, Available = 90. Use report_utilization command for details.
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 134, Available = 90. Use report_utilization command for details.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
+DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
+DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
+DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
@@ -2367,8 +2599,6 @@ DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource managem
 DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
@@ -2419,8 +2649,6 @@ DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource managem
 DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
@@ -2447,28 +2675,6 @@ DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource managem
 DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
-DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
-DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
-DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
-DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
-DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
-DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
-DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
-DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
-DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
-DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
 DSP Report: Generating DSP pixel_addr2, operation Mode is (post resource management): A*(B:0x14).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
 DSP Report: Generating DSP pixel_addr0, operation Mode is (post resource management): PCIN+(A:0x0):B+(C:0xfffffffffec1).
@@ -2627,6 +2833,14 @@ DSP: Preliminary Mapping	Report (see note below)
 |mem_addr_gen | PCIN+(A:0x0):B+(C:0xfffffffffec1) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |mem_addr_gen | PCIN+(A:0x0):B+(C:0xfffffffffec1) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xfffffffffec1) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xfffffffffec1) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xfffffffffec1) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x14)                        | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xfffffffffec1) | 30     | 10     | 10     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -2638,72 +2852,72 @@ Report RTL Partitions:
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |state_control__GB0 |           1|       987|
-|2     |state_control__GB1 |           1|       591|
-|3     |Top__GCB0          |           1|     17345|
-|4     |Top__GCB1          |           1|      5852|
-|5     |Top__GCB2          |           1|      6451|
-|6     |Top__GCB3          |           1|      7981|
-|7     |Top__GCB4          |           1|     13646|
+|1     |state_control__GB0 |           1|      1355|
+|2     |state_control__GB1 |           1|       384|
+|3     |Top__GCB0          |           1|     18551|
+|4     |Top__GCB1          |           1|      4774|
+|5     |Top__GCB2          |           1|      6393|
+|6     |Top__GCB3          |           1|      9662|
+|7     |Top__GCB4          |           1|     16639|
 |8     |Top__GCB5          |           1|      3731|
-|9     |Top__GCB6          |           1|      6057|
-|10    |Top__GCB7          |           1|     14078|
-|11    |Top__GCB8          |           1|     13227|
-|12    |Top__GCB9          |           1|      6630|
+|9     |Top__GCB6          |           1|      6072|
+|10    |Top__GCB7          |           1|     15456|
+|11    |Top__GCB8          |           1|     11069|
+|12    |Top__GCB9          |           1|      7880|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:43 . Memory (MB): peak = 1116.805 ; gain = 501.402
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1120.059 ; gain = 502.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 1122.238 ; gain = 506.836
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1126.168 ; gain = 508.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |state_control__GB0 |           1|       987|
-|2     |state_control__GB1 |           1|       591|
-|3     |Top__GCB0          |           1|     17148|
-|4     |Top__GCB1          |           1|      5852|
-|5     |Top__GCB2          |           1|      6451|
-|6     |Top__GCB3          |           1|      7957|
-|7     |Top__GCB4          |           1|     13360|
+|1     |state_control__GB0 |           1|      1355|
+|2     |state_control__GB1 |           1|       384|
+|3     |Top__GCB0          |           1|     18327|
+|4     |Top__GCB1          |           1|      4774|
+|5     |Top__GCB2          |           1|      6393|
+|6     |Top__GCB3          |           1|      9638|
+|7     |Top__GCB4          |           1|     16230|
 |8     |Top__GCB5          |           1|      3707|
-|9     |Top__GCB6          |           1|      6057|
-|10    |Top__GCB7          |           1|     13690|
-|11    |Top__GCB8          |           1|     13070|
-|12    |Top__GCB9          |           1|      6582|
+|9     |Top__GCB6          |           1|      6072|
+|10    |Top__GCB7          |           1|     14993|
+|11    |Top__GCB8          |           1|     10978|
+|12    |Top__GCB9          |           1|      7749|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1143.465 ; gain = 528.062
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:05 . Memory (MB): peak = 1146.277 ; gain = 528.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
 |      |RTL Partition      |Replication |Instances |
 +------+-------------------+------------+----------+
-|1     |state_control__GB0 |           1|       401|
-|2     |state_control__GB1 |           1|       210|
-|3     |Top__GCB0          |           1|      4026|
-|4     |Top__GCB1          |           1|      1300|
-|5     |Top__GCB2          |           1|      1451|
-|6     |Top__GCB3          |           1|      2022|
-|7     |Top__GCB4          |           1|      3235|
+|1     |state_control__GB0 |           1|       618|
+|2     |state_control__GB1 |           1|       131|
+|3     |Top__GCB0          |           1|      4348|
+|4     |Top__GCB1          |           1|      1047|
+|5     |Top__GCB2          |           1|      1429|
+|6     |Top__GCB3          |           1|      2424|
+|7     |Top__GCB4          |           1|      4116|
 |8     |Top__GCB5          |           1|      1013|
-|9     |Top__GCB6          |           1|      1436|
-|10    |Top__GCB7          |           1|      3794|
-|11    |Top__GCB8          |           1|      3209|
-|12    |Top__GCB9          |           1|      1939|
+|9     |Top__GCB6          |           1|      1453|
+|10    |Top__GCB7          |           1|      4181|
+|11    |Top__GCB8          |           1|      3105|
+|12    |Top__GCB9          |           1|      2232|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2721,13 +2935,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2746,25 +2960,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2776,224 +2990,251 @@ Report BlackBoxes:
 +------+--------------------------+----------+
 |1     |BM_overwall_wall          |        60|
 |2     |BM_computer_room_entrance |         1|
-|3     |BM_CS_student             |         1|
-|4     |BM_CY_front_stand         |         1|
-|5     |BM_CY_front_walk_L        |         1|
-|6     |BM_CY_front_walk_R        |         1|
-|7     |BM_CY_back_stand          |         1|
-|8     |BM_CY_back_walk_L         |         1|
-|9     |BM_CY_back_walk_R         |         1|
+|3     |BM_CY_left_attack         |         1|
+|4     |BM_CY_right_attack        |         1|
+|5     |BM_CY_front_attack        |         1|
+|6     |BM_CY_back_attack         |         1|
+|7     |BM_CY_right_walk          |         1|
+|8     |BM_CY_right_stand         |         1|
+|9     |BM_CY_left_walk           |         1|
 |10    |BM_CY_left_stand          |         1|
-|11    |BM_CY_left_walk           |         1|
-|12    |BM_CY_right_stand         |         1|
-|13    |BM_CY_right_walk          |         1|
-|14    |KeyboardCtrl_0            |         1|
+|11    |BM_CY_back_walk_R         |         1|
+|12    |BM_CY_back_walk_L         |         1|
+|13    |BM_CY_back_stand          |         1|
+|14    |BM_CY_front_walk_R        |         1|
+|15    |BM_CY_front_walk_L        |         1|
+|16    |BM_CY_front_stand         |         1|
+|17    |BM_CS_student_L           |         1|
+|18    |BM_CS_student_R           |         1|
+|19    |BM_heart                  |         3|
+|20    |BM_wooden_fpga_down       |         1|
+|21    |BM_wooden_fpga_up         |         1|
+|22    |BM_wooden_fpga_right      |         1|
+|23    |BM_wooden_fpga_left       |         1|
+|24    |KeyboardCtrl_0            |         1|
 +------+--------------------------+----------+
 
 Report Cell Usage: 
 +------+--------------------------+------+
 |      |Cell                      |Count |
 +------+--------------------------+------+
-|1     |BM_CS_student             |     1|
-|2     |BM_CY_back_stand          |     1|
-|3     |BM_CY_back_walk_L         |     1|
-|4     |BM_CY_back_walk_R         |     1|
-|5     |BM_CY_front_stand         |     1|
-|6     |BM_CY_front_walk_L        |     1|
-|7     |BM_CY_front_walk_R        |     1|
-|8     |BM_CY_left_stand          |     1|
-|9     |BM_CY_left_walk           |     1|
-|10    |BM_CY_right_stand         |     1|
-|11    |BM_CY_right_walk          |     1|
-|12    |BM_computer_room_entrance |     1|
-|13    |BM_overwall_wall          |     1|
-|14    |BM_overwall_wall__100     |     1|
-|15    |BM_overwall_wall__101     |     1|
-|16    |BM_overwall_wall__102     |     1|
-|17    |BM_overwall_wall__103     |     1|
-|18    |BM_overwall_wall__104     |     1|
-|19    |BM_overwall_wall__105     |     1|
-|20    |BM_overwall_wall__106     |     1|
-|21    |BM_overwall_wall__107     |     1|
-|22    |BM_overwall_wall__108     |     1|
-|23    |BM_overwall_wall__109     |     1|
-|24    |BM_overwall_wall__110     |     1|
-|25    |BM_overwall_wall__111     |     1|
-|26    |BM_overwall_wall__112     |     1|
-|27    |BM_overwall_wall__113     |     1|
-|28    |BM_overwall_wall__114     |     1|
-|29    |BM_overwall_wall__115     |     1|
-|30    |BM_overwall_wall__116     |     1|
-|31    |BM_overwall_wall__117     |     1|
-|32    |BM_overwall_wall__118     |     1|
-|33    |BM_overwall_wall__60      |     1|
-|34    |BM_overwall_wall__61      |     1|
-|35    |BM_overwall_wall__62      |     1|
-|36    |BM_overwall_wall__63      |     1|
-|37    |BM_overwall_wall__64      |     1|
-|38    |BM_overwall_wall__65      |     1|
-|39    |BM_overwall_wall__66      |     1|
-|40    |BM_overwall_wall__67      |     1|
-|41    |BM_overwall_wall__68      |     1|
-|42    |BM_overwall_wall__69      |     1|
-|43    |BM_overwall_wall__70      |     1|
-|44    |BM_overwall_wall__71      |     1|
-|45    |BM_overwall_wall__72      |     1|
-|46    |BM_overwall_wall__73      |     1|
-|47    |BM_overwall_wall__74      |     1|
-|48    |BM_overwall_wall__75      |     1|
-|49    |BM_overwall_wall__76      |     1|
-|50    |BM_overwall_wall__77      |     1|
-|51    |BM_overwall_wall__78      |     1|
-|52    |BM_overwall_wall__79      |     1|
-|53    |BM_overwall_wall__80      |     1|
-|54    |BM_overwall_wall__81      |     1|
-|55    |BM_overwall_wall__82      |     1|
-|56    |BM_overwall_wall__83      |     1|
-|57    |BM_overwall_wall__84      |     1|
-|58    |BM_overwall_wall__85      |     1|
-|59    |BM_overwall_wall__86      |     1|
-|60    |BM_overwall_wall__87      |     1|
-|61    |BM_overwall_wall__88      |     1|
-|62    |BM_overwall_wall__89      |     1|
-|63    |BM_overwall_wall__90      |     1|
-|64    |BM_overwall_wall__91      |     1|
-|65    |BM_overwall_wall__92      |     1|
-|66    |BM_overwall_wall__93      |     1|
-|67    |BM_overwall_wall__94      |     1|
-|68    |BM_overwall_wall__95      |     1|
-|69    |BM_overwall_wall__96      |     1|
-|70    |BM_overwall_wall__97      |     1|
-|71    |BM_overwall_wall__98      |     1|
-|72    |BM_overwall_wall__99      |     1|
-|73    |KeyboardCtrl_0            |     1|
-|74    |BUFG                      |     3|
-|75    |CARRY4                    |  4286|
-|76    |DSP48E1                   |    45|
-|77    |DSP48E1_1                 |    45|
-|78    |LUT1                      |  1299|
-|79    |LUT2                      |  4941|
-|80    |LUT3                      |  7382|
-|81    |LUT4                      |  6023|
-|82    |LUT5                      |  2542|
-|83    |LUT6                      |  2686|
-|84    |MUXF7                     |    12|
-|85    |FDCE                      |    19|
-|86    |FDRE                      |   202|
-|87    |FDSE                      |    10|
-|88    |LD                        |    33|
-|89    |LDC                       |     1|
-|90    |IBUF                      |     2|
-|91    |OBUF                      |    14|
+|1     |BM_CS_student_L           |     1|
+|2     |BM_CS_student_R           |     1|
+|3     |BM_CY_back_attack         |     1|
+|4     |BM_CY_back_stand          |     1|
+|5     |BM_CY_back_walk_L         |     1|
+|6     |BM_CY_back_walk_R         |     1|
+|7     |BM_CY_front_attack        |     1|
+|8     |BM_CY_front_stand         |     1|
+|9     |BM_CY_front_walk_L        |     1|
+|10    |BM_CY_front_walk_R        |     1|
+|11    |BM_CY_left_attack         |     1|
+|12    |BM_CY_left_stand          |     1|
+|13    |BM_CY_left_walk           |     1|
+|14    |BM_CY_right_attack        |     1|
+|15    |BM_CY_right_stand         |     1|
+|16    |BM_CY_right_walk          |     1|
+|17    |BM_computer_room_entrance |     1|
+|18    |BM_heart                  |     1|
+|19    |BM_heart__3               |     1|
+|20    |BM_heart__4               |     1|
+|21    |BM_overwall_wall          |     1|
+|22    |BM_overwall_wall__100     |     1|
+|23    |BM_overwall_wall__101     |     1|
+|24    |BM_overwall_wall__102     |     1|
+|25    |BM_overwall_wall__103     |     1|
+|26    |BM_overwall_wall__104     |     1|
+|27    |BM_overwall_wall__105     |     1|
+|28    |BM_overwall_wall__106     |     1|
+|29    |BM_overwall_wall__107     |     1|
+|30    |BM_overwall_wall__108     |     1|
+|31    |BM_overwall_wall__109     |     1|
+|32    |BM_overwall_wall__110     |     1|
+|33    |BM_overwall_wall__111     |     1|
+|34    |BM_overwall_wall__112     |     1|
+|35    |BM_overwall_wall__113     |     1|
+|36    |BM_overwall_wall__114     |     1|
+|37    |BM_overwall_wall__115     |     1|
+|38    |BM_overwall_wall__116     |     1|
+|39    |BM_overwall_wall__117     |     1|
+|40    |BM_overwall_wall__118     |     1|
+|41    |BM_overwall_wall__60      |     1|
+|42    |BM_overwall_wall__61      |     1|
+|43    |BM_overwall_wall__62      |     1|
+|44    |BM_overwall_wall__63      |     1|
+|45    |BM_overwall_wall__64      |     1|
+|46    |BM_overwall_wall__65      |     1|
+|47    |BM_overwall_wall__66      |     1|
+|48    |BM_overwall_wall__67      |     1|
+|49    |BM_overwall_wall__68      |     1|
+|50    |BM_overwall_wall__69      |     1|
+|51    |BM_overwall_wall__70      |     1|
+|52    |BM_overwall_wall__71      |     1|
+|53    |BM_overwall_wall__72      |     1|
+|54    |BM_overwall_wall__73      |     1|
+|55    |BM_overwall_wall__74      |     1|
+|56    |BM_overwall_wall__75      |     1|
+|57    |BM_overwall_wall__76      |     1|
+|58    |BM_overwall_wall__77      |     1|
+|59    |BM_overwall_wall__78      |     1|
+|60    |BM_overwall_wall__79      |     1|
+|61    |BM_overwall_wall__80      |     1|
+|62    |BM_overwall_wall__81      |     1|
+|63    |BM_overwall_wall__82      |     1|
+|64    |BM_overwall_wall__83      |     1|
+|65    |BM_overwall_wall__84      |     1|
+|66    |BM_overwall_wall__85      |     1|
+|67    |BM_overwall_wall__86      |     1|
+|68    |BM_overwall_wall__87      |     1|
+|69    |BM_overwall_wall__88      |     1|
+|70    |BM_overwall_wall__89      |     1|
+|71    |BM_overwall_wall__90      |     1|
+|72    |BM_overwall_wall__91      |     1|
+|73    |BM_overwall_wall__92      |     1|
+|74    |BM_overwall_wall__93      |     1|
+|75    |BM_overwall_wall__94      |     1|
+|76    |BM_overwall_wall__95      |     1|
+|77    |BM_overwall_wall__96      |     1|
+|78    |BM_overwall_wall__97      |     1|
+|79    |BM_overwall_wall__98      |     1|
+|80    |BM_overwall_wall__99      |     1|
+|81    |BM_wooden_fpga_down       |     1|
+|82    |BM_wooden_fpga_left       |     1|
+|83    |BM_wooden_fpga_right      |     1|
+|84    |BM_wooden_fpga_up         |     1|
+|85    |KeyboardCtrl_0            |     1|
+|86    |BUFG                      |     3|
+|87    |CARRY4                    |  4621|
+|88    |DSP48E1                   |    47|
+|89    |DSP48E1_1                 |    43|
+|90    |LUT1                      |  1381|
+|91    |LUT2                      |  5395|
+|92    |LUT3                      |  7753|
+|93    |LUT4                      |  6430|
+|94    |LUT5                      |  2792|
+|95    |LUT6                      |  2874|
+|96    |MUXF7                     |    12|
+|97    |FDCE                      |    20|
+|98    |FDRE                      |   224|
+|99    |FDSE                      |    14|
+|100   |LD                        |    13|
+|101   |IBUF                      |     2|
+|102   |OBUF                      |    14|
 +------+--------------------------+------+
 
 Report Instance Areas: 
-+------+-----------------------------+------------------------+------+
-|      |Instance                     |Module                  |Cells |
-+------+-----------------------------+------------------------+------+
-|1     |top                          |                        | 30421|
-|2     |  CD0                        |clk_div                 |     4|
-|3     |  CD1                        |clk_div__parameterized0 |    26|
-|4     |  DB1                        |debounce                |     6|
-|5     |  MAG_CY                     |mem_addr_gen            |   308|
-|6     |  MAG_computer_room_entrance |mem_addr_gen_0          |   307|
-|7     |  MAG_monster_1              |mem_addr_gen_1          |   308|
-|8     |  MAG_wall_0                 |mem_addr_gen_2          |   311|
-|9     |  MAG_wall_1                 |mem_addr_gen_3          |   305|
-|10    |  MAG_wall_10                |mem_addr_gen_4          |   347|
-|11    |  MAG_wall_11                |mem_addr_gen_5          |   311|
-|12    |  MAG_wall_12                |mem_addr_gen_6          |   311|
-|13    |  MAG_wall_13                |mem_addr_gen_7          |   311|
-|14    |  MAG_wall_14                |mem_addr_gen_8          |   306|
-|15    |  MAG_wall_15                |mem_addr_gen_9          |   306|
-|16    |  MAG_wall_16                |mem_addr_gen_10         |   307|
-|17    |  MAG_wall_17                |mem_addr_gen_11         |   307|
-|18    |  MAG_wall_18                |mem_addr_gen_12         |   347|
-|19    |  MAG_wall_19                |mem_addr_gen_13         |   347|
-|20    |  MAG_wall_2                 |mem_addr_gen_14         |   307|
-|21    |  MAG_wall_20                |mem_addr_gen_15         |   347|
-|22    |  MAG_wall_21                |mem_addr_gen_16         |   347|
-|23    |  MAG_wall_22                |mem_addr_gen_17         |   347|
-|24    |  MAG_wall_23                |mem_addr_gen_18         |   311|
-|25    |  MAG_wall_24                |mem_addr_gen_19         |   311|
-|26    |  MAG_wall_25                |mem_addr_gen_20         |   311|
-|27    |  MAG_wall_26                |mem_addr_gen_21         |   306|
-|28    |  MAG_wall_27                |mem_addr_gen_22         |   307|
-|29    |  MAG_wall_28                |mem_addr_gen_23         |   343|
-|30    |  MAG_wall_29                |mem_addr_gen_24         |   338|
-|31    |  MAG_wall_3                 |mem_addr_gen_25         |   307|
-|32    |  MAG_wall_30                |mem_addr_gen_26         |   311|
-|33    |  MAG_wall_31                |mem_addr_gen_27         |   311|
-|34    |  MAG_wall_32                |mem_addr_gen_28         |   311|
-|35    |  MAG_wall_33                |mem_addr_gen_29         |   311|
-|36    |  MAG_wall_34                |mem_addr_gen_30         |   347|
-|37    |  MAG_wall_35                |mem_addr_gen_31         |   347|
-|38    |  MAG_wall_36                |mem_addr_gen_32         |   347|
-|39    |  MAG_wall_37                |mem_addr_gen_33         |   347|
-|40    |  MAG_wall_38                |mem_addr_gen_34         |   311|
-|41    |  MAG_wall_39                |mem_addr_gen_35         |   311|
-|42    |  MAG_wall_4                 |mem_addr_gen_36         |   311|
-|43    |  MAG_wall_40                |mem_addr_gen_37         |   311|
-|44    |  MAG_wall_41                |mem_addr_gen_38         |   311|
-|45    |  MAG_wall_42                |mem_addr_gen_39         |   343|
-|46    |  MAG_wall_43                |mem_addr_gen_40         |   343|
-|47    |  MAG_wall_44                |mem_addr_gen_41         |   343|
-|48    |  MAG_wall_45                |mem_addr_gen_42         |   343|
-|49    |  MAG_wall_46                |mem_addr_gen_43         |   307|
-|50    |  MAG_wall_47                |mem_addr_gen_44         |   307|
-|51    |  MAG_wall_48                |mem_addr_gen_45         |   307|
-|52    |  MAG_wall_49                |mem_addr_gen_46         |   307|
-|53    |  MAG_wall_5                 |mem_addr_gen_47         |   311|
-|54    |  MAG_wall_50                |mem_addr_gen_48         |   307|
-|55    |  MAG_wall_51                |mem_addr_gen_49         |   307|
-|56    |  MAG_wall_52                |mem_addr_gen_50         |   307|
-|57    |  MAG_wall_53                |mem_addr_gen_51         |   307|
-|58    |  MAG_wall_54                |mem_addr_gen_52         |   307|
-|59    |  MAG_wall_55                |mem_addr_gen_53         |   338|
-|60    |  MAG_wall_56                |mem_addr_gen_54         |   307|
-|61    |  MAG_wall_57                |mem_addr_gen_55         |   315|
-|62    |  MAG_wall_58                |mem_addr_gen_56         |   307|
-|63    |  MAG_wall_59                |mem_addr_gen_57         |   307|
-|64    |  MAG_wall_6                 |mem_addr_gen_58         |   311|
-|65    |  MAG_wall_7                 |mem_addr_gen_59         |   311|
-|66    |  MAG_wall_8                 |mem_addr_gen_60         |   311|
-|67    |  MAG_wall_9                 |mem_addr_gen_61         |   347|
-|68    |  OP1                        |onepulse                |     2|
-|69    |  RGB_GEN_                   |RGB_GEN                 |  1644|
-|70    |  SC0                        |state_control           |   660|
-|71    |    MC                       |maincharacter           |   267|
-|72    |      CD0                    |clk_div__parameterized1 |     6|
-|73    |    m1                       |monster_one             |   389|
-|74    |      randomgen              |LFSR                    |    91|
-|75    |  VC0                        |vga_controller          |  4549|
-|76    |  key_de                     |KeyboardDecoder         |    78|
-|77    |    op                       |onepulse_62             |     3|
-+------+-----------------------------+------------------------+------+
++------+-----------------------------+---------------------------+------+
+|      |Instance                     |Module                     |Cells |
++------+-----------------------------+---------------------------+------+
+|1     |top                          |                           | 32658|
+|2     |  CD0                        |clk_div                    |     4|
+|3     |  CD1                        |clk_div__parameterized0    |    26|
+|4     |  DB1                        |debounce                   |     6|
+|5     |  MAG_CY                     |mem_addr_gen               |   308|
+|6     |  MAG_computer_room_entrance |mem_addr_gen_0             |   333|
+|7     |  MAG_heart_ins_0            |mem_addr_gen_1             |   307|
+|8     |  MAG_heart_ins_1            |mem_addr_gen_2             |   307|
+|9     |  MAG_heart_ins_2            |mem_addr_gen_3             |   307|
+|10    |  MAG_monster_1              |mem_addr_gen_4             |   308|
+|11    |  MAG_wall_0                 |mem_addr_gen_5             |   311|
+|12    |  MAG_wall_1                 |mem_addr_gen_6             |   305|
+|13    |  MAG_wall_10                |mem_addr_gen_7             |   306|
+|14    |  MAG_wall_11                |mem_addr_gen_8             |   306|
+|15    |  MAG_wall_12                |mem_addr_gen_9             |   307|
+|16    |  MAG_wall_13                |mem_addr_gen_10            |   307|
+|17    |  MAG_wall_14                |mem_addr_gen_11            |   307|
+|18    |  MAG_wall_15                |mem_addr_gen_12            |   347|
+|19    |  MAG_wall_16                |mem_addr_gen_13            |   347|
+|20    |  MAG_wall_17                |mem_addr_gen_14            |   347|
+|21    |  MAG_wall_18                |mem_addr_gen_15            |   347|
+|22    |  MAG_wall_19                |mem_addr_gen_16            |   347|
+|23    |  MAG_wall_2                 |mem_addr_gen_17            |   307|
+|24    |  MAG_wall_20                |mem_addr_gen_18            |   311|
+|25    |  MAG_wall_21                |mem_addr_gen_19            |   311|
+|26    |  MAG_wall_22                |mem_addr_gen_20            |   311|
+|27    |  MAG_wall_23                |mem_addr_gen_21            |   311|
+|28    |  MAG_wall_24                |mem_addr_gen_22            |   311|
+|29    |  MAG_wall_25                |mem_addr_gen_23            |   311|
+|30    |  MAG_wall_26                |mem_addr_gen_24            |   347|
+|31    |  MAG_wall_27                |mem_addr_gen_25            |   343|
+|32    |  MAG_wall_28                |mem_addr_gen_26            |   343|
+|33    |  MAG_wall_29                |mem_addr_gen_27            |   343|
+|34    |  MAG_wall_3                 |mem_addr_gen_28            |   311|
+|35    |  MAG_wall_30                |mem_addr_gen_29            |   311|
+|36    |  MAG_wall_31                |mem_addr_gen_30            |   311|
+|37    |  MAG_wall_32                |mem_addr_gen_31            |   311|
+|38    |  MAG_wall_33                |mem_addr_gen_32            |   337|
+|39    |  MAG_wall_34                |mem_addr_gen_33            |   347|
+|40    |  MAG_wall_35                |mem_addr_gen_34            |   347|
+|41    |  MAG_wall_36                |mem_addr_gen_35            |   347|
+|42    |  MAG_wall_37                |mem_addr_gen_36            |   343|
+|43    |  MAG_wall_38                |mem_addr_gen_37            |   311|
+|44    |  MAG_wall_39                |mem_addr_gen_38            |   311|
+|45    |  MAG_wall_4                 |mem_addr_gen_39            |   311|
+|46    |  MAG_wall_40                |mem_addr_gen_40            |   343|
+|47    |  MAG_wall_41                |mem_addr_gen_41            |   343|
+|48    |  MAG_wall_42                |mem_addr_gen_42            |   343|
+|49    |  MAG_wall_43                |mem_addr_gen_43            |   343|
+|50    |  MAG_wall_44                |mem_addr_gen_44            |   343|
+|51    |  MAG_wall_45                |mem_addr_gen_45            |   333|
+|52    |  MAG_wall_46                |mem_addr_gen_46            |   307|
+|53    |  MAG_wall_47                |mem_addr_gen_47            |   307|
+|54    |  MAG_wall_48                |mem_addr_gen_48            |   307|
+|55    |  MAG_wall_49                |mem_addr_gen_49            |   307|
+|56    |  MAG_wall_5                 |mem_addr_gen_50            |   311|
+|57    |  MAG_wall_50                |mem_addr_gen_51            |   307|
+|58    |  MAG_wall_51                |mem_addr_gen_52            |   307|
+|59    |  MAG_wall_52                |mem_addr_gen_53            |   307|
+|60    |  MAG_wall_53                |mem_addr_gen_54            |   307|
+|61    |  MAG_wall_54                |mem_addr_gen_55            |   338|
+|62    |  MAG_wall_55                |mem_addr_gen_56            |   338|
+|63    |  MAG_wall_56                |mem_addr_gen_57            |   333|
+|64    |  MAG_wall_57                |mem_addr_gen_58            |   319|
+|65    |  MAG_wall_58                |mem_addr_gen_59            |   307|
+|66    |  MAG_wall_59                |mem_addr_gen_60            |   307|
+|67    |  MAG_wall_6                 |mem_addr_gen_61            |   311|
+|68    |  MAG_wall_7                 |mem_addr_gen_62            |   311|
+|69    |  MAG_wall_8                 |mem_addr_gen_63            |   311|
+|70    |  MAG_wall_9                 |mem_addr_gen_64            |   311|
+|71    |  MAG_wooden_fpga_down       |mem_addr_gen_65            |   308|
+|72    |  OP1                        |onepulse                   |     2|
+|73    |  RGB_GEN_                   |RGB_GEN                    |  1391|
+|74    |  SC0                        |state_control              |   896|
+|75    |    MC                       |maincharacter              |   364|
+|76    |      CD0                    |clk_div__parameterized1_67 |     6|
+|77    |    m1                       |monster_one                |   381|
+|78    |      CD                     |clk_div__parameterized1    |     6|
+|79    |      randomgen              |LFSR                       |    86|
+|80    |    weapon_                  |weapon                     |   113|
+|81    |    weapon_monster_1         |collide                    |    34|
+|82    |  VC0                        |vga_controller             |  4862|
+|83    |  key_de                     |KeyboardDecoder            |    81|
+|84    |    op                       |onepulse_66                |     3|
++------+-----------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 1160.402 ; gain = 542.762
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:54 . Memory (MB): peak = 1159.664 ; gain = 413.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1159.664 ; gain = 544.262
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:10 . Memory (MB): peak = 1160.402 ; gain = 405.660
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:01:14 . Memory (MB): peak = 1160.402 ; gain = 542.762
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.505 . Memory (MB): peak = 1169.449 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4422 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.554 . Memory (MB): peak = 1173.438 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4736 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1173.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1181.746 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 34 instances were transformed.
-  LD => LDCE: 33 instances
-  LDC => LDCE: 1 instance 
+  A total of 13 instances were transformed.
+  LD => LDCE: 13 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-91 Infos, 173 Warnings, 0 Critical Warnings and 0 Errors encountered.
+122 Infos, 197 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1173.246 ; gain = 834.512
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1173.246 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:25 . Memory (MB): peak = 1181.746 ; gain = 844.645
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1181.746 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  8 01:13:01 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  8 18:41:28 2024...

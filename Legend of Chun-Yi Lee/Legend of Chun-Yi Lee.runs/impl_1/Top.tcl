@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -79,8 +78,6 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
   read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
   read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L.xci}}
   read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R.xci}}
@@ -93,6 +90,18 @@ set rc [catch {
   read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R.xci}}
   read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall.xci}}
   read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}
+  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}
+  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}
   read_xdc {{C:/verilog project/Legend of Chun-Yi Lee/cons.xdc}}
   link_design -top Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

@@ -7,6 +7,14 @@ module state_control(
     output [9:0] pos_h_monster_1, pos_v_monster_1,
     output [3:0] pixel_idx_computer_room_entrance,
     output [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance,
+    output [3:0] pixel_idx_heart_0,
+	output [9:0] pos_h_heart_0, pos_v_heart_0,
+    output [3:0] pixel_idx_heart_1,
+	output [9:0] pos_h_heart_1, pos_v_heart_1,
+    output [3:0] pixel_idx_heart_2,
+	output [9:0] pos_h_heart_2, pos_v_heart_2,
+	output [3:0] pixel_idx_weapon,
+	output [9:0] pos_h_weapon, pos_v_weapon,
     output [3:0] pixel_idx_walls,
     output [9:0] pos_h_wall_0, pos_v_wall_0,
     output [9:0] pos_h_wall_1, pos_v_wall_1,
@@ -91,6 +99,13 @@ module state_control(
                                   wall_collisions_monster_1[20]|wall_collisions_monster_1[21]|wall_collisions_monster_1[22]|wall_collisions_monster_1[23]|wall_collisions_monster_1[24]|wall_collisions_monster_1[25]|wall_collisions_monster_1[26]|wall_collisions_monster_1[27]|wall_collisions_monster_1[28]|wall_collisions_monster_1[29]|
                                   wall_collisions_monster_1[30]|wall_collisions_monster_1[31]|wall_collisions_monster_1[32]|wall_collisions_monster_1[33]|wall_collisions_monster_1[34]|wall_collisions_monster_1[35]|wall_collisions_monster_1[36]|wall_collisions_monster_1[37]|wall_collisions_monster_1[38]|wall_collisions_monster_1[39];
     
+
+    assign pos_h_heart_0 = 60;
+    assign pos_v_heart_0 = 220;
+    assign pos_h_heart_1 = 40;
+    assign pos_v_heart_1 = 220;
+    assign pos_h_heart_2 = 20;
+    assign pos_v_heart_2 = 220;
 
 	assign pos_h_computer_room_entrance = 240;
 	assign pos_v_computer_room_entrance = 160;
@@ -258,7 +273,8 @@ module state_control(
 	   .state(pixel_idx_CY),
 	   .backstage(backstage), 
 	   .nextstage(nextstage),
-	   .wall_collision(wall_collision_total_CY)
+	   .wall_collision(wall_collision_total_CY),
+       .is_attacking(SPACE_signal)
 	);
 	
     wall wall_0(
@@ -664,17 +680,62 @@ module state_control(
         .pos_h(pos_h_wall_39),.pos_v(pos_v_wall_39),
         .collision(wall_collisions_monster_1[39])
     );
+    
+    wire weapon_collision[3:0];
+    collide weapon_monster_1(
+        .pos_h_1(pos_h_monster_1),.pos_v_1(pos_v_monster_1),
+        .pos_h_2(pos_h_weapon),.pos_v_2(pos_v_weapon),
+        .collision(weapon_collision[1])
+    );
 
 //	monster_1
 	 monster_one m1(
 	    .clk(clk), 
 	    .rst(changing_stage), 
 	    .stagestate(stage), 
+        .state(pixel_idx_monster_1),
 	    .pos_h(pos_h_monster_1), 
 	    .pos_v(pos_v_monster_1),
-        .wall_collision(wall_collision_total_monster_1)
+        .wall_collision(wall_collision_total_monster_1),
+        .enable_weapon_collision(SPACE_signal),
+        .weapon_collision(weapon_collision[1])
 	 );
+
+    weapon weapon_(
+        .clk(clk), 
+	    .rst(changing_stage), 
+        .type(0),
+        .state_CY(pixel_idx_CY),
+        .pos_h_CY(pos_h_CY),
+        .pos_v_CY(pos_v_CY),
+        .state(pixel_idx_weapon),
+        .pos_h(pos_h_weapon),
+        .pos_v(pos_v_weapon)
+    );
 	
+endmodule
+
+module collide(
+    input [9:0] pos_h_1, pos_v_1,
+    input [9:0] pos_h_2, pos_v_2,
+    output reg collision
+    );
+
+    always @(*)begin
+        if (pos_h_1 > pos_h_2)begin
+            if (pos_v_1 > pos_v_2)begin
+                collision = (pos_h_1-pos_h_2 <= 20)&&(pos_v_1-pos_v_2 <= 20);
+            end else begin
+                collision = (pos_h_1-pos_h_2 <= 20)&&(pos_v_2-pos_v_1 <= 20);
+            end
+        end else begin
+            if (pos_v_1 > pos_v_2)begin
+                collision = (pos_h_2-pos_h_1 <= 20)&&(pos_v_1-pos_v_2 <= 20);
+            end else begin
+                collision = (pos_h_2-pos_h_1 <= 20)&&(pos_v_2-pos_v_1 <= 20);
+            end
+        end
+    end
 endmodule
 
 module wall(
@@ -713,11 +774,12 @@ module wall(
 
 endmodule
 
-module maincharacter (clk, rst, A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal, stagestate, pos_h, pos_v, state, backstage, nextstage,wall_collision);
+module maincharacter (clk, rst, A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal, stagestate, pos_h, pos_v, state, backstage, nextstage,wall_collision, is_attacking);
 input clk;
 input rst;
 input A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal;
 input [3:0] stagestate;
+input is_attacking;
 input [3:0] wall_collision;
 output reg  [9:0] pos_h = 10'd150, pos_v = 10'd110;
 output reg [3:0] state;
@@ -730,7 +792,8 @@ reg [3:0] nstate;
 
 parameter FACE_FRONT_STAND = 4'd0, FACE_FRONT_WALK_L = 4'd1, FACE_FRONT_WALK_R = 4'd2, 
 FACE_RIGHT_STAND = 4'd3, FACE_RIGHT_WALK = 4'd4, FACE_LEFT_STAND = 4'd5, FACE_LEFT_WALK = 4'd6, 
-FACE_BACK_STAND = 4'd7, FACE_BACK_WALK_L = 4'd8, FACE_BACK_WALK_R = 4'd9;
+FACE_BACK_STAND = 4'd7, FACE_BACK_WALK_L = 4'd8, FACE_BACK_WALK_R = 4'd9, 
+FACE_FRONT_ATTACK = 4'hA, FACE_BACK_ATTACK = 4'hB, FACE_LEFT_ATTACK = 4'hC, FACE_RIGHT_ATTACK = 4'hD;
     
 always @(*) begin //combine WASD signals into one reg for ease of coding
     if (W_signal) signals = 3'd1; //W = go up
@@ -743,11 +806,7 @@ end
 clk_div #(3) CD0(.clk(clk), .clk_d(dclk));
 
 always @(posedge dclk) begin //state always block
-    if (rst) begin
-        state <= FACE_FRONT_STAND;
-    end else begin
-        state <= nstate;
-    end
+    state <= nstate;
 end
 
 always @(*) begin //state always block 2
@@ -775,10 +834,26 @@ always @(*) begin //state always block 2
         end
     endcase
     if (!W_signal && !S_signal && !A_signal && !D_signal) begin
-        if (state == FACE_FRONT_WALK_L || state == FACE_FRONT_WALK_R || state == FACE_FRONT_STAND) nstate = FACE_FRONT_STAND;
-        if (state == FACE_RIGHT_WALK || state == FACE_RIGHT_STAND) nstate = FACE_RIGHT_STAND;
-        if (state == FACE_LEFT_WALK || state == FACE_LEFT_STAND) nstate = FACE_LEFT_STAND;
-        if (state == FACE_BACK_WALK_L || state == FACE_BACK_WALK_R || state == FACE_BACK_STAND) nstate = FACE_BACK_STAND;
+        if (state == FACE_FRONT_WALK_L || state == FACE_FRONT_WALK_R || state == FACE_FRONT_STAND || state == FACE_FRONT_ATTACK ) nstate = FACE_FRONT_STAND;
+        if (state == FACE_RIGHT_WALK || state == FACE_RIGHT_STAND || state == FACE_RIGHT_ATTACK) nstate = FACE_RIGHT_STAND;
+        if (state == FACE_LEFT_WALK || state == FACE_LEFT_STAND || state == FACE_LEFT_ATTACK) nstate = FACE_LEFT_STAND;
+        if (state == FACE_BACK_WALK_L || state == FACE_BACK_WALK_R || state == FACE_BACK_STAND || state == FACE_BACK_ATTACK) nstate = FACE_BACK_STAND;
+    end
+    if (is_attacking)begin
+        case (nstate)
+            FACE_FRONT_STAND: nstate = FACE_FRONT_ATTACK;
+            FACE_FRONT_WALK_L: nstate = FACE_FRONT_ATTACK;
+            FACE_FRONT_WALK_R: nstate = FACE_FRONT_ATTACK;
+            FACE_BACK_STAND: nstate = FACE_BACK_ATTACK;
+            FACE_BACK_WALK_L: nstate = FACE_BACK_ATTACK;
+            FACE_BACK_WALK_R: nstate = FACE_BACK_ATTACK;
+            FACE_RIGHT_STAND: nstate = FACE_RIGHT_ATTACK;
+            FACE_RIGHT_WALK: nstate = FACE_RIGHT_ATTACK;
+            FACE_LEFT_STAND: nstate = FACE_LEFT_ATTACK;
+            FACE_LEFT_WALK: nstate = FACE_LEFT_ATTACK;
+        endcase
+    end else begin
+        nstate = nstate;
     end
 end
 
@@ -793,50 +868,6 @@ always@(posedge clk) begin //movement always block
                 pos_h <= 25;
                 pos_v <= 25;
             end
-            4'd2: begin //stage 3
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd3: begin //stage 4
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd4: begin //stage 5
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd5: begin //stage 6
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd6: begin //stage 7
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd7: begin //stage 8
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd8: begin //stage 9
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd9: begin //stage 10
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd10: begin //end stage
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            4'd11: begin //cave
-                pos_h <= 25;
-                pos_v <= 25;
-            end
-            default: begin
-                pos_h <= 25;
-                pos_v <= 25;   
-            end
         endcase
     end else begin
         pos_h <= npos_h;
@@ -848,7 +879,7 @@ always @ (*) begin
     case (signals)
         3'd1:begin
             npos_h = pos_h;
-            if (wall_collision[2])begin
+            if (wall_collision[2] || is_attacking)begin
                 npos_v = pos_v;
             end else begin
                 npos_v = pos_v + 10'd1; //walk up
@@ -856,14 +887,14 @@ always @ (*) begin
         end 
         3'd2:begin
             npos_h = pos_h;
-            if (wall_collision[3])begin
+            if (wall_collision[3] || is_attacking)begin
                 npos_v = pos_v;
             end else begin
                 npos_v = pos_v - 10'd1; //walk down
             end
         end 
         3'd3:begin
-            if (wall_collision[1])begin
+            if (wall_collision[1] || is_attacking)begin
                 npos_h = pos_h;
             end else begin
                 npos_h = pos_h + 10'd1; //walk left
@@ -871,7 +902,7 @@ always @ (*) begin
             npos_v = pos_v;
         end 
         3'd4:begin
-            if (wall_collision[0])begin
+            if (wall_collision[0] || is_attacking)begin
                 npos_h = pos_h;
             end else begin
                 npos_h = pos_h - 10'd1; //walk right
@@ -902,163 +933,203 @@ end
 
 endmodule
 
-module monster_one (clk, rst, stagestate, pos_h, pos_v, wall_collision);
+module monster_one (clk, rst, stagestate, state, pos_h, pos_v, wall_collision,enable_weapon_collision,weapon_collision);
 input clk;
 input rst;
 input [3:0]stagestate;
 input [3:0]wall_collision;
+input enable_weapon_collision;
+input weapon_collision;
 
+output reg [3:0] state;
 output reg [9:0] pos_h;
 output reg [9:0] pos_v;
 
-reg [9:0] next_pos_h, next_pos_v;
+reg [3:0] direction;
+reg [7:0] counter;
+reg [7:0] is_dieing;
 
-reg [3:0] direction, next_direction;
 wire [12:0] randomNum;
-
 LFSR randomgen(
     .clock(clk),
     .reset(rst),
     .rnd(randomNum)
 );
 
-always@(posedge clk)begin
-    pos_h <= next_pos_h;
-    pos_v <= next_pos_v;
-    direction <= next_direction;
+wire dclk;
+clk_div #(3) CD(.clk(clk), .clk_d(dclk));
+always@(posedge dclk)begin
+    if (is_dieing != 8'd0)begin
+        if (is_dieing <= 8'd50)begin
+            if (state == 1)begin
+                state <= 2;
+            end else begin
+                state <= 1;
+            end
+        end else begin
+            state <= 2;
+        end
+    end else begin
+        if (state == 1)begin
+            state <= 0;
+        end else begin
+            state <= 1;
+        end
+    end
 end
 
-always @(*) begin
-    if (rst) begin
+always@(posedge clk)begin
+    if (rst)begin
         case (stagestate)
             4'd0: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
+                pos_h <= 160;
+                pos_v <= 120;
+                direction <= 0;
+                is_dieing <= 0;
+                counter <= 0;
             end
             4'd1: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd2: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd3: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd4: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd5: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd6: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd7: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd8: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd9: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd10: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
-            end
-            4'd11: begin
-                next_pos_h = 160;
-                next_pos_v = 120;
-                next_direction = 0;
+                pos_h <= 160;
+                pos_v <= 120;
+                direction <= 0;
+                is_dieing <= 0;
+                counter <= 0;
             end
         endcase 
-    end 
-    else begin
-        if ((wall_collision[1] || pos_h >= 300)&&direction==0)begin
-            next_direction = randomNum%3;
-            next_direction = next_direction+1;
-        end else begin
-            if ((wall_collision[0] || pos_h <= 20)&&direction==1)begin
-                next_direction = randomNum%3;
-                if (next_direction >= 1)begin
-                    next_direction = next_direction+1;
-                end else begin
-                    next_direction = next_direction;
-                end
+    end else begin
+        if (is_dieing > 8'd0)begin
+            pos_h <= pos_h;
+            pos_v <= pos_v;
+            direction <= direction;
+            if (is_dieing <= 8'd50)begin
+                is_dieing <= is_dieing+1;
             end else begin
-                if ((wall_collision[2] || pos_v >= 220)&&direction==2)begin
-                    next_direction = randomNum%3;
-                    if (next_direction >= 2)begin
-                        next_direction = next_direction+1;
-                    end else begin
-                        next_direction = next_direction;
-                    end
+                is_dieing <= is_dieing;
+            end
+        end else begin
+            if (enable_weapon_collision && weapon_collision)begin
+                pos_h <= pos_h;
+                pos_v <= pos_v;
+                direction <= direction;
+                is_dieing <= 8'd1;
+            end else begin
+                is_dieing <= 0;
+                if (counter >= 8'd50)begin
+                    counter <= 0;
+                    direction <= (randomNum%4);
                 end else begin
-                    if ((wall_collision[3] || pos_v <= 20)&&direction==3)begin
-                        next_direction = randomNum%3;
+                    counter <= counter+1;
+                    if ((wall_collision[1] || pos_h >= 300)&&direction==0)begin
+                        direction <= (randomNum%3)+1;
                     end else begin
-                        next_direction = direction;
+                        if ((wall_collision[0] || pos_h <= 20)&&direction==1)begin
+                            direction <= (randomNum%3 >= 1)? (randomNum%3)+1: (randomNum%3);
+                        end else begin
+                            if ((wall_collision[2] || pos_v >= 220)&&direction==2)begin
+                                direction <= (randomNum%3 >= 2)? (randomNum%3)+1: (randomNum%3);
+                            end else begin
+                                if ((wall_collision[3] || pos_v <= 20)&&direction==3)begin
+                                    direction <= (randomNum%3);
+                                end else begin
+                                    direction <= direction;
+                                end
+                            end
+                        end
                     end
                 end
             end
-        end
 
-        case (direction)
-            0:begin
-                if (wall_collision[1] || pos_h >= 300)begin
-                    next_pos_h = pos_h;
-                end else begin
-                    next_pos_h = pos_h+1;
+            case (direction)
+                0:begin
+                    if (wall_collision[1] || pos_h >= 300)begin
+                        pos_h <= pos_h;
+                    end else begin
+                        pos_h <= pos_h+1;//
+                    end
+                    pos_v <= pos_v;
                 end
-                next_pos_v = pos_v;
+                1:begin
+                    if (wall_collision[0] || pos_h <= 20)begin
+                        pos_h <= pos_h;
+                    end else begin
+                        pos_h <= pos_h-1;//
+                    end
+                    pos_v <= pos_v;
+                end
+                2:begin
+                    if (wall_collision[2] || pos_v >= 220)begin
+                        pos_v <= pos_v;
+                    end else begin
+                        pos_v <= pos_v+1;//
+                    end
+                    pos_h <= pos_h;
+                end
+                3:begin
+                    if (wall_collision[3] || pos_v <= 20)begin
+                        pos_v <= pos_v;
+                    end else begin
+                        pos_v <= pos_v-1;//
+                    end
+                    pos_h <= pos_h;
+                end
+            endcase
+        end
+    end
+end
+
+endmodule
+
+module weapon(
+    input clk, rst,
+    input [2:0] type,
+    input [3:0] state_CY,
+    input [9:0] pos_h_CY, pos_v_CY,
+    output reg [3:0] state,
+    output reg [9:0] pos_h, pos_v
+    );
+
+    parameter EMPTY = 4'hf, WOODEN_FRONT = 4'h0, WOODEN_BACK = 4'h1, WOODEN_LEFT = 4'h2, WOODEN_RIGHT = 4'h3, 
+              BASYS_FRONT = 4'h4, BASYS_BACK = 4'h5, BASYS_LEFT = 4'h6, BASYS_RIGHT = 4'h7,
+              CAR_FRONT = 4'h8, CAR_BACK = 4'h9, CAR_LEFT = 4'hA, CAR_RIGHT = 4'hB;
+    
+    always @(posedge clk)begin
+        case (type)
+            0:begin//wooden
+                case (state_CY)
+                    4'hA: begin
+                        state <= WOODEN_BACK;
+                        pos_h <= pos_h_CY;
+                        pos_v <= pos_v_CY-20;
+                    end
+                    4'hB: begin
+                        state <= WOODEN_FRONT;
+                        pos_h <= pos_h_CY;
+                        pos_v <= pos_v_CY+20;
+                    end
+                    4'hC: begin
+                        state <= WOODEN_LEFT;
+                        pos_h <= pos_h_CY+20;
+                        pos_v <= pos_v_CY;
+                    end
+                    4'hD: begin
+                        state <= WOODEN_RIGHT;
+                        pos_h <= pos_h_CY-20;
+                        pos_v <= pos_v_CY;
+                    end
+                    default: begin
+                        state <= EMPTY;
+                        pos_h <= pos_h_CY;
+                        pos_v <= pos_v_CY;
+                    end
+                endcase
             end
             1:begin
-                if (wall_collision[0] || pos_h <= 20)begin
-                    next_pos_h = pos_h;
-                end else begin
-                    next_pos_h = pos_h-1;
-                end
-                next_pos_v = pos_v;
             end
             2:begin
-                if (wall_collision[2] || pos_v >= 220)begin
-                    next_pos_v = pos_v;
-                end else begin
-                    next_pos_v = pos_v+1;
-                end
-                next_pos_h = pos_h;
-            end
-            3:begin
-                if (wall_collision[3] || pos_v <= 20)begin
-                    next_pos_v = pos_v;
-                end else begin
-                    next_pos_v = pos_v-1;
-                end
-                next_pos_h = pos_h;
             end
         endcase
     end
-end
+
 endmodule
 
 module LFSR (

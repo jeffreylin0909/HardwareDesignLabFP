@@ -37,21 +37,32 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         wire [11:0] pixel_CY_left_walk;
         wire [11:0] pixel_CY_right_stand;
         wire [11:0] pixel_CY_right_walk;
-        wire [11:0] pixel_BOSS_student;
-        wire [11:0] pixel_CS_student;
-        wire [11:0] pixel_EECS_student;
-        wire [11:0] pixel_NTHU_student;
+        wire [11:0] pixel_CY_front_attack;
+        wire [11:0] pixel_CY_back_attack;
+        wire [11:0] pixel_CY_right_attack;
+        wire [11:0] pixel_CY_left_attack;
+        wire [11:0] pixel_BOSS_student_L;
+        wire [11:0] pixel_BOSS_student_R;
+        wire [11:0] pixel_CS_student_L;
+        wire [11:0] pixel_CS_student_R;
+        wire [11:0] pixel_EECS_student_L;
+        wire [11:0] pixel_EECS_student_R;
+        wire [11:0] pixel_NTHU_student_L;
+        wire [11:0] pixel_NTHU_student_R;
         wire [11:0] pixel_CR;
         wire [11:0] pixel_EM;
         wire [11:0] pixel_JX;
         wire [11:0] pixel_YC;
         wire [11:0] pixel_ZY;
         wire [11:0] pixel_key;
-        wire [11:0] pixel_heart;
+        wire [11:0] pixel_heart[3:0];
         wire [11:0] pixel_potion;
         wire [11:0] pixel_yoshi;
         wire [11:0] pixel_car;
-        wire [11:0] pixel_wooden_fpga;
+        wire [11:0] pixel_wooden_fpga_up;
+        wire [11:0] pixel_wooden_fpga_down;
+        wire [11:0] pixel_wooden_fpga_left;
+        wire [11:0] pixel_wooden_fpga_right;
         wire [11:0] pixel_golden_fpga;
         wire [11:0] pixel_basys_3_fpga;
         wire [11:0] pixel_computer_room_walls;
@@ -68,11 +79,25 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         wire [11:0] pixel_monster_1;
         wire [3:0] pixel_idx_monster_1;
         wire [9:0] pos_h_monster_1, pos_v_monster_1;
+
+        //for weapon
+        wire [16:0] pixel_addr_weapon;
+        wire [11:0] pixel_weapon;
+        wire [3:0] pixel_idx_weapon;
+        wire [9:0] pos_h_weapon, pos_v_weapon;
+
         //for cave entrance
         wire [16:0] pixel_addr_computer_room_entrance;
         wire [11:0] pixel_computer_room_entrance_ins;
         wire [3:0] pixel_idx_computer_room_entrance;
         wire [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance;
+        
+        //for hearts
+        wire [16:0] pixel_addr_heart[3:0];
+        wire [11:0] pixel_heart_ins[3:0];
+        wire [3:0] pixel_idx_heart[3:0];
+        wire [9:0] pos_h_heart[3:0], pos_v_heart[3:0];
+        
         //for walls
         wire [16:0] pixel_addr_wall[63:0];
         wire [11:0] pixel_wall[63:0];
@@ -94,6 +119,10 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .pixel_7(pixel_CY_back_stand),
         .pixel_8(pixel_CY_back_walk_L),
         .pixel_9(pixel_CY_back_walk_R),
+        .pixel_A(pixel_CY_front_attack),
+        .pixel_B(pixel_CY_back_attack),
+        .pixel_C(pixel_CY_left_attack),
+        .pixel_D(pixel_CY_right_attack),
         .now_pixel(pixel_CY)
 	);
 	
@@ -101,8 +130,9 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_monster_1),.pos_v(pos_v_monster_1),
         .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
-        .pixel_0(pixel_CS_student),
+        .now_pixel_idx(pixel_idx_monster_1),
+        .pixel_0(pixel_CS_student_L),
+        .pixel_1(pixel_CS_student_R),
         .now_pixel(pixel_monster_1)
 	);
 	
@@ -113,6 +143,33 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .now_pixel_idx(0),
         .pixel_0(pixel_computer_room_entrance),
         .now_pixel(pixel_computer_room_entrance_ins)
+	);
+	
+	select_pixel SP_heart_0(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_heart[0]),.pos_v(pos_v_heart[0]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(0),
+        .pixel_0(pixel_heart[0]),
+        .now_pixel(pixel_heart_ins[0])
+	);
+	
+	select_pixel SP_heart_1(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_heart[1]),.pos_v(pos_v_heart[1]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(0),
+        .pixel_0(pixel_heart[1]),
+        .now_pixel(pixel_heart_ins[1])
+	);
+	
+	select_pixel SP_heart_2(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_heart[2]),.pos_v(pos_v_heart[2]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(0),
+        .pixel_0(pixel_heart[2]),
+        .now_pixel(pixel_heart_ins[2])
 	);
 	
 	select_pixel SP_w0(
@@ -595,6 +652,18 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
             .pixel_0(pixel_overwall_wall[1]),
             .now_pixel(pixel_wall[59])
     );
+    
+    select_pixel SP_weapon(
+            .h_cnt(h_cnt), .v_cnt(v_cnt),
+            .pos_h(pos_h_weapon),.pos_v(pos_v_weapon),
+            .size_h(20),.size_v(20),
+            .now_pixel_idx(pixel_idx_weapon),
+            .pixel_0(pixel_wooden_fpga_up),
+            .pixel_1(pixel_wooden_fpga_down),
+            .pixel_2(pixel_wooden_fpga_left),
+            .pixel_3(pixel_wooden_fpga_right),
+            .now_pixel(pixel_weapon)
+    );
 
 
 	RGB_GEN RGB_GEN_(
@@ -603,12 +672,16 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 	   .pixel_CY(pixel_CY),
 	   .pixel_monster_1(pixel_monster_1),
 	   .pixel_computer_room_entrance_ins(pixel_computer_room_entrance_ins),
+	   .pixel_heart_ins_0(pixel_heart_ins[0]),
+	   .pixel_heart_ins_1(pixel_heart_ins[1]),
+	   .pixel_heart_ins_2(pixel_heart_ins[2]),
+	   .pixel_weapon(pixel_weapon),
 	   .pixel_wall_0(pixel_wall[0]),
        .pixel_wall_1(pixel_wall[1]),
        .pixel_wall_2(pixel_wall[2]),
        .pixel_wall_3(pixel_wall[3]),
        .pixel_wall_4(pixel_wall[4]),
-       .pixel_wall_5(pixel_wall[5]),
+       .pixel_wall_5(pixel_wall[5]),   
        .pixel_wall_6(pixel_wall[6]),
        .pixel_wall_7(pixel_wall[7]),
        .pixel_wall_8(pixel_wall[8]),
@@ -695,68 +768,79 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.pixel_idx_computer_room_entrance(pixel_idx_computer_room_entrance),
 		.pos_h_computer_room_entrance(pos_h_computer_room_entrance),
 		.pos_v_computer_room_entrance(pos_v_computer_room_entrance),
+                .pixel_idx_heart_0(pixel_idx_heart[0]),
+		.pos_h_heart_0(pos_h_heart[0]),
+		.pos_v_heart_0(pos_v_heart[0]),
+                .pixel_idx_heart_1(pixel_idx_heart[1]),
+		.pos_h_heart_1(pos_h_heart[1]),
+		.pos_v_heart_1(pos_v_heart[1]),
+                .pixel_idx_heart_2(pixel_idx_heart[2]),
+		.pos_h_heart_2(pos_h_heart[2]),
+		.pos_v_heart_2(pos_v_heart[2]),
+		.pixel_idx_weapon(pixel_idx_weapon),
+		.pos_h_weapon(pos_h_weapon),
+		.pos_v_weapon(pos_v_weapon),
 		.pixel_idx_walls(pixel_idx_wall[0]),
 		.pos_h_wall_0(pos_h_wall[0]),.pos_v_wall_0(pos_v_wall[0]),
-        .pos_h_wall_1(pos_h_wall[1]),.pos_v_wall_1(pos_v_wall[1]),
-        .pos_h_wall_2(pos_h_wall[2]),.pos_v_wall_2(pos_v_wall[2]),
-        .pos_h_wall_3(pos_h_wall[3]),.pos_v_wall_3(pos_v_wall[3]),
-        .pos_h_wall_4(pos_h_wall[4]),.pos_v_wall_4(pos_v_wall[4]),
-        .pos_h_wall_5(pos_h_wall[5]),.pos_v_wall_5(pos_v_wall[5]),
-        .pos_h_wall_6(pos_h_wall[6]),.pos_v_wall_6(pos_v_wall[6]),
-        .pos_h_wall_7(pos_h_wall[7]),.pos_v_wall_7(pos_v_wall[7]),
-        .pos_h_wall_8(pos_h_wall[8]),.pos_v_wall_8(pos_v_wall[8]),
-        .pos_h_wall_9(pos_h_wall[9]),.pos_v_wall_9(pos_v_wall[9]),
-        .pos_h_wall_10(pos_h_wall[10]),.pos_v_wall_10(pos_v_wall[10]),
-        .pos_h_wall_11(pos_h_wall[11]),.pos_v_wall_11(pos_v_wall[11]),
-        .pos_h_wall_12(pos_h_wall[12]),.pos_v_wall_12(pos_v_wall[12]),
-        .pos_h_wall_13(pos_h_wall[13]),.pos_v_wall_13(pos_v_wall[13]),
-        .pos_h_wall_14(pos_h_wall[14]),.pos_v_wall_14(pos_v_wall[14]),
-        .pos_h_wall_15(pos_h_wall[15]),.pos_v_wall_15(pos_v_wall[15]),
-        .pos_h_wall_16(pos_h_wall[16]),.pos_v_wall_16(pos_v_wall[16]),
-        .pos_h_wall_17(pos_h_wall[17]),.pos_v_wall_17(pos_v_wall[17]),
-        .pos_h_wall_18(pos_h_wall[18]),.pos_v_wall_18(pos_v_wall[18]),
-        .pos_h_wall_19(pos_h_wall[19]),.pos_v_wall_19(pos_v_wall[19]),
-        .pos_h_wall_20(pos_h_wall[20]),.pos_v_wall_20(pos_v_wall[20]),
-        .pos_h_wall_21(pos_h_wall[21]),.pos_v_wall_21(pos_v_wall[21]),
-        .pos_h_wall_22(pos_h_wall[22]),.pos_v_wall_22(pos_v_wall[22]),
-        .pos_h_wall_23(pos_h_wall[23]),.pos_v_wall_23(pos_v_wall[23]),
-        .pos_h_wall_24(pos_h_wall[24]),.pos_v_wall_24(pos_v_wall[24]),
-        .pos_h_wall_25(pos_h_wall[25]),.pos_v_wall_25(pos_v_wall[25]),
-        .pos_h_wall_26(pos_h_wall[26]),.pos_v_wall_26(pos_v_wall[26]),
-        .pos_h_wall_27(pos_h_wall[27]),.pos_v_wall_27(pos_v_wall[27]),
-        .pos_h_wall_28(pos_h_wall[28]),.pos_v_wall_28(pos_v_wall[28]),
-        .pos_h_wall_29(pos_h_wall[29]),.pos_v_wall_29(pos_v_wall[29]),
-        .pos_h_wall_30(pos_h_wall[30]),.pos_v_wall_30(pos_v_wall[30]),
-        .pos_h_wall_31(pos_h_wall[31]),.pos_v_wall_31(pos_v_wall[31]),
-        .pos_h_wall_32(pos_h_wall[32]),.pos_v_wall_32(pos_v_wall[32]),
-        .pos_h_wall_33(pos_h_wall[33]),.pos_v_wall_33(pos_v_wall[33]),
-        .pos_h_wall_34(pos_h_wall[34]),.pos_v_wall_34(pos_v_wall[34]),
-        .pos_h_wall_35(pos_h_wall[35]),.pos_v_wall_35(pos_v_wall[35]),
-        .pos_h_wall_36(pos_h_wall[36]),.pos_v_wall_36(pos_v_wall[36]),
-        .pos_h_wall_37(pos_h_wall[37]),.pos_v_wall_37(pos_v_wall[37]),
-        .pos_h_wall_38(pos_h_wall[38]),.pos_v_wall_38(pos_v_wall[38]),
-        .pos_h_wall_39(pos_h_wall[39]),.pos_v_wall_39(pos_v_wall[39]),
-        .pos_h_wall_40(pos_h_wall[40]),.pos_v_wall_40(pos_v_wall[40]),
-        .pos_h_wall_41(pos_h_wall[41]),.pos_v_wall_41(pos_v_wall[41]),
-        .pos_h_wall_42(pos_h_wall[42]),.pos_v_wall_42(pos_v_wall[42]),
-        .pos_h_wall_43(pos_h_wall[43]),.pos_v_wall_43(pos_v_wall[43]),
-        .pos_h_wall_44(pos_h_wall[44]),.pos_v_wall_44(pos_v_wall[44]),
-        .pos_h_wall_45(pos_h_wall[45]),.pos_v_wall_45(pos_v_wall[45]),
-        .pos_h_wall_46(pos_h_wall[46]),.pos_v_wall_46(pos_v_wall[46]),
-        .pos_h_wall_47(pos_h_wall[47]),.pos_v_wall_47(pos_v_wall[47]),
-        .pos_h_wall_48(pos_h_wall[48]),.pos_v_wall_48(pos_v_wall[48]),
-        .pos_h_wall_49(pos_h_wall[49]),.pos_v_wall_49(pos_v_wall[49]),
-        .pos_h_wall_50(pos_h_wall[50]),.pos_v_wall_50(pos_v_wall[50]),
-        .pos_h_wall_51(pos_h_wall[51]),.pos_v_wall_51(pos_v_wall[51]),
-        .pos_h_wall_52(pos_h_wall[52]),.pos_v_wall_52(pos_v_wall[52]),
-        .pos_h_wall_53(pos_h_wall[53]),.pos_v_wall_53(pos_v_wall[53]),
-        .pos_h_wall_54(pos_h_wall[54]),.pos_v_wall_54(pos_v_wall[54]),
-        .pos_h_wall_55(pos_h_wall[55]),.pos_v_wall_55(pos_v_wall[55]),
-        .pos_h_wall_56(pos_h_wall[56]),.pos_v_wall_56(pos_v_wall[56]),
-        .pos_h_wall_57(pos_h_wall[57]),.pos_v_wall_57(pos_v_wall[57]),
-        .pos_h_wall_58(pos_h_wall[58]),.pos_v_wall_58(pos_v_wall[58]),
-        .pos_h_wall_59(pos_h_wall[59]),.pos_v_wall_59(pos_v_wall[59])
-
+                .pos_h_wall_1(pos_h_wall[1]),.pos_v_wall_1(pos_v_wall[1]),
+                .pos_h_wall_2(pos_h_wall[2]),.pos_v_wall_2(pos_v_wall[2]),
+                .pos_h_wall_3(pos_h_wall[3]),.pos_v_wall_3(pos_v_wall[3]),
+                .pos_h_wall_4(pos_h_wall[4]),.pos_v_wall_4(pos_v_wall[4]),
+                .pos_h_wall_5(pos_h_wall[5]),.pos_v_wall_5(pos_v_wall[5]),
+                .pos_h_wall_6(pos_h_wall[6]),.pos_v_wall_6(pos_v_wall[6]),
+                .pos_h_wall_7(pos_h_wall[7]),.pos_v_wall_7(pos_v_wall[7]),
+                .pos_h_wall_8(pos_h_wall[8]),.pos_v_wall_8(pos_v_wall[8]),
+                .pos_h_wall_9(pos_h_wall[9]),.pos_v_wall_9(pos_v_wall[9]),
+                .pos_h_wall_10(pos_h_wall[10]),.pos_v_wall_10(pos_v_wall[10]),
+                .pos_h_wall_11(pos_h_wall[11]),.pos_v_wall_11(pos_v_wall[11]),
+                .pos_h_wall_12(pos_h_wall[12]),.pos_v_wall_12(pos_v_wall[12]),
+                .pos_h_wall_13(pos_h_wall[13]),.pos_v_wall_13(pos_v_wall[13]),
+                .pos_h_wall_14(pos_h_wall[14]),.pos_v_wall_14(pos_v_wall[14]),
+                .pos_h_wall_15(pos_h_wall[15]),.pos_v_wall_15(pos_v_wall[15]),
+                .pos_h_wall_16(pos_h_wall[16]),.pos_v_wall_16(pos_v_wall[16]),
+                .pos_h_wall_17(pos_h_wall[17]),.pos_v_wall_17(pos_v_wall[17]),
+                .pos_h_wall_18(pos_h_wall[18]),.pos_v_wall_18(pos_v_wall[18]),
+                .pos_h_wall_19(pos_h_wall[19]),.pos_v_wall_19(pos_v_wall[19]),
+                .pos_h_wall_20(pos_h_wall[20]),.pos_v_wall_20(pos_v_wall[20]),
+                .pos_h_wall_21(pos_h_wall[21]),.pos_v_wall_21(pos_v_wall[21]),
+                .pos_h_wall_22(pos_h_wall[22]),.pos_v_wall_22(pos_v_wall[22]),
+                .pos_h_wall_23(pos_h_wall[23]),.pos_v_wall_23(pos_v_wall[23]),
+                .pos_h_wall_24(pos_h_wall[24]),.pos_v_wall_24(pos_v_wall[24]),
+                .pos_h_wall_25(pos_h_wall[25]),.pos_v_wall_25(pos_v_wall[25]),
+                .pos_h_wall_26(pos_h_wall[26]),.pos_v_wall_26(pos_v_wall[26]),
+                .pos_h_wall_27(pos_h_wall[27]),.pos_v_wall_27(pos_v_wall[27]),
+                .pos_h_wall_28(pos_h_wall[28]),.pos_v_wall_28(pos_v_wall[28]),
+                .pos_h_wall_29(pos_h_wall[29]),.pos_v_wall_29(pos_v_wall[29]),
+                .pos_h_wall_30(pos_h_wall[30]),.pos_v_wall_30(pos_v_wall[30]),
+                .pos_h_wall_31(pos_h_wall[31]),.pos_v_wall_31(pos_v_wall[31]),
+                .pos_h_wall_32(pos_h_wall[32]),.pos_v_wall_32(pos_v_wall[32]),
+                .pos_h_wall_33(pos_h_wall[33]),.pos_v_wall_33(pos_v_wall[33]),
+                .pos_h_wall_34(pos_h_wall[34]),.pos_v_wall_34(pos_v_wall[34]),
+                .pos_h_wall_35(pos_h_wall[35]),.pos_v_wall_35(pos_v_wall[35]),
+                .pos_h_wall_36(pos_h_wall[36]),.pos_v_wall_36(pos_v_wall[36]),
+                .pos_h_wall_37(pos_h_wall[37]),.pos_v_wall_37(pos_v_wall[37]),
+                .pos_h_wall_38(pos_h_wall[38]),.pos_v_wall_38(pos_v_wall[38]),
+                .pos_h_wall_39(pos_h_wall[39]),.pos_v_wall_39(pos_v_wall[39]),
+                .pos_h_wall_40(pos_h_wall[40]),.pos_v_wall_40(pos_v_wall[40]),
+                .pos_h_wall_41(pos_h_wall[41]),.pos_v_wall_41(pos_v_wall[41]),
+                .pos_h_wall_42(pos_h_wall[42]),.pos_v_wall_42(pos_v_wall[42]),
+                .pos_h_wall_43(pos_h_wall[43]),.pos_v_wall_43(pos_v_wall[43]),
+                .pos_h_wall_44(pos_h_wall[44]),.pos_v_wall_44(pos_v_wall[44]),
+                .pos_h_wall_45(pos_h_wall[45]),.pos_v_wall_45(pos_v_wall[45]),
+                .pos_h_wall_46(pos_h_wall[46]),.pos_v_wall_46(pos_v_wall[46]),
+                .pos_h_wall_47(pos_h_wall[47]),.pos_v_wall_47(pos_v_wall[47]),
+                .pos_h_wall_48(pos_h_wall[48]),.pos_v_wall_48(pos_v_wall[48]),
+                .pos_h_wall_49(pos_h_wall[49]),.pos_v_wall_49(pos_v_wall[49]),
+                .pos_h_wall_50(pos_h_wall[50]),.pos_v_wall_50(pos_v_wall[50]),
+                .pos_h_wall_51(pos_h_wall[51]),.pos_v_wall_51(pos_v_wall[51]),
+                .pos_h_wall_52(pos_h_wall[52]),.pos_v_wall_52(pos_v_wall[52]),
+                .pos_h_wall_53(pos_h_wall[53]),.pos_v_wall_53(pos_v_wall[53]),
+                .pos_h_wall_54(pos_h_wall[54]),.pos_v_wall_54(pos_v_wall[54]),
+                .pos_h_wall_55(pos_h_wall[55]),.pos_v_wall_55(pos_v_wall[55]),
+                .pos_h_wall_56(pos_h_wall[56]),.pos_v_wall_56(pos_v_wall[56]),
+                .pos_h_wall_57(pos_h_wall[57]),.pos_v_wall_57(pos_v_wall[57]),
+                .pos_h_wall_58(pos_h_wall[58]),.pos_v_wall_58(pos_v_wall[58]),
+                .pos_h_wall_59(pos_h_wall[59]),.pos_v_wall_59(pos_v_wall[59])
 	);
 	
 	mem_addr_gen MAG_CY(
@@ -781,6 +865,38 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.pos_h(pos_h_computer_room_entrance),
 		.pos_v(pos_v_computer_room_entrance),
 		.pixel_addr(pixel_addr_computer_room_entrance)
+	);
+	
+	mem_addr_gen MAG_heart_ins_0(
+		.h_cnt(h_cnt),
+		.v_cnt(v_cnt), 
+		.pos_h(pos_h_heart[0]),
+		.pos_v(pos_v_heart[0]),
+		.pixel_addr(pixel_addr_heart[0])
+	);
+	
+	mem_addr_gen MAG_heart_ins_1(
+		.h_cnt(h_cnt),
+		.v_cnt(v_cnt), 
+		.pos_h(pos_h_heart[1]),
+		.pos_v(pos_v_heart[1]),
+		.pixel_addr(pixel_addr_heart[1])
+	);
+	
+	mem_addr_gen MAG_heart_ins_2(
+		.h_cnt(h_cnt),
+		.v_cnt(v_cnt), 
+		.pos_h(pos_h_heart[2]),
+		.pos_v(pos_v_heart[2]),
+		.pixel_addr(pixel_addr_heart[2])
+	);
+	
+	mem_addr_gen MAG_wooden_fpga_down(
+		.h_cnt(h_cnt),
+		.v_cnt(v_cnt), 
+		.pos_h(pos_h_weapon),
+		.pos_v(pos_v_weapon),
+		.pixel_addr(pixel_addr_weapon)
 	);
 	
 	  mem_addr_gen MAG_wall_0(.h_cnt(h_cnt),.v_cnt(v_cnt), 
@@ -1096,13 +1212,53 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .dina(12'd0),
         .douta(pixel_CY_right_walk)
     ); 
+
+    BM_CY_back_attack BM_CY_back_attack_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_back_attack)
+    ); 
+
+    BM_CY_front_attack BM_CY_front_attack_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_front_attack)
+    ); 
+
+    BM_CY_right_attack BM_CY_right_attack_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_right_attack)
+    ); 
+
+    BM_CY_left_attack BM_CY_left_attack_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_CY),
+        .dina(12'd0),
+        .douta(pixel_CY_left_attack)
+    ); 
     
-    BM_CS_student BM_CS_student_(
+    BM_CS_student_L BM_CS_student_L_(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_monster_1),
         .dina(12'd0),
-        .douta(pixel_CS_student)
+        .douta(pixel_CS_student_L)
+    ); 
+    
+    BM_CS_student_R BM_CS_student_R_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster_1),
+        .dina(12'd0),
+        .douta(pixel_CS_student_R)
     ); 
     
     BM_computer_room_entrance BM_computer_room_entrance_(
@@ -1111,6 +1267,62 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .addra(pixel_addr_computer_room_entrance),
         .dina(12'd0),
         .douta(pixel_computer_room_entrance)
+    );
+    
+    BM_heart BM_heart_0(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_heart[0]),
+        .dina(12'd0),
+        .douta(pixel_heart[0])
+    );
+    
+    BM_heart BM_heart_1(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_heart[1]),
+        .dina(12'd0),
+        .douta(pixel_heart[1])
+    );
+    
+    BM_heart BM_heart_2(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_heart[2]),
+        .dina(12'd0),
+        .douta(pixel_heart[2])
+    );
+    
+    BM_wooden_fpga_down BM_wooden_fpga_down_(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_weapon),
+        .dina(12'd0),
+        .douta(pixel_wooden_fpga_down)
+    );
+    
+    BM_wooden_fpga_up BM_wooden_fpga_up_(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_weapon),
+        .dina(12'd0),
+        .douta(pixel_wooden_fpga_up)
+    );
+    
+    BM_wooden_fpga_left BM_wooden_fpga_left_(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_weapon),
+        .dina(12'd0),
+        .douta(pixel_wooden_fpga_left)
+    );
+    
+    BM_wooden_fpga_right BM_wooden_fpga_right_(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_weapon),
+        .dina(12'd0),
+        .douta(pixel_wooden_fpga_right)
     );
     
 BM_overwall_wall BM_overwall_wall_0(.clka(clk_d2),.wea(0),

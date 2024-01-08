@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Mon Jan  8 01:14:41 2024
+| Date             : Mon Jan  8 18:42:55 2024
 | Host             : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 63.146 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 99.448 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 62.654                           |
-| Device Static (W)        | 0.492                            |
+| Dynamic (W)              | 98.950                           |
+| Device Static (W)        | 0.498                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 0.0                              |
 | Junction Temperature (C) | 125.0                            |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    25.277 |     9211 |       --- |             --- |
-|   LUT as Logic |    22.951 |     5638 |     20800 |           27.11 |
-|   CARRY4       |     2.202 |     1387 |      8150 |           17.02 |
-|   Register     |     0.068 |      346 |     41600 |            0.83 |
+| Slice Logic    |    39.234 |    11182 |       --- |             --- |
+|   LUT as Logic |    35.749 |     6864 |     20800 |           33.00 |
+|   CARRY4       |     3.348 |     1678 |      8150 |           20.59 |
+|   Register     |     0.087 |      354 |     41600 |            0.85 |
 |   BUFG         |     0.035 |        3 |        32 |            9.38 |
-|   F7/F8 Muxes  |     0.021 |       12 |     32600 |            0.04 |
-|   Others       |     0.000 |       74 |       --- |             --- |
-| Signals        |    22.666 |     6901 |       --- |             --- |
-| Block RAM      |     6.643 |      6.5 |        50 |           13.00 |
-| DSPs           |     1.520 |        8 |        90 |            8.89 |
-| I/O            |     6.548 |       18 |       106 |           16.98 |
-| Static Power   |     0.492 |          |           |                 |
-| Total          |    63.146 |          |           |                 |
+|   F7/F8 Muxes  |     0.015 |       12 |     32600 |            0.04 |
+|   Others       |     0.000 |      118 |       --- |             --- |
+| Signals        |    35.809 |     8822 |       --- |             --- |
+| Block RAM      |    12.775 |     12.5 |        50 |           25.00 |
+| DSPs           |     3.030 |       15 |        90 |           16.67 |
+| I/O            |     8.102 |       18 |       106 |           16.98 |
+| Static Power   |     0.498 |          |           |                 |
+| Total          |    99.448 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,16 +74,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    55.955 |      55.610 |      0.345 |
-| Vccaux    |       1.800 |     0.293 |       0.240 |      0.053 |
-| Vcco33    |       3.300 |     1.853 |       1.852 |      0.001 |
+| Vccint    |       1.000 |    90.239 |      89.891 |      0.348 |
+| Vccaux    |       1.800 |     0.350 |       0.297 |      0.053 |
+| Vcco33    |       3.300 |     2.293 |       2.292 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.512 |       0.500 |      0.012 |
+| Vccbram   |       1.000 |     0.976 |       0.963 |      0.014 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -141,62 +141,105 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| Top                          |    62.654 |
-|   BM_CS_student_             |     0.578 |
-|     U0                       |     0.578 |
-|       inst_blk_mem_gen       |     0.578 |
-|   BM_CY_back_stand_          |     0.572 |
-|     U0                       |     0.572 |
-|       inst_blk_mem_gen       |     0.572 |
-|   BM_CY_back_walk_L_         |     0.567 |
-|     U0                       |     0.567 |
-|       inst_blk_mem_gen       |     0.567 |
-|   BM_CY_back_walk_R_         |     0.582 |
-|     U0                       |     0.582 |
-|       inst_blk_mem_gen       |     0.582 |
-|   BM_CY_front_stand_         |     0.598 |
+| Top                          |    98.950 |
+|   BM_CS_student_L_           |     0.585 |
+|     U0                       |     0.585 |
+|       inst_blk_mem_gen       |     0.585 |
+|   BM_CS_student_R_           |     0.565 |
+|     U0                       |     0.565 |
+|       inst_blk_mem_gen       |     0.565 |
+|   BM_CY_back_attack_         |     0.576 |
+|     U0                       |     0.576 |
+|       inst_blk_mem_gen       |     0.576 |
+|   BM_CY_back_stand_          |     0.563 |
+|     U0                       |     0.563 |
+|       inst_blk_mem_gen       |     0.563 |
+|   BM_CY_back_walk_L_         |     0.591 |
+|     U0                       |     0.591 |
+|       inst_blk_mem_gen       |     0.591 |
+|   BM_CY_back_walk_R_         |     0.573 |
+|     U0                       |     0.573 |
+|       inst_blk_mem_gen       |     0.573 |
+|   BM_CY_front_attack_        |     0.598 |
 |     U0                       |     0.598 |
 |       inst_blk_mem_gen       |     0.598 |
+|   BM_CY_front_stand_         |     0.616 |
+|     U0                       |     0.616 |
+|       inst_blk_mem_gen       |     0.616 |
 |   BM_CY_front_walk_L_        |     0.612 |
 |     U0                       |     0.612 |
 |       inst_blk_mem_gen       |     0.612 |
-|   BM_CY_front_walk_R_        |     0.583 |
-|     U0                       |     0.583 |
-|       inst_blk_mem_gen       |     0.583 |
-|   BM_CY_left_stand_          |     0.591 |
-|     U0                       |     0.591 |
-|       inst_blk_mem_gen       |     0.591 |
-|   BM_CY_left_walk_           |     0.599 |
+|   BM_CY_front_walk_R_        |     0.578 |
+|     U0                       |     0.578 |
+|       inst_blk_mem_gen       |     0.578 |
+|   BM_CY_left_attack_         |     0.599 |
 |     U0                       |     0.599 |
 |       inst_blk_mem_gen       |     0.599 |
-|   BM_CY_right_stand_         |     0.605 |
-|     U0                       |     0.605 |
-|       inst_blk_mem_gen       |     0.605 |
-|   BM_CY_right_walk_          |     0.603 |
-|     U0                       |     0.603 |
-|       inst_blk_mem_gen       |     0.603 |
-|   BM_computer_room_entrance_ |     0.580 |
+|   BM_CY_left_stand_          |     0.586 |
+|     U0                       |     0.586 |
+|       inst_blk_mem_gen       |     0.586 |
+|   BM_CY_left_walk_           |     0.602 |
+|     U0                       |     0.602 |
+|       inst_blk_mem_gen       |     0.602 |
+|   BM_CY_right_attack_        |     0.621 |
+|     U0                       |     0.621 |
+|       inst_blk_mem_gen       |     0.621 |
+|   BM_CY_right_stand_         |     0.622 |
+|     U0                       |     0.622 |
+|       inst_blk_mem_gen       |     0.622 |
+|   BM_CY_right_walk_          |     0.606 |
+|     U0                       |     0.606 |
+|       inst_blk_mem_gen       |     0.606 |
+|   BM_computer_room_entrance_ |     0.632 |
+|     U0                       |     0.632 |
+|       inst_blk_mem_gen       |     0.632 |
+|   BM_heart_0                 |     0.570 |
+|     U0                       |     0.570 |
+|       inst_blk_mem_gen       |     0.570 |
+|   BM_heart_1                 |     0.580 |
 |     U0                       |     0.580 |
 |       inst_blk_mem_gen       |     0.580 |
-|   BM_overwall_wall_1         |     3.051 |
-|     U0                       |     3.051 |
-|       inst_blk_mem_gen       |     3.051 |
-|   CD0                        |     0.030 |
+|   BM_heart_2                 |     0.576 |
+|     U0                       |     0.576 |
+|       inst_blk_mem_gen       |     0.576 |
+|   BM_overwall_wall_1         |     2.872 |
+|     U0                       |     2.872 |
+|       inst_blk_mem_gen       |     2.872 |
+|   BM_wooden_fpga_down_       |     0.583 |
+|     U0                       |     0.583 |
+|       inst_blk_mem_gen       |     0.583 |
+|   BM_wooden_fpga_left_       |     0.600 |
+|     U0                       |     0.600 |
+|       inst_blk_mem_gen       |     0.600 |
+|   BM_wooden_fpga_right_      |     0.583 |
+|     U0                       |     0.583 |
+|       inst_blk_mem_gen       |     0.583 |
+|   BM_wooden_fpga_up_         |     0.563 |
+|     U0                       |     0.563 |
+|       inst_blk_mem_gen       |     0.563 |
+|   CD0                        |     0.035 |
 |   CD1                        |     0.046 |
-|   MAG_CY                     |     9.132 |
-|   MAG_computer_room_entrance |     5.652 |
-|   MAG_monster_1              |     4.724 |
-|   MAG_wall_1                 |     4.988 |
-|   RGB_GEN_                   |     4.500 |
-|   SC0                        |     4.960 |
-|     MC                       |     3.626 |
-|       CD0                    |     0.066 |
-|     m1                       |     1.299 |
-|       randomgen              |     0.983 |
-|   VC0                        |     6.863 |
-|   key_de                     |     0.457 |
-|     inst                     |     0.416 |
-|       inst                   |     0.416 |
+|   MAG_CY                     |     8.712 |
+|   MAG_computer_room_entrance |     3.972 |
+|   MAG_heart_ins_0            |     5.139 |
+|   MAG_heart_ins_1            |     4.888 |
+|   MAG_heart_ins_2            |     4.792 |
+|   MAG_monster_1              |     8.102 |
+|   MAG_wall_1                 |     4.667 |
+|   MAG_wooden_fpga_down       |     8.071 |
+|   RGB_GEN_                   |     3.738 |
+|   SC0                        |     8.193 |
+|     MC                       |     3.180 |
+|       CD0                    |     0.056 |
+|     m1                       |     3.730 |
+|       CD                     |     0.056 |
+|       randomgen              |     0.860 |
+|     weapon_                  |     0.786 |
+|     weapon_monster_1         |     0.462 |
+|   VC0                        |     7.179 |
+|   key_de                     |     0.410 |
+|     inst                     |     0.404 |
+|       inst                   |     0.404 |
 +------------------------------+-----------+
 
 

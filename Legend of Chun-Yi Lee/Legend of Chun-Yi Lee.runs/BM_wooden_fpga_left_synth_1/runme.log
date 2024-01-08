@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log BM_wooden_fpga_left.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BM_wooden_fpga_left.tcl
+

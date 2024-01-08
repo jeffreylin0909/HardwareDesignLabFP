@@ -2,23 +2,81 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jan  7 20:19:57 2024
-# Process ID: 34428
+# Start of session at: Mon Jan  8 09:31:33 2024
+# Process ID: 49880
 # Current directory: C:/verilog project/Legend of Chun-Yi Lee
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10196 C:\verilog project\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37788 C:\verilog project\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
 # Log file: C:/verilog project/Legend of Chun-Yi Lee/vivado.log
 # Journal file: C:/verilog project/Legend of Chun-Yi Lee\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/nthu-326/Desktop/1232/Legend of Chun-Yi Lee' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/verilog project/Legend of Chun-Yi Lee/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 801.676 ; gain = 168.035
+open_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 816.863 ; gain = 141.418
 update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci}}] -no_script -reset -force -quiet
+remove_files  {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci}}
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_NTHU_student/BM_NTHU_student.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset BM_NTHU_student {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_NTHU_student/BM_NTHU_student.xci}}
+INFO: [Project 1-386] Moving file 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_NTHU_student/BM_NTHU_student.xci' from fileset 'BM_NTHU_student' to fileset 'sources_1'.
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_EECS_student/BM_EECS_student.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset BM_EECS_student {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_EECS_student/BM_EECS_student.xci}}
+INFO: [Project 1-386] Moving file 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_EECS_student/BM_EECS_student.xci' from fileset 'BM_EECS_student' to fileset 'sources_1'.
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_BOSS_student/BM_BOSS_student.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset BM_BOSS_student {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_BOSS_student/BM_BOSS_student.xci}}
+INFO: [Project 1-386] Moving file 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_BOSS_student/BM_BOSS_student.xci' from fileset 'BM_BOSS_student' to fileset 'sources_1'.
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student.coe}}] -no_script -reset -force -quiet
+remove_files  {{C:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student.coe}}
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/NTHU_student.coe}}] -no_script -reset -force -quiet
+remove_files  {{C:/verilog project/Legend of Chun-Yi Lee/Assets/NTHU_student.coe}}
+export_ip_user_files -of_objects  [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/EECS_student.coe}}] -no_script -reset -force -quiet
+remove_files  {{C:/verilog project/Legend of Chun-Yi Lee/Assets/EECS_student.coe}}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student_L.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CS_student_L.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_CS_student_L -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_CS_student_L} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student_L.coe}] [get_ips BM_CS_student_L]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_CS_student_L' to 'BM_CS_student_L' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student_L.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CS_student_L.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CS_student_L'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CS_student_L'...
+catch { config_ip_cache -export [get_ips -all BM_CS_student_L] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}]
+launch_runs -jobs 10 BM_CS_student_L_synth_1
+[Mon Jan  8 10:08:10 2024] Launched BM_CS_student_L_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student_R.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CS_student_R.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_CS_student_R -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_CS_student_R} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student_R.coe}] [get_ips BM_CS_student_R]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_CS_student_R' to 'BM_CS_student_R' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CS_student_R.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CS_student_R.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CS_student_R'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_R'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CS_student_R'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CS_student_R'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CS_student_R'...
+catch { config_ip_cache -export [get_ips -all BM_CS_student_R] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}]
+launch_runs -jobs 10 BM_CS_student_R_synth_1
+[Mon Jan  8 10:08:42 2024] Launched BM_CS_student_R_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 reset_run synth_1
 reset_run BM_CY_front_walk_L_synth_1
 reset_run BM_CY_front_walk_R_synth_1
@@ -32,12 +90,7 @@ reset_run BM_CY_back_walk_R_synth_1
 reset_run BM_overwall_wall_synth_1
 reset_run BM_computer_room_entrance_synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student'...
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP BM_CS_student, cache-ID = 516f094e21f112c4; cache size = 2.762 MB.
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_stand'...
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP BM_CY_front_stand, cache-ID = 52f3d771cb270972; cache size = 2.762 MB.
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_L'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_R'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_stand'...
@@ -49,7 +102,7 @@ INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_L'
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_R'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_overwall_wall'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_computer_room_entrance'...
-[Sun Jan  7 20:32:09 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, synth_1...
+[Mon Jan  8 10:18:09 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, BM_CY_front_stand_synth_1, synth_1...
 Run output will be captured here:
 BM_CY_front_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/runme.log
 BM_CY_front_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1/runme.log
@@ -62,17 +115,16 @@ BM_CY_back_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Ch
 BM_CY_back_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1/runme.log
 BM_overwall_wall_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1/runme.log
 BM_computer_room_entrance_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1/runme.log
+BM_CY_front_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1/runme.log
 synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 20:32:09 2024] Launched impl_1...
+[Mon Jan  8 10:18:09 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.231 . Memory (MB): peak = 1370.117 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4211 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.2
-INFO: [Common 17-344] 'open_run' was cancelled
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 10:26:50 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 10:26:50 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -95,13 +147,7 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
- Targets(s) ", jsn-Basys3-210183711740A" may be locked by another hw_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1093.270 ; gain = 34.645
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
 set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
@@ -115,8 +161,103 @@ program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711740A
 close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_back_attack.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_CY_back_attack -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_CY_back_attack} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe}] [get_ips BM_CY_back_attack]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_CY_back_attack' to 'BM_CY_back_attack' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_back_attack.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_back_attack'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_back_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_back_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}]
+launch_runs -jobs 10 BM_CY_back_attack_synth_1
+[Mon Jan  8 10:36:51 2024] Launched BM_CY_back_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_front_attack.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_CY_front_attack -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_CY_front_attack} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe}] [get_ips BM_CY_front_attack]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_CY_front_attack' to 'BM_CY_front_attack' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_front_attack.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_front_attack'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_front_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_front_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}]
+launch_runs -jobs 10 BM_CY_front_attack_synth_1
+[Mon Jan  8 10:37:21 2024] Launched BM_CY_front_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_left_attack.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_CY_left_attack -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_CY_left_attack} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe}] [get_ips BM_CY_left_attack]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_CY_left_attack' to 'BM_CY_left_attack' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_left_attack.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_left_attack'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_left_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_left_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}]
+launch_runs -jobs 10 BM_CY_left_attack_synth_1
+[Mon Jan  8 10:37:49 2024] Launched BM_CY_left_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_right_attack.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_CY_right_attack -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_CY_right_attack} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe}] [get_ips BM_CY_right_attack]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_CY_right_attack' to 'BM_CY_right_attack' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_right_attack.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_right_attack'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_right_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_right_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}]
+launch_runs -jobs 10 BM_CY_right_attack_synth_1
+[Mon Jan  8 10:38:16 2024] Launched BM_CY_right_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 10:48:09 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 10:48:09 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 10:49:51 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 10:49:51 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -139,7 +280,365 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2623.730 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2415.160 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 11:00:43 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 11:00:43 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2434.148 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 11:10:20 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 11:10:20 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 11:25:59 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_back_attack.coe'
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_stand.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_back_stand.coe'
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_back_attack.coe'
+set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe}] [get_ips BM_CY_back_attack]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_back_attack.coe'
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_back_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_back_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}] -no_script -sync -force -quiet
+reset_run BM_CY_back_attack_synth_1
+launch_runs -jobs 10 BM_CY_back_attack_synth_1
+[Mon Jan  8 11:27:26 2024] Launched BM_CY_back_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_front_attack.coe'
+set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe}] [get_ips BM_CY_front_attack]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_front_attack.coe'
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_front_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_front_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}] -no_script -sync -force -quiet
+reset_run BM_CY_front_attack_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1
+
+launch_runs -jobs 10 BM_CY_front_attack_synth_1
+[Mon Jan  8 11:27:39 2024] Launched BM_CY_front_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_right_attack.coe'
+set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe}] [get_ips BM_CY_right_attack]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_right_attack.coe'
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_right_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_right_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}] -no_script -sync -force -quiet
+reset_run BM_CY_right_attack_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1
+
+launch_runs -jobs 10 BM_CY_right_attack_synth_1
+[Mon Jan  8 11:27:55 2024] Launched BM_CY_right_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_left_attack.coe'
+set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe}] [get_ips BM_CY_left_attack]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_left_attack.coe'
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_left_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_left_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}] -no_script -sync -force -quiet
+reset_run BM_CY_left_attack_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1
+
+launch_runs -jobs 10 BM_CY_left_attack_synth_1
+[Mon Jan  8 11:28:10 2024] Launched BM_CY_left_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1
+
+reset_run BM_CY_front_walk_L_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1
+
+reset_run BM_CY_front_walk_R_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1
+
+reset_run BM_CY_right_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1
+
+reset_run BM_CY_right_walk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1
+
+reset_run BM_CY_left_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1
+
+reset_run BM_CY_left_walk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1
+
+reset_run BM_CY_back_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1
+
+reset_run BM_CY_back_walk_L_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1
+
+reset_run BM_CY_back_walk_R_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1
+
+reset_run BM_overwall_wall_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1
+
+reset_run BM_computer_room_entrance_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1
+
+reset_run BM_CS_student_L_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1
+
+reset_run BM_CS_student_R_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1
+
+reset_run BM_CY_front_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_walk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_walk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_overwall_wall'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_computer_room_entrance'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_stand'...
+[Mon Jan  8 11:28:25 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, BM_CS_student_L_synth_1, BM_CS_student_R_synth_1, BM_CY_front_stand_synth_1, BM_CY_left_attack_synth_1, BM_CY_right_attack_synth_1, synth_1...
+Run output will be captured here:
+BM_CY_front_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/runme.log
+BM_CY_front_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1/runme.log
+BM_CY_right_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1/runme.log
+BM_CY_right_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1/runme.log
+BM_CY_left_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1/runme.log
+BM_CY_left_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1/runme.log
+BM_CY_back_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1/runme.log
+BM_CY_back_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1/runme.log
+BM_CY_back_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1/runme.log
+BM_overwall_wall_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1/runme.log
+BM_computer_room_entrance_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1/runme.log
+BM_CS_student_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1/runme.log
+BM_CS_student_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1/runme.log
+BM_CY_front_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1/runme.log
+BM_CY_left_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
+BM_CY_right_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
+synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 11:28:26 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2437.781 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/heart.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/heart.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_heart -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_heart} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/heart.coe}] [get_ips BM_heart]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_heart' to 'BM_heart' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/heart.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/heart.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_heart'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_heart'...
+catch { config_ip_cache -export [get_ips -all BM_heart] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}]
+launch_runs -jobs 10 BM_heart_synth_1
+[Mon Jan  8 12:44:43 2024] Launched BM_heart_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_heart_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2449.125 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
 set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
@@ -155,11 +654,184 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 22:10:42 2024] Launched synth_1...
+[Mon Jan  8 13:05:19 2024] Launched synth_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 22:10:42 2024] Launched impl_1...
+[Mon Jan  8 13:05:19 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+close_hw_manager
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 13:13:42 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 13:13:42 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3730.742 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/heart.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/heart.coe'
+set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/heart.coe}] [get_ips BM_heart]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/heart.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/heart.coe'
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_heart'...
+catch { config_ip_cache -export [get_ips -all BM_heart] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}] -no_script -sync -force -quiet
+reset_run BM_heart_synth_1
+launch_runs -jobs 10 BM_heart_synth_1
+[Mon Jan  8 13:46:03 2024] Launched BM_heart_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_heart_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+reset_run BM_CY_front_walk_L_synth_1
+reset_run BM_CY_front_walk_R_synth_1
+reset_run BM_CY_right_stand_synth_1
+reset_run BM_CY_right_walk_synth_1
+reset_run BM_CY_left_stand_synth_1
+reset_run BM_CY_left_walk_synth_1
+reset_run BM_CY_back_stand_synth_1
+reset_run BM_CY_back_walk_L_synth_1
+reset_run BM_CY_back_walk_R_synth_1
+reset_run BM_overwall_wall_synth_1
+reset_run BM_computer_room_entrance_synth_1
+reset_run BM_CS_student_L_synth_1
+reset_run BM_CS_student_R_synth_1
+reset_run BM_CY_front_stand_synth_1
+reset_run BM_CY_back_attack_synth_1
+reset_run BM_CY_front_attack_synth_1
+reset_run BM_CY_left_attack_synth_1
+reset_run BM_CY_right_attack_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_walk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_walk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_overwall_wall'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_computer_room_entrance'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_attack'...
+[Mon Jan  8 13:46:59 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, BM_CS_student_L_synth_1, BM_CS_student_R_synth_1, BM_CY_front_stand_synth_1, BM_CY_back_attack_synth_1, BM_CY_front_attack_synth_1, BM_CY_left_attack_synth_1, BM_CY_right_attack_synth_1, synth_1...
+Run output will be captured here:
+BM_CY_front_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/runme.log
+BM_CY_front_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1/runme.log
+BM_CY_right_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1/runme.log
+BM_CY_right_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1/runme.log
+BM_CY_left_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1/runme.log
+BM_CY_left_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1/runme.log
+BM_CY_back_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1/runme.log
+BM_CY_back_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1/runme.log
+BM_CY_back_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1/runme.log
+BM_overwall_wall_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1/runme.log
+BM_computer_room_entrance_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1/runme.log
+BM_CS_student_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1/runme.log
+BM_CS_student_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1/runme.log
+BM_CY_front_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1/runme.log
+BM_CY_back_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1/runme.log
+BM_CY_front_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
+BM_CY_left_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
+BM_CY_right_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
+synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 13:46:59 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3744.402 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 13:55:50 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 13:55:50 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 13:56:57 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 13:56:57 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -170,11 +842,501 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 22:22:48 2024] Launched synth_1...
+[Mon Jan  8 14:26:36 2024] Launched synth_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 22:22:48 2024] Launched impl_1...
+[Mon Jan  8 14:26:36 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/basys_3_fpga_down.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/basys_3_fpga_down.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_basys_3_fpga_down -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_basys_3_fpga_down} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/basys_3_fpga_down.coe}] [get_ips BM_basys_3_fpga_down]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_basys_3_fpga_down' to 'BM_basys_3_fpga_down' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/basys_3_fpga_down.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/basys_3_fpga_down.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_basys_3_fpga_down/BM_basys_3_fpga_down.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_basys_3_fpga_down'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_basys_3_fpga_down/BM_basys_3_fpga_down.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_basys_3_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_basys_3_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_basys_3_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_basys_3_fpga_down'...
+catch { config_ip_cache -export [get_ips -all BM_basys_3_fpga_down] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_basys_3_fpga_down/BM_basys_3_fpga_down.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_basys_3_fpga_down/BM_basys_3_fpga_down.xci}}]
+launch_runs -jobs 10 BM_basys_3_fpga_down_synth_1
+[Mon Jan  8 15:04:54 2024] Launched BM_basys_3_fpga_down_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_basys_3_fpga_down_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_basys_3_fpga_down/BM_basys_3_fpga_down.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_down.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_down.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_wooden_fpga_down -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_wooden_fpga_down} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_down.coe}] [get_ips BM_wooden_fpga_down]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_wooden_fpga_down' to 'BM_wooden_fpga_down' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_down.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_down.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_wooden_fpga_down'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_wooden_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_wooden_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_wooden_fpga_down'...
+catch { config_ip_cache -export [get_ips -all BM_wooden_fpga_down] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}]
+launch_runs -jobs 10 BM_wooden_fpga_down_synth_1
+[Mon Jan  8 15:05:26 2024] Launched BM_wooden_fpga_down_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_down_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_up.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_up.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_wooden_fpga_up -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_wooden_fpga_up} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_up.coe}] [get_ips BM_wooden_fpga_up]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_wooden_fpga_up' to 'BM_wooden_fpga_up' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_up.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_up.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_wooden_fpga_up'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_up'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_wooden_fpga_up'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_wooden_fpga_up'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_wooden_fpga_up'...
+catch { config_ip_cache -export [get_ips -all BM_wooden_fpga_up] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}]
+launch_runs -jobs 10 BM_wooden_fpga_up_synth_1
+[Mon Jan  8 15:06:09 2024] Launched BM_wooden_fpga_up_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_up_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_left.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_left.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_wooden_fpga_left -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_wooden_fpga_left} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_left.coe}] [get_ips BM_wooden_fpga_left]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_wooden_fpga_left' to 'BM_wooden_fpga_left' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_left.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_left.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_wooden_fpga_left'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_left'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_wooden_fpga_left'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_wooden_fpga_left'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_wooden_fpga_left'...
+catch { config_ip_cache -export [get_ips -all BM_wooden_fpga_left] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}]
+launch_runs -jobs 10 BM_wooden_fpga_left_synth_1
+[Mon Jan  8 15:06:34 2024] Launched BM_wooden_fpga_left_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_left_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_right.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_right.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_wooden_fpga_right -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_wooden_fpga_right} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_right.coe}] [get_ips BM_wooden_fpga_right]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_wooden_fpga_right' to 'BM_wooden_fpga_right' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_right.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/wooden_fpga_right.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_wooden_fpga_right'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_right'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_wooden_fpga_right'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_wooden_fpga_right'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_wooden_fpga_right'...
+catch { config_ip_cache -export [get_ips -all BM_wooden_fpga_right] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}]
+launch_runs -jobs 10 BM_wooden_fpga_right_synth_1
+[Mon Jan  8 15:06:57 2024] Launched BM_wooden_fpga_right_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_right_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 15:20:44 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 15:20:44 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 15:21:48 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 15:21:48 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3744.402 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_front_attack.coe'
+set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe}] [get_ips BM_CY_front_attack]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/CY_front_attack.coe'
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_CY_front_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_CY_front_attack'...
+catch { config_ip_cache -export [get_ips -all BM_CY_front_attack] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}] -no_script -sync -force -quiet
+reset_run BM_CY_front_attack_synth_1
+launch_runs -jobs 10 BM_CY_front_attack_synth_1
+[Mon Jan  8 15:34:18 2024] Launched BM_CY_front_attack_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1
+
+reset_run BM_CY_front_walk_L_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1
+
+reset_run BM_CY_front_walk_R_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1
+
+reset_run BM_CY_right_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1
+
+reset_run BM_CY_right_walk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1
+
+reset_run BM_CY_left_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1
+
+reset_run BM_CY_left_walk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1
+
+reset_run BM_CY_back_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1
+
+reset_run BM_CY_back_walk_L_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1
+
+reset_run BM_CY_back_walk_R_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1
+
+reset_run BM_overwall_wall_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1
+
+reset_run BM_computer_room_entrance_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1
+
+reset_run BM_CS_student_L_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1
+
+reset_run BM_CS_student_R_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1
+
+reset_run BM_CY_front_stand_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1
+
+reset_run BM_CY_back_attack_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1
+
+reset_run BM_CY_left_attack_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1
+
+reset_run BM_CY_right_attack_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1
+
+reset_run BM_heart_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_heart_synth_1
+
+reset_run BM_wooden_fpga_down_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_down_synth_1
+
+reset_run BM_wooden_fpga_up_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_up_synth_1
+
+reset_run BM_wooden_fpga_left_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_left_synth_1
+
+reset_run BM_wooden_fpga_right_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_right_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_walk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_walk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_overwall_wall'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_computer_room_entrance'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_R'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_stand'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_attack'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_heart'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_down'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_up'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_left'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_right'...
+[Mon Jan  8 15:34:38 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, BM_CS_student_L_synth_1, BM_CS_student_R_synth_1, BM_CY_front_stand_synth_1, BM_CY_back_attack_synth_1, BM_CY_front_attack_synth_1, BM_CY_left_attack_synth_1, BM_CY_right_attack_synth_1, BM_heart_synth_1, BM_wooden_fpga_down_synth_1, BM_wooden_fpga_up_synth_1, BM_wooden_fpga_left_synth_1, BM_wooden_fpga_right_synth_1, synth_1...
+Run output will be captured here:
+BM_CY_front_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/runme.log
+BM_CY_front_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1/runme.log
+BM_CY_right_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1/runme.log
+BM_CY_right_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1/runme.log
+BM_CY_left_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1/runme.log
+BM_CY_left_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1/runme.log
+BM_CY_back_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1/runme.log
+BM_CY_back_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1/runme.log
+BM_CY_back_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1/runme.log
+BM_overwall_wall_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1/runme.log
+BM_computer_room_entrance_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1/runme.log
+BM_CS_student_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1/runme.log
+BM_CS_student_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1/runme.log
+BM_CY_front_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1/runme.log
+BM_CY_back_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1/runme.log
+BM_CY_front_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
+BM_CY_left_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
+BM_CY_right_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
+BM_heart_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_heart_synth_1/runme.log
+BM_wooden_fpga_down_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_down_synth_1/runme.log
+BM_wooden_fpga_up_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_up_synth_1/runme.log
+BM_wooden_fpga_left_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_left_synth_1/runme.log
+BM_wooden_fpga_right_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_right_synth_1/runme.log
+synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 15:34:40 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3744.402 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 15:50:02 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 15:50:02 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3744.402 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 17:43:19 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 17:43:19 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3744.402 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 17:50:21 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 17:50:21 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 17:57:03 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 17:58:19 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 17:58:19 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 18:04:10 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Mon Jan  8 18:04:32 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Mon Jan  8 18:04:32 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -185,11 +1347,9 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 22:26:41 2024] Launched synth_1...
+[Mon Jan  8 18:12:43 2024] Launched synth_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 22:26:41 2024] Launched impl_1...
+[Mon Jan  8 18:12:43 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -200,27 +1360,9 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 22:36:48 2024] Launched synth_1...
+[Mon Jan  8 18:21:45 2024] Launched synth_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 22:36:48 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 23:32:10 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 23:32:10 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 23:32:54 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 23:32:54 2024] Launched impl_1...
+[Mon Jan  8 18:21:45 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -231,44 +1373,9 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 23:37:02 2024] Launched synth_1...
+[Mon Jan  8 18:34:14 2024] Launched synth_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 23:37:02 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2685.219 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1419 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.241 . Memory (MB): peak = 3285.664 ; gain = 0.000
-open_run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 3285.664 ; gain = 610.562
-INFO: [Common 17-344] 'open_run' was cancelled
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 23:42:14 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 23:42:14 2024] Launched impl_1...
+[Mon Jan  8 18:34:14 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -279,109 +1386,9 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Sun Jan  7 23:46:36 2024] Launched synth_1...
+[Mon Jan  8 18:39:52 2024] Launched synth_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Sun Jan  7 23:46:36 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 00:01:20 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 00:01:20 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 00:29:08 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 00:29:08 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 00:30:28 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 00:30:28 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 00:43:36 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 00:43:36 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 00:49:56 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 00:49:56 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 00:57:27 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 00:57:27 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_1/BM_CS_student.xci' is already up-to-date
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci' is already up-to-date
-[Mon Jan  8 01:11:44 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Mon Jan  8 01:11:44 2024] Launched impl_1...
+[Mon Jan  8 18:39:52 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -392,4 +1399,4 @@ refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  8 01:16:54 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  8 18:50:36 2024...

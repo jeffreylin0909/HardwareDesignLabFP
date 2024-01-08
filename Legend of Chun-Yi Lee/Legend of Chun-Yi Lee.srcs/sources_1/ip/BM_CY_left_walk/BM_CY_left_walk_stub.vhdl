@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sat Jan  6 22:13:00 2024
+-- Date        : Mon Jan  8 10:18:52 2024
 -- Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top BM_CY_left_walk -prefix
 --               BM_CY_left_walk_ BM_CY_left_walk_stub.vhdl
