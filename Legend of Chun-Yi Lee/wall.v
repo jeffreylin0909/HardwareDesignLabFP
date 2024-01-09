@@ -1,0 +1,35 @@
+module wall(
+    input [9:0] pos_h_CY, pos_v_CY,
+    input [9:0] pos_h, pos_v,
+    output reg [3:0] collision
+    );
+
+    always @(*)begin
+        if (pos_v_CY < pos_v+20 && pos_v_CY > pos_v-20)begin
+            if (pos_h_CY == pos_h+20) begin
+                collision = 4'b0001;//*->|
+            end else begin
+                if (pos_h_CY+20 == pos_h) begin
+                    collision = 4'b0010;//|<-*
+                end else begin
+                    collision = 4'b0000;
+                end
+            end
+        end else begin
+            if (pos_h_CY < pos_h+20 && pos_h_CY > pos_h-20)begin
+                if (pos_v_CY+20 == pos_v) begin
+                    collision = 4'b0100;//^
+                end else begin
+                    if (pos_v_CY == pos_v+20) begin
+                        collision = 4'b1000;//U
+                    end else begin
+                        collision = 4'b0000;
+                    end
+                end
+            end else begin
+                collision = 4'b0000;
+            end
+        end
+    end
+
+endmodule

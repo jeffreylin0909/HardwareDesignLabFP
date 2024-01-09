@@ -1,109 +1,124 @@
 module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync);
     
-        parameter [8:0] A_CODE  = {1'b0, 8'h1C};
-        parameter [8:0] D_CODE  = {1'b0, 8'h23};
-        parameter [8:0] W_CODE  = {1'b0, 8'h1D};
-        parameter [8:0] S_CODE  = {1'b0, 8'h1B};
-        parameter [8:0] J_CODE  = {1'b0, 8'h3B};
-        parameter [8:0] K_CODE  = {1'b0, 8'h42};
-        parameter [8:0] L_CODE  = {1'b0, 8'h4B};
-        parameter [8:0] SPACE_CODE  = {1'b0, 8'h29};
+    parameter [8:0] A_CODE  = {1'b0, 8'h1C};
+    parameter [8:0] D_CODE  = {1'b0, 8'h23};
+    parameter [8:0] W_CODE  = {1'b0, 8'h1D};
+    parameter [8:0] S_CODE  = {1'b0, 8'h1B};
+    parameter [8:0] J_CODE  = {1'b0, 8'h3B};
+    parameter [8:0] K_CODE  = {1'b0, 8'h42};
+    parameter [8:0] L_CODE  = {1'b0, 8'h4B};
+    parameter [8:0] SPACE_CODE  = {1'b0, 8'h29};
     
 	//keyboard
 	inout PS2_DATA, PS2_CLK;
 	wire [511:0] key_down;
-        wire [8:0] last_change;
-        wire been_ready;
+    wire [8:0] last_change;
+    wire been_ready;
 	//VGA
-        output [3:0] vgaRed, vgaGreen, vgaBlue;
-        output hsync, vsync;
-        wire [9:0] h_cnt, v_cnt;
-        wire valid;
-        //system
-        input rst;
-        wire rst_db;
-        wire rst_op;
-        input clk;//50MHz, used in keyboard and debounce
-        wire clk_d2;//25MHz, used  in VGA
-        wire clk_d22;//~95Hz, used  in state control
-        //for block memory (image)
-        wire [11:0] pixel_CY_back_stand;
-        wire [11:0] pixel_CY_back_walk_L;
-        wire [11:0] pixel_CY_back_walk_R;
-        wire [11:0] pixel_CY_front_stand;
-        wire [11:0] pixel_CY_front_walk_L;
-        wire [11:0] pixel_CY_front_walk_R;
-        wire [11:0] pixel_CY_left_stand;
-        wire [11:0] pixel_CY_left_walk;
-        wire [11:0] pixel_CY_right_stand;
-        wire [11:0] pixel_CY_right_walk;
-        wire [11:0] pixel_CY_front_attack;
-        wire [11:0] pixel_CY_back_attack;
-        wire [11:0] pixel_CY_right_attack;
-        wire [11:0] pixel_CY_left_attack;
-        wire [11:0] pixel_BOSS_student_L;
-        wire [11:0] pixel_BOSS_student_R;
-        wire [11:0] pixel_CS_student_L;
-        wire [11:0] pixel_CS_student_R;
-        wire [11:0] pixel_EECS_student_L;
-        wire [11:0] pixel_EECS_student_R;
-        wire [11:0] pixel_NTHU_student_L;
-        wire [11:0] pixel_NTHU_student_R;
-        wire [11:0] pixel_CR;
-        wire [11:0] pixel_EM;
-        wire [11:0] pixel_JX;
-        wire [11:0] pixel_YC;
-        wire [11:0] pixel_ZY;
-        wire [11:0] pixel_key;
-        wire [11:0] pixel_heart[3:0];
-        wire [11:0] pixel_potion;
-        wire [11:0] pixel_yoshi;
-        wire [11:0] pixel_car;
-        wire [11:0] pixel_wooden_fpga_up;
-        wire [11:0] pixel_wooden_fpga_down;
-        wire [11:0] pixel_wooden_fpga_left;
-        wire [11:0] pixel_wooden_fpga_right;
-        wire [11:0] pixel_golden_fpga;
-        wire [11:0] pixel_basys_3_fpga;
-        wire [11:0] pixel_computer_room_walls;
-        wire [11:0] pixel_computer_room_entrance;
-        wire [11:0] pixel_overwall_wall[63:0];
-        //for sprites
-        //for CY
-        wire [16:0] pixel_addr_CY;
-        wire [11:0] pixel_CY;
-        wire [3:0] pixel_idx_CY;
-        wire [9:0] pos_h_CY, pos_v_CY;
-        //for monster_1
-        wire [16:0] pixel_addr_monster_1;
-        wire [11:0] pixel_monster_1;
-        wire [3:0] pixel_idx_monster_1;
-        wire [9:0] pos_h_monster_1, pos_v_monster_1;
+    output [3:0] vgaRed, vgaGreen, vgaBlue;
+    output hsync, vsync;
+    wire [9:0] h_cnt, v_cnt;
+    wire valid;
+    //system
+    input rst;
+    wire rst_db;
+    wire rst_op;
+    input clk;//50MHz, used in keyboard and debounce
+    wire clk_d2;//25MHz, used  in VGA
+    wire clk_d22;//~95Hz, used  in state control
+    //for block memory (image)
+    wire [11:0] pixel_CY_back_stand;
+    wire [11:0] pixel_CY_back_walk_L;
+    wire [11:0] pixel_CY_back_walk_R;
+    wire [11:0] pixel_CY_front_stand;
+    wire [11:0] pixel_CY_front_walk_L;
+    wire [11:0] pixel_CY_front_walk_R;
+    wire [11:0] pixel_CY_left_stand;
+    wire [11:0] pixel_CY_left_walk;
+    wire [11:0] pixel_CY_right_stand;
+    wire [11:0] pixel_CY_right_walk;
+    wire [11:0] pixel_CY_front_attack;
+    wire [11:0] pixel_CY_back_attack;
+    wire [11:0] pixel_CY_right_attack;
+    wire [11:0] pixel_CY_left_attack;
+    wire [11:0] pixel_BOSS_student_L;
+    wire [11:0] pixel_BOSS_student_R;
+    wire [11:0] pixel_CS_student_L;
+    wire [11:0] pixel_CS_student_R;
+    wire [11:0] pixel_EECS_student_L;
+    wire [11:0] pixel_EECS_student_R;
+    wire [11:0] pixel_NTHU_student_L;
+    wire [11:0] pixel_NTHU_student_R;
+    wire [11:0] pixel_CR;
+    wire [11:0] pixel_EM;
+    wire [11:0] pixel_JX;
+    wire [11:0] pixel_YC;
+    wire [11:0] pixel_ZY;
+    wire [11:0] pixel_key;
+    wire [11:0] pixel_heart[3:0];
+    wire [11:0] pixel_gameover[7:0];
+    wire [11:0] pixel_potion;
+    wire [11:0] pixel_yoshi;
+    wire [11:0] pixel_car;
+    wire [11:0] pixel_wooden_fpga_up;
+    wire [11:0] pixel_wooden_fpga_down;
+    wire [11:0] pixel_wooden_fpga_left;
+    wire [11:0] pixel_wooden_fpga_right;
+    wire [11:0] pixel_golden_fpga;
+    wire [11:0] pixel_basys_3_fpga;
+    wire [11:0] pixel_computer_room_walls;
+    wire [11:0] pixel_computer_room_entrance;
+    wire [11:0] pixel_overwall_wall[63:0];
+    //for sprites
+    //for CY
+    wire [16:0] pixel_addr_CY;
+    wire [11:0] pixel_CY;
+    wire [3:0] pixel_idx_CY;
+    wire [9:0] pos_h_CY, pos_v_CY;
+    //for monster_1
+    wire [16:0] pixel_addr_monster_1;
+    wire [11:0] pixel_monster_1;
+    wire [3:0] pixel_idx_monster_1;
+    wire [9:0] pos_h_monster_1, pos_v_monster_1;
 
-        //for weapon
-        wire [16:0] pixel_addr_weapon;
-        wire [11:0] pixel_weapon;
-        wire [3:0] pixel_idx_weapon;
-        wire [9:0] pos_h_weapon, pos_v_weapon;
+    //for weapon
+    wire [16:0] pixel_addr_weapon;
+    wire [11:0] pixel_weapon;
+    wire [3:0] pixel_idx_weapon;
+    wire [9:0] pos_h_weapon, pos_v_weapon;
 
-        //for cave entrance
-        wire [16:0] pixel_addr_computer_room_entrance;
-        wire [11:0] pixel_computer_room_entrance_ins;
-        wire [3:0] pixel_idx_computer_room_entrance;
-        wire [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance;
-        
-        //for hearts
-        wire [16:0] pixel_addr_heart[3:0];
-        wire [11:0] pixel_heart_ins[3:0];
-        wire [3:0] pixel_idx_heart[3:0];
-        wire [9:0] pos_h_heart[3:0], pos_v_heart[3:0];
-        
-        //for walls
-        wire [16:0] pixel_addr_wall[63:0];
-        wire [11:0] pixel_wall[63:0];
-        wire [3:0] pixel_idx_wall[63:0];
-        wire [9:0] pos_h_wall[63:0], pos_v_wall[63:0];
-                
+    //for cave entrance
+    wire [16:0] pixel_addr_computer_room_entrance;
+    wire [11:0] pixel_computer_room_entrance_ins;
+    wire [3:0] pixel_idx_computer_room_entrance;
+    wire [9:0] pos_h_computer_room_entrance, pos_v_computer_room_entrance;
+    
+    //for hearts
+    wire [16:0] pixel_addr_heart[3:0];
+    wire [11:0] pixel_heart_ins[3:0];
+    wire [3:0] pixel_idx_heart[3:0];
+    wire [9:0] pos_h_heart[3:0], pos_v_heart[3:0];
+
+    //for game_over
+    wire [16:0] pixel_addr_gameover[7:0];
+    wire [11:0] pixel_gameover_ins[7:0];
+    wire [3:0] pixel_idx_gameover;
+    wire [9:0] pos_h_gameover[7:0], pos_v_gameover[7:0];
+    
+    //for walls
+    wire [16:0] pixel_addr_wall[63:0];
+    wire [11:0] pixel_wall[63:0];
+    wire [3:0] pixel_idx_wall[63:0];
+    wire [9:0] pos_h_wall[63:0], pos_v_wall[63:0];
+    
+    //clock
+	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
+	clk_div #(20) CD1(.clk(clk), .clk_d(clk_d22));
+	
+	//signals
+	debounce DB1(.s(rst), .s_db(rst_db), .clk(clk));
+	onepulse OP1(.s(rst_db), .s_op(rst_op), .clk(clk_d22));
+
 	select_pixel SP_CY(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_CY),.pos_v(pos_v_CY),
@@ -149,7 +164,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_heart[0]),.pos_v(pos_v_heart[0]),
         .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
+        .now_pixel_idx(pixel_idx_heart[0]),
         .pixel_0(pixel_heart[0]),
         .now_pixel(pixel_heart_ins[0])
 	);
@@ -158,7 +173,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_heart[1]),.pos_v(pos_v_heart[1]),
         .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
+        .now_pixel_idx(pixel_idx_heart[1]),
         .pixel_0(pixel_heart[1]),
         .now_pixel(pixel_heart_ins[1])
 	);
@@ -167,10 +182,75 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_heart[2]),.pos_v(pos_v_heart[2]),
         .size_h(20),.size_v(20),
-        .now_pixel_idx(0),
+        .now_pixel_idx(pixel_idx_heart[2]),
         .pixel_0(pixel_heart[2]),
         .now_pixel(pixel_heart_ins[2])
 	);
+
+    select_pixel SP_G(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[0]),.pos_v(pos_v_gameover[0]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[0]),
+        .now_pixel(pixel_gameover_ins[0])
+    );
+    select_pixel SP_A(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[1]),.pos_v(pos_v_gameover[1]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[1]),
+        .now_pixel(pixel_gameover_ins[1])
+    );
+    select_pixel SP_M(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[2]),.pos_v(pos_v_gameover[2]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[2]),
+        .now_pixel(pixel_gameover_ins[2])
+    );
+    select_pixel SP_E_1(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[3]),.pos_v(pos_v_gameover[3]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[3]),
+        .now_pixel(pixel_gameover_ins[3])
+    );
+    select_pixel SP_O(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[4]),.pos_v(pos_v_gameover[4]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[4]),
+        .now_pixel(pixel_gameover_ins[4])
+    );
+    select_pixel SP_V(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[5]),.pos_v(pos_v_gameover[5]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[5]),
+        .now_pixel(pixel_gameover_ins[5])
+    );
+    select_pixel SP_E_2(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[6]),.pos_v(pos_v_gameover[6]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[6]),
+        .now_pixel(pixel_gameover_ins[6])
+    );
+    select_pixel SP_R(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_gameover[7]),.pos_v(pos_v_gameover[7]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_gameover),
+        .pixel_0(pixel_gameover[7]),
+        .now_pixel(pixel_gameover_ins[7])
+    );
 	
 	select_pixel SP_w0(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
@@ -181,28 +261,28 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
         .now_pixel(pixel_wall[0])
     );
     select_pixel SP_w1(
-            .h_cnt(h_cnt), .v_cnt(v_cnt),
-            .pos_h(pos_h_wall[1]),.pos_v(pos_v_wall[1]),
-            .size_h(20),.size_v(20),
-            .now_pixel_idx(0),
-            .pixel_0(pixel_overwall_wall[1]),
-            .now_pixel(pixel_wall[1])
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_wall[1]),.pos_v(pos_v_wall[1]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(0),
+        .pixel_0(pixel_overwall_wall[1]),
+        .now_pixel(pixel_wall[1])
     );
     select_pixel SP_w2(
-            .h_cnt(h_cnt), .v_cnt(v_cnt),
-            .pos_h(pos_h_wall[2]),.pos_v(pos_v_wall[2]),
-            .size_h(20),.size_v(20),
-            .now_pixel_idx(0),
-            .pixel_0(pixel_overwall_wall[1]),
-            .now_pixel(pixel_wall[2])
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_wall[2]),.pos_v(pos_v_wall[2]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(0),
+        .pixel_0(pixel_overwall_wall[1]),
+        .now_pixel(pixel_wall[2])
     );
     select_pixel SP_w3(
-            .h_cnt(h_cnt), .v_cnt(v_cnt),
-            .pos_h(pos_h_wall[3]),.pos_v(pos_v_wall[3]),
-            .size_h(20),.size_v(20),
-            .now_pixel_idx(0),
-            .pixel_0(pixel_overwall_wall[1]),
-            .now_pixel(pixel_wall[3])
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_wall[3]),.pos_v(pos_v_wall[3]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(0),
+        .pixel_0(pixel_overwall_wall[1]),
+        .now_pixel(pixel_wall[3])
     );
     select_pixel SP_w4(
             .h_cnt(h_cnt), .v_cnt(v_cnt),
@@ -631,7 +711,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
     select_pixel SP_w57(
             .h_cnt(h_cnt), .v_cnt(v_cnt),
             .pos_h(pos_h_wall[57]),.pos_v(pos_v_wall[57]),
-            .size_h(320),.size_v(20),
+            .size_h(20),.size_v(20),
             .now_pixel_idx(0),
             .pixel_0(pixel_overwall_wall[1]),
             .now_pixel(pixel_wall[57])
@@ -639,7 +719,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
     select_pixel SP_w58(
             .h_cnt(h_cnt), .v_cnt(v_cnt),
             .pos_h(pos_h_wall[58]),.pos_v(pos_v_wall[58]),
-            .size_h(320),.size_v(20),
+            .size_h(20),.size_v(20),
             .now_pixel_idx(0),
             .pixel_0(pixel_overwall_wall[1]),
             .now_pixel(pixel_wall[58])
@@ -647,105 +727,105 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
     select_pixel SP_w59(
             .h_cnt(h_cnt), .v_cnt(v_cnt),
             .pos_h(pos_h_wall[59]),.pos_v(pos_v_wall[59]),
-            .size_h(320),.size_v(20),
+            .size_h(20),.size_v(20),
             .now_pixel_idx(0),
             .pixel_0(pixel_overwall_wall[1]),
             .now_pixel(pixel_wall[59])
     );
     
     select_pixel SP_weapon(
-            .h_cnt(h_cnt), .v_cnt(v_cnt),
-            .pos_h(pos_h_weapon),.pos_v(pos_v_weapon),
-            .size_h(20),.size_v(20),
-            .now_pixel_idx(pixel_idx_weapon),
-            .pixel_0(pixel_wooden_fpga_up),
-            .pixel_1(pixel_wooden_fpga_down),
-            .pixel_2(pixel_wooden_fpga_left),
-            .pixel_3(pixel_wooden_fpga_right),
-            .now_pixel(pixel_weapon)
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_weapon),.pos_v(pos_v_weapon),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_weapon),
+        .pixel_0(pixel_wooden_fpga_up),
+        .pixel_1(pixel_wooden_fpga_down),
+        .pixel_2(pixel_wooden_fpga_left),
+        .pixel_3(pixel_wooden_fpga_right),
+        .now_pixel(pixel_weapon)
     );
 
 
 	RGB_GEN RGB_GEN_(
-	   .valid(valid),
-       .v_cnt(v_cnt),
-	   .pixel_CY(pixel_CY),
-	   .pixel_monster_1(pixel_monster_1),
-	   .pixel_computer_room_entrance_ins(pixel_computer_room_entrance_ins),
-	   .pixel_heart_ins_0(pixel_heart_ins[0]),
-	   .pixel_heart_ins_1(pixel_heart_ins[1]),
-	   .pixel_heart_ins_2(pixel_heart_ins[2]),
-	   .pixel_weapon(pixel_weapon),
-	   .pixel_wall_0(pixel_wall[0]),
-       .pixel_wall_1(pixel_wall[1]),
-       .pixel_wall_2(pixel_wall[2]),
-       .pixel_wall_3(pixel_wall[3]),
-       .pixel_wall_4(pixel_wall[4]),
-       .pixel_wall_5(pixel_wall[5]),   
-       .pixel_wall_6(pixel_wall[6]),
-       .pixel_wall_7(pixel_wall[7]),
-       .pixel_wall_8(pixel_wall[8]),
-       .pixel_wall_9(pixel_wall[9]),
-       .pixel_wall_10(pixel_wall[10]),
-       .pixel_wall_11(pixel_wall[11]),
-       .pixel_wall_12(pixel_wall[12]),
-       .pixel_wall_13(pixel_wall[13]),
-       .pixel_wall_14(pixel_wall[14]),
-       .pixel_wall_15(pixel_wall[15]),
-       .pixel_wall_16(pixel_wall[16]),
-       .pixel_wall_17(pixel_wall[17]),
-       .pixel_wall_18(pixel_wall[18]),
-       .pixel_wall_19(pixel_wall[19]),
-       .pixel_wall_20(pixel_wall[20]),
-       .pixel_wall_21(pixel_wall[21]),
-       .pixel_wall_22(pixel_wall[22]),
-       .pixel_wall_23(pixel_wall[23]),
-       .pixel_wall_24(pixel_wall[24]),
-       .pixel_wall_25(pixel_wall[25]),
-       .pixel_wall_26(pixel_wall[26]),
-       .pixel_wall_27(pixel_wall[27]),
-       .pixel_wall_28(pixel_wall[28]),
-       .pixel_wall_29(pixel_wall[29]),
-       .pixel_wall_30(pixel_wall[30]),
-       .pixel_wall_31(pixel_wall[31]),
-       .pixel_wall_32(pixel_wall[32]),
-       .pixel_wall_33(pixel_wall[33]),
-       .pixel_wall_34(pixel_wall[34]),
-       .pixel_wall_35(pixel_wall[35]),
-       .pixel_wall_36(pixel_wall[36]),
-       .pixel_wall_37(pixel_wall[37]),
-       .pixel_wall_38(pixel_wall[38]),
-       .pixel_wall_39(pixel_wall[39]),
-       .pixel_wall_40(pixel_wall[40]),
-       .pixel_wall_41(pixel_wall[41]),
-       .pixel_wall_42(pixel_wall[42]),
-       .pixel_wall_43(pixel_wall[43]),
-       .pixel_wall_44(pixel_wall[44]),
-       .pixel_wall_45(pixel_wall[45]),
-       .pixel_wall_46(pixel_wall[46]),
-       .pixel_wall_47(pixel_wall[47]),
-       .pixel_wall_48(pixel_wall[48]),
-       .pixel_wall_49(pixel_wall[49]),
-       .pixel_wall_50(pixel_wall[50]),
-       .pixel_wall_51(pixel_wall[51]),
-       .pixel_wall_52(pixel_wall[52]),
-       .pixel_wall_53(pixel_wall[53]),
-       .pixel_wall_54(pixel_wall[54]),
-       .pixel_wall_55(pixel_wall[55]),
-       .pixel_wall_56(pixel_wall[56]),
-       .pixel_wall_57(pixel_wall[57]),
-       .pixel_wall_58(pixel_wall[58]),
-       .pixel_wall_59(pixel_wall[59]),
-	   .RGB({vgaRed, vgaGreen, vgaBlue})
+        .valid(valid),
+        .v_cnt(v_cnt),
+        .pixel_CY(pixel_CY),
+        .pixel_monster_1(pixel_monster_1),
+        .pixel_computer_room_entrance_ins(pixel_computer_room_entrance_ins),
+        .pixel_heart_ins_0(pixel_heart_ins[0]),
+        .pixel_heart_ins_1(pixel_heart_ins[1]),
+        .pixel_heart_ins_2(pixel_heart_ins[2]),
+        .pixel_G(pixel_gameover_ins[0]),
+        .pixel_A(pixel_gameover_ins[1]),
+        .pixel_M(pixel_gameover_ins[2]),
+        .pixel_E_1(pixel_gameover_ins[3]),
+        .pixel_O(pixel_gameover_ins[4]),
+        .pixel_V(pixel_gameover_ins[5]),
+        .pixel_E_2(pixel_gameover_ins[6]),
+        .pixel_R(pixel_gameover_ins[7]),
+        .pixel_weapon(pixel_weapon),
+        .pixel_wall_0(pixel_wall[0]),
+        .pixel_wall_1(pixel_wall[1]),
+        .pixel_wall_2(pixel_wall[2]),
+        .pixel_wall_3(pixel_wall[3]),
+        .pixel_wall_4(pixel_wall[4]),
+        .pixel_wall_5(pixel_wall[5]),   
+        .pixel_wall_6(pixel_wall[6]),
+        .pixel_wall_7(pixel_wall[7]),
+        .pixel_wall_8(pixel_wall[8]),
+        .pixel_wall_9(pixel_wall[9]),
+        .pixel_wall_10(pixel_wall[10]),
+        .pixel_wall_11(pixel_wall[11]),
+        .pixel_wall_12(pixel_wall[12]),
+        .pixel_wall_13(pixel_wall[13]),
+        .pixel_wall_14(pixel_wall[14]),
+        .pixel_wall_15(pixel_wall[15]),
+        .pixel_wall_16(pixel_wall[16]),
+        .pixel_wall_17(pixel_wall[17]),
+        .pixel_wall_18(pixel_wall[18]),
+        .pixel_wall_19(pixel_wall[19]),
+        .pixel_wall_20(pixel_wall[20]),
+        .pixel_wall_21(pixel_wall[21]),
+        .pixel_wall_22(pixel_wall[22]),
+        .pixel_wall_23(pixel_wall[23]),
+        .pixel_wall_24(pixel_wall[24]),
+        .pixel_wall_25(pixel_wall[25]),
+        .pixel_wall_26(pixel_wall[26]),
+        .pixel_wall_27(pixel_wall[27]),
+        .pixel_wall_28(pixel_wall[28]),
+        .pixel_wall_29(pixel_wall[29]),
+        .pixel_wall_30(pixel_wall[30]),
+        .pixel_wall_31(pixel_wall[31]),
+        .pixel_wall_32(pixel_wall[32]),
+        .pixel_wall_33(pixel_wall[33]),
+        .pixel_wall_34(pixel_wall[34]),
+        .pixel_wall_35(pixel_wall[35]),
+        .pixel_wall_36(pixel_wall[36]),
+        .pixel_wall_37(pixel_wall[37]),
+        .pixel_wall_38(pixel_wall[38]),
+        .pixel_wall_39(pixel_wall[39]),
+        .pixel_wall_40(pixel_wall[40]),
+        .pixel_wall_41(pixel_wall[41]),
+        .pixel_wall_42(pixel_wall[42]),
+        .pixel_wall_43(pixel_wall[43]),
+        .pixel_wall_44(pixel_wall[44]),
+        .pixel_wall_45(pixel_wall[45]),
+        .pixel_wall_46(pixel_wall[46]),
+        .pixel_wall_47(pixel_wall[47]),
+        .pixel_wall_48(pixel_wall[48]),
+        .pixel_wall_49(pixel_wall[49]),
+        .pixel_wall_50(pixel_wall[50]),
+        .pixel_wall_51(pixel_wall[51]),
+        .pixel_wall_52(pixel_wall[52]),
+        .pixel_wall_53(pixel_wall[53]),
+        .pixel_wall_54(pixel_wall[54]),
+        .pixel_wall_55(pixel_wall[55]),
+        .pixel_wall_56(pixel_wall[56]),
+        .pixel_wall_57(pixel_wall[57]),
+        .pixel_wall_58(pixel_wall[58]),
+        .pixel_wall_59(pixel_wall[59]),
+        .RGB({vgaRed, vgaGreen, vgaBlue})
 	);
-	
-	//clock
-	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
-	clk_div #(20) CD1(.clk(clk), .clk_d(clk_d22));
-	
-	//signals
-	debounce DB1(.s(rst), .s_db(rst_db), .clk(clk));
-	onepulse OP1(.s(rst_db), .s_op(rst_op), .clk(clk_d22));
 	
 	//control
 	state_control SC0(
@@ -768,79 +848,96 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.pixel_idx_computer_room_entrance(pixel_idx_computer_room_entrance),
 		.pos_h_computer_room_entrance(pos_h_computer_room_entrance),
 		.pos_v_computer_room_entrance(pos_v_computer_room_entrance),
-                .pixel_idx_heart_0(pixel_idx_heart[0]),
+        .pixel_idx_heart_0(pixel_idx_heart[0]),
 		.pos_h_heart_0(pos_h_heart[0]),
 		.pos_v_heart_0(pos_v_heart[0]),
-                .pixel_idx_heart_1(pixel_idx_heart[1]),
+        .pixel_idx_heart_1(pixel_idx_heart[1]),
 		.pos_h_heart_1(pos_h_heart[1]),
 		.pos_v_heart_1(pos_v_heart[1]),
-                .pixel_idx_heart_2(pixel_idx_heart[2]),
+        .pixel_idx_heart_2(pixel_idx_heart[2]),
 		.pos_h_heart_2(pos_h_heart[2]),
 		.pos_v_heart_2(pos_v_heart[2]),
+        .pixel_idx_gameover(pixel_idx_gameover),
+        .pos_h_gameover_0(pos_h_gameover[0]),
+        .pos_v_gameover_0(pos_v_gameover[0]),
+        .pos_h_gameover_1(pos_h_gameover[1]),
+        .pos_v_gameover_1(pos_v_gameover[1]),
+        .pos_h_gameover_2(pos_h_gameover[2]),
+        .pos_v_gameover_2(pos_v_gameover[2]),
+        .pos_h_gameover_3(pos_h_gameover[3]),
+        .pos_v_gameover_3(pos_v_gameover[3]),
+        .pos_h_gameover_4(pos_h_gameover[4]),
+        .pos_v_gameover_4(pos_v_gameover[4]),
+        .pos_h_gameover_5(pos_h_gameover[5]),
+        .pos_v_gameover_5(pos_v_gameover[5]),
+        .pos_h_gameover_6(pos_h_gameover[6]),
+        .pos_v_gameover_6(pos_v_gameover[6]),
+        .pos_h_gameover_7(pos_h_gameover[7]),
+        .pos_v_gameover_7(pos_v_gameover[7]),
 		.pixel_idx_weapon(pixel_idx_weapon),
 		.pos_h_weapon(pos_h_weapon),
 		.pos_v_weapon(pos_v_weapon),
 		.pixel_idx_walls(pixel_idx_wall[0]),
 		.pos_h_wall_0(pos_h_wall[0]),.pos_v_wall_0(pos_v_wall[0]),
-                .pos_h_wall_1(pos_h_wall[1]),.pos_v_wall_1(pos_v_wall[1]),
-                .pos_h_wall_2(pos_h_wall[2]),.pos_v_wall_2(pos_v_wall[2]),
-                .pos_h_wall_3(pos_h_wall[3]),.pos_v_wall_3(pos_v_wall[3]),
-                .pos_h_wall_4(pos_h_wall[4]),.pos_v_wall_4(pos_v_wall[4]),
-                .pos_h_wall_5(pos_h_wall[5]),.pos_v_wall_5(pos_v_wall[5]),
-                .pos_h_wall_6(pos_h_wall[6]),.pos_v_wall_6(pos_v_wall[6]),
-                .pos_h_wall_7(pos_h_wall[7]),.pos_v_wall_7(pos_v_wall[7]),
-                .pos_h_wall_8(pos_h_wall[8]),.pos_v_wall_8(pos_v_wall[8]),
-                .pos_h_wall_9(pos_h_wall[9]),.pos_v_wall_9(pos_v_wall[9]),
-                .pos_h_wall_10(pos_h_wall[10]),.pos_v_wall_10(pos_v_wall[10]),
-                .pos_h_wall_11(pos_h_wall[11]),.pos_v_wall_11(pos_v_wall[11]),
-                .pos_h_wall_12(pos_h_wall[12]),.pos_v_wall_12(pos_v_wall[12]),
-                .pos_h_wall_13(pos_h_wall[13]),.pos_v_wall_13(pos_v_wall[13]),
-                .pos_h_wall_14(pos_h_wall[14]),.pos_v_wall_14(pos_v_wall[14]),
-                .pos_h_wall_15(pos_h_wall[15]),.pos_v_wall_15(pos_v_wall[15]),
-                .pos_h_wall_16(pos_h_wall[16]),.pos_v_wall_16(pos_v_wall[16]),
-                .pos_h_wall_17(pos_h_wall[17]),.pos_v_wall_17(pos_v_wall[17]),
-                .pos_h_wall_18(pos_h_wall[18]),.pos_v_wall_18(pos_v_wall[18]),
-                .pos_h_wall_19(pos_h_wall[19]),.pos_v_wall_19(pos_v_wall[19]),
-                .pos_h_wall_20(pos_h_wall[20]),.pos_v_wall_20(pos_v_wall[20]),
-                .pos_h_wall_21(pos_h_wall[21]),.pos_v_wall_21(pos_v_wall[21]),
-                .pos_h_wall_22(pos_h_wall[22]),.pos_v_wall_22(pos_v_wall[22]),
-                .pos_h_wall_23(pos_h_wall[23]),.pos_v_wall_23(pos_v_wall[23]),
-                .pos_h_wall_24(pos_h_wall[24]),.pos_v_wall_24(pos_v_wall[24]),
-                .pos_h_wall_25(pos_h_wall[25]),.pos_v_wall_25(pos_v_wall[25]),
-                .pos_h_wall_26(pos_h_wall[26]),.pos_v_wall_26(pos_v_wall[26]),
-                .pos_h_wall_27(pos_h_wall[27]),.pos_v_wall_27(pos_v_wall[27]),
-                .pos_h_wall_28(pos_h_wall[28]),.pos_v_wall_28(pos_v_wall[28]),
-                .pos_h_wall_29(pos_h_wall[29]),.pos_v_wall_29(pos_v_wall[29]),
-                .pos_h_wall_30(pos_h_wall[30]),.pos_v_wall_30(pos_v_wall[30]),
-                .pos_h_wall_31(pos_h_wall[31]),.pos_v_wall_31(pos_v_wall[31]),
-                .pos_h_wall_32(pos_h_wall[32]),.pos_v_wall_32(pos_v_wall[32]),
-                .pos_h_wall_33(pos_h_wall[33]),.pos_v_wall_33(pos_v_wall[33]),
-                .pos_h_wall_34(pos_h_wall[34]),.pos_v_wall_34(pos_v_wall[34]),
-                .pos_h_wall_35(pos_h_wall[35]),.pos_v_wall_35(pos_v_wall[35]),
-                .pos_h_wall_36(pos_h_wall[36]),.pos_v_wall_36(pos_v_wall[36]),
-                .pos_h_wall_37(pos_h_wall[37]),.pos_v_wall_37(pos_v_wall[37]),
-                .pos_h_wall_38(pos_h_wall[38]),.pos_v_wall_38(pos_v_wall[38]),
-                .pos_h_wall_39(pos_h_wall[39]),.pos_v_wall_39(pos_v_wall[39]),
-                .pos_h_wall_40(pos_h_wall[40]),.pos_v_wall_40(pos_v_wall[40]),
-                .pos_h_wall_41(pos_h_wall[41]),.pos_v_wall_41(pos_v_wall[41]),
-                .pos_h_wall_42(pos_h_wall[42]),.pos_v_wall_42(pos_v_wall[42]),
-                .pos_h_wall_43(pos_h_wall[43]),.pos_v_wall_43(pos_v_wall[43]),
-                .pos_h_wall_44(pos_h_wall[44]),.pos_v_wall_44(pos_v_wall[44]),
-                .pos_h_wall_45(pos_h_wall[45]),.pos_v_wall_45(pos_v_wall[45]),
-                .pos_h_wall_46(pos_h_wall[46]),.pos_v_wall_46(pos_v_wall[46]),
-                .pos_h_wall_47(pos_h_wall[47]),.pos_v_wall_47(pos_v_wall[47]),
-                .pos_h_wall_48(pos_h_wall[48]),.pos_v_wall_48(pos_v_wall[48]),
-                .pos_h_wall_49(pos_h_wall[49]),.pos_v_wall_49(pos_v_wall[49]),
-                .pos_h_wall_50(pos_h_wall[50]),.pos_v_wall_50(pos_v_wall[50]),
-                .pos_h_wall_51(pos_h_wall[51]),.pos_v_wall_51(pos_v_wall[51]),
-                .pos_h_wall_52(pos_h_wall[52]),.pos_v_wall_52(pos_v_wall[52]),
-                .pos_h_wall_53(pos_h_wall[53]),.pos_v_wall_53(pos_v_wall[53]),
-                .pos_h_wall_54(pos_h_wall[54]),.pos_v_wall_54(pos_v_wall[54]),
-                .pos_h_wall_55(pos_h_wall[55]),.pos_v_wall_55(pos_v_wall[55]),
-                .pos_h_wall_56(pos_h_wall[56]),.pos_v_wall_56(pos_v_wall[56]),
-                .pos_h_wall_57(pos_h_wall[57]),.pos_v_wall_57(pos_v_wall[57]),
-                .pos_h_wall_58(pos_h_wall[58]),.pos_v_wall_58(pos_v_wall[58]),
-                .pos_h_wall_59(pos_h_wall[59]),.pos_v_wall_59(pos_v_wall[59])
+        .pos_h_wall_1(pos_h_wall[1]),.pos_v_wall_1(pos_v_wall[1]),
+        .pos_h_wall_2(pos_h_wall[2]),.pos_v_wall_2(pos_v_wall[2]),
+        .pos_h_wall_3(pos_h_wall[3]),.pos_v_wall_3(pos_v_wall[3]),
+        .pos_h_wall_4(pos_h_wall[4]),.pos_v_wall_4(pos_v_wall[4]),
+        .pos_h_wall_5(pos_h_wall[5]),.pos_v_wall_5(pos_v_wall[5]),
+        .pos_h_wall_6(pos_h_wall[6]),.pos_v_wall_6(pos_v_wall[6]),
+        .pos_h_wall_7(pos_h_wall[7]),.pos_v_wall_7(pos_v_wall[7]),
+        .pos_h_wall_8(pos_h_wall[8]),.pos_v_wall_8(pos_v_wall[8]),
+        .pos_h_wall_9(pos_h_wall[9]),.pos_v_wall_9(pos_v_wall[9]),
+        .pos_h_wall_10(pos_h_wall[10]),.pos_v_wall_10(pos_v_wall[10]),
+        .pos_h_wall_11(pos_h_wall[11]),.pos_v_wall_11(pos_v_wall[11]),
+        .pos_h_wall_12(pos_h_wall[12]),.pos_v_wall_12(pos_v_wall[12]),
+        .pos_h_wall_13(pos_h_wall[13]),.pos_v_wall_13(pos_v_wall[13]),
+        .pos_h_wall_14(pos_h_wall[14]),.pos_v_wall_14(pos_v_wall[14]),
+        .pos_h_wall_15(pos_h_wall[15]),.pos_v_wall_15(pos_v_wall[15]),
+        .pos_h_wall_16(pos_h_wall[16]),.pos_v_wall_16(pos_v_wall[16]),
+        .pos_h_wall_17(pos_h_wall[17]),.pos_v_wall_17(pos_v_wall[17]),
+        .pos_h_wall_18(pos_h_wall[18]),.pos_v_wall_18(pos_v_wall[18]),
+        .pos_h_wall_19(pos_h_wall[19]),.pos_v_wall_19(pos_v_wall[19]),
+        .pos_h_wall_20(pos_h_wall[20]),.pos_v_wall_20(pos_v_wall[20]),
+        .pos_h_wall_21(pos_h_wall[21]),.pos_v_wall_21(pos_v_wall[21]),
+        .pos_h_wall_22(pos_h_wall[22]),.pos_v_wall_22(pos_v_wall[22]),
+        .pos_h_wall_23(pos_h_wall[23]),.pos_v_wall_23(pos_v_wall[23]),
+        .pos_h_wall_24(pos_h_wall[24]),.pos_v_wall_24(pos_v_wall[24]),
+        .pos_h_wall_25(pos_h_wall[25]),.pos_v_wall_25(pos_v_wall[25]),
+        .pos_h_wall_26(pos_h_wall[26]),.pos_v_wall_26(pos_v_wall[26]),
+        .pos_h_wall_27(pos_h_wall[27]),.pos_v_wall_27(pos_v_wall[27]),
+        .pos_h_wall_28(pos_h_wall[28]),.pos_v_wall_28(pos_v_wall[28]),
+        .pos_h_wall_29(pos_h_wall[29]),.pos_v_wall_29(pos_v_wall[29]),
+        .pos_h_wall_30(pos_h_wall[30]),.pos_v_wall_30(pos_v_wall[30]),
+        .pos_h_wall_31(pos_h_wall[31]),.pos_v_wall_31(pos_v_wall[31]),
+        .pos_h_wall_32(pos_h_wall[32]),.pos_v_wall_32(pos_v_wall[32]),
+        .pos_h_wall_33(pos_h_wall[33]),.pos_v_wall_33(pos_v_wall[33]),
+        .pos_h_wall_34(pos_h_wall[34]),.pos_v_wall_34(pos_v_wall[34]),
+        .pos_h_wall_35(pos_h_wall[35]),.pos_v_wall_35(pos_v_wall[35]),
+        .pos_h_wall_36(pos_h_wall[36]),.pos_v_wall_36(pos_v_wall[36]),
+        .pos_h_wall_37(pos_h_wall[37]),.pos_v_wall_37(pos_v_wall[37]),
+        .pos_h_wall_38(pos_h_wall[38]),.pos_v_wall_38(pos_v_wall[38]),
+        .pos_h_wall_39(pos_h_wall[39]),.pos_v_wall_39(pos_v_wall[39]),
+        .pos_h_wall_40(pos_h_wall[40]),.pos_v_wall_40(pos_v_wall[40]),
+        .pos_h_wall_41(pos_h_wall[41]),.pos_v_wall_41(pos_v_wall[41]),
+        .pos_h_wall_42(pos_h_wall[42]),.pos_v_wall_42(pos_v_wall[42]),
+        .pos_h_wall_43(pos_h_wall[43]),.pos_v_wall_43(pos_v_wall[43]),
+        .pos_h_wall_44(pos_h_wall[44]),.pos_v_wall_44(pos_v_wall[44]),
+        .pos_h_wall_45(pos_h_wall[45]),.pos_v_wall_45(pos_v_wall[45]),
+        .pos_h_wall_46(pos_h_wall[46]),.pos_v_wall_46(pos_v_wall[46]),
+        .pos_h_wall_47(pos_h_wall[47]),.pos_v_wall_47(pos_v_wall[47]),
+        .pos_h_wall_48(pos_h_wall[48]),.pos_v_wall_48(pos_v_wall[48]),
+        .pos_h_wall_49(pos_h_wall[49]),.pos_v_wall_49(pos_v_wall[49]),
+        .pos_h_wall_50(pos_h_wall[50]),.pos_v_wall_50(pos_v_wall[50]),
+        .pos_h_wall_51(pos_h_wall[51]),.pos_v_wall_51(pos_v_wall[51]),
+        .pos_h_wall_52(pos_h_wall[52]),.pos_v_wall_52(pos_v_wall[52]),
+        .pos_h_wall_53(pos_h_wall[53]),.pos_v_wall_53(pos_v_wall[53]),
+        .pos_h_wall_54(pos_h_wall[54]),.pos_v_wall_54(pos_v_wall[54]),
+        .pos_h_wall_55(pos_h_wall[55]),.pos_v_wall_55(pos_v_wall[55]),
+        .pos_h_wall_56(pos_h_wall[56]),.pos_v_wall_56(pos_v_wall[56]),
+        .pos_h_wall_57(pos_h_wall[57]),.pos_v_wall_57(pos_v_wall[57]),
+        .pos_h_wall_58(pos_h_wall[58]),.pos_v_wall_58(pos_v_wall[58]),
+        .pos_h_wall_59(pos_h_wall[59]),.pos_v_wall_59(pos_v_wall[59])
 	);
 	
 	mem_addr_gen MAG_CY(
@@ -898,6 +995,63 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 		.pos_v(pos_v_weapon),
 		.pixel_addr(pixel_addr_weapon)
 	);
+
+    mem_addr_gen MAG_G(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[0]),
+            .pos_v(pos_v_gameover[0]),
+            .pixel_addr(pixel_addr_gameover[0])
+    );
+    mem_addr_gen MAG_A(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[1]),
+            .pos_v(pos_v_gameover[1]),
+            .pixel_addr(pixel_addr_gameover[1])
+    );
+    mem_addr_gen MAG_M(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[2]),
+            .pos_v(pos_v_gameover[2]),
+            .pixel_addr(pixel_addr_gameover[2])
+    );
+    mem_addr_gen MAG_E_1(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[3]),
+            .pos_v(pos_v_gameover[3]),
+            .pixel_addr(pixel_addr_gameover[3])
+    );
+    mem_addr_gen MAG_O(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[4]),
+            .pos_v(pos_v_gameover[4]),
+            .pixel_addr(pixel_addr_gameover[4])
+    );
+    mem_addr_gen MAG_V(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[5]),
+            .pos_v(pos_v_gameover[5]),
+            .pixel_addr(pixel_addr_gameover[5])
+    );
+    mem_addr_gen MAG_E_2(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[6]),
+            .pos_v(pos_v_gameover[6]),
+            .pixel_addr(pixel_addr_gameover[6])
+    );
+    mem_addr_gen MAG_R(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_gameover[7]),
+            .pos_v(pos_v_gameover[7]),
+            .pixel_addr(pixel_addr_gameover[7])
+    );
 	
 	  mem_addr_gen MAG_wall_0(.h_cnt(h_cnt),.v_cnt(v_cnt), 
 		  .pos_h(pos_h_wall[0]),
@@ -1142,6 +1296,70 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
 
 
 	//display
+    BM_G BM_G_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[0]),
+        .dina(12'd0),
+        .douta(pixel_gameover[0])
+    ); 
+
+    BM_A BM_A_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[1]),
+        .dina(12'd0),
+        .douta(pixel_gameover[1])
+    ); 
+
+    BM_M BM_M_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[2]),
+        .dina(12'd0),
+        .douta(pixel_gameover[2])
+    ); 
+
+    BM_E BM_E_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[3]),
+        .dina(12'd0),
+        .douta(pixel_gameover[3])
+    ); 
+
+    BM_O BM_O_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[4]),
+        .dina(12'd0),
+        .douta(pixel_gameover[4])
+    ); 
+
+    BM_V BM_V_(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[5]),
+        .dina(12'd0),
+        .douta(pixel_gameover[5])
+    ); 
+
+    BM_E BM_E_2(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[6]),
+        .dina(12'd0),
+        .douta(pixel_gameover[6])
+    ); 
+
+    BM_R BM_R_2(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_gameover[7]),
+        .dina(12'd0),
+        .douta(pixel_gameover[7])
+    ); 
+
     BM_CY_front_stand BM_CY_front_stand_(
 		.clka(clk_d2),
         .wea(0),
