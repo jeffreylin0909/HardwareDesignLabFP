@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BM_rupee_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704941005">
+<GenRun Id="BM_rupee_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704961650">
   <File Type="PA-TCL" Name="BM_rupee.tcl"/>
   <File Type="REPORTS-TCL" Name="BM_rupee_reports.tcl"/>
   <File Type="RDS-RDS" Name="BM_rupee.vds"/>
+  <File Type="RDS-UTIL" Name="BM_rupee_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BM_rupee_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BM_rupee.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_rupee">
     <File Path="$PSRCDIR/sources_1/ip/BM_rupee/BM_rupee.xci">

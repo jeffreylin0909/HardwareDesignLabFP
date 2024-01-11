@@ -119,6 +119,7 @@ module state_control(
     count_kill CK(
         .clk(clk),
         .rst(rst),
+        .stage(stage),
         .monster_dead_0(monster_dead[0]),
         .monster_dead_1(monster_dead[1]),
         .monster_dead_2(monster_dead[2]),

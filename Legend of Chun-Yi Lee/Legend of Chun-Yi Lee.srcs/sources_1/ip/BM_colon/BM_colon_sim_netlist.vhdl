@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Jan 11 08:13:50 2024
+-- Date        : Thu Jan 11 16:34:29 2024
 -- Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top BM_colon -prefix
---               BM_colon_ BM_colon_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
+--               Lee.srcs/sources_1/ip/BM_colon/BM_colon_sim_netlist.vhdl}
 -- Design      : BM_colon
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity BM_colon_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of BM_colon_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end BM_colon_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of BM_colon_blk_mem_gen_prim_wrapper_init is
@@ -78,11 +80,11 @@ begin
       INIT_0B => X"0000000000000000000000000000000000000000070707070707070700000000",
       INIT_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_0D => X"0000000007070707070707070000000000000000000000000000000000000000",
-      INIT_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_0E => X"0000000000000000000000000000000000000000000000000000000007070707",
       INIT_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_10 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_11 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_12 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_12 => X"0000000007070707070707070000000000000000000000000000000000000000",
       INIT_13 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_14 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_15 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -95,15 +97,15 @@ begin
       INIT_1C => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_1D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_1E => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_1F => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_1F => X"0000000000000000000000000000000000000000070707070707070700000000",
       INIT_20 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_21 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_22 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_23 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_24 => X"0000000000000000000000000000000000000000070707070707070700000000",
+      INIT_23 => X"0707070700000000000000000000000000000000000000000000000000000000",
+      INIT_24 => X"0000000000000000000000000707070700000000070707070707070700000000",
       INIT_25 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_26 => X"0000000007070707070707070000000000000000000000000000000000000000",
-      INIT_27 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_27 => X"0000000000000000000000000000000000000000000000000000000007070707",
       INIT_28 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_29 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_2A => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -226,6 +228,8 @@ entity BM_colon_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of BM_colon_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end BM_colon_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of BM_colon_blk_mem_gen_prim_width is
@@ -251,6 +255,8 @@ entity BM_colon_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of BM_colon_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end BM_colon_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of BM_colon_blk_mem_gen_generic_cstr is
@@ -276,6 +282,8 @@ entity BM_colon_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of BM_colon_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end BM_colon_blk_mem_gen_top;
 
 architecture STRUCTURE of BM_colon_blk_mem_gen_top is
@@ -301,6 +309,8 @@ entity BM_colon_blk_mem_gen_v8_4_4_synth is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of BM_colon_blk_mem_gen_v8_4_4_synth : entity is "blk_mem_gen_v8_4_4_synth";
 end BM_colon_blk_mem_gen_v8_4_4_synth;
 
 architecture STRUCTURE of BM_colon_blk_mem_gen_v8_4_4_synth is
@@ -534,6 +544,8 @@ entity BM_colon_blk_mem_gen_v8_4_4 is
   attribute C_WRITE_WIDTH_B of BM_colon_blk_mem_gen_v8_4_4 : entity is 12;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of BM_colon_blk_mem_gen_v8_4_4 : entity is "artix7";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of BM_colon_blk_mem_gen_v8_4_4 : entity is "blk_mem_gen_v8_4_4";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of BM_colon_blk_mem_gen_v8_4_4 : entity is "yes";
 end BM_colon_blk_mem_gen_v8_4_4;

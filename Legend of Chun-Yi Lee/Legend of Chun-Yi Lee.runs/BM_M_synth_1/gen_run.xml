@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BM_M_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704941003">
+<GenRun Id="BM_M_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704961649">
   <File Type="PA-TCL" Name="BM_M.tcl"/>
   <File Type="REPORTS-TCL" Name="BM_M_reports.tcl"/>
   <File Type="RDS-RDS" Name="BM_M.vds"/>
+  <File Type="RDS-UTIL" Name="BM_M_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BM_M_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BM_M.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_M">
     <File Path="$PSRCDIR/sources_1/ip/BM_M/BM_M.xci">

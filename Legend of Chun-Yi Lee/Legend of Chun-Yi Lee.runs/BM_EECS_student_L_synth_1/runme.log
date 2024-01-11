@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log BM_EECS_student_L.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BM_EECS_student_L.tcl
+

@@ -11,8 +11,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     parameter BEAT_FREQ = 32'd32;	//one beat=0.03125sec
     parameter DUTY_BEST = 10'd512;	//duty cycle=50%
 
-    //music
-	
+    //speaker
 	output pmod_1;
 	output pmod_2;
 	output pmod_4;
@@ -24,14 +23,9 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     wire beatFreq;
     wire change; // change to boss music
     
-    assign change = 1;
+    assign change = 0;
     assign pmod_2 = 1'd1;	//no gain(6dB)
     assign pmod_4 = 1'd1;	//turn-on
-	//keyboard
-	inout PS2_DATA, PS2_CLK;
-	wire [511:0] key_down;
-    wire [8:0] last_change;
-    wire been_ready;
     
     always @(*) begin
         if (change) begin
@@ -81,6 +75,11 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
           .duty(DUTY_BEST), 
           .PWM(pmod_1)
     );
+    //keyboard
+	inout PS2_DATA, PS2_CLK;
+	wire [511:0] key_down;
+    wire [8:0] last_change;
+    wire been_ready;
 	//VGA
     output [3:0] vgaRed, vgaGreen, vgaBlue;
     output hsync, vsync;
@@ -108,14 +107,14 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     wire [11:0] pixel_CY_back_attack;
     wire [11:0] pixel_CY_right_attack;
     wire [11:0] pixel_CY_left_attack;
-    wire [11:0] pixel_BOSS_student_L;
-    wire [11:0] pixel_BOSS_student_R;
+    wire [11:0] pixel_BOSS_student_L[3:0];
+    wire [11:0] pixel_BOSS_student_R[3:0];
     wire [11:0] pixel_CS_student_L[3:0];
     wire [11:0] pixel_CS_student_R[3:0];
-    wire [11:0] pixel_EECS_student_L;
-    wire [11:0] pixel_EECS_student_R;
-    wire [11:0] pixel_NTHU_student_L;
-    wire [11:0] pixel_NTHU_student_R;
+    wire [11:0] pixel_EECS_student_L[3:0];
+    wire [11:0] pixel_EECS_student_R[3:0];
+    wire [11:0] pixel_NTHU_student_L[3:0];
+    wire [11:0] pixel_NTHU_student_R[3:0];
     wire [11:0] pixel_CR;
     wire [11:0] pixel_EM;
     wire [11:0] pixel_JX;
@@ -247,6 +246,12 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .now_pixel_idx(pixel_idx_monster[0]),
         .pixel_0(pixel_CS_student_L[0]),
         .pixel_1(pixel_CS_student_R[0]),
+        .pixel_2(pixel_EECS_student_L[0]),
+        .pixel_3(pixel_EECS_student_R[0]),
+        .pixel_4(pixel_NTHU_student_L[0]),
+        .pixel_5(pixel_NTHU_student_R[0]),
+        .pixel_6(pixel_BOSS_student_L[0]),
+        .pixel_7(pixel_BOSS_student_R[0]),
         .now_pixel(pixel_monster[0])
 	);
 
@@ -257,6 +262,12 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .now_pixel_idx(pixel_idx_monster[1]),
         .pixel_0(pixel_CS_student_L[1]),
         .pixel_1(pixel_CS_student_R[1]),
+        .pixel_2(pixel_EECS_student_L[1]),
+        .pixel_3(pixel_EECS_student_R[1]),
+        .pixel_4(pixel_NTHU_student_L[1]),
+        .pixel_5(pixel_NTHU_student_R[1]),
+        .pixel_6(pixel_BOSS_student_L[1]),
+        .pixel_7(pixel_BOSS_student_R[1]),
         .now_pixel(pixel_monster[1])
 	);
 	
@@ -1590,6 +1601,112 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .addra(pixel_addr_monster[1]),
         .dina(12'd0),
         .douta(pixel_CS_student_R[1])
+    ); 
+
+    ///
+    BM_EECS_student_L BM_EECS_student_L_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[0]),
+        .dina(12'd0),
+        .douta(pixel_EECS_student_L[0])
+    ); 
+
+    BM_EECS_student_L BM_EECS_student_L_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[1]),
+        .dina(12'd0),
+        .douta(pixel_EECS_student_L[1])
+    ); 
+    
+    BM_EECS_student_R BM_EECS_student_R_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[0]),
+        .dina(12'd0),
+        .douta(pixel_EECS_student_R[0])
+    ); 
+
+    BM_EECS_student_R BM_EECS_student_R_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[1]),
+        .dina(12'd0),
+        .douta(pixel_EECS_student_R[1])
+    ); 
+
+    //
+    BM_NTHU_student_L BM_NTHU_student_L_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[0]),
+        .dina(12'd0),
+        .douta(pixel_NTHU_student_L[0])
+    ); 
+
+    BM_NTHU_student_L BM_NTHU_student_L_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[1]),
+        .dina(12'd0),
+        .douta(pixel_NTHU_student_L[1])
+    ); 
+    
+    BM_NTHU_student_R BM_NTHU_student_R_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[0]),
+        .dina(12'd0),
+        .douta(pixel_NTHU_student_R[0])
+    ); 
+
+    BM_NTHU_student_R BM_NTHU_student_R_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[1]),
+        .dina(12'd0),
+        .douta(pixel_NTHU_student_R[1])
+    ); 
+    
+    BM_computer_room_entrance BM_computer_room_entrance_(
+        .clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_computer_room_entrance),
+        .dina(12'd0),
+        .douta(pixel_computer_room_entrance)
+    );
+    //
+    BM_BOSS_student_L BM_BOSS_student_L_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[0]),
+        .dina(12'd0),
+        .douta(pixel_BOSS_student_L[0])
+    ); 
+
+    BM_BOSS_student_L BM_BOSS_student_L_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[1]),
+        .dina(12'd0),
+        .douta(pixel_BOSS_student_L[1])
+    ); 
+    
+    BM_BOSS_student_R BM_BOSS_student_R_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[0]),
+        .dina(12'd0),
+        .douta(pixel_BOSS_student_R[0])
+    ); 
+
+    BM_BOSS_student_R BM_BOSS_student_R_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_monster[1]),
+        .dina(12'd0),
+        .douta(pixel_BOSS_student_R[1])
     ); 
     
     BM_computer_room_entrance BM_computer_room_entrance_(

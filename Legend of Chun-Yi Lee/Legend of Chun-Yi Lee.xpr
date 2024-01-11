@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr">
+<Project Version="7" Minor="44" Path="C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fdaaa4183be24a019138a7aade708a05"/>
@@ -37,13 +37,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="83"/>
-    <Option Name="WTModelSimExportSim" Val="83"/>
-    <Option Name="WTQuestaExportSim" Val="83"/>
-    <Option Name="WTIesExportSim" Val="83"/>
-    <Option Name="WTVcsExportSim" Val="83"/>
-    <Option Name="WTRivieraExportSim" Val="83"/>
-    <Option Name="WTActivehdlExportSim" Val="83"/>
+    <Option Name="WTXSimExportSim" Val="94"/>
+    <Option Name="WTModelSimExportSim" Val="94"/>
+    <Option Name="WTQuestaExportSim" Val="94"/>
+    <Option Name="WTIesExportSim" Val="94"/>
+    <Option Name="WTVcsExportSim" Val="94"/>
+    <Option Name="WTRivieraExportSim" Val="94"/>
+    <Option Name="WTActivehdlExportSim" Val="94"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -59,36 +59,46 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/KeyboardDecoder.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/KeyboardDecoder.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/KeyboardDecoder.v"/>
+          <Attr Name="ImportTime" Val="1703856672"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/LFSR.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/LFSR.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/LFSR.v"/>
+          <Attr Name="ImportTime" Val="1704803946"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/MusicBoss.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/MusicBoss.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/MusicBoss.v"/>
+          <Attr Name="ImportTime" Val="1704955245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/MusicZelda.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/MusicZelda.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/MusicZelda.v"/>
+          <Attr Name="ImportTime" Val="1704955245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/PWM.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/PWM.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/PWM.v"/>
+          <Attr Name="ImportTime" Val="1704955245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -108,57 +118,73 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/RGB_GEN.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/RGB_GEN.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/RGB_GEN.v"/>
+          <Attr Name="ImportTime" Val="1704935443"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/clk_div.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/clk_div.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/clk_div.v"/>
+          <Attr Name="ImportTime" Val="1703855391"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/collide.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/collide.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/collide.v"/>
+          <Attr Name="ImportTime" Val="1704730503"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/count_kill.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/count_kill.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/count_kill.v"/>
+          <Attr Name="ImportTime" Val="1704957864"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/debounce.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/debounce.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/debounce.v"/>
+          <Attr Name="ImportTime" Val="1703855376"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/lives_gameover_hearts.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/lives_gameover_hearts.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/lives_gameover_hearts.v"/>
+          <Attr Name="ImportTime" Val="1704881283"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/maincharacter.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/maincharacter.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/maincharacter.v"/>
+          <Attr Name="ImportTime" Val="1704955245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/mem_addr_gen.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/mem_addr_gen.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/mem_addr_gen.v"/>
+          <Attr Name="ImportTime" Val="1704551052"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -171,15 +197,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/onepluse.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/onepluse.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/onepluse.v"/>
+          <Attr Name="ImportTime" Val="1703855360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/select_pixel.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/select_pixel.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/select_pixel.v"/>
+          <Attr Name="ImportTime" Val="1704629885"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -192,408 +222,538 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/state_control.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/state_control.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/state_control.v"/>
+          <Attr Name="ImportTime" Val="1704957791"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/vga_controller.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/vga_controller.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/vga_controller.v"/>
+          <Attr Name="ImportTime" Val="1704451761"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/wall.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/wall.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/wall.v"/>
+          <Attr Name="ImportTime" Val="1704730519"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/weapon.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/weapon.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/weapon.v"/>
+          <Attr Name="ImportTime" Val="1704955245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/top.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/top.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/top.v"/>
+          <Attr Name="ImportTime" Val="1704960428"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/MusicBoss.v">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_front_stand.coe">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/MusicBoss.v"/>
-          <Attr Name="ImportTime" Val="1704721406"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/MusicZelda.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/MusicZelda.v"/>
-          <Attr Name="ImportTime" Val="1704621675"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/PWM.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/PWM.v"/>
-          <Attr Name="ImportTime" Val="1448125852"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/PlayerCtrlBoss.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/PlayerCtrlBoss.v"/>
-          <Attr Name="ImportTime" Val="1704721423"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/PlayerCtrlZelda.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/PlayerCtrlZelda.v"/>
-          <Attr Name="ImportTime" Val="1704620991"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/stage_control.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/stage_control.v"/>
-          <Attr Name="ImportTime" Val="1704944787"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_front_stand.coe">
-        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_front_stand.coe"/>
+          <Attr Name="ImportTime" Val="1704960138"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/Assets/CY_front_walk_L.coe">
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_front_walk_L.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_front_walk_L.coe"/>
+          <Attr Name="ImportTime" Val="1704960139"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_front_walk_R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_front_walk_R.coe"/>
+          <Attr Name="ImportTime" Val="1704960140"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_right_stand.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_right_stand.coe"/>
+          <Attr Name="ImportTime" Val="1704960145"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_right_walk.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_right_walk.coe"/>
+          <Attr Name="ImportTime" Val="1704960146"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_left_stand.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_left_stand.coe"/>
+          <Attr Name="ImportTime" Val="1704960142"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_left_walk.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_left_walk.coe"/>
+          <Attr Name="ImportTime" Val="1704960143"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_back_stand.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_back_stand.coe"/>
+          <Attr Name="ImportTime" Val="1704960134"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_back_walk_L.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_back_walk_L.coe"/>
+          <Attr Name="ImportTime" Val="1704960135"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_back_walk_R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_back_walk_R.coe"/>
+          <Attr Name="ImportTime" Val="1704960136"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/overwall_wall.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/overwall_wall.coe"/>
+          <Attr Name="ImportTime" Val="1704960163"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/computer_room_entrance.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/computer_room_entrance.coe"/>
+          <Attr Name="ImportTime" Val="1704960128"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CS_student_L.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CS_student_L.coe"/>
+          <Attr Name="ImportTime" Val="1704960131"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CS_student_R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CS_student_R.coe"/>
+          <Attr Name="ImportTime" Val="1704960132"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_back_attack.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_back_attack.coe"/>
+          <Attr Name="ImportTime" Val="1704960133"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_front_attack.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_front_attack.coe"/>
+          <Attr Name="ImportTime" Val="1704960137"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_left_attack.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_left_attack.coe"/>
+          <Attr Name="ImportTime" Val="1704960141"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/CY_right_attack.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/CY_right_attack.coe"/>
+          <Attr Name="ImportTime" Val="1704960144"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/heart.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/heart.coe"/>
+          <Attr Name="ImportTime" Val="1704960155"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/basys_3_fpga_down.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/basys_3_fpga_down.coe"/>
+          <Attr Name="ImportTime" Val="1704960117"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/wooden_fpga_down.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/wooden_fpga_down.coe"/>
+          <Attr Name="ImportTime" Val="1704960174"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/wooden_fpga_up.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/wooden_fpga_up.coe"/>
+          <Attr Name="ImportTime" Val="1704960177"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/wooden_fpga_left.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/wooden_fpga_left.coe"/>
+          <Attr Name="ImportTime" Val="1704960175"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/wooden_fpga_right.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/wooden_fpga_right.coe"/>
+          <Attr Name="ImportTime" Val="1704960176"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/G.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/G.coe"/>
+          <Attr Name="ImportTime" Val="1704960153"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/A.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/A.coe"/>
+          <Attr Name="ImportTime" Val="1704960115"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/M.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/M.coe"/>
+          <Attr Name="ImportTime" Val="1704960159"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/E.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/E.coe"/>
+          <Attr Name="ImportTime" Val="1704960147"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/O.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/O.coe"/>
+          <Attr Name="ImportTime" Val="1704960162"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/V.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/V.coe"/>
+          <Attr Name="ImportTime" Val="1704960173"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/R.coe"/>
+          <Attr Name="ImportTime" Val="1704960167"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/P_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/P_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960166"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/R_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/R_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960169"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/E_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/E_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960152"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/S_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/S_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960171"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/T_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/T_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960172"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/O_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/O_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960164"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/A_w.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/A_w.coe"/>
+          <Attr Name="ImportTime" Val="1704960116"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/colon.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/colon.coe"/>
+          <Attr Name="ImportTime" Val="1704960127"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/Lv.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/Lv.coe"/>
+          <Attr Name="ImportTime" Val="1704960158"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/rupee.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/rupee.coe"/>
+          <Attr Name="ImportTime" Val="1704960168"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/0.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/0.coe"/>
+          <Attr Name="ImportTime" Val="1704960105"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/1.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/1.coe"/>
+          <Attr Name="ImportTime" Val="1704960106"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/2.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/2.coe"/>
+          <Attr Name="ImportTime" Val="1704960107"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/3.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/3.coe"/>
+          <Attr Name="ImportTime" Val="1704960108"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/4.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/4.coe"/>
+          <Attr Name="ImportTime" Val="1704960109"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/5.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/5.coe"/>
+          <Attr Name="ImportTime" Val="1704960110"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/6.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/6.coe"/>
+          <Attr Name="ImportTime" Val="1704960111"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/7.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/7.coe"/>
+          <Attr Name="ImportTime" Val="1704960112"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/8.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/8.coe"/>
+          <Attr Name="ImportTime" Val="1704960113"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/9.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/9.coe"/>
+          <Attr Name="ImportTime" Val="1704960114"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/EECS_student_L.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/EECS_student_L.coe"/>
+          <Attr Name="ImportTime" Val="1704960148"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/EECS_student_R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/EECS_student_R.coe"/>
+          <Attr Name="ImportTime" Val="1704960150"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/NTHU_student_L.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/NTHU_student_L.coe"/>
+          <Attr Name="ImportTime" Val="1704960160"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/NTHU_student_R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/NTHU_student_R.coe"/>
+          <Attr Name="ImportTime" Val="1704960161"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/BOSS_student_L.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/BOSS_student_L.coe"/>
+          <Attr Name="ImportTime" Val="1704960121"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/BOSS_student_R.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/BOSS_student_R.coe"/>
+          <Attr Name="ImportTime" Val="1704960122"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/basys_3_fpga_up.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/basys_3_fpga_up.coe"/>
+          <Attr Name="ImportTime" Val="1704960120"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/basys_3_fpga_left.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/basys_3_fpga_left.coe"/>
+          <Attr Name="ImportTime" Val="1704960118"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Legend of Chun-Yi Lee/Assets/basys_3_fpga_right.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/Assets/basys_3_fpga_right.coe"/>
+          <Attr Name="ImportTime" Val="1704960119"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Assets/EECS_student_L.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/Assets/CY_front_walk_R.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_right_stand.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_right_walk.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_left_stand.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_left_walk.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_back_stand.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_back_walk_L.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_back_walk_R.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/BOSS_student.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/overwall_wall.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/computer_room_entrance.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CS_student_L.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CS_student_R.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_back_attack.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_front_attack.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_left_attack.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/CY_right_attack.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/heart.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/basys_3_fpga_down.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/wooden_fpga_down.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/wooden_fpga_up.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/wooden_fpga_left.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/wooden_fpga_right.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/G.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/A.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/M.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/E.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/O.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/V.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/R.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/P_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/R_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/E_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/S_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/T_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/O_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/A_w.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/colon.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/Lv.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/rupee.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/0.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/1.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/2.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/3.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/4.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/5.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/6.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/7.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/8.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/Assets/9.coe">
+      <File Path="$PPRDIR/Assets/EECS_student_R.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -607,8 +767,10 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/cons.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/Legend of Chun-Yi Lee/cons.xdc">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/cons.xdc"/>
+          <Attr Name="ImportTime" Val="1704955245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -1320,6 +1482,126 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="BM_EECS_student_L" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_EECS_student_L">
+      <File Path="$PSRCDIR/sources_1/ip/BM_EECS_student_L/BM_EECS_student_L.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_EECS_student_L"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_EECS_student_R" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_EECS_student_R">
+      <File Path="$PSRCDIR/sources_1/ip/BM_EECS_student_R/BM_EECS_student_R.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_EECS_student_R"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_NTHU_student_L" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_NTHU_student_L">
+      <File Path="$PSRCDIR/sources_1/ip/BM_NTHU_student_L/BM_NTHU_student_L.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_NTHU_student_L"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_NTHU_student_R" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_NTHU_student_R">
+      <File Path="$PSRCDIR/sources_1/ip/BM_NTHU_student_R/BM_NTHU_student_R.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_NTHU_student_R"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_BOSS_student_L" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_BOSS_student_L">
+      <File Path="$PSRCDIR/sources_1/ip/BM_BOSS_student_L/BM_BOSS_student_L.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_BOSS_student_L"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_BOSS_student_R" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_BOSS_student_R">
+      <File Path="$PSRCDIR/sources_1/ip/BM_BOSS_student_R/BM_BOSS_student_R.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_BOSS_student_R"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_basys_3_fpga_up" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_basys_3_fpga_up">
+      <File Path="$PSRCDIR/sources_1/ip/BM_basys_3_fpga_up/BM_basys_3_fpga_up.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_basys_3_fpga_up"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_basys_3_fpga_left" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_basys_3_fpga_left">
+      <File Path="$PSRCDIR/sources_1/ip/BM_basys_3_fpga_left/BM_basys_3_fpga_left.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_basys_3_fpga_left"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BM_basys_3_fpga_right" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_basys_3_fpga_right">
+      <File Path="$PSRCDIR/sources_1/ip/BM_basys_3_fpga_right/BM_basys_3_fpga_right.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="BM_basys_3_fpga_right"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -1861,6 +2143,96 @@
       <RQSFiles/>
     </Run>
     <Run Id="BM_9_synth_1" Type="Ft3:Synth" SrcSet="BM_9" Part="xc7a35tcpg236-1" ConstrsSet="BM_9" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_9_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_EECS_student_L_synth_1" Type="Ft3:Synth" SrcSet="BM_EECS_student_L" Part="xc7a35tcpg236-1" ConstrsSet="BM_EECS_student_L" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_EECS_student_L_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_EECS_student_R_synth_1" Type="Ft3:Synth" SrcSet="BM_EECS_student_R" Part="xc7a35tcpg236-1" ConstrsSet="BM_EECS_student_R" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_EECS_student_R_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_NTHU_student_L_synth_1" Type="Ft3:Synth" SrcSet="BM_NTHU_student_L" Part="xc7a35tcpg236-1" ConstrsSet="BM_NTHU_student_L" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_NTHU_student_L_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_NTHU_student_R_synth_1" Type="Ft3:Synth" SrcSet="BM_NTHU_student_R" Part="xc7a35tcpg236-1" ConstrsSet="BM_NTHU_student_R" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_NTHU_student_R_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_BOSS_student_L_synth_1" Type="Ft3:Synth" SrcSet="BM_BOSS_student_L" Part="xc7a35tcpg236-1" ConstrsSet="BM_BOSS_student_L" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_BOSS_student_L_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_BOSS_student_R_synth_1" Type="Ft3:Synth" SrcSet="BM_BOSS_student_R" Part="xc7a35tcpg236-1" ConstrsSet="BM_BOSS_student_R" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_BOSS_student_R_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_basys_3_fpga_up_synth_1" Type="Ft3:Synth" SrcSet="BM_basys_3_fpga_up" Part="xc7a35tcpg236-1" ConstrsSet="BM_basys_3_fpga_up" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_basys_3_fpga_up_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_basys_3_fpga_left_synth_1" Type="Ft3:Synth" SrcSet="BM_basys_3_fpga_left" Part="xc7a35tcpg236-1" ConstrsSet="BM_basys_3_fpga_left" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_basys_3_fpga_left_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_basys_3_fpga_right_synth_1" Type="Ft3:Synth" SrcSet="BM_basys_3_fpga_right" Part="xc7a35tcpg236-1" ConstrsSet="BM_basys_3_fpga_right" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BM_basys_3_fpga_right_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -2758,6 +3130,159 @@
       <RQSFiles/>
     </Run>
     <Run Id="BM_9_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_9" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_9_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_EECS_student_L_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_EECS_student_L" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_EECS_student_L_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_EECS_student_R_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_EECS_student_R" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_EECS_student_R_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_NTHU_student_L_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_NTHU_student_L" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_NTHU_student_L_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_NTHU_student_R_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_NTHU_student_R" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_NTHU_student_R_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_BOSS_student_L_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_BOSS_student_L" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_BOSS_student_L_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_BOSS_student_R_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_BOSS_student_R" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_BOSS_student_R_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_basys_3_fpga_up_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_basys_3_fpga_up" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_basys_3_fpga_up_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_basys_3_fpga_left_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_basys_3_fpga_left" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_basys_3_fpga_left_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BM_basys_3_fpga_right_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BM_basys_3_fpga_right" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BM_basys_3_fpga_right_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>

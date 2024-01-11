@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BM_CY_front_stand_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704941000">
+<GenRun Id="BM_CY_front_stand_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704961647">
   <File Type="PA-TCL" Name="BM_CY_front_stand.tcl"/>
   <File Type="REPORTS-TCL" Name="BM_CY_front_stand_reports.tcl"/>
   <File Type="RDS-RDS" Name="BM_CY_front_stand.vds"/>
+  <File Type="RDS-UTIL" Name="BM_CY_front_stand_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BM_CY_front_stand_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BM_CY_front_stand.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_CY_front_stand">
     <File Path="$PSRCDIR/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci">

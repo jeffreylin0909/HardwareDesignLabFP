@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 13:19:20 2024
-| Host         : R326-44 running 64-bit major release  (build 9200)
+| Date         : Thu Jan 11 18:31:02 2024
+| Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
 | Device       : 7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 13176 |     0 |     20800 | 63.35 |
-|   LUT as Logic          | 13176 |     0 |     20800 | 63.35 |
+| Slice LUTs*             | 14139 |     0 |     20800 | 67.98 |
+|   LUT as Logic          | 14139 |     0 |     20800 | 67.98 |
 |   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   513 |     0 |     41600 |  1.23 |
-|   Register as Flip Flop |   429 |     0 |     41600 |  1.03 |
-|   Register as Latch     |    84 |     0 |     41600 |  0.20 |
-| F7 Muxes                |    63 |     0 |     16300 |  0.39 |
-| F8 Muxes                |     2 |     0 |      8150 |  0.02 |
+| Slice Registers         |   559 |     0 |     41600 |  1.34 |
+|   Register as Flip Flop |   464 |     0 |     41600 |  1.12 |
+|   Register as Latch     |    95 |     0 |     41600 |  0.23 |
+| F7 Muxes                |    67 |     0 |     16300 |  0.41 |
+| F8 Muxes                |     5 |     0 |      8150 |  0.06 |
 +-------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 19    |          Yes |           - |          Set |
-| 163   |          Yes |           - |        Reset |
-| 34    |          Yes |         Set |            - |
-| 297   |          Yes |       Reset |            - |
+| 185   |          Yes |           - |        Reset |
+| 44    |          Yes |         Set |            - |
+| 311   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,23 +150,23 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT3     | 4288 |                 LUT |
-| LUT2     | 4018 |                 LUT |
-| LUT4     | 3898 |                 LUT |
-| CARRY4   | 2991 |          CarryLogic |
-| LUT6     | 2398 |                 LUT |
-| LUT5     | 1862 |                 LUT |
-| LUT1     | 1071 |                 LUT |
-| FDRE     |  297 |        Flop & Latch |
-| FDCE     |   98 |        Flop & Latch |
-| LDCE     |   65 |        Flop & Latch |
-| MUXF7    |   63 |               MuxFx |
+| LUT3     | 4339 |                 LUT |
+| LUT2     | 4076 |                 LUT |
+| LUT4     | 3944 |                 LUT |
+| LUT6     | 3142 |                 LUT |
+| CARRY4   | 3023 |          CarryLogic |
+| LUT5     | 2052 |                 LUT |
+| LUT1     | 1059 |                 LUT |
+| FDRE     |  311 |        Flop & Latch |
+| FDCE     |  109 |        Flop & Latch |
+| LDCE     |   76 |        Flop & Latch |
+| MUXF7    |   67 |               MuxFx |
 | DSP48E1  |   48 |    Block Arithmetic |
-| FDSE     |   34 |        Flop & Latch |
+| FDSE     |   44 |        Flop & Latch |
 | LDPE     |   19 |        Flop & Latch |
 | OBUF     |   17 |                  IO |
+| MUXF8    |    5 |               MuxFx |
 | BUFG     |    3 |               Clock |
-| MUXF8    |    2 |               MuxFx |
 | IBUF     |    2 |                  IO |
 +----------+------+---------------------+
 
@@ -179,9 +179,15 @@ Table of Contents
 +---------------------------+------+
 | BM_heart                  |    3 |
 | BM_colon                  |    2 |
+| BM_NTHU_student_R         |    2 |
+| BM_NTHU_student_L         |    2 |
+| BM_EECS_student_R         |    2 |
+| BM_EECS_student_L         |    2 |
 | BM_E                      |    2 |
 | BM_CS_student_R           |    2 |
 | BM_CS_student_L           |    2 |
+| BM_BOSS_student_R         |    2 |
+| BM_BOSS_student_L         |    2 |
 | BM_9                      |    2 |
 | BM_8                      |    2 |
 | BM_7                      |    2 |

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 13:21:02 2024
-| Host         : R326-44 running 64-bit major release  (build 9200)
+| Date         : Thu Jan 11 18:32:41 2024
+| Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_drc_routed.rpt -pb Top_drc_routed.pb -rpx Top_drc_routed.rpx
 | Design       : Top
 | Device       : xc7a35tcpg236-1
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 80
+             Violations found: 82
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
@@ -32,7 +32,7 @@ Table of Contents
 | DPIP-1   | Warning  | Input pipelining                                    | 47         |
 | DPOP-1   | Warning  | PREG Output pipelining                              | 25         |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 2          |
-| PDRC-153 | Warning  | Gated clock check                                   | 5          |
+| PDRC-153 | Warning  | Gated clock check                                   | 7          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -422,25 +422,35 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net SC0/SC/next_stage_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/SC/next_stage_reg[3]_i_2/O, cell SC0/SC/next_stage_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/SC/E[0] is a gated clock net sourced by a combinational pin SC0/SC/now_img_R_reg[2]_i_1/O, cell SC0/SC/now_img_R_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net SC0/m0/n_pos_h_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/m0/n_pos_h_reg[9]_i_2/O, cell SC0/m0/n_pos_h_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/SC/next_stage_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/SC/next_stage_reg[3]_i_2/O, cell SC0/SC/next_stage_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net SC0/m0/randomgen/random_done_n_0 is a gated clock net sourced by a combinational pin SC0/m0/randomgen/random_done/O, cell SC0/m0/randomgen/random_done. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/SC/stage_reg[0]_3[0] is a gated clock net sourced by a combinational pin SC0/SC/now_img_R_reg[2]_i_2/O, cell SC0/SC/now_img_R_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net SC0/m1/n_pos_h_reg[9]_i_2__0_n_0 is a gated clock net sourced by a combinational pin SC0/m1/n_pos_h_reg[9]_i_2__0/O, cell SC0/m1/n_pos_h_reg[9]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/m0/n_pos_h_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/m0/n_pos_h_reg[9]_i_2/O, cell SC0/m0/n_pos_h_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
+Gated clock check  
+Net SC0/m0/randomgen/random_done_n_0 is a gated clock net sourced by a combinational pin SC0/m0/randomgen/random_done/O, cell SC0/m0/randomgen/random_done. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net SC0/m1/n_pos_h_reg[9]_i_2__0_n_0 is a gated clock net sourced by a combinational pin SC0/m1/n_pos_h_reg[9]_i_2__0/O, cell SC0/m1/n_pos_h_reg[9]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
 Gated clock check  
 Net SC0/m1/randomgen/random_done_n_0 is a gated clock net sourced by a combinational pin SC0/m1/randomgen/random_done/O, cell SC0/m1/randomgen/random_done. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 13:21:10 2024
-| Host         : R326-44 running 64-bit major release  (build 9200)
+| Date         : Thu Jan 11 18:32:52 2024
+| Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -pb Top_timing_summary_routed.pb -rpx Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top
 | Device       : 7a35t-cpg236
@@ -56,15 +56,21 @@ Table of Contents
 --------------------
  There are 205 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 211 register/latch pins with no clock driven by root clock pin: CD0/count_reg[1]/Q (HIGH)
+ There are 243 register/latch pins with no clock driven by root clock pin: CD0/count_reg[1]/Q (HIGH)
 
- There are 210 register/latch pins with no clock driven by root clock pin: CD1/count_reg[19]/Q (HIGH)
+ There are 226 register/latch pins with no clock driven by root clock pin: CD1/count_reg[19]/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[1]/Q (HIGH)
+ There are 22 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[0]/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[2]/Q (HIGH)
+ There are 22 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[1]/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[3]/Q (HIGH)
+ There are 22 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[2]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: SC0/SC/stage_reg[3]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: SC0/m0/direction_reg[0]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: SC0/m0/direction_reg[1]/Q (HIGH)
 
  There are 20 register/latch pins with no clock driven by root clock pin: SC0/m0/direction_reg[2]/Q (HIGH)
 
@@ -78,6 +84,10 @@ Table of Contents
 
  There are 13 register/latch pins with no clock driven by root clock pin: SC0/m0/randomgen/count_reg[3]/Q (HIGH)
 
+ There are 20 register/latch pins with no clock driven by root clock pin: SC0/m1/direction_reg[0]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: SC0/m1/direction_reg[1]/Q (HIGH)
+
  There are 20 register/latch pins with no clock driven by root clock pin: SC0/m1/direction_reg[2]/Q (HIGH)
 
  There are 20 register/latch pins with no clock driven by root clock pin: SC0/m1/is_dead_reg/Q (HIGH)
@@ -90,7 +100,7 @@ Table of Contents
 
  There are 13 register/latch pins with no clock driven by root clock pin: SC0/m1/randomgen/count_reg[3]/Q (HIGH)
 
- There are 12 register/latch pins with no clock driven by root clock pin: btSpeedGen/PWM_reg/Q (HIGH)
+ There are 23 register/latch pins with no clock driven by root clock pin: btSpeedGen/PWM_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -105,7 +115,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 2248 pins that are not constrained for maximum delay. (HIGH)
+ There are 2541 pins that are not constrained for maximum delay. (HIGH)
 
  There are 14 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
 

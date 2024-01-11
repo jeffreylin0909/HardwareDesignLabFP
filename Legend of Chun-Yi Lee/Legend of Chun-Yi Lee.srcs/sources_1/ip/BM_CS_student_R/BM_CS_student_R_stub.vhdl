@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Mon Jan  8 10:09:20 2024
+-- Date        : Thu Jan 11 16:30:58 2024
 -- Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top BM_CS_student_R -prefix
---               BM_CS_student_R_ BM_CS_student_R_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
+--               Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R_stub.vhdl}
 -- Design      : BM_CS_student_R
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

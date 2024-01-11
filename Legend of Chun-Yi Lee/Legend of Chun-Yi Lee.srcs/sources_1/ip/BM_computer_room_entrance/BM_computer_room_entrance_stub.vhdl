@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sun Jan  7 17:42:41 2024
--- Host        : R326-31 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top BM_computer_room_entrance -prefix
---               BM_computer_room_entrance_ BM_computer_room_entrance_stub.vhdl
+-- Date        : Thu Jan 11 16:30:57 2024
+-- Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
+--               Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance_stub.vhdl}
 -- Design      : BM_computer_room_entrance
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
