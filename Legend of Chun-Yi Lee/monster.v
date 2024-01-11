@@ -42,7 +42,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_state = 4'hf;
         end else begin
             if (change_state_counter == 4'h0)begin
@@ -80,7 +80,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_pos_h = 20;
             n_pos_v = 120;
         end else begin
@@ -90,7 +90,7 @@ module monster (
             end else begin
                 case (direction)
                     0:begin
-                        if (wall_collision[1] || pos_h >= 300)begin
+                        if (wall_collision[1])begin
                             n_pos_h = pos_h;
                         end else begin
                             n_pos_h = pos_h+1;//
@@ -98,7 +98,7 @@ module monster (
                         n_pos_v = pos_v;
                     end
                     1:begin
-                        if (wall_collision[0] || pos_h <= 20)begin
+                        if (wall_collision[0] || pos_h == 20)begin
                             n_pos_h = pos_h;
                         end else begin
                             n_pos_h = pos_h-1;//
@@ -106,7 +106,7 @@ module monster (
                         n_pos_v = pos_v;
                     end
                     2:begin
-                        if (wall_collision[2] || pos_v >= 220)begin
+                        if (wall_collision[2])begin
                             n_pos_v = pos_v;
                         end else begin
                             n_pos_v = pos_v+1;//
@@ -114,7 +114,7 @@ module monster (
                         n_pos_h = pos_h;
                     end
                     3:begin
-                        if (wall_collision[3] || pos_v <= 20)begin
+                        if (wall_collision[3])begin
                             n_pos_v = pos_v;
                         end else begin
                             n_pos_v = pos_v-1;//
@@ -135,7 +135,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_is_dead = 0;
         end else begin
             if (is_dead ||(enable_weapon_collision && weapon_collision))begin
@@ -155,7 +155,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_direction = 0;
         end else begin
             if (change_direction_counter >= 8'd50)begin
@@ -187,7 +187,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_change_direction_counter = 0;
         end else begin
             if (change_direction_counter >= 8'd50)begin
@@ -207,7 +207,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_change_state_counter = 3'h0;
         end else begin
             n_change_state_counter = change_state_counter+1;
@@ -223,7 +223,7 @@ module monster (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_is_dieing = 0;
         end else begin
             if (is_dead)begin

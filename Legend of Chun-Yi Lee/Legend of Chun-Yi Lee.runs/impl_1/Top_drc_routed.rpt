@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 09:27:52 2024
-| Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
+| Date         : Thu Jan 11 13:21:02 2024
+| Host         : R326-44 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_drc_routed.rpt -pb Top_drc_routed.pb -rpx Top_drc_routed.rpx
 | Design       : Top
 | Device       : xc7a35tcpg236-1
@@ -24,13 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 75
+             Violations found: 80
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 46         |
-| DPOP-1   | Warning  | PREG Output pipelining                              | 23         |
+| DPIP-1   | Warning  | Input pipelining                                    | 47         |
+| DPOP-1   | Warning  | PREG Output pipelining                              | 25         |
+| DPOP-2   | Warning  | MREG Output pipelining                              | 2          |
 | PDRC-153 | Warning  | Gated clock check                                   | 5          |
 +----------+----------+-----------------------------------------------------+------------+
 
@@ -279,6 +280,11 @@ Input pipelining
 DSP MAG_wooden_fpga_down/pixel_addr2 input MAG_wooden_fpga_down/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
+DPIP-1#47 Warning
+Input pipelining  
+DSP toneGen/count_duty0 input toneGen/count_duty0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
 DPOP-1#1 Warning
 PREG Output pipelining  
 DSP MAG_A/pixel_addr0 output MAG_A/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -394,14 +400,34 @@ PREG Output pipelining
 DSP MAG_wooden_fpga_down/pixel_addr0 output MAG_wooden_fpga_down/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
+DPOP-1#24 Warning
+PREG Output pipelining  
+DSP btSpeedGen/count_duty0 output btSpeedGen/count_duty0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#25 Warning
+PREG Output pipelining  
+DSP toneGen/count_duty0 output toneGen/count_duty0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP btSpeedGen/count_duty0 multiplier stage btSpeedGen/count_duty0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP toneGen/count_duty0 multiplier stage toneGen/count_duty0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
 PDRC-153#1 Warning
 Gated clock check  
-Net SC0/SC/FSM_onehot_next_stage_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/SC/FSM_onehot_next_stage_reg[2]_i_2/O, cell SC0/SC/FSM_onehot_next_stage_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/SC/next_stage_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/SC/next_stage_reg[3]_i_2/O, cell SC0/SC/next_stage_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net SC0/m0/n_pos_h_reg[8]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/m0/n_pos_h_reg[8]_i_2/O, cell SC0/m0/n_pos_h_reg[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/m0/n_pos_h_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin SC0/m0/n_pos_h_reg[9]_i_2/O, cell SC0/m0/n_pos_h_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
@@ -411,7 +437,7 @@ Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net SC0/m1/n_pos_h_reg[8]_i_2__0_n_0 is a gated clock net sourced by a combinational pin SC0/m1/n_pos_h_reg[8]_i_2__0/O, cell SC0/m1/n_pos_h_reg[8]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/m1/n_pos_h_reg[9]_i_2__0_n_0 is a gated clock net sourced by a combinational pin SC0/m1/n_pos_h_reg[9]_i_2__0/O, cell SC0/m1/n_pos_h_reg[9]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning

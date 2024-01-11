@@ -25,7 +25,7 @@ module weapon(
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_state = EMPTY;
         end else begin
             case (type)
@@ -63,7 +63,7 @@ module weapon(
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_pos_h = pos_h_CY;
             n_pos_v = pos_v_CY;
         end else begin

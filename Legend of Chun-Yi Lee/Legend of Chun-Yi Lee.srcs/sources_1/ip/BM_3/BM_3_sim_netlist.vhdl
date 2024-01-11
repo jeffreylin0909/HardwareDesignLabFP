@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 -- Date        : Thu Jan 11 08:58:57 2024
 -- Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
---               Lee.srcs/sources_1/ip/BM_3/BM_3_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top BM_3 -prefix
+--               BM_3_ BM_3_sim_netlist.vhdl
 -- Design      : BM_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity BM_3_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BM_3_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end BM_3_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of BM_3_blk_mem_gen_prim_wrapper_init is
@@ -228,8 +226,6 @@ entity BM_3_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BM_3_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end BM_3_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of BM_3_blk_mem_gen_prim_width is
@@ -255,8 +251,6 @@ entity BM_3_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BM_3_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end BM_3_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of BM_3_blk_mem_gen_generic_cstr is
@@ -282,8 +276,6 @@ entity BM_3_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BM_3_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end BM_3_blk_mem_gen_top;
 
 architecture STRUCTURE of BM_3_blk_mem_gen_top is
@@ -309,8 +301,6 @@ entity BM_3_blk_mem_gen_v8_4_4_synth is
     dina : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BM_3_blk_mem_gen_v8_4_4_synth : entity is "blk_mem_gen_v8_4_4_synth";
 end BM_3_blk_mem_gen_v8_4_4_synth;
 
 architecture STRUCTURE of BM_3_blk_mem_gen_v8_4_4_synth is
@@ -544,8 +534,6 @@ entity BM_3_blk_mem_gen_v8_4_4 is
   attribute C_WRITE_WIDTH_B of BM_3_blk_mem_gen_v8_4_4 : entity is 12;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of BM_3_blk_mem_gen_v8_4_4 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BM_3_blk_mem_gen_v8_4_4 : entity is "blk_mem_gen_v8_4_4";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of BM_3_blk_mem_gen_v8_4_4 : entity is "yes";
 end BM_3_blk_mem_gen_v8_4_4;

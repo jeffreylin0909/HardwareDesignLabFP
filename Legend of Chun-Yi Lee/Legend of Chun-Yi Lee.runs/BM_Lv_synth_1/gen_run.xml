@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BM_Lv_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704931335">
+<GenRun Id="BM_Lv_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704941005">
   <File Type="PA-TCL" Name="BM_Lv.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="BM_Lv_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BM_Lv_reports.tcl"/>
   <File Type="RDS-RDS" Name="BM_Lv.vds"/>
-  <File Type="RDS-UTIL" Name="BM_Lv_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="BM_Lv_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BM_Lv.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="BM_Lv_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="BM_Lv_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_Lv">
     <File Path="$PSRCDIR/sources_1/ip/BM_Lv/BM_Lv.xci">
       <FileInfo>

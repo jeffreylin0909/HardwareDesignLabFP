@@ -1,4 +1,4 @@
-module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync);
+module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync, pmod_1, pmod_2, pmod_4);
     
     parameter [8:0] A_CODE  = {1'b0, 8'h1C};
     parameter [8:0] D_CODE  = {1'b0, 8'h23};
@@ -8,12 +8,79 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync)
     parameter [8:0] K_CODE  = {1'b0, 8'h42};
     parameter [8:0] L_CODE  = {1'b0, 8'h4B};
     parameter [8:0] SPACE_CODE  = {1'b0, 8'h29};
+    parameter BEAT_FREQ = 32'd32;	//one beat=0.03125sec
+    parameter DUTY_BEST = 10'd512;	//duty cycle=50%
+
+    //music
+	
+	output pmod_1;
+	output pmod_2;
+	output pmod_4;
+	
+	wire [31:0] freqZelda, freqBoss;
+    reg [31:0] freq;
+    wire [12:0] ibeatNumZelda;
+    wire [12:0] ibeatNumBoss;
+    wire beatFreq;
+    wire change; // change to boss music
     
+    assign change = 1;
+    assign pmod_2 = 1'd1;	//no gain(6dB)
+    assign pmod_4 = 1'd1;	//turn-on
 	//keyboard
 	inout PS2_DATA, PS2_CLK;
 	wire [511:0] key_down;
     wire [8:0] last_change;
     wire been_ready;
+    
+    always @(*) begin
+        if (change) begin
+            freq = freqBoss;
+        end else begin
+            freq = freqZelda;    
+        end
+    end
+    //Generate beat speed
+    PWM_gen btSpeedGen ( 
+         .clk(clk), 
+         .reset(rst),
+         .freq(BEAT_FREQ),
+         .duty(DUTY_BEST), 
+         .PWM(beatFreq)
+    );
+        
+    //manipulate beat
+    PlayerCtrlZelda playerCtrl_zelda ( 
+        .clk(beatFreq),
+        .reset(rst),
+        .ibeat(ibeatNumZelda)
+    );	
+    
+    PlayerCtrlBoss playerCtrl_boss ( 
+        .clk(beatFreq),
+        .reset(rst),
+        .ibeat(ibeatNumBoss)
+    );	
+        
+    //Generate variant freq. of tones
+    MusicZelda musicZelda ( 
+        .ibeatNum(ibeatNumZelda),
+        .tone(freqZelda)
+    );
+    
+    MusicBoss musicBoss(
+        .ibeatNum(ibeatNumBoss),
+        .tone(freqBoss)
+    );
+    
+    // Generate particular freq. signal
+    PWM_gen toneGen ( 
+          .clk(clk), 
+          .reset(rst), 
+          .freq(freq),
+          .duty(DUTY_BEST), 
+          .PWM(pmod_1)
+    );
 	//VGA
     output [3:0] vgaRed, vgaGreen, vgaBlue;
     output hsync, vsync;

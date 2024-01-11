@@ -2,126 +2,39 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Jan 11 07:31:18 2024
-# Process ID: 5608
-# Current directory: C:/verilog project/Legend of Chun-Yi Lee
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2104 C:\verilog project\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
-# Log file: C:/verilog project/Legend of Chun-Yi Lee/vivado.log
-# Journal file: C:/verilog project/Legend of Chun-Yi Lee\vivado.jou
+# Start of session at: Thu Jan 11 12:19:34 2024
+# Process ID: 11580
+# Current directory: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3440 C:\Users\nthu-326\Documents\GitHub\HardwareDesignLabFP\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
+# Log file: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/vivado.log
+# Journal file: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr}
+open_project {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr}
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/verilog project/Legend of Chun-Yi Lee/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 872.488 ; gain = 223.641
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 808.164 ; gain = 173.367
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/MusicZelda.v} {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/PWM.v} {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/MusicBoss.v} {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/PlayerCtrlBoss.v} {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/PlayerCtrlZelda.v} {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/stage_control.v}}
 update_compile_order -fileset sources_1
 reset_run synth_1
-reset_run BM_CY_front_walk_L_synth_1
-reset_run BM_CY_front_walk_R_synth_1
-reset_run BM_CY_right_stand_synth_1
-reset_run BM_CY_right_walk_synth_1
-reset_run BM_CY_left_stand_synth_1
-reset_run BM_CY_left_walk_synth_1
-reset_run BM_CY_back_stand_synth_1
-reset_run BM_CY_back_walk_L_synth_1
-reset_run BM_CY_back_walk_R_synth_1
-reset_run BM_overwall_wall_synth_1
-reset_run BM_computer_room_entrance_synth_1
-reset_run BM_CS_student_L_synth_1
-reset_run BM_CS_student_R_synth_1
-reset_run BM_CY_front_stand_synth_1
-reset_run BM_CY_back_attack_synth_1
-reset_run BM_CY_front_attack_synth_1
-reset_run BM_CY_left_attack_synth_1
-reset_run BM_CY_right_attack_synth_1
-reset_run BM_heart_synth_1
-reset_run BM_wooden_fpga_down_synth_1
-reset_run BM_wooden_fpga_up_synth_1
-reset_run BM_wooden_fpga_left_synth_1
-reset_run BM_wooden_fpga_right_synth_1
-reset_run BM_G_synth_1
-reset_run BM_M_synth_1
-reset_run BM_E_synth_1
-reset_run BM_O_synth_1
-reset_run BM_V_synth_1
-reset_run BM_R_synth_1
-reset_run BM_A_synth_1
-reset_run BM_Lv_synth_1
-reset_run BM_rupee_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_L'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_walk'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_walk'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_L'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_overwall_wall'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_computer_room_entrance'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_L'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_heart'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_down'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_up'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_left'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_right'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_G'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_M'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_E'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_O'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_V'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_A'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_Lv'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_rupee'...
-[Thu Jan 11 07:45:34 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, BM_CS_student_L_synth_1, BM_CS_student_R_synth_1, BM_CY_front_stand_synth_1, BM_CY_back_attack_synth_1, BM_CY_front_attack_synth_1, BM_CY_left_attack_synth_1, BM_CY_right_attack_synth_1, BM_heart_synth_1, BM_wooden_fpga_down_synth_1, BM_wooden_fpga_up_synth_1, BM_wooden_fpga_left_synth_1, BM_wooden_fpga_right_synth_1, BM_G_synth_1, BM_M_synth_1, BM_E_synth_1, BM_O_synth_1, BM_V_synth_1, BM_R_synth_1, BM_A_synth_1, BM_Lv_synth_1, BM_rupee_synth_1, synth_1...
-Run output will be captured here:
-BM_CY_front_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/runme.log
-BM_CY_front_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1/runme.log
-BM_CY_right_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1/runme.log
-BM_CY_right_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1/runme.log
-BM_CY_left_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1/runme.log
-BM_CY_left_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1/runme.log
-BM_CY_back_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1/runme.log
-BM_CY_back_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1/runme.log
-BM_CY_back_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1/runme.log
-BM_overwall_wall_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1/runme.log
-BM_computer_room_entrance_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1/runme.log
-BM_CS_student_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1/runme.log
-BM_CS_student_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1/runme.log
-BM_CY_front_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1/runme.log
-BM_CY_back_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1/runme.log
-BM_CY_front_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
-BM_CY_left_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
-BM_CY_right_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
-BM_heart_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_heart_synth_1/runme.log
-BM_wooden_fpga_down_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_down_synth_1/runme.log
-BM_wooden_fpga_up_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_up_synth_1/runme.log
-BM_wooden_fpga_left_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_left_synth_1/runme.log
-BM_wooden_fpga_right_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_right_synth_1/runme.log
-BM_G_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_G_synth_1/runme.log
-BM_M_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_M_synth_1/runme.log
-BM_E_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_E_synth_1/runme.log
-BM_O_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_O_synth_1/runme.log
-BM_V_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_V_synth_1/runme.log
-BM_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_R_synth_1/runme.log
-BM_A_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_A_synth_1/runme.log
-BM_Lv_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_Lv_synth_1/runme.log
-BM_rupee_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_rupee_synth_1/runme.log
-synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 07:45:38 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1327.090 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 12:25:37 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 12:25:37 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/constrs_1/new/cons.xdc}}] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/constrs_1/new/cons.xdc}}
+add_files -fileset constrs_1 -norecurse {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/cons.xdc}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 12:30:29 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 12:30:29 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -144,575 +57,237 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1327.090 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/Lv.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/Lv.coe'
-set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/Lv.coe}] [get_ips BM_Lv]
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/Lv.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/Lv.coe'
-generate_target all [get_files  {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_Lv'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_Lv'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_Lv'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_Lv'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_Lv'...
-catch { config_ip_cache -export [get_ips -all BM_Lv] }
-export_ip_user_files -of_objects [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}] -no_script -sync -force -quiet
-reset_run BM_Lv_synth_1
-launch_runs -jobs 10 BM_Lv_synth_1
-[Thu Jan 11 08:02:15 2024] Launched BM_Lv_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_Lv_synth_1/runme.log
-export_simulation -of_objects [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/colon.coe'
-set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe}] [get_ips BM_colon]
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/colon.coe'
-generate_target all [get_files  {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_colon'...
-catch { config_ip_cache -export [get_ips -all BM_colon] }
-export_ip_user_files -of_objects [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}] -no_script -sync -force -quiet
-reset_run BM_colon_synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_colon_synth_1
-
-launch_runs -jobs 10 BM_colon_synth_1
-[Thu Jan 11 08:02:39 2024] Launched BM_colon_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_colon_synth_1/runme.log
-export_simulation -of_objects [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-reset_run BM_CY_front_walk_L_synth_1
-reset_run BM_CY_front_walk_R_synth_1
-reset_run BM_CY_right_stand_synth_1
-reset_run BM_CY_right_walk_synth_1
-reset_run BM_CY_left_stand_synth_1
-reset_run BM_CY_left_walk_synth_1
-reset_run BM_CY_back_stand_synth_1
-reset_run BM_CY_back_walk_L_synth_1
-reset_run BM_CY_back_walk_R_synth_1
-reset_run BM_overwall_wall_synth_1
-reset_run BM_computer_room_entrance_synth_1
-reset_run BM_CS_student_L_synth_1
-reset_run BM_CS_student_R_synth_1
-reset_run BM_CY_front_stand_synth_1
-reset_run BM_CY_back_attack_synth_1
-reset_run BM_CY_front_attack_synth_1
-reset_run BM_CY_left_attack_synth_1
-reset_run BM_CY_right_attack_synth_1
-reset_run BM_heart_synth_1
-reset_run BM_wooden_fpga_down_synth_1
-reset_run BM_wooden_fpga_up_synth_1
-reset_run BM_wooden_fpga_left_synth_1
-reset_run BM_wooden_fpga_right_synth_1
-reset_run BM_G_synth_1
-reset_run BM_M_synth_1
-reset_run BM_E_synth_1
-reset_run BM_O_synth_1
-reset_run BM_V_synth_1
-reset_run BM_R_synth_1
-reset_run BM_A_synth_1
-reset_run BM_rupee_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_L'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_walk_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_walk'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_walk'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_L'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_walk_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_overwall_wall'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_computer_room_entrance'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_L'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CS_student_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_stand'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_back_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_front_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_left_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_CY_right_attack'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_heart'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_down'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_up'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_left'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_wooden_fpga_right'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_G'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_M'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_E'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_O'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_V'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_R'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_A'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_rupee'...
-[Thu Jan 11 08:05:29 2024] Launched BM_CY_front_walk_L_synth_1, BM_CY_front_walk_R_synth_1, BM_CY_right_stand_synth_1, BM_CY_right_walk_synth_1, BM_CY_left_stand_synth_1, BM_CY_left_walk_synth_1, BM_CY_back_stand_synth_1, BM_CY_back_walk_L_synth_1, BM_CY_back_walk_R_synth_1, BM_overwall_wall_synth_1, BM_computer_room_entrance_synth_1, BM_CS_student_L_synth_1, BM_CS_student_R_synth_1, BM_CY_front_stand_synth_1, BM_CY_back_attack_synth_1, BM_CY_front_attack_synth_1, BM_CY_left_attack_synth_1, BM_CY_right_attack_synth_1, BM_heart_synth_1, BM_wooden_fpga_down_synth_1, BM_wooden_fpga_up_synth_1, BM_wooden_fpga_left_synth_1, BM_wooden_fpga_right_synth_1, BM_G_synth_1, BM_M_synth_1, BM_E_synth_1, BM_O_synth_1, BM_V_synth_1, BM_R_synth_1, BM_A_synth_1, BM_rupee_synth_1, synth_1...
-Run output will be captured here:
-BM_CY_front_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_L_synth_1/runme.log
-BM_CY_front_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_walk_R_synth_1/runme.log
-BM_CY_right_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_stand_synth_1/runme.log
-BM_CY_right_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_walk_synth_1/runme.log
-BM_CY_left_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_stand_synth_1/runme.log
-BM_CY_left_walk_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_walk_synth_1/runme.log
-BM_CY_back_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_stand_synth_1/runme.log
-BM_CY_back_walk_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_L_synth_1/runme.log
-BM_CY_back_walk_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_walk_R_synth_1/runme.log
-BM_overwall_wall_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_overwall_wall_synth_1/runme.log
-BM_computer_room_entrance_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_computer_room_entrance_synth_1/runme.log
-BM_CS_student_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_L_synth_1/runme.log
-BM_CS_student_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CS_student_R_synth_1/runme.log
-BM_CY_front_stand_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_stand_synth_1/runme.log
-BM_CY_back_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_back_attack_synth_1/runme.log
-BM_CY_front_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_front_attack_synth_1/runme.log
-BM_CY_left_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_left_attack_synth_1/runme.log
-BM_CY_right_attack_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_CY_right_attack_synth_1/runme.log
-BM_heart_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_heart_synth_1/runme.log
-BM_wooden_fpga_down_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_down_synth_1/runme.log
-BM_wooden_fpga_up_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_up_synth_1/runme.log
-BM_wooden_fpga_left_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_left_synth_1/runme.log
-BM_wooden_fpga_right_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_wooden_fpga_right_synth_1/runme.log
-BM_G_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_G_synth_1/runme.log
-BM_M_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_M_synth_1/runme.log
-BM_E_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_E_synth_1/runme.log
-BM_O_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_O_synth_1/runme.log
-BM_V_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_V_synth_1/runme.log
-BM_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_R_synth_1/runme.log
-BM_A_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_A_synth_1/runme.log
-BM_rupee_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_rupee_synth_1/runme.log
-synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 08:05:33 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2650.355 ; gain = 0.000
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2019.2
-  **** Build date : Nov  6 2019 at 22:12:23
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-****** Xilinx cs_server v2019.2.0
-  **** Build date : Nov 07 2019-13:28:22
-    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2650.355 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
 INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/colon.coe'
-set_property -dict [list CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe}] [get_ips BM_colon]
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/colon.coe'
-generate_target all [get_files  {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_colon'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_colon'...
-catch { config_ip_cache -export [get_ips -all BM_colon] }
-export_ip_user_files -of_objects [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}] -no_script -sync -force -quiet
-reset_run BM_colon_synth_1
-launch_runs -jobs 10 BM_colon_synth_1
-[Thu Jan 11 08:12:54 2024] Launched BM_colon_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_colon_synth_1/runme.log
-export_simulation -of_objects [get_files {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:59 . Memory (MB): peak = 2364.461 ; gain = 1.152
+endgroup
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 08:14:48 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 08:14:48 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2019.2
-  **** Build date : Nov  6 2019 at 22:12:23
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-****** Xilinx cs_server v2019.2.0
-  **** Build date : Nov 07 2019-13:28:22
-    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2650.355 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 12:48:36 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 12:48:36 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 12:49:26 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 12:49:26 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
 INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 08:26:01 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 08:26:01 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711740A
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/0.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/0.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_0 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_0} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/0.coe}] [get_ips BM_0]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_0' to 'BM_0' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/0.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/0.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_0'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_0'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_0'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_0'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_0'...
-catch { config_ip_cache -export [get_ips -all BM_0] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}]
-launch_runs -jobs 10 BM_0_synth_1
-[Thu Jan 11 08:56:46 2024] Launched BM_0_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_0_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/0.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/0.coe'
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/1.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/1.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_1 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_1} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/1.coe}] [get_ips BM_1]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_1' to 'BM_1' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/1.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/1.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_1'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_1'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_1'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_1'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_1'...
-catch { config_ip_cache -export [get_ips -all BM_1] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}]
-launch_runs -jobs 10 BM_1_synth_1
-[Thu Jan 11 08:57:26 2024] Launched BM_1_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_1_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/2.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/2.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_2 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_2} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/2.coe}] [get_ips BM_2]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_2' to 'BM_2' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/2.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/2.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_2'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_2'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_2'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_2'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_2'...
-catch { config_ip_cache -export [get_ips -all BM_2] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}]
-launch_runs -jobs 10 BM_2_synth_1
-[Thu Jan 11 08:57:52 2024] Launched BM_2_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_2_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/3.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/3.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_3 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_3} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/3.coe}] [get_ips BM_3]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_3' to 'BM_3' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/3.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/3.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_3'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_3'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_3'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_3'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_3'...
-catch { config_ip_cache -export [get_ips -all BM_3] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}]
-launch_runs -jobs 10 BM_3_synth_1
-[Thu Jan 11 08:58:19 2024] Launched BM_3_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_3_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/4.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/4.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_4 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_4} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/4.coe}] [get_ips BM_4]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_4' to 'BM_4' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/4.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/4.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_4'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_4'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_4'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_4'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_4'...
-catch { config_ip_cache -export [get_ips -all BM_4] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}]
-launch_runs -jobs 10 BM_4_synth_1
-[Thu Jan 11 08:58:46 2024] Launched BM_4_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_4_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/5.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/5.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_5 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_5} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/5.coe}] [get_ips BM_5]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_5' to 'BM_5' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/5.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/5.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_5'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_5'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_5'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_5'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_5'...
-catch { config_ip_cache -export [get_ips -all BM_5] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}]
-launch_runs -jobs 10 BM_5_synth_1
-[Thu Jan 11 08:59:15 2024] Launched BM_5_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_5_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/6.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/6.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_6 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_6} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/6.coe}] [get_ips BM_6]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_6' to 'BM_6' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/6.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/6.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_6'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_6'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_6'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_6'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_6'...
-catch { config_ip_cache -export [get_ips -all BM_6] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}]
-launch_runs -jobs 10 BM_6_synth_1
-[Thu Jan 11 08:59:43 2024] Launched BM_6_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_6_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/7.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/7.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_7 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_7} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/7.coe}] [get_ips BM_7]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_7' to 'BM_7' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/7.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/7.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_7'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_7'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_7'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_7'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_7'...
-catch { config_ip_cache -export [get_ips -all BM_7] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}]
-launch_runs -jobs 10 BM_7_synth_1
-[Thu Jan 11 09:00:08 2024] Launched BM_7_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_7_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/8.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/8.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_8 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_8} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/8.coe}] [get_ips BM_8]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_8' to 'BM_8' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/8.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/8.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_8'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_8'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_8'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_8'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_8'...
-catch { config_ip_cache -export [get_ips -all BM_8] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}]
-launch_runs -jobs 10 BM_8_synth_1
-[Thu Jan 11 09:00:36 2024] Launched BM_8_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_8_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/9.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/9.coe'
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_9 -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Component_Name {BM_9} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/9.coe}] [get_ips BM_9]
-WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_9' to 'BM_9' is not allowed and is ignored.
-INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/9.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/9.coe'
-generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_9'...
-generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_9'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_9'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_9'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_9'...
-catch { config_ip_cache -export [get_ips -all BM_9] }
-export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}]
-launch_runs -jobs 10 BM_9_synth_1
-[Thu Jan 11 09:01:03 2024] Launched BM_9_synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_9_synth_1/runme.log
-export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:10:48 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:10:48 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-add_files -norecurse {{C:/verilog project/Legend of Chun-Yi Lee/count_kill.v}}
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:12:22 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:12:22 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:14:38 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:14:38 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:17:31 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:17:32 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:18:54 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:18:54 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2019.2
-  **** Build date : Nov  6 2019 at 22:12:23
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-****** Xilinx cs_server v2019.2.0
-  **** Build date : Nov 07 2019-13:28:22
-    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2683.070 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:23:05 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:23:05 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-reset_run impl_1
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:02 ; elapsed = 00:00:59 . Memory (MB): peak = 2369.711 ; gain = 0.000
+endgroup
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Thu Jan 11 12:59:14 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
 WARNING: [Vivado 12-1017] Problems encountered:
 1. PID not specified
 
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 09:25:16 2024] Launched synth_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
-[Thu Jan 11 09:25:16 2024] Launched impl_1...
-Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 12:59:29 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 12:59:29 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
 INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:02 ; elapsed = 00:00:59 . Memory (MB): peak = 2375.246 ; gain = 0.000
+endgroup
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 13:09:23 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 13:09:23 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2381.219 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:59 . Memory (MB): peak = 2396.473 ; gain = 0.000
+endgroup
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Jan 11 13:17:53 2024] Launched synth_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 13:17:53 2024] Launched impl_1...
+Run output will be captured here: C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:02 ; elapsed = 00:00:58 . Memory (MB): peak = 2396.473 ; gain = 0.000
+endgroup
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 13:25:50 2024...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 12:19:45 2024...

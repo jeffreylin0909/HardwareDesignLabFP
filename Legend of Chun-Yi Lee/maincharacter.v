@@ -35,7 +35,7 @@ module maincharacter (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_facing = 4'h0;
         end else begin
             if (W_signal)begin
@@ -61,7 +61,7 @@ module maincharacter (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_change_state_counter = 3'h0;
         end else begin
             n_change_state_counter = change_state_counter+1;
@@ -80,7 +80,7 @@ module maincharacter (
         if (stage==4'hf)begin
             n_lives = 4'd0;
         end else begin
-            if (stage==4'h0)begin
+            if (stage==4'h0 || stage==4'he)begin
                 n_lives = 4'd3;
             end else begin
                 if (is_attacked && hurt == 8'd0)begin
@@ -101,7 +101,7 @@ module maincharacter (
         end
     end
     always@(*)begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_hurt = 8'd0;
         end else begin
             if (hurt==8'd0)begin
@@ -125,7 +125,7 @@ module maincharacter (
         end
     end
     always @(*) begin //state always block 2
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_state = EMPTY;
         end else begin
             if (change_state_counter == 4'h0)begin
@@ -185,7 +185,7 @@ module maincharacter (
         end
     end
     always @ (*) begin
-        if (stage==4'h0 || stage==4'hf)begin
+        if (stage==4'h0 || stage==4'he || stage==4'hf)begin
             n_pos_h = 150;
             n_pos_v = 110;
         end else begin

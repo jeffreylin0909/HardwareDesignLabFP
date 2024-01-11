@@ -65,64 +65,64 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 5
+  set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/wt} [current_project]
-  set_property parent.project_path {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr} [current_project]
-  set_property ip_repo_paths {{C:/verilog project/Legend of Chun-Yi Lee/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr} [current_project]
+  set_property ip_repo_paths {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/ip}} [current_project]
   update_ip_catalog
-  set_property ip_output_repo {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/ip}} [current_project]
+  set_property ip_output_repo {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_G/BM_G.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_M/BM_M.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E/BM_E.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O/BM_O.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V/BM_V.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R/BM_R.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A/BM_A.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}
-  read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}
-  read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}
-  read_xdc {{C:/verilog project/Legend of Chun-Yi Lee/cons.xdc}}
+  add_files -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/Top.dcp}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_L/BM_CY_front_walk_L.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_walk_R/BM_CY_front_walk_R.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_stand/BM_CY_right_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_walk/BM_CY_right_walk.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_stand/BM_CY_left_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_walk/BM_CY_left_walk.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_stand/BM_CY_back_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_L/BM_CY_back_walk_L.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_walk_R/BM_CY_back_walk_R.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_overwall_wall/BM_overwall_wall.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_computer_room_entrance/BM_computer_room_entrance.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_L/BM_CS_student_L.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CS_student_R/BM_CS_student_R.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_stand_1/BM_CY_front_stand.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_back_attack/BM_CY_back_attack.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_front_attack/BM_CY_front_attack.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_left_attack/BM_CY_left_attack.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_CY_right_attack/BM_CY_right_attack.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_heart/BM_heart.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_down/BM_wooden_fpga_down.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_up/BM_wooden_fpga_up.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_left/BM_wooden_fpga_left.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_wooden_fpga_right/BM_wooden_fpga_right.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_G/BM_G.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_M/BM_M.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E/BM_E.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O/BM_O.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V/BM_V.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R/BM_R.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A/BM_A.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}
+  read_ip -quiet {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}
+  read_xdc {{C:/Users/nthu-326/Documents/GitHub/HardwareDesignLabFP/Legend of Chun-Yi Lee/cons.xdc}}
   link_design -top Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -220,7 +220,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force Top.mmi }
-  write_bitstream -force Top.bit 
+  write_bitstream -force Top.bit -bin_file
   catch {write_debug_probes -quiet -force Top}
   catch {file copy -force Top.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb

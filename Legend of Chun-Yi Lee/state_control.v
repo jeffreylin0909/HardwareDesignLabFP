@@ -164,13 +164,15 @@ module state_control(
                                   wall_monster_collisions[1][60]|wall_monster_collisions[1][61]|wall_monster_collisions[1][62]|wall_monster_collisions[1][63];
 
     wire weapon_monster_collision[3:0];
+    wire changing_stage;
 
     stage_control SC(
         .clk(clk), .rst(rst),
         .kills(kills),
         .gameover(gameover),
         .SPACE_signal(SPACE_signal),
-        .stage(stage)
+        .stage(stage),
+        .changing_stage(changing_stage)
     );
 
     lives_gameover_hearts LDH(
@@ -202,7 +204,7 @@ module state_control(
     //monster_0
     monster m0(
 	    .clk(clk), 
-	    .rst(rst), 
+	    .rst(rst|changing_stage), 
 	    .stage(stage), 
         .state(pixel_idx_monster_0),
 	    .pos_h(pos_h_monster_0), 
@@ -217,7 +219,7 @@ module state_control(
     //monster_1
     monster m1(
 	    .clk(clk), 
-	    .rst(rst), 
+	    .rst(rst|changing_stage), 
 	    .stage(stage), 
         .state(pixel_idx_monster_1),
 	    .pos_h(pos_h_monster_1), 
@@ -259,7 +261,7 @@ module state_control(
     assign pos_h_kill_counter = 220;
     assign pos_v_kill_counter = 240;
 
-    assign pixel_idx_levl_counter = 0;
+    assign pixel_idx_levl_counter = stage;
     assign pos_h_levl_counter = 280;
     assign pos_v_levl_counter = 240;
 
