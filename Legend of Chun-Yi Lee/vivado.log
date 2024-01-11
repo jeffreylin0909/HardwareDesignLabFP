@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Jan 11 18:40:07 2024
-# Process ID: 18876
+# Start of session at: Thu Jan 11 18:57:30 2024
+# Process ID: 17176
 # Current directory: C:/verilog project/Legend of Chun-Yi Lee
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19020 C:\verilog project\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13968 C:\verilog project\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
 # Log file: C:/verilog project/Legend of Chun-Yi Lee/vivado.log
 # Journal file: C:/verilog project/Legend of Chun-Yi Lee\vivado.jou
 #-----------------------------------------------------------
@@ -16,8 +16,19 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/verilog project/Legend of Chun-Yi Lee/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 967.926 ; gain = 304.656
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 996.953 ; gain = 288.363
 update_compile_order -fileset sources_1
+add_files -norecurse {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/imports/Legend of Chun-Yi Lee/PlayerCtrlBoss.v} {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/imports/Legend of Chun-Yi Lee/PlayerCtrlZelda.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/imports/Legend of Chun-Yi Lee/stage_control.v} {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/imports/Legend of Chun-Yi Lee/monster.v}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Thu Jan 11 19:13:40 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 19:13:40 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -40,17 +51,119 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2360.988 ; gain = 15.344
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2370.938 ; gain = 2.102
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
 set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
-reset_run impl_1 -prev_step 
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:51 . Memory (MB): peak = 3633.500 ; gain = 0.000
+endgroup
+reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Thu Jan 11 18:41:09 2024] Launched impl_1...
+[Thu Jan 11 19:54:20 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 19:54:20 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+ERROR: [Labtools 27-3419] Disconnecting from hw_server since it's not responding to requests.  It is recommended to investigate hw_server to find any issues.
+Erase Operation failed.
+ERROR: [Labtools 27-2248] Operation was cancelled.
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 3633.500 ; gain = 0.000
+INFO: [Common 17-344] 'program_hw_cfgmem' was cancelled
+ERROR: [Labtoolstcl 44-695] HW Server shut down, disconnecting from server: localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:53 . Memory (MB): peak = 3633.500 ; gain = 0.000
+endgroup
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Thu Jan 11 20:05:43 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 20:05:43 2024] Launched impl_1...
 Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
 set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
 set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
@@ -80,5 +193,284 @@ Erase Operation successful.
 Performing Program and Verify Operations...
 Program/Verify Operation successful.
 INFO: [Labtoolstcl 44-377] Flash programming completed successfully
-program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:54 . Memory (MB): peak = 3599.863 ; gain = 0.000
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:52 . Memory (MB): peak = 3633.500 ; gain = 0.000
 endgroup
+close_hw_manager
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/Y_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/Y_y.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_Y_y -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_Y_y} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/Y_y.coe}] [get_ips BM_Y_y]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_Y_y' to 'BM_Y_y' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/Y_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/Y_y.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Y_y/BM_Y_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_Y_y'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Y_y/BM_Y_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_Y_y'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_Y_y'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_Y_y'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_Y_y'...
+catch { config_ip_cache -export [get_ips -all BM_Y_y] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Y_y/BM_Y_y.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Y_y/BM_Y_y.xci}}]
+launch_runs -jobs 10 BM_Y_y_synth_1
+[Thu Jan 11 20:17:19 2024] Launched BM_Y_y_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_Y_y_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Y_y/BM_Y_y.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/O_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/O_y.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_O_y -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_O_y} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/O_y.coe}] [get_ips BM_O_y]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_O_y' to 'BM_O_y' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/O_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/O_y.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_y/BM_O_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_O_y'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_y/BM_O_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_O_y'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_O_y'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_O_y'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_O_y'...
+catch { config_ip_cache -export [get_ips -all BM_O_y] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_y/BM_O_y.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_y/BM_O_y.xci}}]
+launch_runs -jobs 10 BM_O_y_synth_1
+[Thu Jan 11 20:18:14 2024] Launched BM_O_y_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_O_y_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_y/BM_O_y.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/U_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/U_y.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_U_y -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_U_y} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/U_y.coe}] [get_ips BM_U_y]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_U_y' to 'BM_U_y' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/U_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/U_y.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_U_y/BM_U_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_U_y'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_U_y/BM_U_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_U_y'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_U_y'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_U_y'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_U_y'...
+catch { config_ip_cache -export [get_ips -all BM_U_y] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_U_y/BM_U_y.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_U_y/BM_U_y.xci}}]
+launch_runs -jobs 10 BM_U_y_synth_1
+[Thu Jan 11 20:18:54 2024] Launched BM_U_y_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_U_y_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_U_y/BM_U_y.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/W_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/W_y.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_W_y -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_W_y} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/W_y.coe}] [get_ips BM_W_y]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_W_y' to 'BM_W_y' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/W_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/W_y.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_W_y/BM_W_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_W_y'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_W_y/BM_W_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_W_y'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_W_y'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_W_y'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_W_y'...
+catch { config_ip_cache -export [get_ips -all BM_W_y] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_W_y/BM_W_y.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_W_y/BM_W_y.xci}}]
+launch_runs -jobs 10 BM_W_y_synth_1
+[Thu Jan 11 20:19:51 2024] Launched BM_W_y_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_W_y_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_W_y/BM_W_y.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/I_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/I_y.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_I_y -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_I_y} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/I_y.coe}] [get_ips BM_I_y]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_I_y' to 'BM_I_y' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/I_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/I_y.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_I_y/BM_I_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_I_y'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_I_y/BM_I_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_I_y'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_I_y'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_I_y'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_I_y'...
+catch { config_ip_cache -export [get_ips -all BM_I_y] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_I_y/BM_I_y.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_I_y/BM_I_y.xci}}]
+launch_runs -jobs 10 BM_I_y_synth_1
+[Thu Jan 11 20:21:01 2024] Launched BM_I_y_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_I_y_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_I_y/BM_I_y.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/N_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/N_y.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_N_y -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_N_y} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/N_y.coe}] [get_ips BM_N_y]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'BM_N_y' to 'BM_N_y' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/verilog project/Legend of Chun-Yi Lee/Assets/N_y.coe' provided. It will be converted relative to IP Instance files '../../../../Assets/N_y.coe'
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_N_y/BM_N_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BM_N_y'...
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_N_y/BM_N_y.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_N_y'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BM_N_y'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BM_N_y'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BM_N_y'...
+catch { config_ip_cache -export [get_ips -all BM_N_y] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_N_y/BM_N_y.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_N_y/BM_N_y.xci}}]
+launch_runs -jobs 10 BM_N_y_synth_1
+[Thu Jan 11 20:21:34 2024] Launched BM_N_y_synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_N_y_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_N_y/BM_N_y.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+reset_run BM_P_w_synth_1
+reset_run BM_R_w_synth_1
+reset_run BM_E_w_synth_1
+reset_run BM_S_w_synth_1
+reset_run BM_T_w_synth_1
+reset_run BM_O_w_synth_1
+reset_run BM_A_w_synth_1
+reset_run BM_EECS_student_L_synth_1
+reset_run BM_EECS_student_R_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_P_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_R_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_E_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_S_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_T_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_O_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_A_w'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_EECS_student_L'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BM_EECS_student_R'...
+[Thu Jan 11 20:25:05 2024] Launched BM_P_w_synth_1, BM_R_w_synth_1, BM_E_w_synth_1, BM_S_w_synth_1, BM_T_w_synth_1, BM_O_w_synth_1, BM_A_w_synth_1, BM_EECS_student_L_synth_1, BM_EECS_student_R_synth_1, synth_1...
+Run output will be captured here:
+BM_P_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_P_w_synth_1/runme.log
+BM_R_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_R_w_synth_1/runme.log
+BM_E_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_E_w_synth_1/runme.log
+BM_S_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_S_w_synth_1/runme.log
+BM_T_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_T_w_synth_1/runme.log
+BM_O_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_O_w_synth_1/runme.log
+BM_A_w_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_A_w_synth_1/runme.log
+BM_EECS_student_L_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_EECS_student_L_synth_1/runme.log
+BM_EECS_student_R_synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_EECS_student_R_synth_1/runme.log
+synth_1: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 20:25:06 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711740A
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+ERROR: [Labtools 27-2149] File C:/Xilinx/Vivado/2019.2/data/xicom/cfgmem/bitfile/spi_xc7a35t_pullnone.bit not found. Check file name and file permissions.
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:01 ; elapsed = 00:00:51 . Memory (MB): peak = 3633.500 ; gain = 0.000
+endgroup
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Thu Jan 11 20:35:38 2024] Launched synth_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/synth_1/runme.log
+[Thu Jan 11 20:35:38 2024] Launched impl_1...
+Run output will be captured here: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 3633.500 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4404 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 3633.500 ; gain = 0.000
+INFO: [Common 17-344] 'open_run' was cancelled
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 1   Memory Type : 2   Memory Capacity : 15   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:00:51 . Memory (MB): peak = 4089.246 ; gain = 0.000
+endgroup
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 20:45:37 2024...

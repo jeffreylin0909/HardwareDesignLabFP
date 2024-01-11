@@ -12,6 +12,9 @@ module stage_control(
 
     reg [7:0] n_change_stage_counter;
 
+    wire SPACE_signal_op;
+    onepulse OP(SPACE_signal, SPACE_signal_op, clk);
+
     //for change_stage_counter
     always@(posedge clk) begin
 	   if (rst)begin
@@ -69,17 +72,6 @@ module stage_control(
                     n_change_stage_counter = 8'd100;
                 end
             end
-            4'h5:begin
-                if(kills == 4'h9)begin
-                    if (change_stage_counter == 0)begin
-                        n_change_stage_counter = 8'd100;
-                    end else begin
-                        n_change_stage_counter = change_stage_counter-1;
-                    end
-                end else begin
-                    n_change_stage_counter = 8'd100;
-                end
-            end
             4'he:begin
                 n_change_stage_counter = 8'd100;
             end
@@ -102,7 +94,7 @@ module stage_control(
 	always@(*)begin
         case (stage)
             4'h0:begin
-                if (SPACE_signal)begin
+                if (SPACE_signal_op)begin
                     next_stage = 4'h1;
                 end else begin
                     next_stage = stage;
@@ -139,29 +131,20 @@ module stage_control(
                 if (gameover)begin
                     next_stage = 4'hf;
                 end else if(change_stage_counter == 0)begin
-                    next_stage = 4'h5;
-                end else begin
-                    next_stage = stage;
-                end
-            end
-            4'h5:begin
-                if (gameover)begin
-                    next_stage = 4'hf;
-                end else if(change_stage_counter == 0)begin
                     next_stage = 4'he;
                 end else begin
                     next_stage = stage;
                 end
             end
             4'he:begin
-                if (SPACE_signal)begin
+                if (SPACE_signal_op)begin
                     next_stage = 4'h0;
                 end else begin
                     next_stage = stage;
                 end
             end
             4'hf:begin
-                if (SPACE_signal)begin
+                if (SPACE_signal_op)begin
                     next_stage = 4'h0;
                 end else begin
                     next_stage = stage;

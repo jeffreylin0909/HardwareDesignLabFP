@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BM_EECS_student_R_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704964964">
+<GenRun Id="BM_EECS_student_R_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704975905">
   <File Type="PA-TCL" Name="BM_EECS_student_R.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="BM_EECS_student_R_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BM_EECS_student_R_reports.tcl"/>
   <File Type="RDS-RDS" Name="BM_EECS_student_R.vds"/>
+  <File Type="RDS-UTIL" Name="BM_EECS_student_R_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BM_EECS_student_R_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BM_EECS_student_R.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="BM_EECS_student_R_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="BM_EECS_student_R_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BM_EECS_student_R">
     <File Path="$PSRCDIR/sources_1/ip/BM_EECS_student_R/BM_EECS_student_R.xci">
       <FileInfo>

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 18:31:58 2024
+| Date         : Thu Jan 11 20:37:53 2024
 | Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_placed.rpt -pb Top_utilization_placed.pb
 | Design       : Top
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs              | 14211 |     0 |     20800 | 68.32 |
-|   LUT as Logic          | 14211 |     0 |     20800 | 68.32 |
+| Slice LUTs              | 19187 |     0 |     20800 | 92.25 |
+|   LUT as Logic          | 19187 |     0 |     20800 | 92.25 |
 |   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   650 |     0 |     41600 |  1.56 |
-|   Register as Flip Flop |   555 |     0 |     41600 |  1.33 |
+| Slice Registers         |   673 |     0 |     41600 |  1.62 |
+|   Register as Flip Flop |   578 |     0 |     41600 |  1.39 |
 |   Register as Latch     |    95 |     0 |     41600 |  0.23 |
 | F7 Muxes                |    67 |     0 |     16300 |  0.41 |
 | F8 Muxes                |     5 |     0 |      8150 |  0.06 |
@@ -57,7 +57,7 @@ Table of Contents
 | 28    |          Yes |           - |          Set |
 | 267   |          Yes |           - |        Reset |
 | 44    |          Yes |         Set |            - |
-| 311   |          Yes |       Reset |            - |
+| 334   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,21 +67,21 @@ Table of Contents
 +--------------------------------------------+-------+-------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Available | Util% |
 +--------------------------------------------+-------+-------+-----------+-------+
-| Slice                                      |  4397 |     0 |      8150 | 53.95 |
-|   SLICEL                                   |  3040 |     0 |           |       |
-|   SLICEM                                   |  1357 |     0 |           |       |
-| LUT as Logic                               | 14211 |     0 |     20800 | 68.32 |
+| Slice                                      |  5880 |     0 |      8150 | 72.15 |
+|   SLICEL                                   |  4090 |     0 |           |       |
+|   SLICEM                                   |  1790 |     0 |           |       |
+| LUT as Logic                               | 19187 |     0 |     20800 | 92.25 |
 |   using O5 output only                     |     0 |       |           |       |
-|   using O6 output only                     |  9783 |       |           |       |
-|   using O5 and O6                          |  4428 |       |           |       |
+|   using O6 output only                     | 12826 |       |           |       |
+|   using O5 and O6                          |  6361 |       |           |       |
 | LUT as Memory                              |     0 |     0 |      9600 |  0.00 |
 |   LUT as Distributed RAM                   |     0 |     0 |           |       |
 |   LUT as Shift Register                    |     0 |     0 |           |       |
-| Slice Registers                            |   650 |     0 |     41600 |  1.56 |
-|   Register driven from within the Slice    |   419 |       |           |       |
-|   Register driven from outside the Slice   |   231 |       |           |       |
-|     LUT in front of the register is unused |    74 |       |           |       |
-|     LUT in front of the register is used   |   157 |       |           |       |
+| Slice Registers                            |   673 |     0 |     41600 |  1.62 |
+|   Register driven from within the Slice    |   448 |       |           |       |
+|   Register driven from outside the Slice   |   225 |       |           |       |
+|     LUT in front of the register is unused |    91 |       |           |       |
+|     LUT in front of the register is used   |   134 |       |           |       |
 | Unique Control Sets                        |    37 |       |      8150 |  0.45 |
 +--------------------------------------------+-------+-------+-----------+-------+
 * Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
@@ -93,10 +93,10 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    | 35.5 |     0 |        50 | 71.00 |
+| Block RAM Tile    | 44.5 |     0 |        50 | 89.00 |
 |   RAMB36/FIFO*    |    0 |     0 |        50 |  0.00 |
-|   RAMB18          |   71 |     0 |       100 | 71.00 |
-|     RAMB18E1 only |   71 |       |           |       |
+|   RAMB18          |   89 |     0 |       100 | 89.00 |
+|     RAMB18E1 only |   89 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -107,8 +107,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   48 |     0 |        90 | 53.33 |
-|   DSP48E1 only |   48 |       |           |       |
+| DSPs           |   84 |     0 |        90 | 93.33 |
+|   DSP48E1 only |   84 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -179,19 +179,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 4333 |                 LUT |
-| LUT3     | 4023 |                 LUT |
-| LUT4     | 3901 |                 LUT |
-| LUT6     | 3168 |                 LUT |
-| CARRY4   | 3026 |          CarryLogic |
-| LUT5     | 2073 |                 LUT |
-| LUT1     | 1141 |                 LUT |
-| FDRE     |  311 |        Flop & Latch |
+| LUT3     | 5966 |                 LUT |
+| LUT4     | 5866 |                 LUT |
+| LUT2     | 5666 |                 LUT |
+| CARRY4   | 4157 |          CarryLogic |
+| LUT6     | 3786 |                 LUT |
+| LUT5     | 2713 |                 LUT |
+| LUT1     | 1551 |                 LUT |
+| FDRE     |  334 |        Flop & Latch |
 | FDCE     |  191 |        Flop & Latch |
+| RAMB18E1 |   89 |        Block Memory |
+| DSP48E1  |   84 |    Block Arithmetic |
 | LDCE     |   76 |        Flop & Latch |
-| RAMB18E1 |   71 |        Block Memory |
 | MUXF7    |   67 |               MuxFx |
-| DSP48E1  |   48 |    Block Arithmetic |
 | FDSE     |   44 |        Flop & Latch |
 | LDPE     |   19 |        Flop & Latch |
 | OBUF     |   17 |                  IO |
@@ -218,7 +218,10 @@ Table of Contents
 |          Ref Name         | Used |
 +---------------------------+------+
 | BM_heart                  |    3 |
+| BM_T_w                    |    3 |
+| BM_S_w                    |    3 |
 | BM_colon                  |    2 |
+| BM_R_w                    |    2 |
 | BM_NTHU_student_R         |    2 |
 | BM_NTHU_student_L         |    2 |
 | BM_EECS_student_R         |    2 |
@@ -246,12 +249,21 @@ Table of Contents
 | BM_rupee                  |    1 |
 | BM_overwall_wall          |    1 |
 | BM_computer_room_entrance |    1 |
+| BM_Y_y                    |    1 |
+| BM_W_y                    |    1 |
 | BM_V                      |    1 |
+| BM_U_y                    |    1 |
 | BM_R                      |    1 |
+| BM_P_w                    |    1 |
+| BM_O_y                    |    1 |
+| BM_O_w                    |    1 |
 | BM_O                      |    1 |
+| BM_N_y                    |    1 |
 | BM_M                      |    1 |
 | BM_Lv                     |    1 |
+| BM_I_y                    |    1 |
 | BM_G                      |    1 |
+| BM_E_w                    |    1 |
 | BM_CY_right_walk          |    1 |
 | BM_CY_right_stand         |    1 |
 | BM_CY_right_attack        |    1 |
@@ -266,6 +278,7 @@ Table of Contents
 | BM_CY_back_walk_L         |    1 |
 | BM_CY_back_stand          |    1 |
 | BM_CY_back_attack         |    1 |
+| BM_A_w                    |    1 |
 | BM_A                      |    1 |
 +---------------------------+------+
 

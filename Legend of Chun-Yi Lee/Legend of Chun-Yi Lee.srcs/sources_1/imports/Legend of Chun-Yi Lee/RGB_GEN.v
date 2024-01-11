@@ -14,14 +14,32 @@ module RGB_GEN(
     input [11:0] pixel_heart_ins_0,
     input [11:0] pixel_heart_ins_1,
     input [11:0] pixel_heart_ins_2,
-    input [11:0] pixel_G,
-    input [11:0] pixel_A,
-    input [11:0] pixel_M,
-    input [11:0] pixel_E_1,
-    input [11:0] pixel_O,
-    input [11:0] pixel_V,
-    input [11:0] pixel_E_2,
-    input [11:0] pixel_R,
+    input [11:0] pixel_press_to_start_0,
+    input [11:0] pixel_press_to_start_1,
+    input [11:0] pixel_press_to_start_2,
+    input [11:0] pixel_press_to_start_3,
+    input [11:0] pixel_press_to_start_4,
+    input [11:0] pixel_press_to_start_5,
+    input [11:0] pixel_press_to_start_6,
+    input [11:0] pixel_press_to_start_7,
+    input [11:0] pixel_press_to_start_8,
+    input [11:0] pixel_press_to_start_9,
+    input [11:0] pixel_press_to_start_10,
+    input [11:0] pixel_press_to_start_11,
+    input [11:0] pixel_you_win_0,
+    input [11:0] pixel_you_win_1,
+    input [11:0] pixel_you_win_2,
+    input [11:0] pixel_you_win_3,
+    input [11:0] pixel_you_win_4,
+    input [11:0] pixel_you_win_5,
+    input [11:0] pixel_gameover_0,
+    input [11:0] pixel_gameover_1,
+    input [11:0] pixel_gameover_2,
+    input [11:0] pixel_gameover_3,
+    input [11:0] pixel_gameover_4,
+    input [11:0] pixel_gameover_5,
+    input [11:0] pixel_gameover_6,
+    input [11:0] pixel_gameover_7,
     input [11:0] pixel_weapon,
 	input [11:0] pixel_wall_0,
     input [11:0] pixel_wall_1,
@@ -94,8 +112,11 @@ module RGB_GEN(
     always @(*) begin
         if (valid == 1'b1)begin
             if (pixel_CY+pixel_monster_0+pixel_monster_1+pixel_computer_room_entrance_ins+pixel_heart_ins_0+pixel_heart_ins_1+pixel_heart_ins_2+pixel_weapon
-                +pixel_G+pixel_A+pixel_M+pixel_E_1+pixel_O+pixel_V+pixel_E_2+pixel_R+pixel_Lv_ins
+                +pixel_gameover_0+pixel_gameover_1+pixel_gameover_2+pixel_gameover_3+pixel_gameover_4+pixel_gameover_5+pixel_gameover_6+pixel_gameover_7+pixel_Lv_ins
                 +pixel_rupee_ins+pixel_colon_ins_0+pixel_colon_ins_1+pixel_levl_counter+pixel_kill_counter
+                +pixel_press_to_start_0+pixel_press_to_start_1+pixel_press_to_start_2+pixel_press_to_start_3+pixel_press_to_start_4+pixel_press_to_start_5
+                +pixel_press_to_start_6+pixel_press_to_start_7+pixel_press_to_start_8+pixel_press_to_start_9+pixel_press_to_start_10+pixel_press_to_start_11
+                +pixel_you_win_0+pixel_you_win_1+pixel_you_win_2+pixel_you_win_3+pixel_you_win_4+pixel_you_win_5
                 +pixel_wall_0
                 +pixel_wall_1
                 +pixel_wall_2
@@ -168,11 +189,17 @@ module RGB_GEN(
                 end else if (pixel_monster_1)begin
                     RGB = pixel_monster_1;
                 end else if (pixel_CY+pixel_heart_ins_0+pixel_heart_ins_1+pixel_heart_ins_2+pixel_weapon
-                        +pixel_G+pixel_A+pixel_M+pixel_E_1+pixel_O+pixel_V+pixel_E_2+pixel_R+pixel_Lv_ins
-                        +pixel_rupee_ins+pixel_colon_ins_0+pixel_colon_ins_1+pixel_levl_counter+pixel_kill_counter)begin
+                        +pixel_gameover_0+pixel_gameover_1+pixel_gameover_2+pixel_gameover_3+pixel_gameover_4+pixel_gameover_5+pixel_gameover_6+pixel_gameover_7+pixel_Lv_ins
+                        +pixel_rupee_ins+pixel_colon_ins_0+pixel_colon_ins_1+pixel_levl_counter+pixel_kill_counter
+                        +pixel_press_to_start_0+pixel_press_to_start_1+pixel_press_to_start_2+pixel_press_to_start_3+pixel_press_to_start_4+pixel_press_to_start_5
+                        +pixel_press_to_start_6+pixel_press_to_start_7+pixel_press_to_start_8+pixel_press_to_start_9+pixel_press_to_start_10+pixel_press_to_start_11
+                        +pixel_you_win_0+pixel_you_win_1+pixel_you_win_2+pixel_you_win_3+pixel_you_win_4+pixel_you_win_5)begin
                     RGB = pixel_CY+pixel_heart_ins_0+pixel_heart_ins_1+pixel_heart_ins_2+pixel_weapon
-                        +pixel_G+pixel_A+pixel_M+pixel_E_1+pixel_O+pixel_V+pixel_E_2+pixel_R+pixel_Lv_ins
-                        +pixel_rupee_ins+pixel_colon_ins_0+pixel_colon_ins_1+pixel_levl_counter+pixel_kill_counter;
+                        +pixel_gameover_0+pixel_gameover_1+pixel_gameover_2+pixel_gameover_3+pixel_gameover_4+pixel_gameover_5+pixel_gameover_6+pixel_gameover_7+pixel_Lv_ins
+                        +pixel_rupee_ins+pixel_colon_ins_0+pixel_colon_ins_1+pixel_levl_counter+pixel_kill_counter
+                        +pixel_press_to_start_0+pixel_press_to_start_1+pixel_press_to_start_2+pixel_press_to_start_3+pixel_press_to_start_4+pixel_press_to_start_5
+                        +pixel_press_to_start_6+pixel_press_to_start_7+pixel_press_to_start_8+pixel_press_to_start_9+pixel_press_to_start_10+pixel_press_to_start_11
+                        +pixel_you_win_0+pixel_you_win_1+pixel_you_win_2+pixel_you_win_3+pixel_you_win_4+pixel_you_win_5;
                 end else begin
                     RGB = pixel_wall_0
                         +pixel_wall_1

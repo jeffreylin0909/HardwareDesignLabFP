@@ -22,7 +22,9 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     wire [12:0] ibeatNumBoss;
     wire beatFreq;
     wire change; // change to boss music
+    wire [3:0] stage;
     
+    assign change = (stage==4'h4);
     assign pmod_2 = 1'd1;	//no gain(6dB)
     assign pmod_4 = 1'd1;	//turn-on
     
@@ -127,6 +129,8 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     wire [11:0] pixel_heart[3:0];
     wire [11:0] pixel_colon[1:0];
     wire [11:0] pixel_gameover[7:0];
+    wire [11:0] pixel_you_win[5:0];
+    wire [11:0] pixel_press_to_start[11:0];
     wire [11:0] pixel_potion;
     wire [11:0] pixel_yoshi;
     wire [11:0] pixel_car;
@@ -201,7 +205,19 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     wire [11:0] pixel_gameover_ins[7:0];
     wire [3:0] pixel_idx_gameover;
     wire [9:0] pos_h_gameover[7:0], pos_v_gameover[7:0];
+
+    //for you_win
+    wire [16:0] pixel_addr_you_win[5:0];
+    wire [11:0] pixel_you_win_ins[5:0];
+    wire [3:0] pixel_idx_you_win;
+    wire [9:0] pos_h_you_win[5:0], pos_v_you_win[5:0];
     
+    //for press to start
+    wire [16:0] pixel_addr_press_to_start[11:0];
+    wire [11:0] pixel_press_to_start_ins[11:0];
+    wire [3:0] pixel_idx_press_to_start;
+    wire [9:0] pos_h_press_to_start[11:0], pos_v_press_to_start[11:0];
+
     //for walls
     wire [16:0] pixel_addr_wall;
     wire [11:0] pixel_wall[63:0];
@@ -378,7 +394,153 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .now_pixel(pixel_heart_ins[2])
 	);
 
-    select_pixel SP_G(
+    select_pixel SP_press_to_start_0(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[0]),.pos_v(pos_v_press_to_start[0]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[0]),
+        .now_pixel(pixel_press_to_start_ins[0])
+    );
+    select_pixel SP_press_to_start_1(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[1]),.pos_v(pos_v_press_to_start[1]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[1]),
+        .now_pixel(pixel_press_to_start_ins[1])
+    );
+    select_pixel SP_press_to_start_2(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[2]),.pos_v(pos_v_press_to_start[2]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[2]),
+        .now_pixel(pixel_press_to_start_ins[2])
+    );
+    select_pixel SP_press_to_start_3(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[3]),.pos_v(pos_v_press_to_start[3]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[3]),
+        .now_pixel(pixel_press_to_start_ins[3])
+    );
+    select_pixel SP_press_to_start_4(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[4]),.pos_v(pos_v_press_to_start[4]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[4]),
+        .now_pixel(pixel_press_to_start_ins[4])
+    );
+    select_pixel SP_press_to_start_5(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[5]),.pos_v(pos_v_press_to_start[5]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[5]),
+        .now_pixel(pixel_press_to_start_ins[5])
+    );
+    select_pixel SP_press_to_start_6(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[6]),.pos_v(pos_v_press_to_start[6]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[6]),
+        .now_pixel(pixel_press_to_start_ins[6])
+    );
+    select_pixel SP_press_to_start_7(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[7]),.pos_v(pos_v_press_to_start[7]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[7]),
+        .now_pixel(pixel_press_to_start_ins[7])
+    );
+    select_pixel SP_press_to_start_8(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[8]),.pos_v(pos_v_press_to_start[8]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[8]),
+        .now_pixel(pixel_press_to_start_ins[8])
+    );
+    select_pixel SP_press_to_start_9(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[9]),.pos_v(pos_v_press_to_start[9]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[9]),
+        .now_pixel(pixel_press_to_start_ins[9])
+    );
+    select_pixel SP_press_to_start_10(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[10]),.pos_v(pos_v_press_to_start[10]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[10]),
+        .now_pixel(pixel_press_to_start_ins[10])
+    );
+    select_pixel SP_press_to_start_11(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_press_to_start[11]),.pos_v(pos_v_press_to_start[11]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_press_to_start),
+        .pixel_0(pixel_press_to_start[11]),
+        .now_pixel(pixel_press_to_start_ins[11])
+    );
+
+    select_pixel SP_you_win_0(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_you_win[0]),.pos_v(pos_v_you_win[0]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_you_win),
+        .pixel_0(pixel_you_win[0]),
+        .now_pixel(pixel_you_win_ins[0])
+    );
+    select_pixel SP_you_win_1(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_you_win[1]),.pos_v(pos_v_you_win[1]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_you_win),
+        .pixel_0(pixel_you_win[1]),
+        .now_pixel(pixel_you_win_ins[1])
+    );
+    select_pixel SP_you_win_2(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_you_win[2]),.pos_v(pos_v_you_win[2]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_you_win),
+        .pixel_0(pixel_you_win[2]),
+        .now_pixel(pixel_you_win_ins[2])
+    );
+    select_pixel SP_you_win_3(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_you_win[3]),.pos_v(pos_v_you_win[3]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_you_win),
+        .pixel_0(pixel_you_win[3]),
+        .now_pixel(pixel_you_win_ins[3])
+    );
+    select_pixel SP_you_win_4(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_you_win[4]),.pos_v(pos_v_you_win[4]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_you_win),
+        .pixel_0(pixel_you_win[4]),
+        .now_pixel(pixel_you_win_ins[4])
+    );
+    select_pixel SP_you_win_5(
+        .h_cnt(h_cnt), .v_cnt(v_cnt),
+        .pos_h(pos_h_you_win[5]),.pos_v(pos_v_you_win[5]),
+        .size_h(20),.size_v(20),
+        .now_pixel_idx(pixel_idx_you_win),
+        .pixel_0(pixel_you_win[5]),
+        .now_pixel(pixel_you_win_ins[5])
+    );
+
+    select_pixel SP_gameover_0(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[0]),.pos_v(pos_v_gameover[0]),
         .size_h(20),.size_v(20),
@@ -386,7 +548,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[0]),
         .now_pixel(pixel_gameover_ins[0])
     );
-    select_pixel SP_A(
+    select_pixel SP_gameover_1(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[1]),.pos_v(pos_v_gameover[1]),
         .size_h(20),.size_v(20),
@@ -394,7 +556,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[1]),
         .now_pixel(pixel_gameover_ins[1])
     );
-    select_pixel SP_M(
+    select_pixel SP_gameover_2(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[2]),.pos_v(pos_v_gameover[2]),
         .size_h(20),.size_v(20),
@@ -402,7 +564,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[2]),
         .now_pixel(pixel_gameover_ins[2])
     );
-    select_pixel SP_E_1(
+    select_pixel SP_gameover_3(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[3]),.pos_v(pos_v_gameover[3]),
         .size_h(20),.size_v(20),
@@ -410,7 +572,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[3]),
         .now_pixel(pixel_gameover_ins[3])
     );
-    select_pixel SP_O(
+    select_pixel SP_gameover_4(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[4]),.pos_v(pos_v_gameover[4]),
         .size_h(20),.size_v(20),
@@ -418,7 +580,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[4]),
         .now_pixel(pixel_gameover_ins[4])
     );
-    select_pixel SP_V(
+    select_pixel SP_gameover_5(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[5]),.pos_v(pos_v_gameover[5]),
         .size_h(20),.size_v(20),
@@ -426,7 +588,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[5]),
         .now_pixel(pixel_gameover_ins[5])
     );
-    select_pixel SP_E_2(
+    select_pixel SP_gameover_6(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[6]),.pos_v(pos_v_gameover[6]),
         .size_h(20),.size_v(20),
@@ -434,7 +596,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_0(pixel_gameover[6]),
         .now_pixel(pixel_gameover_ins[6])
     );
-    select_pixel SP_R(
+    select_pixel SP_gameover_7(
         .h_cnt(h_cnt), .v_cnt(v_cnt),
         .pos_h(pos_h_gameover[7]),.pos_v(pos_v_gameover[7]),
         .size_h(20),.size_v(20),
@@ -985,14 +1147,32 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_heart_ins_0(pixel_heart_ins[0]),
         .pixel_heart_ins_1(pixel_heart_ins[1]),
         .pixel_heart_ins_2(pixel_heart_ins[2]),
-        .pixel_G(pixel_gameover_ins[0]),
-        .pixel_A(pixel_gameover_ins[1]),
-        .pixel_M(pixel_gameover_ins[2]),
-        .pixel_E_1(pixel_gameover_ins[3]),
-        .pixel_O(pixel_gameover_ins[4]),
-        .pixel_V(pixel_gameover_ins[5]),
-        .pixel_E_2(pixel_gameover_ins[6]),
-        .pixel_R(pixel_gameover_ins[7]),
+        .pixel_press_to_start_0(pixel_press_to_start_ins[0]),
+        .pixel_press_to_start_1(pixel_press_to_start_ins[1]),
+        .pixel_press_to_start_2(pixel_press_to_start_ins[2]),
+        .pixel_press_to_start_3(pixel_press_to_start_ins[3]),
+        .pixel_press_to_start_4(pixel_press_to_start_ins[4]),
+        .pixel_press_to_start_5(pixel_press_to_start_ins[5]),
+        .pixel_press_to_start_6(pixel_press_to_start_ins[6]),
+        .pixel_press_to_start_7(pixel_press_to_start_ins[7]),
+        .pixel_press_to_start_8(pixel_press_to_start_ins[8]),
+        .pixel_press_to_start_9(pixel_press_to_start_ins[9]),
+        .pixel_press_to_start_10(pixel_press_to_start_ins[10]),
+        .pixel_press_to_start_11(pixel_press_to_start_ins[11]),
+        .pixel_you_win_0(pixel_you_win_ins[0]),
+        .pixel_you_win_1(pixel_you_win_ins[1]),
+        .pixel_you_win_2(pixel_you_win_ins[2]),
+        .pixel_you_win_3(pixel_you_win_ins[3]),
+        .pixel_you_win_4(pixel_you_win_ins[4]),
+        .pixel_you_win_5(pixel_you_win_ins[5]),
+        .pixel_gameover_0(pixel_gameover_ins[0]),
+        .pixel_gameover_1(pixel_gameover_ins[1]),
+        .pixel_gameover_2(pixel_gameover_ins[2]),
+        .pixel_gameover_3(pixel_gameover_ins[3]),
+        .pixel_gameover_4(pixel_gameover_ins[4]),
+        .pixel_gameover_5(pixel_gameover_ins[5]),
+        .pixel_gameover_6(pixel_gameover_ins[6]),
+        .pixel_gameover_7(pixel_gameover_ins[7]),
         .pixel_weapon(pixel_weapon),
         .pixel_wall_0(pixel_wall[0]),
         .pixel_wall_1(pixel_wall[1]),
@@ -1108,6 +1288,44 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pixel_idx_heart_2(pixel_idx_heart[2]),
 		.pos_h_heart_2(pos_h_heart[2]),
 		.pos_v_heart_2(pos_v_heart[2]),
+        .pixel_idx_press_to_start(pixel_idx_press_to_start),
+        .pos_h_press_to_start_0(pos_h_press_to_start[0]),
+        .pos_v_press_to_start_0(pos_v_press_to_start[0]),
+        .pos_h_press_to_start_1(pos_h_press_to_start[1]),
+        .pos_v_press_to_start_1(pos_v_press_to_start[1]),
+        .pos_h_press_to_start_2(pos_h_press_to_start[2]),
+        .pos_v_press_to_start_2(pos_v_press_to_start[2]),
+        .pos_h_press_to_start_3(pos_h_press_to_start[3]),
+        .pos_v_press_to_start_3(pos_v_press_to_start[3]),
+        .pos_h_press_to_start_4(pos_h_press_to_start[4]),
+        .pos_v_press_to_start_4(pos_v_press_to_start[4]),
+        .pos_h_press_to_start_5(pos_h_press_to_start[5]),
+        .pos_v_press_to_start_5(pos_v_press_to_start[5]),
+        .pos_h_press_to_start_6(pos_h_press_to_start[6]),
+        .pos_v_press_to_start_6(pos_v_press_to_start[6]),
+        .pos_h_press_to_start_7(pos_h_press_to_start[7]),
+        .pos_v_press_to_start_7(pos_v_press_to_start[7]),
+        .pos_h_press_to_start_8(pos_h_press_to_start[8]),
+        .pos_v_press_to_start_8(pos_v_press_to_start[8]),
+        .pos_h_press_to_start_9(pos_h_press_to_start[9]),
+        .pos_v_press_to_start_9(pos_v_press_to_start[9]),
+        .pos_h_press_to_start_10(pos_h_press_to_start[10]),
+        .pos_v_press_to_start_10(pos_v_press_to_start[10]),
+        .pos_h_press_to_start_11(pos_h_press_to_start[11]),
+        .pos_v_press_to_start_11(pos_v_press_to_start[11]),
+        .pixel_idx_you_win(pixel_idx_you_win),
+        .pos_h_you_win_0(pos_h_you_win[0]),
+        .pos_v_you_win_0(pos_v_you_win[0]),
+        .pos_h_you_win_1(pos_h_you_win[1]),
+        .pos_v_you_win_1(pos_v_you_win[1]),
+        .pos_h_you_win_2(pos_h_you_win[2]),
+        .pos_v_you_win_2(pos_v_you_win[2]),
+        .pos_h_you_win_3(pos_h_you_win[3]),
+        .pos_v_you_win_3(pos_v_you_win[3]),
+        .pos_h_you_win_4(pos_h_you_win[4]),
+        .pos_v_you_win_4(pos_v_you_win[4]),
+        .pos_h_you_win_5(pos_h_you_win[5]),
+        .pos_v_you_win_5(pos_v_you_win[5]),
         .pixel_idx_gameover(pixel_idx_gameover),
         .pos_h_gameover_0(pos_h_gameover[0]),
         .pos_v_gameover_0(pos_v_gameover[0]),
@@ -1193,7 +1411,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .pos_h_wall_61(pos_h_wall[61]),.pos_v_wall_61(pos_v_wall[61]),
         .pos_h_wall_62(pos_h_wall[62]),.pos_v_wall_62(pos_v_wall[62]),
         .pos_h_wall_63(pos_h_wall[63]),.pos_v_wall_63(pos_v_wall[63]),
-        .change(change)        
+        .stage(stage)        
 	);
 	
 	mem_addr_gen MAG_CY(
@@ -1308,56 +1526,184 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
 		.pixel_addr(pixel_addr_weapon)
 	);
 
-    mem_addr_gen MAG_G(
+    mem_addr_gen MAG_press_to_start_0(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[0]),
+            .pos_v(pos_v_press_to_start[0]),
+            .pixel_addr(pixel_addr_press_to_start[0])
+    );
+    mem_addr_gen MAG_press_to_start_1(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[1]),
+            .pos_v(pos_v_press_to_start[1]),
+            .pixel_addr(pixel_addr_press_to_start[1])
+    );
+    mem_addr_gen MAG_press_to_start_2(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[2]),
+            .pos_v(pos_v_press_to_start[2]),
+            .pixel_addr(pixel_addr_press_to_start[2])
+    );
+    mem_addr_gen MAG_press_to_start_3(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[3]),
+            .pos_v(pos_v_press_to_start[3]),
+            .pixel_addr(pixel_addr_press_to_start[3])
+    );
+    mem_addr_gen MAG_press_to_start_4(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[4]),
+            .pos_v(pos_v_press_to_start[4]),
+            .pixel_addr(pixel_addr_press_to_start[4])
+    );
+    mem_addr_gen MAG_press_to_start_5(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[5]),
+            .pos_v(pos_v_press_to_start[5]),
+            .pixel_addr(pixel_addr_press_to_start[5])
+    );
+    mem_addr_gen MAG_press_to_start_6(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[6]),
+            .pos_v(pos_v_press_to_start[6]),
+            .pixel_addr(pixel_addr_press_to_start[6])
+    );
+    mem_addr_gen MAG_press_to_start_7(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[7]),
+            .pos_v(pos_v_press_to_start[7]),
+            .pixel_addr(pixel_addr_press_to_start[7])
+    );
+    mem_addr_gen MAG_press_to_start_8(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[8]),
+            .pos_v(pos_v_press_to_start[8]),
+            .pixel_addr(pixel_addr_press_to_start[8])
+    );
+    mem_addr_gen MAG_press_to_start_9(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[9]),
+            .pos_v(pos_v_press_to_start[9]),
+            .pixel_addr(pixel_addr_press_to_start[9])
+    );
+    mem_addr_gen MAG_press_to_start_10(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[10]),
+            .pos_v(pos_v_press_to_start[10]),
+            .pixel_addr(pixel_addr_press_to_start[10])
+    );
+    mem_addr_gen MAG_press_to_start_11(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_press_to_start[11]),
+            .pos_v(pos_v_press_to_start[11]),
+            .pixel_addr(pixel_addr_press_to_start[11])
+    );
+
+    mem_addr_gen MAG_you_win_0(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_you_win[0]),
+            .pos_v(pos_v_you_win[0]),
+            .pixel_addr(pixel_addr_you_win[0])
+    );
+    mem_addr_gen MAG_you_win_1(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_you_win[1]),
+            .pos_v(pos_v_you_win[1]),
+            .pixel_addr(pixel_addr_you_win[1])
+    );
+    mem_addr_gen MAG_you_win_2(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_you_win[2]),
+            .pos_v(pos_v_you_win[2]),
+            .pixel_addr(pixel_addr_you_win[2])
+    );
+    mem_addr_gen MAG_you_win_3(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_you_win[3]),
+            .pos_v(pos_v_you_win[3]),
+            .pixel_addr(pixel_addr_you_win[3])
+    );
+    mem_addr_gen MAG_you_win_4(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_you_win[4]),
+            .pos_v(pos_v_you_win[4]),
+            .pixel_addr(pixel_addr_you_win[4])
+    );
+    mem_addr_gen MAG_you_win_5(
+            .h_cnt(h_cnt),
+            .v_cnt(v_cnt),
+            .pos_h(pos_h_you_win[5]),
+            .pos_v(pos_v_you_win[5]),
+            .pixel_addr(pixel_addr_you_win[5])
+    );
+
+    mem_addr_gen MAG_gameover_0(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[0]),
             .pos_v(pos_v_gameover[0]),
             .pixel_addr(pixel_addr_gameover[0])
     );
-    mem_addr_gen MAG_A(
+    mem_addr_gen MAG_gameover_1(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[1]),
             .pos_v(pos_v_gameover[1]),
             .pixel_addr(pixel_addr_gameover[1])
     );
-    mem_addr_gen MAG_M(
+    mem_addr_gen MAG_gameover_2(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[2]),
             .pos_v(pos_v_gameover[2]),
             .pixel_addr(pixel_addr_gameover[2])
     );
-    mem_addr_gen MAG_E_1(
+    mem_addr_gen MAG_gameover_3(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[3]),
             .pos_v(pos_v_gameover[3]),
             .pixel_addr(pixel_addr_gameover[3])
     );
-    mem_addr_gen MAG_O(
+    mem_addr_gen MAG_gameover_4(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[4]),
             .pos_v(pos_v_gameover[4]),
             .pixel_addr(pixel_addr_gameover[4])
     );
-    mem_addr_gen MAG_V(
+    mem_addr_gen MAG_gameover_5(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[5]),
             .pos_v(pos_v_gameover[5]),
             .pixel_addr(pixel_addr_gameover[5])
     );
-    mem_addr_gen MAG_E_2(
+    mem_addr_gen MAG_gameover_6(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[6]),
             .pos_v(pos_v_gameover[6]),
             .pixel_addr(pixel_addr_gameover[6])
     );
-    mem_addr_gen MAG_R(
+    mem_addr_gen MAG_gameover_7(
             .h_cnt(h_cnt),
             .v_cnt(v_cnt),
             .pos_h(pos_h_gameover[7]),
@@ -1404,7 +1750,147 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_colon[1])
     ); 
 
-    BM_G BM_G_(
+    BM_P_w BM_press_to_start_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[0]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[0])
+    ); 
+
+    BM_R_w BM_press_to_start_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[1]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[1])
+    ); 
+
+    BM_E_w BM_press_to_start_2(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[2]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[2])
+    ); 
+
+    BM_S_w BM_press_to_start_3(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[3]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[3])
+    ); 
+
+    BM_S_w BM_press_to_start_4(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[4]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[4])
+    ); 
+
+    BM_T_w BM_press_to_start_5(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[5]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[5])
+    ); 
+
+    BM_O_w BM_press_to_start_6(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[6]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[6])
+    ); 
+
+    BM_S_w BM_press_to_start_7(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[7]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[7])
+    ); 
+    BM_T_w BM_press_to_start_8(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[8]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[8])
+    ); 
+    BM_A_w BM_press_to_start_9(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[9]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[9])
+    ); 
+    BM_R_w BM_press_to_start_10(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[10]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[10])
+    ); 
+    BM_T_w BM_press_to_start_11(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_press_to_start[11]),
+        .dina(12'd0),
+        .douta(pixel_press_to_start[11])
+    ); 
+    
+    BM_Y_y BM_you_win_0(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_you_win[0]),
+        .dina(12'd0),
+        .douta(pixel_you_win[0])
+    ); 
+
+    BM_O_y BM_you_win_1(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_you_win[1]),
+        .dina(12'd0),
+        .douta(pixel_you_win[1])
+    ); 
+
+    BM_U_y BM_you_win_2(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_you_win[2]),
+        .dina(12'd0),
+        .douta(pixel_you_win[2])
+    ); 
+
+    BM_W_y BM_you_win_3(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_you_win[3]),
+        .dina(12'd0),
+        .douta(pixel_you_win[3])
+    ); 
+
+    BM_I_y BM_you_win_4(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_you_win[4]),
+        .dina(12'd0),
+        .douta(pixel_you_win[4])
+    ); 
+
+    BM_N_y BM_you_win_5(
+		.clka(clk_d2),
+        .wea(0),
+        .addra(pixel_addr_you_win[5]),
+        .dina(12'd0),
+        .douta(pixel_you_win[5])
+    ); 
+
+    BM_G BM_gameover_0(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[0]),
@@ -1412,7 +1898,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[0])
     ); 
 
-    BM_A BM_A_(
+    BM_A BM_gameover_1(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[1]),
@@ -1420,7 +1906,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[1])
     ); 
 
-    BM_M BM_M_(
+    BM_M BM_gameover_2(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[2]),
@@ -1428,7 +1914,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[2])
     ); 
 
-    BM_E BM_E_1(
+    BM_E BM_gameover_3(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[3]),
@@ -1436,7 +1922,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[3])
     ); 
 
-    BM_O BM_O_(
+    BM_O BM_gameover_4(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[4]),
@@ -1444,7 +1930,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[4])
     ); 
 
-    BM_V BM_V_(
+    BM_V BM_gameover_5(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[5]),
@@ -1452,7 +1938,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[5])
     ); 
 
-    BM_E BM_E_2(
+    BM_E BM_gameover_6(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[6]),
@@ -1460,7 +1946,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .douta(pixel_gameover[6])
     ); 
 
-    BM_R BM_R_2(
+    BM_R BM_gameover_7(
 		.clka(clk_d2),
         .wea(0),
         .addra(pixel_addr_gameover[7]),

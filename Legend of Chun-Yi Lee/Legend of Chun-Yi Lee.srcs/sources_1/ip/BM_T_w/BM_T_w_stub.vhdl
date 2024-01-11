@@ -1,9 +1,9 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Wed Jan 10 20:27:27 2024
+-- Date        : Thu Jan 11 20:25:46 2024
 -- Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
+-- Command     : write_vhdl -force -mode synth_stub {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
 --               Lee.srcs/sources_1/ip/BM_T_w/BM_T_w_stub.vhdl}
 -- Design      : BM_T_w
 -- Purpose     : Stub declaration of top-level module interface

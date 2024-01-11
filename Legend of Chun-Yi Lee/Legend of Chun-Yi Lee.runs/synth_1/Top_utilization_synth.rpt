@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 18:31:02 2024
+| Date         : Thu Jan 11 20:36:54 2024
 | Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 14139 |     0 |     20800 | 67.98 |
-|   LUT as Logic          | 14139 |     0 |     20800 | 67.98 |
+| Slice LUTs*             | 19110 |     0 |     20800 | 91.88 |
+|   LUT as Logic          | 19110 |     0 |     20800 | 91.88 |
 |   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   559 |     0 |     41600 |  1.34 |
-|   Register as Flip Flop |   464 |     0 |     41600 |  1.12 |
+| Slice Registers         |   582 |     0 |     41600 |  1.40 |
+|   Register as Flip Flop |   487 |     0 |     41600 |  1.17 |
 |   Register as Latch     |    95 |     0 |     41600 |  0.23 |
 | F7 Muxes                |    67 |     0 |     16300 |  0.41 |
 | F8 Muxes                |     5 |     0 |      8150 |  0.06 |
@@ -57,7 +57,7 @@ Table of Contents
 | 19    |          Yes |           - |          Set |
 | 185   |          Yes |           - |        Reset |
 | 44    |          Yes |         Set |            - |
-| 311   |          Yes |       Reset |            - |
+| 334   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   48 |     0 |        90 | 53.33 |
-|   DSP48E1 only |   48 |       |           |       |
+| DSPs           |   84 |     0 |        90 | 93.33 |
+|   DSP48E1 only |   84 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -150,18 +150,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT3     | 4339 |                 LUT |
-| LUT2     | 4076 |                 LUT |
-| LUT4     | 3944 |                 LUT |
-| LUT6     | 3142 |                 LUT |
-| CARRY4   | 3023 |          CarryLogic |
-| LUT5     | 2052 |                 LUT |
-| LUT1     | 1059 |                 LUT |
-| FDRE     |  311 |        Flop & Latch |
+| LUT3     | 6354 |                 LUT |
+| LUT4     | 5927 |                 LUT |
+| LUT2     | 5355 |                 LUT |
+| CARRY4   | 4154 |          CarryLogic |
+| LUT6     | 3760 |                 LUT |
+| LUT5     | 2692 |                 LUT |
+| LUT1     | 1451 |                 LUT |
+| FDRE     |  334 |        Flop & Latch |
 | FDCE     |  109 |        Flop & Latch |
+| DSP48E1  |   84 |    Block Arithmetic |
 | LDCE     |   76 |        Flop & Latch |
 | MUXF7    |   67 |               MuxFx |
-| DSP48E1  |   48 |    Block Arithmetic |
 | FDSE     |   44 |        Flop & Latch |
 | LDPE     |   19 |        Flop & Latch |
 | OBUF     |   17 |                  IO |
@@ -178,7 +178,10 @@ Table of Contents
 |          Ref Name         | Used |
 +---------------------------+------+
 | BM_heart                  |    3 |
+| BM_T_w                    |    3 |
+| BM_S_w                    |    3 |
 | BM_colon                  |    2 |
+| BM_R_w                    |    2 |
 | BM_NTHU_student_R         |    2 |
 | BM_NTHU_student_L         |    2 |
 | BM_EECS_student_R         |    2 |
@@ -206,12 +209,21 @@ Table of Contents
 | BM_rupee                  |    1 |
 | BM_overwall_wall          |    1 |
 | BM_computer_room_entrance |    1 |
+| BM_Y_y                    |    1 |
+| BM_W_y                    |    1 |
 | BM_V                      |    1 |
+| BM_U_y                    |    1 |
 | BM_R                      |    1 |
+| BM_P_w                    |    1 |
+| BM_O_y                    |    1 |
+| BM_O_w                    |    1 |
 | BM_O                      |    1 |
+| BM_N_y                    |    1 |
 | BM_M                      |    1 |
 | BM_Lv                     |    1 |
+| BM_I_y                    |    1 |
 | BM_G                      |    1 |
+| BM_E_w                    |    1 |
 | BM_CY_right_walk          |    1 |
 | BM_CY_right_stand         |    1 |
 | BM_CY_right_attack        |    1 |
@@ -226,6 +238,7 @@ Table of Contents
 | BM_CY_back_walk_L         |    1 |
 | BM_CY_back_stand          |    1 |
 | BM_CY_back_attack         |    1 |
+| BM_A_w                    |    1 |
 | BM_A                      |    1 |
 +---------------------------+------+
 

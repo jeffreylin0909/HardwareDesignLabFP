@@ -2,7 +2,7 @@ module state_control(
     input clk, rst, 
     input A_signal, D_signal, W_signal, S_signal, J_signal, K_signal, L_signal, SPACE_signal, 
     
-    output change,
+    output [3:0] stage,
     output [3:0] pixel_idx_CY,
     output [9:0] pos_h_CY, pos_v_CY,
 
@@ -35,6 +35,28 @@ module state_control(
 	output [9:0] pos_h_heart_1, pos_v_heart_1,
     output [3:0] pixel_idx_heart_2,
 	output [9:0] pos_h_heart_2, pos_v_heart_2,
+
+    output [3:0] pixel_idx_press_to_start,
+    output [9:0] pos_h_press_to_start_0, pos_v_press_to_start_0,
+    output [9:0] pos_h_press_to_start_1, pos_v_press_to_start_1,
+    output [9:0] pos_h_press_to_start_2, pos_v_press_to_start_2,
+    output [9:0] pos_h_press_to_start_3, pos_v_press_to_start_3,
+    output [9:0] pos_h_press_to_start_4, pos_v_press_to_start_4,
+    output [9:0] pos_h_press_to_start_5, pos_v_press_to_start_5,
+    output [9:0] pos_h_press_to_start_6, pos_v_press_to_start_6,
+    output [9:0] pos_h_press_to_start_7, pos_v_press_to_start_7,
+    output [9:0] pos_h_press_to_start_8, pos_v_press_to_start_8,
+    output [9:0] pos_h_press_to_start_9, pos_v_press_to_start_9,
+    output [9:0] pos_h_press_to_start_10, pos_v_press_to_start_10,
+    output [9:0] pos_h_press_to_start_11, pos_v_press_to_start_11,
+
+    output [3:0] pixel_idx_you_win,
+    output [9:0] pos_h_you_win_0, pos_v_you_win_0,
+    output [9:0] pos_h_you_win_1, pos_v_you_win_1,
+    output [9:0] pos_h_you_win_2, pos_v_you_win_2,
+    output [9:0] pos_h_you_win_3, pos_v_you_win_3,
+    output [9:0] pos_h_you_win_4, pos_v_you_win_4,
+    output [9:0] pos_h_you_win_5, pos_v_you_win_5,
 
     output [3:0] pixel_idx_gameover,
     output [9:0] pos_h_gameover_0, pos_v_gameover_0,
@@ -113,7 +135,6 @@ module state_control(
     output [9:0] pos_h_wall_63, pos_v_wall_63
     );
 
-    wire [3:0] stage;
     wire [3:0] lives;
     wire [3:0] kills;
 
@@ -167,8 +188,6 @@ module state_control(
 
     wire weapon_monster_collision[3:0];
     wire changing_stage;
-    
-    assign change = (stage == 4'h4);
     
     stage_control SC(
         .clk(clk), .rst(rst),
@@ -287,6 +306,46 @@ module state_control(
     assign pos_h_gameover_7 = 100;
     assign pos_v_gameover_7 = 120;
 
+    assign pixel_idx_you_win = (stage == 4'he)? 0: 4'hf;
+    assign pos_h_you_win_0 = 240;
+    assign pos_v_you_win_0 = 120;
+    assign pos_h_you_win_1 = 220;
+    assign pos_v_you_win_1 = 120;
+    assign pos_h_you_win_2 = 200;
+    assign pos_v_you_win_2 = 120;
+    assign pos_h_you_win_3 = 140;
+    assign pos_v_you_win_3 = 120;
+    assign pos_h_you_win_4 = 120;
+    assign pos_v_you_win_4 = 120;
+    assign pos_h_you_win_5 = 100;
+    assign pos_v_you_win_5 = 120;
+
+    assign pixel_idx_press_to_start = (stage == 4'h0)? 0: 4'hf;
+    assign pos_h_press_to_start_0 = 300;
+    assign pos_v_press_to_start_0 = 120;
+    assign pos_h_press_to_start_1 = 280;
+    assign pos_v_press_to_start_1 = 120;
+    assign pos_h_press_to_start_2 = 260;
+    assign pos_v_press_to_start_2 = 120;
+    assign pos_h_press_to_start_3 = 240;
+    assign pos_v_press_to_start_3 = 120;
+    assign pos_h_press_to_start_4 = 220;
+    assign pos_v_press_to_start_4 = 120;
+    assign pos_h_press_to_start_5 = 180;
+    assign pos_v_press_to_start_5 = 120;
+    assign pos_h_press_to_start_6 = 160;
+    assign pos_v_press_to_start_6 = 120;
+    assign pos_h_press_to_start_7 = 120;
+    assign pos_v_press_to_start_7 = 120;
+    assign pos_h_press_to_start_8 = 100;
+    assign pos_v_press_to_start_8 = 120;
+    assign pos_h_press_to_start_9 = 80;
+    assign pos_v_press_to_start_9 = 120;
+    assign pos_h_press_to_start_10 = 60;
+    assign pos_v_press_to_start_10 = 120;
+    assign pos_h_press_to_start_11 = 40;
+    assign pos_v_press_to_start_11 = 120;
+    
     assign pos_h_heart_0 = 60;
     assign pos_v_heart_0 = 240;
     assign pos_h_heart_1 = 40;

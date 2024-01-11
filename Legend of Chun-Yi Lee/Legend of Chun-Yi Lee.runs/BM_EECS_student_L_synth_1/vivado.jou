@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Jan 11 17:22:24 2024
-# Process ID: 16080
+# Start of session at: Thu Jan 11 20:25:07 2024
+# Process ID: 7504
 # Current directory: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_EECS_student_L_synth_1
 # Command line: vivado.exe -log BM_EECS_student_L.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BM_EECS_student_L.tcl
 # Log file: C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/BM_EECS_student_L_synth_1/BM_EECS_student_L.vds

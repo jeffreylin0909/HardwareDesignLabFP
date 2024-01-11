@@ -40,3 +40,4 @@ EAStep()
      fi
 }
 
+EAStep vivado -log BM_EECS_student_R.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BM_EECS_student_R.tcl

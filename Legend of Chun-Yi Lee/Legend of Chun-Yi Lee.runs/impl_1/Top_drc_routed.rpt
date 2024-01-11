@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 11 18:32:41 2024
+| Date         : Thu Jan 11 20:38:22 2024
 | Host         : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_drc_routed.rpt -pb Top_drc_routed.pb -rpx Top_drc_routed.rpx
 | Design       : Top
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 82
+             Violations found: 136
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 47         |
-| DPOP-1   | Warning  | PREG Output pipelining                              | 25         |
+| DPIP-1   | Warning  | Input pipelining                                    | 83         |
+| DPOP-1   | Warning  | PREG Output pipelining                              | 43         |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 2          |
 | PDRC-153 | Warning  | Gated clock check                                   | 7          |
 +----------+----------+-----------------------------------------------------+------------+
@@ -52,132 +52,132 @@ Related violations: <none>
 
 DPIP-1#1 Warning
 Input pipelining  
-DSP MAG_A/pixel_addr0 input MAG_A/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_CY/pixel_addr0 input MAG_CY/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP MAG_A/pixel_addr2 input MAG_A/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_CY/pixel_addr2 input MAG_CY/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP MAG_CY/pixel_addr0 input MAG_CY/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_Lv/pixel_addr0 input MAG_Lv/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP MAG_CY/pixel_addr2 input MAG_CY/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_Lv/pixel_addr2 input MAG_Lv/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP MAG_E_1/pixel_addr0 input MAG_E_1/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_colon_0/pixel_addr0 input MAG_colon_0/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP MAG_E_1/pixel_addr2 input MAG_E_1/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_colon_0/pixel_addr2 input MAG_colon_0/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP MAG_E_2/pixel_addr0 input MAG_E_2/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_colon_1/pixel_addr0 input MAG_colon_1/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP MAG_E_2/pixel_addr2 input MAG_E_2/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_colon_1/pixel_addr2 input MAG_colon_1/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP MAG_G/pixel_addr0 input MAG_G/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_computer_room_entrance/pixel_addr0 input MAG_computer_room_entrance/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP MAG_G/pixel_addr2 input MAG_G/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_computer_room_entrance/pixel_addr2 input MAG_computer_room_entrance/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP MAG_Lv/pixel_addr0 input MAG_Lv/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_0/pixel_addr0 input MAG_gameover_0/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
 Input pipelining  
-DSP MAG_Lv/pixel_addr2 input MAG_Lv/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_0/pixel_addr2 input MAG_gameover_0/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#13 Warning
 Input pipelining  
-DSP MAG_M/pixel_addr0 input MAG_M/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_1/pixel_addr0 input MAG_gameover_1/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP MAG_M/pixel_addr2 input MAG_M/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_1/pixel_addr2 input MAG_gameover_1/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#15 Warning
 Input pipelining  
-DSP MAG_O/pixel_addr0 input MAG_O/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_2/pixel_addr0 input MAG_gameover_2/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#16 Warning
 Input pipelining  
-DSP MAG_O/pixel_addr2 input MAG_O/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_2/pixel_addr2 input MAG_gameover_2/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#17 Warning
 Input pipelining  
-DSP MAG_R/pixel_addr0 input MAG_R/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_3/pixel_addr0 input MAG_gameover_3/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#18 Warning
 Input pipelining  
-DSP MAG_R/pixel_addr2 input MAG_R/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_3/pixel_addr2 input MAG_gameover_3/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#19 Warning
 Input pipelining  
-DSP MAG_V/pixel_addr0 input MAG_V/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_4/pixel_addr0 input MAG_gameover_4/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#20 Warning
 Input pipelining  
-DSP MAG_V/pixel_addr2 input MAG_V/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_4/pixel_addr2 input MAG_gameover_4/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#21 Warning
 Input pipelining  
-DSP MAG_colon_0/pixel_addr0 input MAG_colon_0/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_5/pixel_addr0 input MAG_gameover_5/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#22 Warning
 Input pipelining  
-DSP MAG_colon_0/pixel_addr2 input MAG_colon_0/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_5/pixel_addr2 input MAG_gameover_5/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#23 Warning
 Input pipelining  
-DSP MAG_colon_1/pixel_addr0 input MAG_colon_1/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_6/pixel_addr0 input MAG_gameover_6/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#24 Warning
 Input pipelining  
-DSP MAG_colon_1/pixel_addr2 input MAG_colon_1/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_6/pixel_addr2 input MAG_gameover_6/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#25 Warning
 Input pipelining  
-DSP MAG_computer_room_entrance/pixel_addr0 input MAG_computer_room_entrance/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_7/pixel_addr0 input MAG_gameover_7/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#26 Warning
 Input pipelining  
-DSP MAG_computer_room_entrance/pixel_addr2 input MAG_computer_room_entrance/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_gameover_7/pixel_addr2 input MAG_gameover_7/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#27 Warning
@@ -252,102 +252,282 @@ Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP MAG_rupee/pixel_addr0 input MAG_rupee/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_press_to_start_0/pixel_addr0 input MAG_press_to_start_0/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#42 Warning
 Input pipelining  
-DSP MAG_rupee/pixel_addr2 input MAG_rupee/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_press_to_start_0/pixel_addr2 input MAG_press_to_start_0/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP MAG_wall/pixel_addr0 input MAG_wall/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_press_to_start_1/pixel_addr0 input MAG_press_to_start_1/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP MAG_wall/pixel_addr2 input MAG_wall/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_press_to_start_1/pixel_addr2 input MAG_press_to_start_1/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
 Input pipelining  
-DSP MAG_wooden_fpga_down/pixel_addr0 input MAG_wooden_fpga_down/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_press_to_start_10/pixel_addr0 input MAG_press_to_start_10/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP MAG_wooden_fpga_down/pixel_addr2 input MAG_wooden_fpga_down/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP MAG_press_to_start_10/pixel_addr2 input MAG_press_to_start_10/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
+Input pipelining  
+DSP MAG_press_to_start_11/pixel_addr0 input MAG_press_to_start_11/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#48 Warning
+Input pipelining  
+DSP MAG_press_to_start_11/pixel_addr2 input MAG_press_to_start_11/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#49 Warning
+Input pipelining  
+DSP MAG_press_to_start_2/pixel_addr0 input MAG_press_to_start_2/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#50 Warning
+Input pipelining  
+DSP MAG_press_to_start_2/pixel_addr2 input MAG_press_to_start_2/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#51 Warning
+Input pipelining  
+DSP MAG_press_to_start_3/pixel_addr0 input MAG_press_to_start_3/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#52 Warning
+Input pipelining  
+DSP MAG_press_to_start_3/pixel_addr2 input MAG_press_to_start_3/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#53 Warning
+Input pipelining  
+DSP MAG_press_to_start_4/pixel_addr0 input MAG_press_to_start_4/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#54 Warning
+Input pipelining  
+DSP MAG_press_to_start_4/pixel_addr2 input MAG_press_to_start_4/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#55 Warning
+Input pipelining  
+DSP MAG_press_to_start_5/pixel_addr0 input MAG_press_to_start_5/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#56 Warning
+Input pipelining  
+DSP MAG_press_to_start_5/pixel_addr2 input MAG_press_to_start_5/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#57 Warning
+Input pipelining  
+DSP MAG_press_to_start_6/pixel_addr0 input MAG_press_to_start_6/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#58 Warning
+Input pipelining  
+DSP MAG_press_to_start_6/pixel_addr2 input MAG_press_to_start_6/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#59 Warning
+Input pipelining  
+DSP MAG_press_to_start_7/pixel_addr0 input MAG_press_to_start_7/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#60 Warning
+Input pipelining  
+DSP MAG_press_to_start_7/pixel_addr2 input MAG_press_to_start_7/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#61 Warning
+Input pipelining  
+DSP MAG_press_to_start_8/pixel_addr0 input MAG_press_to_start_8/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#62 Warning
+Input pipelining  
+DSP MAG_press_to_start_8/pixel_addr2 input MAG_press_to_start_8/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#63 Warning
+Input pipelining  
+DSP MAG_press_to_start_9/pixel_addr0 input MAG_press_to_start_9/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#64 Warning
+Input pipelining  
+DSP MAG_press_to_start_9/pixel_addr2 input MAG_press_to_start_9/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#65 Warning
+Input pipelining  
+DSP MAG_rupee/pixel_addr0 input MAG_rupee/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#66 Warning
+Input pipelining  
+DSP MAG_rupee/pixel_addr2 input MAG_rupee/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#67 Warning
+Input pipelining  
+DSP MAG_wall/pixel_addr0 input MAG_wall/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#68 Warning
+Input pipelining  
+DSP MAG_wall/pixel_addr2 input MAG_wall/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#69 Warning
+Input pipelining  
+DSP MAG_wooden_fpga_down/pixel_addr0 input MAG_wooden_fpga_down/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#70 Warning
+Input pipelining  
+DSP MAG_wooden_fpga_down/pixel_addr2 input MAG_wooden_fpga_down/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#71 Warning
+Input pipelining  
+DSP MAG_you_win_0/pixel_addr0 input MAG_you_win_0/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#72 Warning
+Input pipelining  
+DSP MAG_you_win_0/pixel_addr2 input MAG_you_win_0/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#73 Warning
+Input pipelining  
+DSP MAG_you_win_1/pixel_addr0 input MAG_you_win_1/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#74 Warning
+Input pipelining  
+DSP MAG_you_win_1/pixel_addr2 input MAG_you_win_1/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#75 Warning
+Input pipelining  
+DSP MAG_you_win_2/pixel_addr0 input MAG_you_win_2/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#76 Warning
+Input pipelining  
+DSP MAG_you_win_2/pixel_addr2 input MAG_you_win_2/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#77 Warning
+Input pipelining  
+DSP MAG_you_win_3/pixel_addr0 input MAG_you_win_3/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#78 Warning
+Input pipelining  
+DSP MAG_you_win_3/pixel_addr2 input MAG_you_win_3/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#79 Warning
+Input pipelining  
+DSP MAG_you_win_4/pixel_addr0 input MAG_you_win_4/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#80 Warning
+Input pipelining  
+DSP MAG_you_win_4/pixel_addr2 input MAG_you_win_4/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#81 Warning
+Input pipelining  
+DSP MAG_you_win_5/pixel_addr0 input MAG_you_win_5/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#82 Warning
+Input pipelining  
+DSP MAG_you_win_5/pixel_addr2 input MAG_you_win_5/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#83 Warning
 Input pipelining  
 DSP toneGen/count_duty0 input toneGen/count_duty0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
 PREG Output pipelining  
-DSP MAG_A/pixel_addr0 output MAG_A/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_CY/pixel_addr0 output MAG_CY/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#2 Warning
 PREG Output pipelining  
-DSP MAG_CY/pixel_addr0 output MAG_CY/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_Lv/pixel_addr0 output MAG_Lv/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#3 Warning
 PREG Output pipelining  
-DSP MAG_E_1/pixel_addr0 output MAG_E_1/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_colon_0/pixel_addr0 output MAG_colon_0/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#4 Warning
 PREG Output pipelining  
-DSP MAG_E_2/pixel_addr0 output MAG_E_2/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_colon_1/pixel_addr0 output MAG_colon_1/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#5 Warning
 PREG Output pipelining  
-DSP MAG_G/pixel_addr0 output MAG_G/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_computer_room_entrance/pixel_addr0 output MAG_computer_room_entrance/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#6 Warning
 PREG Output pipelining  
-DSP MAG_Lv/pixel_addr0 output MAG_Lv/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_0/pixel_addr0 output MAG_gameover_0/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#7 Warning
 PREG Output pipelining  
-DSP MAG_M/pixel_addr0 output MAG_M/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_1/pixel_addr0 output MAG_gameover_1/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#8 Warning
 PREG Output pipelining  
-DSP MAG_O/pixel_addr0 output MAG_O/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_2/pixel_addr0 output MAG_gameover_2/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#9 Warning
 PREG Output pipelining  
-DSP MAG_R/pixel_addr0 output MAG_R/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_3/pixel_addr0 output MAG_gameover_3/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#10 Warning
 PREG Output pipelining  
-DSP MAG_V/pixel_addr0 output MAG_V/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_4/pixel_addr0 output MAG_gameover_4/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#11 Warning
 PREG Output pipelining  
-DSP MAG_colon_0/pixel_addr0 output MAG_colon_0/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_5/pixel_addr0 output MAG_gameover_5/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#12 Warning
 PREG Output pipelining  
-DSP MAG_colon_1/pixel_addr0 output MAG_colon_1/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_6/pixel_addr0 output MAG_gameover_6/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#13 Warning
 PREG Output pipelining  
-DSP MAG_computer_room_entrance/pixel_addr0 output MAG_computer_room_entrance/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_gameover_7/pixel_addr0 output MAG_gameover_7/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#14 Warning
@@ -387,25 +567,115 @@ Related violations: <none>
 
 DPOP-1#21 Warning
 PREG Output pipelining  
-DSP MAG_rupee/pixel_addr0 output MAG_rupee/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_press_to_start_0/pixel_addr0 output MAG_press_to_start_0/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#22 Warning
 PREG Output pipelining  
-DSP MAG_wall/pixel_addr0 output MAG_wall/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_press_to_start_1/pixel_addr0 output MAG_press_to_start_1/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#23 Warning
 PREG Output pipelining  
-DSP MAG_wooden_fpga_down/pixel_addr0 output MAG_wooden_fpga_down/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_press_to_start_10/pixel_addr0 output MAG_press_to_start_10/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#24 Warning
 PREG Output pipelining  
-DSP btSpeedGen/count_duty0 output btSpeedGen/count_duty0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP MAG_press_to_start_11/pixel_addr0 output MAG_press_to_start_11/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#25 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_2/pixel_addr0 output MAG_press_to_start_2/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#26 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_3/pixel_addr0 output MAG_press_to_start_3/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#27 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_4/pixel_addr0 output MAG_press_to_start_4/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#28 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_5/pixel_addr0 output MAG_press_to_start_5/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#29 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_6/pixel_addr0 output MAG_press_to_start_6/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#30 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_7/pixel_addr0 output MAG_press_to_start_7/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#31 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_8/pixel_addr0 output MAG_press_to_start_8/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#32 Warning
+PREG Output pipelining  
+DSP MAG_press_to_start_9/pixel_addr0 output MAG_press_to_start_9/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#33 Warning
+PREG Output pipelining  
+DSP MAG_rupee/pixel_addr0 output MAG_rupee/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#34 Warning
+PREG Output pipelining  
+DSP MAG_wall/pixel_addr0 output MAG_wall/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#35 Warning
+PREG Output pipelining  
+DSP MAG_wooden_fpga_down/pixel_addr0 output MAG_wooden_fpga_down/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#36 Warning
+PREG Output pipelining  
+DSP MAG_you_win_0/pixel_addr0 output MAG_you_win_0/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#37 Warning
+PREG Output pipelining  
+DSP MAG_you_win_1/pixel_addr0 output MAG_you_win_1/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#38 Warning
+PREG Output pipelining  
+DSP MAG_you_win_2/pixel_addr0 output MAG_you_win_2/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#39 Warning
+PREG Output pipelining  
+DSP MAG_you_win_3/pixel_addr0 output MAG_you_win_3/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#40 Warning
+PREG Output pipelining  
+DSP MAG_you_win_4/pixel_addr0 output MAG_you_win_4/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#41 Warning
+PREG Output pipelining  
+DSP MAG_you_win_5/pixel_addr0 output MAG_you_win_5/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#42 Warning
+PREG Output pipelining  
+DSP btSpeedGen/count_duty0 output btSpeedGen/count_duty0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#43 Warning
 PREG Output pipelining  
 DSP toneGen/count_duty0 output toneGen/count_duty0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
@@ -432,7 +702,7 @@ Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net SC0/SC/stage_reg[0]_3[0] is a gated clock net sourced by a combinational pin SC0/SC/now_img_R_reg[2]_i_2/O, cell SC0/SC/now_img_R_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SC0/SC/stage_reg[0]_4[0] is a gated clock net sourced by a combinational pin SC0/SC/now_img_R_reg[2]_i_2/O, cell SC0/SC/now_img_R_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning

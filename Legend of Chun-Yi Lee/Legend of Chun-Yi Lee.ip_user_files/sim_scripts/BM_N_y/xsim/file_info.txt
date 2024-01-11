@@ -1,0 +1,2 @@
+BM_N_y.v,verilog,xil_defaultlib,../../../../Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_N_y/sim/BM_N_y.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
