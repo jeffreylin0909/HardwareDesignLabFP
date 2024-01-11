@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704803959">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704936316">
   <File Type="PA-TCL" Name="Top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Top_reports.tcl"/>
@@ -40,6 +40,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/collide.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/count_kill.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -329,6 +336,126 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/Assets/P_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/R_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/E_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/S_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/T_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/O_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/A_w.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/colon.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/Lv.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/rupee.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/3.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/4.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/5.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/6.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/7.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/8.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Assets/9.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Top"/>
@@ -362,6 +489,7 @@
   <BlockFileSet Type="BlockSrcs" Name="BM_CS_student_R"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_left_stand"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_stand"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_7"/>
   <BlockFileSet Type="BlockSrcs" Name="KeyboardCtrl_0"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_M"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_walk_L"/>
@@ -369,6 +497,7 @@
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_walk_L"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_right_walk"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_walk_R"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_Lv"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_R"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_right_stand"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_left_walk"/>
@@ -380,6 +509,7 @@
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_left_attack"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_back_attack"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_front_stand"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_4"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_CY_right_attack"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_heart"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_wooden_fpga_down"/>
@@ -388,4 +518,14 @@
   <BlockFileSet Type="BlockSrcs" Name="BM_E"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_O"/>
   <BlockFileSet Type="BlockSrcs" Name="BM_V"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_colon"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_rupee"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="BM_9"/>
 </GenRun>

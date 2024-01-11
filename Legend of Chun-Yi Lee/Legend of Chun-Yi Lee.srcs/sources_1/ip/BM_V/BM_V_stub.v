@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Tue Jan  9 16:58:56 2024
+// Date        : Wed Jan 10 13:36:49 2024
 // Host        : DESKTOP-Q29MBHF running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi
-//               Lee.srcs/sources_1/ip/BM_V/BM_V_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top BM_V -prefix
+//               BM_V_ BM_V_stub.v
 // Design      : BM_V
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

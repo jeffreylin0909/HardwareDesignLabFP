@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BM_wooden_fpga_left_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704790740">
+<GenRun Id="BM_wooden_fpga_left_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1704931526">
   <File Type="PA-TCL" Name="BM_wooden_fpga_left.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="BM_wooden_fpga_left_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BM_wooden_fpga_left_reports.tcl"/>

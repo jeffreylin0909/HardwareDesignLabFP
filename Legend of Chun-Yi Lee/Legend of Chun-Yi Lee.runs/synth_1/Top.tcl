@@ -19,7 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 5
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -63,16 +62,37 @@ add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/wooden_fpga_right.co
 add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/G.coe}}
 add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/A.coe}}
 add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/M.coe}}
-add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/E.coe}}
-add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/O.coe}}
-add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/V.coe}}
-add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/R.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/E.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/O.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/V.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/R.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/P_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/R_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/E_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/S_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/T_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/O_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/A_w.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/Lv.coe}}
+add_files {{C:/verilog project/Legend of Chun-Yi Lee/Assets/rupee.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/0.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/1.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/2.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/3.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/4.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/5.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/6.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/7.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/8.coe}}
+add_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/9.coe}}
 read_verilog -library xil_defaultlib {
   {C:/verilog project/Legend of Chun-Yi Lee/KeyboardDecoder.v}
   {C:/verilog project/Legend of Chun-Yi Lee/LFSR.v}
   {C:/verilog project/Legend of Chun-Yi Lee/RGB_GEN.v}
   {C:/verilog project/Legend of Chun-Yi Lee/clk_div.v}
   {C:/verilog project/Legend of Chun-Yi Lee/collide.v}
+  {C:/verilog project/Legend of Chun-Yi Lee/count_kill.v}
   {C:/verilog project/Legend of Chun-Yi Lee/debounce.v}
   {C:/verilog project/Legend of Chun-Yi Lee/lives_gameover_hearts.v}
   {C:/verilog project/Legend of Chun-Yi Lee/maincharacter.v}
@@ -164,20 +184,59 @@ set_property used_in_implementation false [get_files -all {{c:/verilog project/L
 read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_M/BM_M.xci}}
 set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_M/BM_M_ooc.xdc}}]
 
-read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E/BM_E.xci}}
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E/BM_E.xci}}
 set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E/BM_E_ooc.xdc}}]
 
-read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O/BM_O.xci}}
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O/BM_O.xci}}
 set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O/BM_O_ooc.xdc}}]
 
-read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V/BM_V.xci}}
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V/BM_V.xci}}
 set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V/BM_V_ooc.xdc}}]
 
-read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R/BM_R.xci}}
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R/BM_R.xci}}
 set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R/BM_R_ooc.xdc}}]
 
-read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A/BM_A.xci}}
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A/BM_A.xci}}
 set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A/BM_A_ooc.xdc}}]
+
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon_ooc.xdc}}]
+
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv_ooc.xdc}}]
+
+read_ip -quiet {{C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_0/BM_0_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_1/BM_1_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_2/BM_2_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_3/BM_3_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_4/BM_4_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_5/BM_5_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_6/BM_6_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_7/BM_7_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_8/BM_8_ooc.xdc}}]
+
+read_ip -quiet {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9.xci}}
+set_property used_in_implementation false [get_files -all {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_9/BM_9_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

@@ -1,0 +1,225 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jan 10 20:16:44 2024
+# Process ID: 49800
+# Current directory: C:/verilog project/Legend of Chun-Yi Lee
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21784 C:\verilog project\Legend of Chun-Yi Lee\Legend of Chun-Yi Lee.xpr
+# Log file: C:/verilog project/Legend of Chun-Yi Lee/vivado.log
+# Journal file: C:/verilog project/Legend of Chun-Yi Lee\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.xpr}
+update_compile_order -fileset sources_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_P_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_P_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/P_w.coe}] [get_ips BM_P_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_P_w/BM_P_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_P_w/BM_P_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_P_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_P_w/BM_P_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_P_w/BM_P_w.xci}}]
+launch_runs -jobs 10 BM_P_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_P_w/BM_P_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_R_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_R_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/R_w.coe}] [get_ips BM_R_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R_w/BM_R_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R_w/BM_R_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_R_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R_w/BM_R_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R_w/BM_R_w.xci}}]
+launch_runs -jobs 10 BM_R_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_R_w/BM_R_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_E_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_E_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/E_w.coe}] [get_ips BM_E_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E_w/BM_E_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E_w/BM_E_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_E_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E_w/BM_E_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E_w/BM_E_w.xci}}]
+launch_runs -jobs 10 BM_E_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_E_w/BM_E_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_S_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_S_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/S_w.coe}] [get_ips BM_S_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_S_w/BM_S_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_S_w/BM_S_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_S_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_S_w/BM_S_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_S_w/BM_S_w.xci}}]
+launch_runs -jobs 10 BM_S_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_S_w/BM_S_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_T_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_T_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/T_w.coe}] [get_ips BM_T_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_T_w/BM_T_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_T_w/BM_T_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_T_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_T_w/BM_T_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_T_w/BM_T_w.xci}}]
+launch_runs -jobs 10 BM_T_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_T_w/BM_T_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_O_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_O_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/O_w.coe}] [get_ips BM_O_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_w/BM_O_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_w/BM_O_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_O_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_w/BM_O_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_w/BM_O_w.xci}}]
+launch_runs -jobs 10 BM_O_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_O_w/BM_O_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_A_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_A_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/A_w.coe}] [get_ips BM_A_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A_w/BM_A_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A_w/BM_A_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_A_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A_w/BM_A_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A_w/BM_A_w.xci}}]
+launch_runs -jobs 10 BM_A_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_A_w/BM_A_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+reset_run BM_CY_front_walk_L_synth_1
+reset_run BM_CY_front_walk_R_synth_1
+reset_run BM_CY_right_stand_synth_1
+reset_run BM_CY_right_walk_synth_1
+reset_run BM_CY_left_stand_synth_1
+reset_run BM_CY_left_walk_synth_1
+reset_run BM_CY_back_stand_synth_1
+reset_run BM_CY_back_walk_L_synth_1
+reset_run BM_CY_back_walk_R_synth_1
+reset_run BM_overwall_wall_synth_1
+reset_run BM_computer_room_entrance_synth_1
+reset_run BM_CS_student_L_synth_1
+reset_run BM_CS_student_R_synth_1
+reset_run BM_CY_front_stand_synth_1
+reset_run BM_CY_back_attack_synth_1
+reset_run BM_CY_front_attack_synth_1
+reset_run BM_CY_left_attack_synth_1
+reset_run BM_CY_right_attack_synth_1
+reset_run BM_heart_synth_1
+reset_run BM_wooden_fpga_down_synth_1
+reset_run BM_wooden_fpga_up_synth_1
+reset_run BM_wooden_fpga_left_synth_1
+reset_run BM_wooden_fpga_right_synth_1
+reset_run BM_G_synth_1
+reset_run BM_M_synth_1
+reset_run BM_E_synth_1
+reset_run BM_O_synth_1
+reset_run BM_V_synth_1
+reset_run BM_R_synth_1
+reset_run BM_A_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_L_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_L_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/L_w.coe}] [get_ips BM_L_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_L_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}]
+launch_runs -jobs 10 BM_L_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_V_w -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_V_w} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/V_w.coe}] [get_ips BM_V_w]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_V_w] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}]
+launch_runs -jobs 10 BM_V_w_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_colon -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_colon} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/colon.coe}] [get_ips BM_colon]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_colon] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}]
+launch_runs -jobs 10 BM_colon_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_colon/BM_colon.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset BM_V_w {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_V_w/BM_V_w.xci}}
+export_ip_user_files -of_objects  [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset BM_L_w {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_L_w/BM_L_w.xci}}
+export_ip_user_files -of_objects  [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/L_w.coe}}] -no_script -reset -force -quiet
+remove_files  {{c:/verilog project/Legend of Chun-Yi Lee/Assets/L_w.coe}}
+export_ip_user_files -of_objects  [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Assets/V_w.coe}}] -no_script -reset -force -quiet
+remove_files  {{c:/verilog project/Legend of Chun-Yi Lee/Assets/V_w.coe}}
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_Lv -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_Lv} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/Lv.coe}] [get_ips BM_Lv]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_Lv] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}]
+launch_runs -jobs 10 BM_Lv_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_Lv/BM_Lv.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+reset_run BM_CY_front_walk_L_synth_1
+reset_run BM_CY_front_walk_R_synth_1
+reset_run BM_CY_right_stand_synth_1
+reset_run BM_CY_right_walk_synth_1
+reset_run BM_CY_left_stand_synth_1
+reset_run BM_CY_left_walk_synth_1
+reset_run BM_CY_back_stand_synth_1
+reset_run BM_CY_back_walk_L_synth_1
+reset_run BM_CY_back_walk_R_synth_1
+reset_run BM_overwall_wall_synth_1
+reset_run BM_computer_room_entrance_synth_1
+reset_run BM_CS_student_L_synth_1
+reset_run BM_CS_student_R_synth_1
+reset_run BM_CY_front_stand_synth_1
+reset_run BM_CY_back_attack_synth_1
+reset_run BM_CY_front_attack_synth_1
+reset_run BM_CY_left_attack_synth_1
+reset_run BM_CY_right_attack_synth_1
+reset_run BM_heart_synth_1
+reset_run BM_wooden_fpga_down_synth_1
+reset_run BM_wooden_fpga_up_synth_1
+reset_run BM_wooden_fpga_left_synth_1
+reset_run BM_wooden_fpga_right_synth_1
+reset_run BM_G_synth_1
+reset_run BM_M_synth_1
+reset_run BM_E_synth_1
+reset_run BM_O_synth_1
+reset_run BM_V_synth_1
+reset_run BM_R_synth_1
+reset_run BM_A_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name BM_rupee -dir {c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {BM_rupee} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/verilog project/Legend of Chun-Yi Lee/Assets/rupee.coe}] [get_ips BM_rupee]
+generate_target {instantiation_template} [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}]
+generate_target all [get_files  {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}]
+catch { config_ip_cache -export [get_ips -all BM_rupee] }
+export_ip_user_files -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}]
+launch_runs -jobs 10 BM_rupee_synth_1
+export_simulation -of_objects [get_files {{c:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.srcs/sources_1/ip/BM_rupee/BM_rupee.xci}}] -directory {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/sim_scripts} -ip_user_files_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files} -ipstatic_source_dir {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/modelsim} {questa=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/questa} {riviera=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/riviera} {activehdl=C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/verilog project/Legend of Chun-Yi Lee/Legend of Chun-Yi Lee.runs/impl_1/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

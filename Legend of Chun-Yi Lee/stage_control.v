@@ -1,6 +1,8 @@
 module stage_control(
     input clk, rst,
-    input nextstage, backstage, cave, gameover,
+    input gameover,
+    input [7:0] kills,
+    input SPACE_signal,
     output reg [3:0] stage
     );
     
@@ -9,7 +11,7 @@ module stage_control(
     //stage change
 	always@(posedge clk) begin
 	   if (rst)begin
-	       stage <= 4'd0;
+	       stage <= 4'h0;
 	   end else begin
 	       stage <= next_stage;
 	   end
@@ -17,22 +19,30 @@ module stage_control(
 
 	//determine state change
 	always@(*)begin
-        if (nextstage)begin
-            next_stage = stage+1;
-        end else begin
-            if (backstage)begin
-                    if (stage == 4'h0)begin
-                        next_stage = stage;
-                    end else begin
-                        next_stage = stage-1;
-                    end
-            end else if (cave) begin
-                next_stage = 4'hb;
-            end else if (gameover) begin
-                next_stage = 4'hf;
-            end begin
-                next_stage = stage;
+        case (stage)
+            4'h0:begin
+                if (SPACE_signal)begin
+                    next_stage = 4'h1;
+                end else begin
+                    next_stage = stage;
+                end
             end
-        end
+            4'h1:begin
+                if (gameover)begin
+                    next_stage = 4'hf;
+                end else begin
+                    next_stage = stage;
+                end
+            end
+            4'hf:begin
+                if (SPACE_signal)begin
+                    next_stage = 4'h0;
+                end else begin
+                    next_stage = stage;
+                end
+            end
+            default:begin
+            end
+        endcase
 	end
 endmodule
