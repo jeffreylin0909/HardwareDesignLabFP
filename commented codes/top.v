@@ -176,7 +176,7 @@ module Top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     assign change = (stage==4'h4);
     play_audio Pa(
         .clk(clk), 
-        .reset(rst),
+        .rst(rst),
         .change(change),
         .pmod_1(pmod_1),
         .pmod_2(pmod_2),
